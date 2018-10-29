@@ -1,7 +1,7 @@
 \documentclass[12pt]{article}
 \usepackage[utf8x]{inputenc}
 \usepackage[BoldFont,SlantFont]{xeCJK}
-\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.2cm]{geometry}
+\usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm,\footskip=0.2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
@@ -14,7 +14,6 @@
 \usepackage{tkz-euclide,pgfplots}
 \usetikzlibrary{automata,positioning}
 
-
 % \setCJKmainfont[BoldFont = simhei.ttf]{simfang.ttf}
 
 % \defaultfontfeatures{Scale=1.2}
@@ -24,36 +23,34 @@
 
 \fancypagestyle{plain}
 {\fancyhf{}
-\fancyhead[L]{\includegraphics[height=2.32cm]{Logo.jpg}}
+\renewcommand{\headrulewidth}{1.2pt}
+\fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
+{\vspace{-0.8em}}
+\hspace{-4em}\includegraphics[height=2.32cm]{Logo.jpg}
+\end{tabular}
+}
 % \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
-\fancyhead[R]{\large 福州清大教育\hspace{3em}\\ FuZhou Qingda Education}
-\renewcommand{\footrulewidth}{.4pt}
-\fancyfoot[C]{
-\resizebox{!}{0.9\baselineskip}{\begin{tabular}[b]{@{} l @{}}
-      \textbf{鼓楼校区：87500166}\,\textbf{金山校区：87521588}\,\textbf{台江校区：83310089} \\
-      清大教学内部版权所有 \,未经允许\,严禁复制 \\
-\end{tabular}}}
+\fancyhead[R]{\begin{tabular}[t]{@{} c @{}}
+      {\vspace{0.3em}}
+      \small{福州清大教育\hspace{6em}} \\
+      \small{FuZhou Qingda Education\hspace{6em}} \\
+\end{tabular}
 }
 
-% \fancypagestyle{myfancy}
-% {\fancyhf{}
-% \fancyhead[L]{\includegraphics[height=3.6cm]{logo.png}}
-% % \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
-% \fancyhead[R]{\large Tsinghua University \\ Department of Mathematical Sciences}
-% \renewcommand{\footrulewidth}{.4pt}
-% \fancyfoot[L]{
-% \resizebox{!}{3\baselineskip}{\begin{tabular}[b]{@{} l @{}}
-%       Prof. Dr. Hechun \textbf{Zhang} \\
-%       Professor in Mathematics - Tsinghua University \\
-%       Beijing 100084, China \\
-%       Fax: +86(10)62781785 \\
-%       Email: \href{mailto:hzhang@math.tsinghua.edu.cn}{\nolinkurl{hzhang@math.tsinghua.edu.cn}}
-% \end{tabular}}}
-% }
+\renewcommand{\footrulewidth}{.4pt}
+\fancyfoot[C]{
+\resizebox{!}{0.9\baselineskip}
+{\begin{tabular}[c]{@{} c @{}}
+      \large{\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}} \\
+      \small{\vspace{1em}清大教学部内部版权所有\hspace{2em}未经允许\hspace{2em}严禁复制} \\
+      \small{第\thepage 页}
+\end{tabular}}
+}
+}
 
 \pagestyle{plain}
 
-\pagenumbering{gobble} % switch off page numbering
+\pagenumbering{arabic} % switch off page numbering
 
 
 \begin{document}
