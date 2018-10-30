@@ -1,0 +1,50 @@
+% !Mode:: "TeX:UTF-8"                                  %  采用UTF-8编码
+%& -makeindex_opts='-C mixed -s ctex.ist'              %  索引按拼音排序
+\documentclass{ctexart}
+\usepackage{ifthen} 
+\newlength{\la}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xx}[4]{\ \\[.5pt]%
+  \settowidth{\la}{A.~#1~~~}
+  \settowidth{\lb}{B.~#2~~~}
+  \settowidth{\lc}{C.~#3~~~}
+  \settowidth{\ld}{D.~#4~~~}
+  \ifthenelse{\lengthtest{\la > \lb}}
+    {\setlength{\lmax}{\la}}
+    {\setlength{\lmax}{\lb}}
+  \ifthenelse{\lengthtest{\lmax < \lc}}
+    {\setlength{\lmax}{\lc}}  {}
+  \ifthenelse{\lengthtest{\lmax < \ld}}
+    {\setlength{\lmax}{\ld}}  {}
+  \setlength{\lhalf}{0.5\linewidth}
+  \setlength{\lquarter}{0.25\linewidth}
+  \ifthenelse{\lengthtest{\lmax < \lquarter}}
+    {\noindent\makebox[\lquarter][l]{A.~#1~~~}%
+     \makebox[\lquarter][l]{B.~#2~~~}%
+     \makebox[\lquarter][l]{C.~#3~~~}%
+     \makebox[\lquarter][l]{D.~#4~~~}}%
+    {\ifthenelse{\lengthtest{\lmax < \lhalf}}
+       {\noindent\makebox[\lhalf][l]{A.~#1~~~}%
+        \makebox[\lhalf][l]{B.~#2~~~}\\%
+        \makebox[\lhalf][l]{C.~#3~~~}%
+        \makebox[\lhalf][l]{D.~#4~~~}}
+       {\noindent A.~#1  \\ B.~#2 \\ C.~#3 \\ D.~#4 }
+    }
+}
+\begin{document}
+
+这是一道选择题.
+\xx{1ss11}{这是选项}{11ss111}{1ss1111}
+
+这是一道选择题.
+\xx{1ss11111231}{这是一个选项这是一个选项}{11ss111}{1ss1111}%
+
+这是一道选择题.
+\xx{1ss11111231}{这是一个选项这是一个选项这是一个选项}{11ss111}{1ss1111}
+
+\end{document}
