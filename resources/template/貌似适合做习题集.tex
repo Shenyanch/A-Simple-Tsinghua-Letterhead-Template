@@ -1,0 +1,144 @@
+%使用answers包来实现： 选自：http://tex.stackexchange.com/questions/301/how-can-i-produce-exercises-in-one-part-of-a-latex-document-with-selected-answer代码如下：\\
+
+\documentclass[12pt,openany,twoside]{book} 
+\usepackage{fouriernc}
+\usepackage[thmmarks,standard,thref]{ntheorem}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{answers}
+
+\theoremseparator{.}
+\theorembodyfont{\upshape}
+\newtheorem{pro}{Problem}[chapter]
+
+\Newassociation{loigiai}{Answer}{loigiaichung}
+
+\begin{document}
+\chapter{Firist }
+\thispagestyle{empty}
+\Opensolutionfile{loigiaichung}[pro]
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\Closesolutionfile{loigiaichung}
+\section{This is solution}
+\input{pro}
+
+\chapter{Firist }
+\thispagestyle{empty}
+\Opensolutionfile{loigiaichung}[pro]
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\begin{pro}
+This is a problem
+\begin{loigiai}
+This is a solution
+\end{loigiai}
+\end{pro}
+
+\Closesolutionfile{loigiaichung}
+\section{This is solution}
+\input{pro}
+
+\end{document}

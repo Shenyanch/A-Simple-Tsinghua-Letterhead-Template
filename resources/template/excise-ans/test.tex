@@ -1,0 +1,33 @@
+%在一般我们写书籍的时候，每本书后面的习题就不太好用了，下面的处理方式选自ctex上的milksea帖子，对于大家写作书籍有很大帮助
+\documentclass[openany]{ctexbook}
+\usepackage{latexexercise}
+\begin{document}
+\startexercise
+\chapter{例子}
+\begin{exercise}
+\item 题目
+\begin{answer}
+这有答案。
+\end{answer}
+\item 又一道
+\begin{answer}
+这还有答案。
+\end{answer}
+\end{exercise}
+%\stopexercise
+%\startexercise
+\begin{exercise}
+  \item 是的
+  \begin{answer}
+这有答案。
+\end{answer}
+  \item 哦也
+  \begin{answer}
+这有答案。
+\end{answer}
+\end{exercise}
+\stopexercise
+
+\chapter{答案}
+\printanswer
+\end{document} 

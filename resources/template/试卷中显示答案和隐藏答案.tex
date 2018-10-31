@@ -1,0 +1,8 @@
+\documentclass{ctexart}
+\usepackage{ulem}
+\usepackage{tagging}
+%\usetag{ans}% 注释掉该行语句不显示答案
+\newcommand{\answer}[1]{\iftagged{ans}{\uline{#1}}{\uline{\phantom{#1}}}}
+\begin{document}
+这个问题的答案是\answer{This is the key to the question}.
+\end{document}
