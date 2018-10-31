@@ -1,0 +1,36 @@
+%http://www.latexstudio.net/archives/2234.html
+%函数绘图扩展
+% 可能有些函数在 TikZ 的数学引擎（math engine）中并没有定义，用户可以自己定义，然后通过绘图函数将其绘制出来。比如这里考虑伯努利概率函数（二项分布），定义函数使用到的命令是
+% declare function={binom(\k,\n,\p)=\n!/(\k!*(\n-\k)!)*\p^\k*(1-\p)^(\n-\k);}
+% 有了函数然后可以像已经定义过的函数一样使用。
+\documentclass[border=5pt]{standalone}
+
+\usepackage{mathpazo}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+ % define the binom function
+\tikzset{declare function={
+            binom(\k,\n,\p)=\n!/(\k!*(\n-\k)!)*\p^\k*(1-\p)^(\n-\k);
+            }
+        }
+
+\begin{document}
+
+\begin{tikzpicture}
+    \begin{axis}[samples at={0,...,40},
+                 yticklabel style={
+                   /pgf/number format/fixed,
+                   /pgf/number format/fixed zerofill,
+                   /pgf/number format/precision=2}
+                ]
+        \addplot [only marks,orange] {binom(x,40,0.5)};
+        \addlegendentry{$p=0.5$}
+        \addplot [only marks,cyan] {binom(x,40,0.2)};
+        \addlegendentry{$p=0.2$}
+        \addplot [smooth,thick,cyan] {binom(x,40,0.2)};
+        \addlegendentry{$p=0.2$}
+    \end{axis}
+\end{tikzpicture}
+
+\end{document}

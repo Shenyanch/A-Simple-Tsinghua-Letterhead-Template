@@ -21,6 +21,9 @@
 \else\ifdefined\c@section
   \@addtoreset{exercise}{section}
   \def\theexercise{\arabic{section}.\arabic{exercise}}
+\else\ifdefined\c@paragraph
+  \@addtoreset{exercise}{paragraph}
+  \def\theexercise{\arabic{paragraph}.\arabic{exercise}}  
 \else
   \def\theexercise{\arabic{exercise}}
 \fi\fi
