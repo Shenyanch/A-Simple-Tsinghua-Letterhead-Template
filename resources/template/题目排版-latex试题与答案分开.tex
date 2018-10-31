@@ -1,0 +1,202 @@
+\documentclass[11pt,a4paper,CJK]{exam}%a4paper
+%\usepackage[nosolutionfiles]{answers}
+\usepackage{answers}
+%\usepackage[fntef]{ctexcap}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  宏包设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mhs}
+\usepackage{CCTfntef}%中文下划线、加点等包在字中间画一道横线而不是下划线或上划线\CCTunderdot{不}
+%\usepackage{lastpage}
+\usepackage{graphicx}
+%\usepackage[margin=2cm]{geometry}
+\usepackage[nodisplayskipstretch]{setspace}
+\usepackage{stmaryrd}%含平行命令
+%\usepackage{ctexcap}
+\usepackage{indentfirst}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{paralist}
+\usepackage{array}
+\usepackage{multirow}
+%\usepackage{yhmath}%弧宏包
+\usepackage{ifthen}
+%\usepackage{ctex}
+\usepackage{picinpar}
+%\usepackage[assymb]{SIunits}
+%\usepackage[nooneline]{caption2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  页面设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Newassociation{sol}{Soln}{ans}
+
+\newcommand\pagestyleA{\firstpagefooter{}{\small\zihao{-5}%
+第~\thepage~页~共~4~页\quad ~中学汇编}{}
+\runningfooter{}{\small\zihao{-5}
+第~\thepage~页~共~4~页\quad ~中学汇编~}{}}%\numpages
+
+\newcommand\pagestyleB{\firstpagefooter{}{\small\zihao{-5}%
+第~\thepage~页~共~\numpages~页\quad ~中学汇编}{}
+\runningfooter{}{\small\zihao{-5}
+第~\thepage~页~共~\numpages~页\quad ~中学汇编~}{}}%\numpages
+
+%\usepackage[top=0.94cm,left=1cm,right=1cm,includeheadfoot,vmarginratio=1:2]{geometry}
+
+%符号
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  新命令设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newcommand{\kh}{$(~~~~~~)$}
+\newcommand{\kb}{~~~~~~~~}%空白
+\newcommand{\xhx}{$\underline{~~~~~~~~}$}
+\newcommand{\as}{答案:}
+\newcommand{\dd}{\geqslant}
+\newcommand{\xd}{\leqslant}
+\newcommand{\ct}{\boldsymbol}%粗体命令斜体
+\newcommand{\sjx}{\triangle}%三角形
+\newcommand{\px}{\sslash}%平行
+\newcommand{\ri}{\text{i}}%直体i
+\newcommand{\xl}{\overrightarrow}%向量
+\newcommand{\du}{^{\circ}}%度
+\newcommand{\rc}{\text{C}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  字号设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
+\newcommand{\xiaoerhao}{\fontsize{18pt}{\baselineskip}\selectfont}
+\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
+\newcommand{\xiaosihao}{\fontsize{13pt}{\baselineskip}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
+\newcommand{\xiaowuhao}{\fontsize{9pt}{\baselineskip}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
+
+
+
+\renewcommand{\baselinestretch}{1.74}
+
+%\renewcommand{\Solnlabel}[1]{\hspace*{0cm}{\heiti~~\,\, 解析:}}
+\renewcommand{\Solnlabel}[1]{\hspace*{0cm}#1.解析:}
+\newcommand{\qu}{\question}
+
+
+
+
+
+
+\renewcommand{\solution}[1]{%\newpage\setlength{\oddsidemargin}{0.8cm}%
+\noindent\zihao{4}\heiti #1\songti\zihao{5}\par\topsep=-2pt\itemsep=2pt\parsep=-1.5pt\input{ans1}}
+
+%\newenvironment{problems}{\begin{questions}\Opensolutionfile{ans}[ans1]}
+%{\end{questions}\Closesolutionfile{ans}}
+
+\newenvironment{problems}{\begin{questions}\topsep=0pt\itemsep=-3.5pt\parsep=-1.5pt\Opensolutionfile{ans}[ans1]}
+{\end{questions}\Closesolutionfile{ans}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  选择题设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\newlength{\lab}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xx}[4]{\\[.5pt]%
+  \settowidth{\lab}{A.~#1~~~}
+  \settowidth{\lb}{B.~#2~~~}
+  \settowidth{\lc}{C.~#3~~~}
+  \settowidth{\ld}{D.~#4~~~}
+  \ifthenelse{\lengthtest{\lab > \lb}}  {\setlength{\lmax}{\lab}}  {\setlength{\lmax}{\lb}}
+  \ifthenelse{\lengthtest{\lmax < \lc}}  {\setlength{\lmax}{\lc}}  {}
+  \ifthenelse{\lengthtest{\lmax < \ld}}  {\setlength{\lmax}{\ld}}  {}
+  \setlength{\lhalf}{0.5\linewidth}
+  \setlength{\lquarter}{0.25\linewidth}
+  \ifthenelse{\lengthtest{\lmax > \lhalf}}  {\noindent{}A.~#1 \\ B.~#2 \\ C.~#3 \\ D.~#4 }  {
+  \ifthenelse{\lengthtest{\lmax > \lquarter}}  {\noindent\makebox[\lhalf][l]{A.~#1~~~}%
+    \makebox[\lhalf][l]{B.~#2~~~}\\%
+    \makebox[\lhalf][l]{C.~#3~~~}%
+    \makebox[\lhalf][l]{D.~#4~~~}}%
+    {\noindent\makebox[\lquarter][l]{A.~#1~~~}%
+      \makebox[\lquarter][l]{B.~#2~~~}%
+      \makebox[\lquarter][l]{C.~#3~~~}%
+      \makebox[\lquarter][l]{D.~#4~~~}}}}
+
+\newcommand{\kh}[1][0.7]{\nolinebreak\hfill%\dotfill
+\mbox{%\raisebox{-1.8pt}
+  % {$\cdots$}
+   (\hspace{#1 cm})}%\\
+   }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  图形设置   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\renewcommand{\figurename}{图}
+%\renewcommand{\captionlabeldelim}{}
+%\piccaptionoutside
+\setlength{\abovecaptionskip}{0pt}
+\setlength{\belowcaptionskip}{10pt}
+
+\renewcommand\solution[1]{\fullwidth{\large\heiti#1\songti}}
+
+\begin{document}
+\newpage
+\pagenumbering{arabic}
+\pagestyleA
+
+\begin{center} {\heiti2013\Huge{年安徽省高考数学理科试题}}
+\end{center}
+
+%说明：1.本卷分第I卷和第II卷两部分；全卷分值150分，考试时间120 分钟；\\
+%\hspace*{1.8cm}2.请将第I卷答案填写在答题卷的相应位置.
+
+
+%\begin{center}
+%{{\heiti{第}}Ⅰ{\heiti{卷}}}(选择题，填空题，共75 分)
+%\end{center}
+{\heiti\hspace*{-6mm}一、选择题}(本大题共10小题，每小题5分，共50 分.在每小题给出的四个选项中，只有一项是符合题目要求的.)
+\begin{problems}
+
+\qu设~$\ri$~是虚数单位，$\overline{z}$~是复数~$z$~的共轭复数。若~$z\cdot\overline{z}\ri+2=2z$，则~$z=$\kh
+\xx{$1+\ri$}{$1-\ri$}{$-1+\ri$}{$-1-\ri$}
+\begin{sol}
+A
+\end{sol}
+
+
+
+{\heiti\hspace*{-6mm}二、填空题}
+\qu若~$(x+\dfrac{a}{\sqrt[3]{x}})^8$~的展开式中~$x^4$~的系数为~7，则实数~$a=$\xhx.
+\begin{sol}
+$\dfrac{1}{2}$
+\end{sol}
+
+
+
+
+
+{\heiti\hspace*{-6mm}三、解答题}
+
+
+\end{problems}
+
+
+\newpage
+
+%\solution{参考答案}
+\pagenumbering{arabic}
+\pagestyleB
+\begin{center}\heiti{\erhao参考答案}\end{center}
+\input{ans1}
+\end{document}

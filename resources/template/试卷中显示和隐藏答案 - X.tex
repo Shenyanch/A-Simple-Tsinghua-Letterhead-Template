@@ -1,0 +1,9 @@
+\documentclass[fntef]{ctexart}
+\usepackage{xcolor}
+\usepackage{tagging}
+%\usetag{ans}% 注释掉该行语句不显示答案
+\renewcommand*\CJKunderlinecolor{\color{black}}
+\newcommand{\answer}[1]{\iftagged{ans}{\uline{#1}}{{\color{white}\CJKunderline{#1}}}}%
+\begin{document}
+这个问题的答案是\answer{答案This is the key to the question 这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案这是答案 This is the key to the question This is the key to the question This is the key to the question This is the key to the question This is the key to the question This is the key to the question This is the key to the question}.
+\end{document}

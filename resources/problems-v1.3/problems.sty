@@ -1,0 +1,305 @@
+%% Problems style
+%% Author: Mark Hickman
+%% Date: 27 February 2009
+%% Copyright (c) 2009 Mark Hickman
+%
+% Permission is granted to copy, distribute and/or modify this
+% software under the terms of the LaTeX Project Public License
+% (LPPL), version 1.3.
+%
+% The LPPL maintenance status of this software is
+% 'author-maintained'.
+%
+% This software is provided 'as is', without warranty of any kind,
+% either expressed or implied, including, but not limited to, the
+% implied warranties of merchantability and fitness for a
+% particular purpose.
+
+\ProvidesPackage{problems}
+         [08/10/2013 Local LaTeX file]
+\def\fileversion{v1.3}
+\def\filedate{08/10/2013}
+\def\docdate {08/10/2013}
+
+\typeout{Style Option: `problems'
+  \fileversion\space <\filedate> (Mark Hickman)}
+
+
+
+\NeedsTeXFormat{LaTeX2e}
+
+\RequirePackage{atbegshi}
+
+\DeclareOption{solution}{\renewcommand{\theSolution}{\space Solutions}
+\renewcommand{\NotinSolution}[1]{}
+\renewcommand{\Instructions}[1]{}
+\renewcommand{\msh@solution}[1]{#1}}
+
+
+
+
+
+\DeclareOption{database}{\renewcommand{\msh@biboptions}{sorting=debug,defernums=true,bibstyle=draft}}
+
+\DeclareOption{marks}{\renewcommand{\Marks}[2][]{{\theMarksFormat \par\bigskip
+  \textbf{\sc Marks: Total #2.} \par #1 \par \vspace*{1cm} }}
+\renewcommand{\pmark}[1]{{\theMarksFormat \hfill
+  \textbf{\sc Marks: #1}  \par \bigskip }}}
+
+\DeclareOption{biber}{\renewcommand{\msh@backend}{backend=biber}
+\def\msh@problem{usera}
+\def\msh@solutions{userb}
+\define@key{blx@bib1}{solution}[]{\renewcommand{\msh@solution}[1]{##1}}
+\define@key{blx@bib1}{prefix}{\renewcommand{\bibleftbracket}{#1\msh@left}}
+\define@key{blx@bib2}{solution}[]{\renewcommand{\msh@solution}[1]{##1}}
+\define@key{blx@bib2}{prefix}{\renewcommand{\bibleftbracket}{#1\msh@left}}
+}
+
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{biblatex}}
+
+
+\newcommand{\theSolution}{}
+
+\newcommand{\msh@biboptions}{sorting=none,defernumbers=true}
+
+\newcommand{\msh@backend}{backend=bibtex8}
+
+\newcommand{\msh@solution}[1]{}
+
+\def\msh@problem{problem}
+\def\msh@solutions{solution}
+
+
+
+\newcommand{\NotinSolution}[1]{#1}
+
+
+
+\newcommand{\Marks}[2][]{}
+
+\def\Instructions#1{\def\theInstructions{#1}}
+\def\theInstructions{\relax}
+
+\newcommand{\pmark}[1]{}
+
+\newcommand{\pmarks}[1]{\par \hspace*{\fill}  {\sc [Marks: #1]}}
+
+
+\def\SolutionFormat#1{\def\theSolutionFormat{#1}}
+
+\def\theSolutionFormat{}
+
+\def\MarksFormat#1{\def\theMarksFormat{#1}}%
+\def\theMarksFormat{\bf}
+\def\AtEndSolution#1{\def\theAtEndSolution{#1}}
+\def\theAtEndSolution{\newpage}
+
+\DeclareOption{solution}{\renewcommand{\theSolution}{\space Solutions}
+\renewcommand{\NotinSolution}[1]{}
+\renewcommand{\Instructions}[1]{}
+\renewcommand{\msh@solution}[1]{#1}}
+
+
+\ProcessOptions
+
+\RequirePackage[\msh@biboptions,\msh@backend]{biblatex}%
+
+
+
+
+
+
+\def\blx@auxinit@bibtex#1{%
+  \blx@auxwrite\blx@auxout@bibtex
+    {\def\do##1{,\blx@stripbib{##1}}}
+    {\ifx\blx@auxout@bibtex\@mainaux
+     \else
+       \blx@msg@aux
+     \fi
+     \string\bibstyle{question}\blx@nl
+     \string\bibdata{%
+       \blx@ctrlfile@bibtex\blxauxsuffix
+       \ifx#1\@empty
+       \else
+         \dolistloop#1%
+       \fi}\blx@nl
+     \string\citation{biblatex-control}}}
+
+\DeclareFieldFormat{problem}{#1}
+\DeclareFieldFormat{solution}{#1}
+
+\def\Problemskip#1{\setlength{\bibitemsep}{#1}}
+
+\@ifpackagewith{problems}{biber}{
+\DeclareSourcemap{\maps[datatype=bibtex]{\map[overwrite]{
+\step[fieldsource=problem, fieldtarget=usera]
+\step[fieldsource=solution, fieldtarget=userb]}}}}{}
+
+
+\DeclareBibliographyDriver{question}{%
+\printfield{\msh@problem}
+\msh@solution{\par
+\vspace{0.02\textwidth}
+\par
+{\theSolutionFormat \textsc{\bf Solution:}\par
+%\vspace{0.01\textwidth}\par
+\printfield{\msh@solutions}\par
+\theAtEndSolution}}}
+
+\newcommand{\msh@left}{}
+
+
+\renewcommand{\bibleftbracket}{\msh@left}
+\renewcommand{\bibrightbracket}{.}
+
+\defbibheading{bibliography}{}
+
+
+\newcommand{\problems}[2][]{%
+\newrefsegment%
+\nocite{#2}%
+\printbibliography[segment=\therefsegment,#1]
+\renewcommand{\bibleftbracket}{\msh@left}}
+
+\define@key{blx@bib}{prefix}{\renewcommand{\bibleftbracket}{#1\msh@left}}
+\define@key{blx@bib}{solution}[]{\renewcommand{\msh@solution}[1]{##1}}
+
+
+
+\newcommand{\insertpdf}[2][scale=0.9]{\par\includegraphics[#1]{#2}\par}
+
+\@enumdepth = 1
+
+\setlength{\leftmarginii}{0.12\textwidth}
+\setlength{\leftmarginiii}{0.06\textwidth}
+
+\let\msh@path\@currdir
+
+
+
+\def\InputDir#1{\edef\msh@path{\msh@path,#1}%
+\@for\@dir:=#1\do{\edef\input@path{{\@dir/}\input@path}
+\let\Ginput@path\input@path}
+}
+
+\providecommand{\VerbInput}[2][]{\@for\msh@dir:=\msh@path\do{\def\input@path{{}}\IfFileExists{\msh@dir/#2}{\VerbatimInput[#1]{\msh@dir/#2} }{}}}
+
+\edef\input@path{{\@currdir}}
+
+
+
+
+
+
+
+
+
+
+\newcommand{\Database}[1]{
+  \@for\@msh@database:=#1\do{\def\input@path{{}}
+  \IfFileExists{\@msh@database.bib}{
+    \bibliography{\@msh@database}}{
+    \@for\@msh@input:=\msh@path\do{
+      \IfFileExists{\@msh@input/\@msh@database.bib}{
+        \bibliography{\@msh@input/\@msh@database}}
+        {}
+       }}}}
+
+
+ 
+
+\let\printproblems\printbibliography
+
+\newcommand{\NoLabels}{\ExecuteBibliographyOptions{labelnumber=false}
+\renewcommand{\bibrightbracket}{}}
+
+\newlength\msh@label
+\settowidth{\msh@label}{**}
+\addtolength{\msh@label}{\labelnumberwidth}
+
+\def\Course#1{\def\theCourse{#1}}
+\def\theCourse{\relax}
+
+\def\Year#1{\def\theYear{#1}}
+\def\theYear{\relax}
+
+\def\Occurence#1{\def\theOccurence{#1}}
+\def\theOccurence{\relax}
+
+\def\Tutorial#1{\def\theTutorial{#1}}
+\def\theTutorial{Tutorial}
+
+\newcommand{\TutorialNumber}[2][\theTutorialNumber .]{\def\theTutorialNumber{#2}%
+\renewcommand{\msh@left}{#1}%
+\renewcommand{\bibrightbracket}{} \settowidth{\labelnumberwidth}{#1 .} \addtolength{\labelnumberwidth}{\msh@label}}
+\def\theTutorialNumber{\relax}
+
+\newcommand{\TutorialIndex}[2]{\renewcommand{\msh@left}{#1}%
+\renewcommand{\bibrightbracket}{#2}
+\settowidth{\labelnumberwidth}{#1 . #2} \addtolength{\labelnumberwidth}{\msh@label}}
+
+\def\TutorialDate#1{\def\theTutorialDate{#1}}
+\def\theTutorialDate{\relax}
+
+\newcommand{\nolabels}{\defbibenvironment{bibliography}{
+\list{\printfield[\msh@label]{}}
+{\setlength{\labelwidth}{\labelnumberwidth}
+}}%
+{\endlist}{\item}}
+%\setlength{\labelnumberwidth}{0mm}}
+%\renewcommand{\msh@left}{}}
+%\@enumdepth=1}
+
+
+
+\newcommand{\TutorialHeader}{\begin{center}
+
+{\bf\Large\sc \theCourse-\theYear\theOccurence \space \theTutorial
+ \space \theTutorialNumber  \theSolution}
+
+\vspace{0.01\textwidth}
+
+{\bf\sc \theTutorialDate}
+
+\end{center}
+
+\vspace{0.01\textwidth}
+
+\theInstructions
+
+\vspace{0.02\textwidth}}
+
+\newcommand{\tutorial}[2][]{%
+\TutorialHeader
+
+\problems[#1]{#2}}
+
+\def\questions{
+\@enumdepth = 1
+%\setlength{\leftmarginii}{2.2 em}
+\renewcommand{\msh@left}{}
+%\renewcommand{\makelabel}{\bibleftbracket \arabic{enumi}.}
+\renewcommand{\labelenumi}{\theqindex}
+%\renewcommand{\labelenumiii}{\parbox{\labelwidth}{(\roman{enumiii})}}
+\providecommand{\@enumctr}{enumi}
+%\providecommand{\starred}[1][*]{\item[\addtocounter{\@enumctr}{1} #1\csname
+%label\@enumctr\endcsname]}
+\renewcommand{\labelenumiii}{(\roman{enumiii})}
+\setlength{\leftmarginii}{\labelwidth}
+\setlength{\leftmarginiii}{0.5\labelwidth}
+\list{\labelenumi}{\usecounter{enumi} \addtolength{\itemsep}{20\unitlength}}}
+
+
+\let\endquestions=\endquestionslist
+
+ \providecommand{\starred}[1][*]{\item[\addtocounter{\@enumctr}{1} #1\csname
+label\@enumctr\endcsname]}
+
+
+\def\qindex#1{\def\theqindex{#1}}
+
+\def\theqindex{\arabic{enumi}.}
+
+\InputIfFileExists{problems.cfg}{}{}
+
+\endinput
