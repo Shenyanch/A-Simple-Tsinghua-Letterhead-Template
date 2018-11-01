@@ -1,31 +1,27 @@
+%\usepackage[BoldFont,SlantFont]{xeCJK}
 \usepackage[utf8x]{inputenc}
-\usepackage[BoldFont,SlantFont]{xeCJK}
 \usepackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm,\footskip=0.2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{fancyhdr}
 \usepackage[export]{adjustbox}
 \usepackage{tabularx}
 \usepackage[hidelinks]{hyperref}
+\usepackage{latexexercise}
 %数学符号
 \usepackage{amsmath,amsfonts,amssymb,times }%AMS宏包
 %绘图
-\usepackage{tikz,pgfplots}
-\usepackage{tkz-euclide,pgfplots}
-\usetikzlibrary{automata,positioning}
-\usepackage{latexexercise}
+\usepackage{tikz,
+            pgfplots,
+            tkz-euclide}
+\usetikzlibrary{automata,
+                positioning}
+
 % \setCJKmainfont[BoldFont = simhei.ttf]{simfang.ttf}
 
 % \defaultfontfeatures{Scale=1.2}
 % \linespread{1.2}
-\usepackage{zhnumber}
 
-% 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
-% 用法：\rmnum{数字}，\Rmnum{数字}
-\makeatletter
-\newcommand{\rmnum}[1]{\romannumeral #1}
-\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
-\makeatother
-% 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字.
+\usepackage{zhnumber}
 
 \fancypagestyle{plain}
 {\fancyhf{}

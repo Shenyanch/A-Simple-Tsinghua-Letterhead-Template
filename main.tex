@@ -1,5 +1,5 @@
-\documentclass[12pt]{ctexart}
-\input{style}
+\documentclass[12pt,UTF8]{ctexart}
+\usepackage{QingDa}
 \begin{document}
 \title{2012年某某中学高三数学测试题}
 \author{总分:150分and 时间120分钟}
@@ -10,8 +10,12 @@
 \setlength\parindent{2em}
 \part{部分标题}
 %\chapter{章标题}这一章我们介绍这些内容。
-\section{节标题}这一节我们介绍这些内容。
+\section{节标题}
+这是一个CTEX的utf-8编码例子，{\kai 这里是楷体显示}，{\songti 这里是宋体显示}，{\heiti 这里是黑体显示}，{\fangsong 这里是仿宋显示}，{\lishu 这里是隶书显示}，{\youyuan 这里是幼圆显示}。
 \paragraph{这一段}
+$X+Y\over c^t$\\
+$\frac{X+Y}{c^t}$
+\startexercise
 \begin{exercise}
 \item (17-18福州八中高一期中4)函数$f(x)=a^{-x^2+3x+2}(0<a<1)$的单调递增区间是\xz
         \xx{$(-\infty,\frac32)$}
@@ -52,6 +56,24 @@ D
 \end{answer}
 \end{exercise}
 \subsubsection{子节标题}这一子节我们介绍这些内容。
+\begin{exercise}
+\item (17-18福州八中高一期中4)函数$f(x)=a^{-x^2+3x+2}(0<a<1)$的单调递增区间是\xz
+        \xx{$(-\infty,\frac32)$}
+        {$(\frac32,+\infty)$}
+        {$(-\infty,-\frac32)$}
+        {$(\frac32,+\infty)$}
+\begin{answer}
+不行吗。
+\end{answer}
+\item  (17-18福州八中高一期中5) 下列四组函数中，表示同一函数的是\xz
+        \xx{$f(x)=\lg{x^4},g(x)=4\lg x$}
+        {$f(x)=\sqrt{x+1}\cdot\sqrt{x-1},g(x)=\sqrt{x^2-1}$}
+        {$f(x)=\frac{x^2-1}{x-1},g(x)=x+1$}
+        {$f(x)=\begin{cases}x,x\geq0\\-x,x<0\end{cases},g(x)=\sqrt{x^2}$}
+\begin{answer}
+D
+\end{answer}
+\end{exercise}
 \section{节标题}这一节我们介绍这些内容。
 \begin{exercise}
 \item (17-18福州八中高一期中4)函数$f(x)=a^{-x^2+3x+2}(0<a<1)$的单调递增区间是\xz
@@ -90,9 +112,9 @@ D
 D
 \end{answer}
 \end{exercise}
+\startexercise
 
-
-%\input{test}
+\input{test}
 \vspace{1em}
 
 \vspace{2em}

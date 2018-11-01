@@ -16,11 +16,26 @@
 \pgfplotsset{compat=1.8}
  % define the plot style and the axis style
 \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
+ 
 
 \begin{tikzpicture}
 \draw(0,0)--+(2,-2);
 \end{tikzpicture}
+\begin{tikzpicture} \draw (-2, 1.5) rectangle (2, -1.5); \fill[color=gray] (-2,1.5) rectangle (2,-1.5); \draw (-0.5, 0) circle (1); \draw ( 0.5, 0) circle (1); \end{tikzpicture}
+\par
 
+
+\usetikzlibrary{calc,through}
+\begin{tikzpicture}[scale=1.2] 
+\coordinate [label=left:$A$] (A) at (0,0); \coordinate [label=right:$B$] (B) at (1.25,0.25); \draw (A) -- (B); 
+\node (D) [draw,circle through=(B),label=left:$D$] at (A) {}; 
+\node (E) [draw,circle through=(A),label=right:$E$] at (B) {}; \coordinate[label=above:$C$] (C) at (intersection 2 of D and E); 
+\draw [red] (A) -- (C); 
+\draw [red] (B) -- (C); 
+\end{tikzpicture}
+\par
+
+\begin{tikzpicture} \draw (-2,-0.8) sin (1,1) cos (2,0)\end{tikzpicture}
 
 \begin{tikzpicture}[scale=0.4,line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm] 
 \draw[-latex,color=black,thick] (-7.42,0) -- (13,0) node[above] {$x$}; 

@@ -1,0 +1,219 @@
+\ProvidesPackage{QingDa}
+%\RequirePackage[BoldFont,SlantFont]{xeCJK}
+%\RequirePackage[utf8x]{inputenc}
+\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm,\footskip=0.2cm]{geometry}
+\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+\RequirePackage[export]{adjustbox}
+\RequirePackage{tabularx}
+\usepackage{titlesec}
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{zhnumber}
+\RequirePackage{latexexercise}
+%数学符号
+\RequirePackage{amsmath,amsfonts,amssymb,times }%AMS宏包
+%绘图
+\RequirePackage{tikz,
+            pgfplots,
+            tkz-euclide}
+\usetikzlibrary{automata,
+                positioning}
+                
+% Font Setting:
+%-----------------------------------------------------------------------
+% 1. Families Definations
+%
+%    Only 3 families are introduced here, for the normal font, caption
+% font, and title font.
+%-----------------------------------------------------------------------
+\newcommand{\song}{\songti}    % 宋体
+\newcommand{\kai}{\kaishu}      % 楷体
+\newcommand{\hei}{\heiti}      % 黑体
+\newcommand{\fsong}{\fangsong}      % 仿宋
+%-----------------------------------------------------------------------
+% 2. Font size definition
+%
+%    Copy From THU Template by Wang Lei with modifying by Wang Xu.
+%-----------------------------------------------------------------------
+\newcommand{\yihao}{\fontsize{26pt}{36pt}\selectfont}  	  % 一号
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}  	  % 二号
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont} 	  % 小二
+\newcommand{\sanhao}{\fontsize{16pt}{16pt}\selectfont} 	  % 三号
+\newcommand{\xiaosan}{\fontsize{15pt}{15pt}\selectfont}	  % 小三
+\newcommand{\sihao}{\fontsize{14pt}{14pt}\selectfont}  	  % 四号
+\newcommand{\xiaosi}{\fontsize{12pt}{20pt}\selectfont} 	  % 小四
+\newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont} % 五号
+\newcommand{\defaultfont}{\renewcommand{\baselinestretch}{1.5}%
+	\fontsize{12pt}{13pt}\selectfont}
+%
+% End of Font Setting
+%\CTEXsetup[name={第,节},number={\chinese{section}}]{section}
+\titleformat{\chinese{section}}{\left\bfseries}{第\,\thesection\,章}{1em}{}
+
+\fancypagestyle{plain}
+{\fancyhf{}
+\renewcommand{\headrulewidth}{1.2pt}
+\fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
+{\vspace{-0.8em}}
+\hspace{-4em}\includegraphics[height=2.32cm]{Logo.jpg}
+\end{tabular}
+}
+% \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
+\fancyhead[R]{\begin{tabular}[t]{@{} c @{}}
+      {\vspace{0.3em}}
+      \small{福州清大教育\hspace{6em}} \\
+      \small{FuZhou Qingda Education\hspace{6em}} \\
+\end{tabular}
+}
+
+\renewcommand{\footrulewidth}{.4pt}
+\fancyfoot[C]{
+\resizebox{!}{0.9\baselineskip}
+{\begin{tabular}[c]{@{} c @{}}
+      \large{\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}} \\
+      \small{\vspace{1em}清大教学部内部版权所有\hspace{2em}未经允许\hspace{2em}严禁复制} \\
+      \small{第\thepage 页}
+\end{tabular}}
+}
+}
+
+\pagestyle{plain}
+
+\pagenumbering{arabic} % switch off page numbering
+
+%选择题括号的配置
+\newcommand{\xz}[1][1]{\nolinebreak\dotfill\mbox{\raisebox{-1.8pt}
+   {$\cdots$}(\hspace{#1 cm})}\\ }
+%z选择题四个选项的样式
+%       当你排版选择题的时候，你只需输入
+%\xx{选项 A 的内容}{选项 B 的内容}{选项 C 的内容}{选项 D 的内容}
+%       上面代码的意思是取四个选项的最长宽度，加上 “A.” %以及左右留空，作为选项的最长宽度。将
+%它和行宽的 1/2 以及 1/4 作比较， 来决定把 4 个选项排成一行、两行或者四行及以上。
+\RequirePackage{ifthen} 
+\newlength{\la}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xx}[4]{\ \\[.5pt]%
+  \settowidth{\la}{A.~#1~~~}
+  \settowidth{\lb}{B.~#2~~~}
+  \settowidth{\lc}{C.~#3~~~}
+  \settowidth{\ld}{D.~#4~~~}
+  \ifthenelse{\lengthtest{\la > \lb}}
+    {\setlength{\lmax}{\la}}
+    {\setlength{\lmax}{\lb}}
+  \ifthenelse{\lengthtest{\lmax < \lc}}
+    {\setlength{\lmax}{\lc}}  {}
+  \ifthenelse{\lengthtest{\lmax < \ld}}
+    {\setlength{\lmax}{\ld}}  {}
+  \setlength{\lhalf}{0.5\linewidth}
+  \setlength{\lquarter}{0.25\linewidth}
+  \ifthenelse{\lengthtest{\lmax < \lquarter}}
+    {\noindent\makebox[\lquarter][l]{A.~#1~~~}%
+     \makebox[\lquarter][l]{B.~#2~~~}%
+     \makebox[\lquarter][l]{C.~#3~~~}%
+     \makebox[\lquarter][l]{D.~#4~~~}}%
+    {\ifthenelse{\lengthtest{\lmax < \lhalf}}
+       {\noindent\makebox[\lhalf][l]{A.~#1~~~}%
+        \makebox[\lhalf][l]{B.~#2~~~}\\%
+        \makebox[\lhalf][l]{C.~#3~~~}%
+        \makebox[\lhalf][l]{D.~#4~~~}}
+       {\noindent A.~#1  \\ B.~#2 \\ C.~#3 \\ D.~#4 }
+    }
+}
+%(6) 填空题横线的排版
+%       当编写到填空题的时候，加上 \tk 即可，可以加在一句话中间，也可以加到一句话末尾，当在
+%末尾的时候，可以在后面加上句号。
+%       横线的默认长度是 2.5cm， 可以使用\tk[3]将横线改为 3cm。
+\newcommand{\tk}[1][2.5]{\,\underline{\mbox{\hspace{#1 cm}}}\,}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 公式的精调
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \eqnarray如果很长，影响分栏、换行和分页（整块挪动，造成页面空白），
+% 可以设置成为自动调整模式
+\allowdisplaybreaks[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%下面这组命令使浮动对象的缺省值稍微宽松一点，从而防止幅度
+%对象占据过多的文本页面，也可以防止在很大空白的浮动页上放置
+%很小的图形。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+
+\newlength\CJKtwospaces
+\def\CJKindent{
+    \settowidth\CJKtwospaces{\CJKchar{"0A1}{"0A1}\CJKchar{"0A1}{"0A1}}%
+    \parindent\CJKtwospaces
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置行距和段落间垂直距离
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 段落之间的竖直距离
+%\setlength{\parskip}{3pt plus1pt minus1pt}
+\setlength{\parskip}{2pt plus1pt minus1pt}
+
+% 定义行距
+\renewcommand{\baselinestretch}{1.2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 调整列表环境的垂直间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\let\orig@Itemize =\itemize
+\let\orig@Enumerate =\enumerate
+\let\orig@Description =\description
+
+\def\Myspacing{\itemsep=1.5ex \topsep=-0.5ex \partopsep=0pt \parskip=0pt \parsep=0.5ex}
+
+\def\newitemsep{
+\renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
+\renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
+\renewenvironment{description}{\orig@Description\Myspacing}{\endlist}
+}
+
+\def\olditemsep{
+\renewenvironment{itemize}{\orig@Itemize}{\endlist}
+\renewenvironment{enumerate}{\orig@Enumerate}{\endlist}
+\renewenvironment{description}{\orig@Description}{\endlist}
+}
+
+\newitemsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 修改引用的格式，
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 增加 \ucite 命令使显示的引用为上标形式
+\newcommand{\ucite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
+\newcommand{\BIBand}{and}
+%\bibpunct{[}{]}{,}{s}{}{\textsuperscript{,}}
+%\renewcommand\NAT@open{\textsuperscript{[}}
+%\renewcommand\NAT@close{\textsuperscript{]}}
+
+%=======================================================================
+% The captions
+\renewcommand{\captionfont}{\wuhao\kai\rmfamily}
+\renewcommand{\captionlabelfont}{\wuhao\kai\rmfamily}
+%\renewcommand{\captionlabeldelim}{\hspace{1em}}
+\renewcommand{\thefigure}{\thechapter--\@arabic\c@figure}
+\renewcommand{\thetable}{\thechapter--\@arabic\c@table}
+\renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
+%=======================================================================
+
+
+
+
+
+
