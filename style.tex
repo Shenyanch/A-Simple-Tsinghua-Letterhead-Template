@@ -55,8 +55,7 @@
 \pagenumbering{arabic} % switch off page numbering
 
 %选择题括号的配置
-\newcommand{\xz}[1][1]{\nolinebreak\dotfill\mbox{\raisebox{-1.8pt}
-   {$\cdots$}(\hspace{#1 cm})}\\ }
+\newcommand{\xz}[1][1]{\nolinebreak\dotfill\mbox{{$\cdots$}(\hspace{#1 cm})}\\ }
 %z选择题四个选项的样式
 %       当你排版选择题的时候，你只需输入
 %\xx{选项 A 的内容}{选项 B 的内容}{选项 C 的内容}{选项 D 的内容}
@@ -70,7 +69,7 @@
 \newlength{\lhalf}
 \newlength{\lquarter}
 \newlength{\lmax}
-\newcommand{\xx}[4]{\ \\[.5pt]%
+\newcommand{\xx}[4]{%\ \\[.5pt]%
   \settowidth{\la}{A.~#1~~~}
   \settowidth{\lb}{B.~#2~~~}
   \settowidth{\lc}{C.~#3~~~}

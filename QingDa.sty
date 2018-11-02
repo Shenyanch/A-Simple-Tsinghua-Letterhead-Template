@@ -43,12 +43,22 @@
 \newcommand{\sihao}{\fontsize{14pt}{14pt}\selectfont}  	  % 四号
 \newcommand{\xiaosi}{\fontsize{12pt}{20pt}\selectfont} 	  % 小四
 \newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont} % 五号
+\newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont} % 小五
+\newcommand{\liuhao}{\fontsize{8pt}{8pt}\selectfont} % 六号
 \newcommand{\defaultfont}{\renewcommand{\baselinestretch}{1.5}%
 	\fontsize{12pt}{13pt}\selectfont}
 %
 % End of Font Setting
 %\CTEXsetup[name={第,节},number={\chinese{section}}]{section}
-\titleformat{\section}[block]{\bfseries}{第 \chinese{section} 章}{1em}{}
+\titleformat{\section}[block]{\bfseries}{\chinese{section} 、}{0.25em}{}
+\titlespacing{\section}{0pt}{0.5ex plus 0.1ex minus .1ex}{0.4ex plus .1ex minus .1ex}
+\titleformat{\subsection}[block]{\bfseries}{\arabic{subsection}.}{0.25em}{}
+\titlespacing{\subsection}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
+\titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsubsection}.}{0.25em}{}
+\titlespacing{\subsubsection}{0pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
+
+
+
 
 \fancypagestyle{plain}
 {\fancyhf{}
@@ -82,7 +92,7 @@
 \pagenumbering{arabic} % switch off page numbering
 
 %选择题括号的配置
-\newcommand{\xz}[1][1]{\nolinebreak\dotfill\mbox{\raisebox{-1.8pt}
+\newcommand{\xz}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
    {$\cdots$}(\hspace{#1 cm})}\\ }
 %z选择题四个选项的样式
 %       当你排版选择题的时候，你只需输入
@@ -97,7 +107,7 @@
 \newlength{\lhalf}
 \newlength{\lquarter}
 \newlength{\lmax}
-\newcommand{\xx}[4]{\ \\[.5pt]%
+\newcommand{\xx}[4]{%\ \\[.5pt]%
   \settowidth{\la}{A.~#1~~~}
   \settowidth{\lb}{B.~#2~~~}
   \settowidth{\lc}{C.~#3~~~}
