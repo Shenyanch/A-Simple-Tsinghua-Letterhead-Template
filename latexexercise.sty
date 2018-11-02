@@ -21,12 +21,12 @@
 \else\ifdefined\c@section
   \@addtoreset{exercise}{section}
   \def\theexercise{\arabic{section}.\arabic{exercise}}
-
 \else
   \def\theexercise{\arabic{exercise}}
 \fi\fi
 
-\def\exercisename{练习}
+%\def\exercisename{练习}
+\def\exercisename{}
 
 \newcommand\startexercise{%
   \immediate\openout\ltxex@ansfile=\ltxex@ansfilename
