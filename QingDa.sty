@@ -18,6 +18,14 @@
             tkz-euclide}
 \usetikzlibrary{automata,
                 positioning}
+
+% 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字 
+% 用法：\rmnum{数字}，\Rmnum{数字} 
+%\makeatletter 
+\newcommand{\rmnum}[1]{\romannumeral #1} 
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@} 
+%\makeatother 
+% 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字. 
                 
 % Font Setting:
 %-----------------------------------------------------------------------

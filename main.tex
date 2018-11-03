@@ -1,6 +1,27 @@
 \documentclass[12pt,UTF8]{ctexart}
 \usepackage{QingDa}
 \usepackage{multirow}
+\usepackage[demo]{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+%\usepackage{subfig}
+\usepackage[hypcap=true,labelsep=period,font=small]{caption}% 图的标题设置Fig.
+\usepackage[hypcap=true]{subcaption}%用于画子图 可以适配hyperref包
+\usepackage{float}
+\usepackage[colorlinks,dvipdfm,
+            pdfpagemode=UseOutlines,
+            pdfstartview=FitH,
+            anchorcolor=green,
+            citecolor=blue,
+            linkcolor=red,
+            hyperindex=true,
+            pagebackref,
+            bookmarksnumbered,
+            bookmarksopenlevel=2,
+            colorlinks]{hyperref}
+\pgfplotsset{width=6cm,compat=1.15}
+
+\newcommand\putfig[2]{\begin{tabular}[t]{@{}l@{}}#1\\#2\end{tabular}}
 \begin{document}
 %\title{2012年某某中学高三数学测试题}
 %\author{总分:150分and 时间120分钟}
@@ -12,16 +33,16 @@
     \centering
       \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
     \hline
-    {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&1v3  & {\hei \wuhao 首课时间}&181028&{\hei \wuhao 本课时间}  & 181103  \\ \hline
+    {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&1v2  & {\hei \wuhao 首课时间}&181028&{\hei \wuhao 本课时间}  & 181103  \\ \hline
    {\hei 学习科目}  & 数学&{\hei 上课年级}&高一 & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
-   {\hei 课题名称} & \multicolumn{7}{l|}{必修一复习}\\\hline
-   {\hei 重点难点}&\multicolumn{7}{l|}{参数问题；函数图像}\\\hline
+   {\hei 课题名称} & \multicolumn{7}{l|}{必修一综合专题复习}\\\hline
+   {\hei 重点难点}&\multicolumn{7}{l|}{分类讨论；}\\\hline
   \end{tabular}
 \end{table}
 
 %--------------------- 
 \vspace{-1.7em}
-\input{101103_1v3}
+\input{test}
 \vspace{1em}
 
 \vspace{2em}
