@@ -19,14 +19,14 @@
 \usetikzlibrary{automata,
                 positioning}
 
-% 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字 
-% 用法：\rmnum{数字}，\Rmnum{数字} 
-%\makeatletter 
-\newcommand{\rmnum}[1]{\romannumeral #1} 
-\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@} 
-%\makeatother 
-% 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字. 
-                
+% 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
+% 用法：\rmnum{数字}，\Rmnum{数字}
+%\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+%\makeatother
+% 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字.
+
 % Font Setting:
 %-----------------------------------------------------------------------
 % 1. Families Definations
@@ -97,6 +97,42 @@
 
 \pagestyle{plain}
 
+\newcommand{\QD@StuName}{}
+\newcommand{\QD@FirstTime}{}
+\newcommand{\QD@CurrentTime}{}
+\newcommand{\QD@Grade}{}
+\newcommand{\QD@Topic}{}
+\newcommand{\QD@Teach}{}
+
+\newcommand{\Name}[1]{\renewcommand{\QD@StuName}{#1}}
+\newcommand{\FirstTime}[1]{\renewcommand{\QD@FirstTime}{#1}}
+\newcommand{\CurrentTime}[1]{\renewcommand{\QD@CurrentTime}{#1}}
+\newcommand{\Grade}[1]{\renewcommand{\QD@Grade}{#1}}
+\newcommand{\Topic}[1]{\renewcommand{\QD@Topic}{#1}}
+\newcommand{\Teach}[1]{\renewcommand{\QD@Teach}{#1}}
+
+\newcommand{\makefront}{
+%\title{2012年某某中学高三数学测试题}
+%\author{总分:150分and 时间120分钟}
+%\date{命题人: 某某某}
+%\maketitle
+\begin{table}[h]
+\small
+\arrayrulewidth=1pt
+    \centering
+      \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
+    \hline
+    {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei \wuhao 首课时间}&\QD@FirstTime&{\hei \wuhao 本课时间}  & \QD@CurrentTime  \\ \hline
+   {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
+   {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
+   {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
+  \end{tabular}
+\end{table}
+}
+
+
+
+
 \pagenumbering{arabic} % switch off page numbering
 
 %选择题括号的配置
@@ -107,7 +143,7 @@
 %\xx{选项 A 的内容}{选项 B 的内容}{选项 C 的内容}{选项 D 的内容}
 %       上面代码的意思是取四个选项的最长宽度，加上 “A.” %以及左右留空，作为选项的最长宽度。将
 %它和行宽的 1/2 以及 1/4 作比较， 来决定把 4 个选项排成一行、两行或者四行及以上。
-\RequirePackage{ifthen} 
+\RequirePackage{ifthen}
 \newlength{\la}
 \newlength{\lb}
 \newlength{\lc}
@@ -229,9 +265,3 @@
 \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
 \renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
 %=======================================================================
-
-
-
-
-
-
