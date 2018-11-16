@@ -1,7 +1,7 @@
 \ProvidesPackage{QingDa}
 %\RequirePackage[BoldFont,SlantFont]{xeCJK}
 %\RequirePackage[utf8x]{inputenc}
-\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm,\footskip=0.2cm]{geometry}
+\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm]{geometry}
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage[export]{adjustbox}
@@ -26,6 +26,14 @@
 \newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
 %\makeatother
 % 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字.
+% LaTeX的命令和TeX的命令一样，只允许普通字符（26个字母的大小写形式）作为命令的名称，
+% 不允许出现数字、特殊字符等。当然，这不是一个不可逾越的鸿沟。
+% 本质上来说，只要catcode=11的字符都可以作为命令的名称，因此只要修改字符的catcode为11，
+% 这个字符就可以出现在命令的名称中。LaTeX的内部命令中，
+% \makeatletter命令的实质就是修改字符@的catcode为11，这样@就可以出现在命令名称中了。
+% \makeatother重新修改@的catcode为12，不允许@出现在命令的名字中。
+
+
 
 % Font Setting:
 %-----------------------------------------------------------------------
@@ -62,8 +70,8 @@
 \titlespacing{\section}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
 \titleformat{\subsection}[block]{\bfseries}{\arabic{subsection}.}{0.25em}{}
 \titlespacing{\subsection}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
-\titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsubsection}.}{0.25em}{}
-\titlespacing{\subsubsection}{0pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
+\titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsection}.\arabic{subsubsection}}{0.25em}{}
+\titlespacing{\subsubsection}{4pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
 
 
 
@@ -258,8 +266,8 @@
 
 %=======================================================================
 % The captions
-\renewcommand{\captionfont}{\wuhao\kai\rmfamily}
-\renewcommand{\captionlabelfont}{\wuhao\kai\rmfamily}
+\newcommand{\captionfont}{\wuhao\kai\rmfamily}
+\newcommand{\captionlabelfont}{\wuhao\kai\rmfamily}
 %\renewcommand{\captionlabeldelim}{\hspace{1em}}
 \renewcommand{\thefigure}{\thechapter--\@arabic\c@figure}
 \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
