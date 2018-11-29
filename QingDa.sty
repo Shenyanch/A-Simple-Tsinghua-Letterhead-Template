@@ -1,4 +1,4 @@
-\ProvidesPackage{QingDa}
+ \ProvidesPackage{QingDa}
 %\RequirePackage[BoldFont,SlantFont]{xeCJK}
 %\RequirePackage[utf8x]{inputenc}
 \RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm]{geometry}
@@ -9,7 +9,8 @@
 \usepackage{titlesec}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{zhnumber}
-\RequirePackage{latexexercise}
+%\RequirePackage{latexexercise}
+%\RequirePackage{latexexercise0}
 %数学符号
 \RequirePackage{amsmath,amsfonts,amssymb,times }%AMS宏包
 %绘图
@@ -72,8 +73,7 @@
 \titlespacing{\subsection}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
 \titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsection}.\arabic{subsubsection}}{0.25em}{}
 \titlespacing{\subsubsection}{4pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
-
-
+\titleformat{\part}{\centering\bfseries}{}{0.1em}{}
 
 
 \fancypagestyle{plain}
@@ -238,7 +238,6 @@
 \let\orig@Description =\description
 
 \def\Myspacing{\itemsep=1.5ex \topsep=-0.5ex \partopsep=0pt \parskip=0pt \parsep=0.5ex}
-
 \def\newitemsep{
 \renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
 \renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
