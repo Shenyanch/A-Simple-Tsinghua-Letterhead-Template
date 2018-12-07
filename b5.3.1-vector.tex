@@ -1,0 +1,390 @@
+\Topic{向量基本概念与线性运算}
+  \Teach{向量共线定理}
+  \Grade{高一}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+\section{向量的基本相关概念}
+  \begin{description}
+    \item[有向线段]带有方向的线段.用$\vv{AB}$表示；线段AB的长度也叫做有向线段$\vv{AB}$的长度，记作$\abs{\vv{AB}}$.\par
+    {\kaishu 有向线段包含三要素：{\textbf 起点、方向、长度}}
+    \item[向量] 既有大小，又有方向的量，用$ \vv{a},~\vv{AB},~\bm{a} $表示；向量的大小叫做向量的长度或向量的模，用$ \abs{\bm{a}} $表示.\par
+    \begin{itemize}[leftmargin=*]
+      \kaishu
+      \item 不同于有向线段，平面向量是自由向量(无源向量)；不同于有向线段，平面向量是自由向量(无源向量)；不同于有向线段，平面向量是自由向量(无源向量)；
+      \item 只有大小，没有方向的量称为数量；（物理学中称数量为标量，并把向量称为矢量）
+    \end{itemize}
+    \item[零向量] 长度为零的向量，其方向是任意的，记作$ \vv{0} $或$ \bm{0} $；
+    \item[相等向量] 长度相等且方向相同的向量；\par
+    {\kaishu 两个向量只能相等或者不相等，不能比较大小.}
+    \item[相反向量] 长度相等且方向相反的向量\par
+    {\kaishu 规定：$\bm{0}$的相反向量为$\bm{0}$}
+    \item[单位向量] 长度等于一个单位长度的向量；
+    \item[平行向量(共线向量)]方向相同或相反的非零向量叫做平行向量或共线向量；规定零向量与任一向量平行共线.向量$\bm{a}$、$\bm{b}$平行记作$\bm{a}\varparallel \bm{b}$.
+  \end{description}
+  \begin{exercise}{\textbf{基础测试}}
+    \item
+      判断下列结论是否正确(请在括号中打“\checkmark”或“\XSolidBrush”)\\
+      (1)向量与有向线段是一样的，因此可以用有向线段来表示向量．(　　)\\
+      (2)$\abs{\bm{a}}$与$\abs{\bm{b}}$是否相等与$\bm{a}$,$\bm{b}$的方向无关．(　　)\\
+      (3)若$\bm{a}\varparallel\bm{b}$,$\bm{b}\varparallel\bm{c}$，则$\bm{a}\varparallel\bm{c}$.(　　)\\
+      (4)若向量$\vv{AB}$与向量$\vv{CD}$是共线向量，则$A,B,C,D$四点在一条直线上．(　　)\\
+      (5)若向量$\bm a$与任一向量$\bm b$平行，则$\bm a=\bm 0$．(　　)\\
+      (6)若两个向量共线，则其方向必定相同或相反．(　　)\\
+      \begin{answer}
+        (2)(5)正确
+      \end{answer}
+    \item
+      有下列命题：
+      \circled{1}两个相等向量，它们的起点相同，终点也相同；
+      \circled{2}若$\abs{\bm{a}}=\abs{\bm{b}}$，则$\bm{a}=\bm{b}$；
+      \circled{3}若$\abs{\vv{AB}}=\abs{\vv{CD}}$，则四边形$ABCD$是平行四边形；
+      \circled{4}若$\bm{m}=\bm{n}$，$\bm{n}=\bm{k}$，则$\bm{m}=\bm{k}$；
+      \circled{5}若$\bm{a}\varparallel\bm{b}$，$\bm{c}\varparallel\bm{b}$，则$\bm{a}\varparallel\bm{c}$；
+      \circled{6}有向线段就是向量，向量就是有向线段．其中，错误的个数是\xz
+      \xx{2}{3}{4}{5}
+  \end{exercise}
+\section{向量的线性运算}
+  向量的线性运算包括向量的加、减、数乘运算.
+  \subsection{加法}
+    \begin{description}
+      \item[定义] 两个向量和的运算；
+      \item[法则] 平行四边形法则或三角形法则
+        \begin{center}
+        \begin{tikzpicture}
+          \coordinate(O) at (0,0);
+          \coordinate(A) at (2,0);
+          \coordinate(B) at(1,2);
+          \coordinate(C) at ($(A)+(B)$);
+          \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{a}$};
+          \draw[->,>=latex] (O)--(C)node[midway,above,sloped](a){\small$\bm{a}+\bm{b}$};
+          \draw[->,>=latex] (A)--(C)node[midway, below](a){\small$\bm{b}$};
+          \begin{scope}[xshift=4cm]
+            \coordinate(O) at (0,0);
+            \coordinate(A) at (2,0);
+            \coordinate(B) at(1,2);
+            \coordinate(C) at ($(A)+(B)$);
+            \draw[->,>=latex] (O)--(A)node[midway ,below](a){\small$\bm{a}$};
+            \draw[->,>=latex] (O)--(C)node[midway ,below,sloped](a){\small$\bm{a}+\bm{b}$};
+            \draw[->,>=latex] (O)--(B)node[midway, left](a){\small$\bm{b}$};
+            \draw[dashed](B)--(C);
+            \draw[dashed](A)--(C);
+          \end{scope}
+        \end{tikzpicture}
+        \end{center}
+        {\kaishu 对于零向量与任一向量$\bm{a}$，规定$$\bm{a}+\bm{0}=\bm{0}+\bm{a}=\bm{a}$$}\par
+        由三角形法则，可得向量不等式：$$\abs{\bm{a}}+\abs{\bm{b}}\leqslant \abs{\bm{a}+\bm{b}}\leqslant \abs{\bm{a}}+\abs{\bm{b}}$$
+      \item[运算律]
+        \begin{itemize}%[leftmargin=*]
+          \item 交换律：$\bm{a}+\bm{b}=\bm{b}+\bm{a}$\
+          \item 结合律：$(\bm{a}+\bm{b})+\bm{c}=\bm{a}+(\bm{b}+\bm{c})$
+        \end{itemize}
+    \end{description}
+  \subsection{减法}
+    \begin{description}
+      \item[定义]减去一个向量相当于加上这个向量的相反向量，即$$\bm{a}-\bm{b}=\bm{a}+\bm{-b}$$
+      \item[运算法则]三角形法则、平行四边形法则，$\vv{AB}-\vv{AC}=\vv{CB}$.
+      \begin{center}
+      \begin{tikzpicture}
+        \coordinate(O) at (0,0);
+        \coordinate(A) at (2,0);
+        \coordinate(B) at(1.5,1.5);
+        \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{b}$};
+        \draw[->,>=latex] (O)--(B)node[midway, left](a){\small$\bm{a}$};
+        \draw[->,>=latex](A)--(B)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
+        \begin{scope}[xshift=6cm]
+          \coordinate(O) at (0,0);
+          \coordinate(B) at (2,0);
+          \coordinate(A) at(1.5,1.5);
+          \coordinate(B1) at (-2,0);
+          \coordinate(C)at($(B1)+(A)$);
+          \draw[->,>=latex] (O)--(B)node[midway,below](a){\small$\bm{b}$};
+          \draw[->,>=latex] (O)--(A)node[midway, left](a){\small$\bm{a}$};
+          \draw[->,>=latex](B)--(A)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
+          \draw[->,>=latex](O)--(B1)node[midway,below](b1){\small$\bm{-b}$};
+          \draw[->,>=latex](O)--(C)node[midway,below,sloped](b1){\small$\bm{a-b}$};
+          \draw[dashed] (B1)--(C) (A)--(C);
+        \end{scope}
+      \end{tikzpicture}
+      \end{center}
+    \end{description}
+  \subsection{数乘}
+    \begin{description}
+      \item[定义] 求实数$ \lambda $与向量$\bm{a}$的积是一个向量，记作$\lambda\bm{a}$,长度与方向由以下法则规定：
+      \item[法则]
+      \begin{enumerate}[label=\arabic*)]
+        \item $\abs{\lambda \bm{a}}=\abs{\lambda}\abs{\bm{a}} $;
+        \item 当$ \lambda>0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相同；
+        \item 当$ \lambda<0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相反.
+      \end{enumerate}
+      \item[运算律]
+      设$\lambda,\mu\in\mathbb{R}$，则：\par
+      \begin{itemize}
+          \item $\lambda(\mu\bm{a})=(\lambda\mu)\bm{a}$;
+          \item $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$;
+          \item $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambda\bm{b}$.
+      \end{itemize}
+    \end{description}
+    \begin{Theorem}[向量共线定理]
+      向量$\bm{a}~(\bm{a}\ne\bm{0})$与向量$\bm{b}$共线,当且仅当存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.
+    \end{Theorem}
+  \begin{exercise}{基础测试}
+    \item
+      如图，$\vv{AB}+\vv{BC}-\vv{AD}$等于\xz
+      \begin{minipage}[b]{0.7\linewidth}
+      	\xx{$\vv{AD}$}{$\vv{DC}$}{$\vv{DB}$}{$\vv{AB}$}
+      \end{minipage}\hfill
+      \begin{minipage}[h]{0.3\linewidth}
+        \begin{tikzpicture}
+          \coordinate[label=left:$B$](B)at(0,0);
+          \coordinate[label=right:$C$](C)at(3,0);
+          \coordinate[label=above:$A$](A)at(1.5,2);
+          \coordinate[label=below:$D$](D)at($(B)!0.4!(C)$);
+          \draw (A)--(B)--(C)--cycle;
+          \draw (A)--(D);
+        \end{tikzpicture}
+      \end{minipage}
+      \begin{answer}
+        B
+      \end{answer}
+    \item
+      如图所示，在五边形$ABCDE$中，若四边形$ACDE$是平行四边形，且$\vv{AB}=\bm{a}$，$\vv{AC}=\bm{b}$，$\vv{AE}=\bm{c}$，试用向量$\bm a$，$\bm b$，$\bm c$表示向量$\vv{BD}$，$\vv{BC}$，$\vv{BE}$，$\vv{CD}$及$\vv{CE}$.
+      \begin{flushright}
+        \begin{tikzpicture}
+          \coordinate[label=left:$D$](D)at(0,0);
+          \coordinate[label=right:$E$](E)at(3,0);
+          \coordinate[label=above:$C$](C)at(1,1.5);
+          \coordinate[label=below:$A$](A)at($(C)+(E)$);
+          \coordinate[label=below:$B$](B)at(3.5,2.5);
+          \draw (A)--(B)--(C)--(D)--(E) --cycle;
+          \draw (B)--(D) (B)--(E) (C)--(E);
+          \draw[->,>=latex] (A)--(B);
+          \draw[->,>=latex] (A)--(C);
+          \draw[->,>=latex] (A)--(E);
+        \end{tikzpicture}
+      \end{flushright}
+      \begin{answer}
+        $\vv{BD}=-\bm a+\bm c+\bm b$；$\vv{BC}=\bm b-\bm a$；$\vv{BE}=\bm a-\bm a$；$\vv{CD}=\bm c$；$\vv{CE}=\bm c-\bm b$.
+      \end{answer}
+    \item
+      \begin{enumerate}[label=\arabic*)]
+        \item $3(6\bm{a}+\bm{b})-9(a+\dfrac13\bm{b})=$\tk;
+        \item 若$2(\bm{y}-\dfrac13\bm{a})-\dfrac12(\bm c+\bm b-3\bm y)+\bm b=0$其中$\bm a$，$\bm b$，$\bm c$为已知向量，则未知向量$\bm y=$\tk.
+        \item 若$\bm a=\bm b+\bm c$，化简$3(\bm a+2\bm b)-2(3\bm b+\bm c)-2(\bm a+\bm b)=$\tk.
+      \end{enumerate}
+      \begin{answer}
+        (1)$9\bm a$；(2)$\dfrac4{21}\bm a-\dfrac17\bm b+\dfrac17\bm c$；$-\bm a$.
+      \end{answer}
+  \end{exercise}
+\newpage
+\section{习题}
+\begin{exercise}
+  \item
+    一辆汽车从$A $点出发向西行驶了100 km 到达$B $点，然后又改变方向向西偏北$50\textdegree$走了200 km到达$C$ 点，最后又改变方向，向东行驶了100 km 到达$D$ 点.\\
+    (1)作出向量$\vv{AB}$，$\vv{BC}$，$\vv{CD}$；\\
+    (2)求$\abs{\vv{AD}}$.\\
+  \vspace{4cm}\\
+  \begin{minipage}[b]{0.65\linewidth}
+  \item
+    在$\triangle ABC$中，点$ M$，$N $满足$ \vv{AM}=2\vv{MC}$，$\vv{BN}=\vv{NC}$.若$\vv{MN}=x\vv{AB}+y\vv{AC}$，则$ x= $\tk;$ y= ~$ \tk.
+    \begin{answer}
+      $x=\dfrac12$；$y=-\dfrac16$
+    \end{answer}
+  \end{minipage}
+  \begin{minipage}[htbp!]{0.3\linewidth}
+    \begin{center}
+    \begin{tikzpicture}
+      \draw(0,0)node[below](B){\small$B$}--(1,0)node[below](N){\small$N$}--(2,0)node[below](C){\small$C$};
+      \draw (0,0)--(1.1,2.1)node[above](A){\small$A$}--(2,0);
+      \draw (1,0)--(1.1,2.1);
+      \draw(1,0)--($(1.1,2.1)!0.7!(2,0)$)node[right](M){\small$M$};
+    \end{tikzpicture}
+    \end{center}
+  \end{minipage}
+  \item
+    (2018届贵州遵义航天高级中学一模)如图所示，向量$\vv{OA}=\bm{a}$，$\vv{OB}=\bm{b}$，$\vv{OC}=\bm{c}$，$A$，$B$，$C$在一条直线上，且$\vv{AC}=3\vv{CB}$，则\xz
+    \begin{minipage}[b]{0.7\linewidth}
+      \xx{$\bm{c}=\dfrac32\bm{b}-\dfrac12\bm{a}$}
+        {$\bm{c}=\dfrac32\bm{a}-\dfrac12\bm{b}$}
+        {$\bm{c}=-\bm{a}+2\bm{b}$}
+        {$\bm{c}=\bm{a}+2\bm{b}$}
+    \end{minipage}\hfill
+    \begin{minipage}[htbp!]{0.3\linewidth}
+      \begin{center}
+      \begin{tikzpicture}
+        \coordinate[label=left:$O$](O)at(0,0);
+        \coordinate[label=right:$C$](C)at(3,0);
+        \coordinate[label=left:$A$](A)at(-1,2.5);
+        \coordinate[label=right:$B$](B)at($(A)!0.66!(C)$);
+        \draw (A)--(B)--(C)--cycle;
+        \draw[->,>=latex] (O)--(C);
+        \draw[->,>=latex] (O)--(A);
+        \draw[->,>=latex] (O)--(B);
+      \end{tikzpicture}
+      \end{center}
+  \end{minipage}
+    \begin{answer}
+      A
+    \end{answer}
+  \item
+    设向量$\bm a$，$\bm b$不共线，向量$\lambda\bm a+\bm b$与$\bm a+2\bm b$共线，则实数$\lambda=$\tk.
+    \begin{answer}
+      $\dfrac12$
+    \end{answer}
+  \item
+    如图，在$\triangle ABC$中，$D$，$E$为边$AB$的两个三等分点，$\vv{CA}=3\bm a$，$\vv{CB}=2\bm b$，求$\vv{CD}$，$\vv{CE}$(用$\bm a$，$\bm b$表示).
+    \begin{flushright}
+      \begin{tikzpicture}
+        \coordinate[label=left:$B$](B)at(0,0);
+        \coordinate[label=right:$C$](C)at(2.5,0);
+        \coordinate[label=above:$A$](A)at(3,3);
+        \coordinate[label=above:$E$](E)at($(B)!0.33!(A)$);
+        \coordinate[label=above:$D$](D)at($(B)!0.66!(A)$);
+        \draw (A)--(B)--(C) --cycle;
+        \draw (C)--(D) (C)--(E);
+        \draw[->,>=latex] (C)--(A);
+        \draw[->,>=latex] (C)--(B);
+      \end{tikzpicture}
+    \end{flushright}
+    \begin{answer}
+      $\vv{CD}=2\bm a+\dfrac23\bm b$；$\vv{CE}=\bm a+\dfrac43\bm b$
+    \end{answer}
+  \item
+    设$\bm a$，$\bm b$是不共线的两个非零向量.\\
+    (1)若$\vv{OA}=2\bm a-\bm b$，$\vv{OB}=3\bm a+\bm b$，$\vv{OC}=\bm a-3\bm b$，求证：$A$，$B$，$C$三点共线；\\
+    (2)若$8\bm a+k\bm b$与$k\bm a+\2\bm b$共线，求实数$k$的值；\\
+    (3)若$\vv{OM}=m\bm a$，$\vv{ON}=n\bm b$，$\vv{OP}=\alpha\bm a+\beta\bm b$，其中$m$，$n$，$\alpha$，$\beta$均为实数，且$m,n\neq 0$，若$M$，$P$，$N$三点共线，求证：$\dfrac{\alpha}m+\dfrac{\beta}n=1$
+    \begin{answer}
+      (1)$\because \vv{AB}=\bm a+2\bm b$，$\vv{CB}=2\bm a+4\bm b$；$\therefore \vv{CB}=2\vv{AB}$；\\
+      (2)$k=2\sqrt2$；
+    \end{answer}
+    \vspace{5cm}
+  \item
+    设点$G$为$\triangle ABC$重心，$D$，$E$，$F$分别为各边中点.试用向量证明：$AG=\dfrac23 AD$.
+    \begin{flushright}
+      \begin{tikzpicture}
+        \coordinate[label=left:$B$](B)at(0,0);
+        \coordinate[label=right:$C$](C)at(3,0);
+        \coordinate[label=above:$A$](A)at(2,2);
+        \coordinate[label=below:$D$](D)at($(B)!0.5!(C)$);
+        \coordinate[label=right:$E$](E)at($(A)!0.5!(C)$);
+        \coordinate[label=above:$F$](F)at($(B)!0.5!(A)$);
+        \coordinate[label=above:$G$](G)at($(D)!0.33!(A)$);
+        \draw (A)--(B)--(C) --cycle;
+        \draw (A)--(D) (B)--(E) (C)--(F);
+      \end{tikzpicture}
+    \end{flushright}
+  \vspace{2cm}
+\end{exercise}
+\section{课后作业}
+  \begin{exercise}
+    \item
+      判断下列结论是否正确(请在括号中打“\checkmark”或“\XSolidBrush”)\\
+      (1)向量就是有向线段．(　　)\\
+      (2)如果$\abs{\vv{AB}}>\abs{\vv{CD}}$，那么$\vv{AB}>\vv{CD}$．(　　)\\
+      (3)力、速度和质量都是向量.(　　)\\
+      (4)若$\bm a$，$\bm b$都是单位向量，则$\bm a=\bm b$．(　　)\\
+      (5)若$\bm a=\bm b$，且$\bm a$与$\bm b$的起点相同，则终点也相同．(　　)\\
+      (6)零向量的大小为0，没有方向．(　　)\\
+      \begin{answer}
+        (5)正确，其余皆误.
+      \end{answer}
+    \item
+      给出下列命题：
+      \ding{192}两个具有公共终点的向量，一定是共线向量；
+      \ding{193}两个向量不能比较大小，但它们的模能比较大小；
+      \ding{194}$\lambda\bm{a}=\bm{0}$($\lambda$为实数)，则$\lambda$必为零；
+      \ding{195}$\lambda$，$\mu$为实数，若$\lambda\bm{a}=\mu\bm{b}$，则$\bm{a}$与$\bm{b}$共线．
+      其中正确的命题的个数为\xz
+      \xx{1}{2}{3}{4}
+      \begin{answer}
+        A
+      \end{answer}
+    \item
+      (2018·安徽淮北第一中学最后一卷)设$\bm{a}$，$\bm{b}$都是非零向量，下列四个条件，使$\dfrac{\bm{a}}{\abs{\bm{a}}}=\dfrac{\bm{b}}{\abs{\bm{b}}}$成立当且仅当\xz
+      \xx{$\bm a=\bm b$}
+      {$\bm a=2\bm b$}
+      {$\bm a\varparallel\bm b$且$\abs{\bm a}=\abs{\bm b}$}
+      {$\bm a\varparallel\bm b$且方向相同}
+      \begin{answer}
+        D
+      \end{answer}
+    \item
+      已知四边形$ABCD$ 是菱形，则下列等式中成立的是\xz
+      \xx{$\vv{AB}+\vv{BC}=\vv{CA}$}
+        {$\vv{AB}+\vv{AC}=\vv{BC}$}
+        {$\vv{AC}+\vv{BA}=\vv{AD}$}
+        {$\vv{AC}+\vv{AD}=\vv{DC}$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item
+      已知$AM$ 是$\triangle ABC$ 的边$BC$ 上的中线，若$\vv{AB}=\bm a$，$\vv{AC}=\bm b$，则$\vv{AM}$等于\xz
+      \xx{$\dfrac12(\bm a-\bm b)$}
+        {$-\dfrac12(\bm a-\bm b)$}
+        {$\dfrac12(\bm a+\bm b)$}
+        {$-\dfrac12(\bm a+\bm b)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item
+      化简：\\
+      \circled{1} $\vv{BC}+\vv{AB}$; \hspace{2em} \circled{2} $\vv{DB}+\vv{CD}+\vv{BC}$;\\
+      \circled{3} $\vv{AB}-\vv{FD}+\vv{CD}-\vv{CB}+\vv{FA}$;\hspace{2em} \circled{4} $(\vv{AC}+\vv{BO}+\vv{OA})-(\vv{DC}-\vv{DO}-\vv{OB})$;\\
+      \vspace{4cm}
+      \begin{answer}
+        \circled{1}$\vv{AC}$；\circled{2}$\bm 0$；\circled{3}$\bm 0$；\circled{4}$\bm 0$
+      \end{answer}
+    \item
+      一架飞机从$A$ 地按北偏东$35\textdegree$的方向飞行800 km 到达$B$ 地接到受伤人员，然后又从$B$ 地按南偏东$55\textdegree$的方向飞行600 km 送往$C $地医院，求这架飞机飞行的路程及两次位移的和．
+    \begin{answer}
+      路程1400km，位移1000km.
+    \end{answer}
+    \vspace{4cm}
+    \item
+      设点$G$为$\triangle ABC$重心，$D$，$E$，$F$分别为各边中点.\\
+      (1)试用向量证明：三角形三条中线共点；
+      (2)求$\vv{AD}+\vv{BE}+\vv{CF}$.
+      \begin{flushright}
+        \begin{tikzpicture}
+          \coordinate[label=left:$B$](B)at(0,0);
+          \coordinate[label=right:$C$](C)at(3,0);
+          \coordinate[label=above:$A$](A)at(2,2);
+          \coordinate[label=below:$D$](D)at($(B)!0.5!(C)$);
+          \coordinate[label=right:$E$](E)at($(A)!0.5!(C)$);
+          \coordinate[label=above:$F$](F)at($(B)!0.5!(A)$);
+          \coordinate[label=above:$G$](G)at($(D)!0.33!(A)$);
+          \draw (A)--(B)--(C) --cycle;
+          \draw (A)--(D) (B)--(E) (C)--(F);
+        \end{tikzpicture}
+      \end{flushright}
+      \vspace{2cm}
+    \item
+      已知$\vv{OA}=\lambda\vv{OB}+\mu\vv{OC}$($\lambda,\mu\in\mathbb{R}$)，若$\lambda+\mu=1$,求证：点$A$，$B$，$C$三点共线.\\
+      \vspace{4cm}
+    \item
+      【定比分点坐标公式】如图，设$P$为$\triangle ABO$边$AB$上一点.设$\vv{OA}=\bm a$，$\vv{OB}=\bm b$\vspace{8pt}\\
+      (1)求证：$\vv{OP}=\dfrac{\abs{\vv{PB}}}{\abs{\bm b-\bm a}}\bm a+\dfrac{\abs{\vv{PA}}}{\abs{\bm b-\bm a}}\bm b$；\vspace{8pt}\\
+      (2)设$\vv{AP}=\lambda\vv{PB}$,求证：$\vv{OP}=\dfrac{\bm a+\lambda\bm b}{1+\lambda}$
+      \begin{flushright}
+        \begin{tikzpicture}
+          \coordinate[label=left:$O$](O)at(0,0);
+          \coordinate[label=right:$A$](A)at(3,0);
+          \coordinate[label=above:$B$](B)at(2,2);
+          \coordinate[label=right:$P$](P)at($(B)!0.4!(A)$);
+          \draw (A)--(B)--(O) --cycle;
+          \draw[->,>=latex] (O)--(A);
+          \draw[->,>=latex] (O)--(B);
+          \draw[->,>=latex] (O)--(P);
+        \end{tikzpicture}
+      \end{flushright}
+  \end{exercise}
+\stopexercise
+\newpage
+\section{部分参考答案}
+\printanswer

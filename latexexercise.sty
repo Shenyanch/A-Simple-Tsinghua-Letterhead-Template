@@ -15,9 +15,20 @@
 \def\ltxex@ansfilename{\jobname.ans}
 
 \newcounter{exercise}
-%标号分章节
+% 标号分章节
+\ifdefined\c@chapter
+  \@addtoreset{exercise}{chapter}
+  \def\theexercise{\arabic{chapter}.\arabic{exercise}}
+\else\ifdefined\c@section
+  \@addtoreset{exercise}{section}
+  \def\theexercise{\arabic{section}.\arabic{exercise}}
+\else
+  \def\theexercise{\arabic{exercise}}
+\fi\fi
+% 标号不分章节
+% \newcounter{exercises}
 % \ifdefined\c@chapter
-%   \@addtoreset{exercise}{chapter}
+%   \@addtoreset{exercises}{chapter}
 %   \def\theexercise{\arabic{chapter}.\arabic{exercise}}
 % \else\ifdefined\c@section
 %   \@addtoreset{exercise}{section}
@@ -25,7 +36,6 @@
 % \else
 %   \def\theexercise{\arabic{exercise}}
 % \fi\fi
-%标号不分章节
 
 
 %\def\exercisename{练习}

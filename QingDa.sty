@@ -6,20 +6,24 @@
 \RequirePackage{fancyhdr}
 \RequirePackage[export]{adjustbox}
 \RequirePackage{tabularx}
-\usepackage{titlesec}
+\RequirePackage{titlesec}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{zhnumber}
-%\RequirePackage{latexexercise}
+\RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
 %数学符号
-\RequirePackage{amsmath,amsfonts,amssymb,times }%AMS宏包
+\RequirePackage{amsmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
+\RequirePackage[g]{esvect}%向量表示包
+\usepackage{enumitem}
+\setlist[enumerate]{itemsep=0mm}
 %绘图
 \RequirePackage{tikz,
             pgfplots,
             tkz-euclide}
 \usetikzlibrary{automata,
                 positioning}
-
+\RequirePackage{fontspec,txfonts,setspace}
+\setmainfont{Times New Roman}
 % 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
 % 用法：\rmnum{数字}，\Rmnum{数字}
 %\makeatletter
@@ -96,9 +100,9 @@
 \fancyfoot[C]{
 \resizebox{!}{0.9\baselineskip}
 {\begin{tabular}[c]{@{} c @{}}
-      \large{\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}} \\
-      \small{\vspace{1em}清大教学部内部版权所有\hspace{2em}未经允许\hspace{2em}严禁复制} \\
-      \small{第\thepage 页}
+      \Huge{\vspace{0.3em}\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}} \\
+      \LARGE{\vspace{0.5em}清大教学部内部版权所有\hspace{1em}未经允许\hspace{1em}严禁复制} \\
+      \LARGE{第\thepage 页}
 \end{tabular}}
 }
 }
@@ -191,7 +195,14 @@
 %末尾的时候，可以在后面加上句号。
 %       横线的默认长度是 2.5cm， 可以使用\tk[3]将横线改为 3cm。
 \newcommand{\tk}[1][2.5]{\,\underline{\mbox{\hspace{#1 cm}}}\,}
-
+\newcommand{\tkline}[1]{\rule[-3pt]{#1cm}{0.4pt}}
+% \newcommand{\tk}[1][2.5]{
+% \setlength{\lengthtemp}{1cm}%
+% \whiledo{\lengthtest{\lengthtemp<\tklength}}{
+% ifthenelse{\equal{#1}{m}}{}{\linebreak[3]}
+% rulew
+% }
+% \,\underline{\mbox{\hspace{#1 cm}}}\,}
 
 
 
@@ -233,24 +244,24 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\let\orig@Itemize =\itemize
-\let\orig@Enumerate =\enumerate
-\let\orig@Description =\description
-
-\def\Myspacing{\itemsep=1.5ex \topsep=-0.5ex \partopsep=0pt \parskip=0pt \parsep=0.5ex}
-\def\newitemsep{
-\renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
-\renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
-\renewenvironment{description}{\orig@Description\Myspacing}{\endlist}
-}
-
-\def\olditemsep{
-\renewenvironment{itemize}{\orig@Itemize}{\endlist}
-\renewenvironment{enumerate}{\orig@Enumerate}{\endlist}
-\renewenvironment{description}{\orig@Description}{\endlist}
-}
-
-\newitemsep
+% \let\orig@Itemize =\itemize
+% \let\orig@Enumerate =\enumerate
+% \let\orig@Description =\description
+%
+% \def\Myspacing{\itemsep=1.5ex \topsep=-0.5ex \partopsep=0pt \parskip=0pt \parsep=0.5ex}
+% \def\newitemsep{
+% \renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
+% \renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
+% \renewenvironment{description}{\orig@Description\Myspacing}{\endlist}
+% }
+%
+% \def\olditemsep{
+% \renewenvironment{itemize}{\orig@Itemize}{\endlist}
+% \renewenvironment{enumerate}{\orig@Enumerate}{\endlist}
+% \renewenvironment{description}{\orig@Description}{\endlist}
+% }
+%
+% \newitemsep
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 修改引用的格式，
@@ -272,3 +283,10 @@
 \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
 \renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
 %=======================================================================
+\newcommand{\circled}[1]{\textcircled{\scriptsize #1}}
+\newcommand{\dcircled}[1]{}
+\newcommand{\ee}{{\mathrm e}}
+\newcommand{\ii}{{\mathrm i}}
+\newcommand{\dd}{{\mathrm d}}
+\newcommand{\ppi}{{\mathrm \pi}}
+\newcommand{\abs}[1]{\left| #1 \right|}
