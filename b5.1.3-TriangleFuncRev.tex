@@ -1,0 +1,245 @@
+\Topic{三角函数单元复习}
+  \Teach{}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+% \end{exercise}
+\section{习题}
+  % \begin{description}
+  %   \item [label]
+  % \end{description}
+  \begin{exercise}
+    \item%高中数学习题解法辞典.pdf 2-1-8
+      已知$\abs{\cos \theta}\leqslant \abs{\sin\theta}$，则$\theta$的取值范围是\tk.
+      \begin{answer}
+        $\Bigl[k\piup+\dfrac{\piup}4,k\piup+\dfrac{3\piup}4\Bigr],k\in\mathbb{Z}$
+      \end{answer}
+    \item%高中数学习题解法辞典.pdf 2-1-19
+      已知$\sin\Bigl(\dfrac{\piup}2+2x\Bigr)=-\dfrac12$,则$x=$\tk.
+      \begin{answer}
+        k\piup\pm\dfrac{\piup}3(k\in\mathbb{Z})
+      \end{answer}
+    \item%高中数学习题解法辞典.pdf 2-2-4
+      函数$y=\sqrt{25-x^2}+\lg\sin\Bigl(x+\dfrac{\piup}3\Bigr)$的定义域为\tk.
+      \begin{answer}
+        $\Bigl[-5,-\dfrac{4\piup}3\Bigr)\bigcup\Bigl(-\dfrac{\piup}3,\dfrac{2\piup}3\Bigr)$
+      \end{answer}
+    \item%LaTeX-master/sanjiaohanshu/sanjiaohanshu-gaokao.tex 4
+      函数$f(x)=\cos(\omega x+\varphi)$的部分图象如图所示，则$f(x)$的单调递减区间为\xz
+      \begin{minipage}[b]{0.8\linewidth}
+        \vspace{2.5em}
+        \xx{$\Bigl(k\piup-\dfrac{1}{4},k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$ \Bigl(2k\piup-\dfrac{1}{4},2k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$ \Bigl(k-\dfrac{1}{4},k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$\Bigl(2k-\dfrac{1}{4},2k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z} $}
+      \end{minipage}\hfill
+      \begin{minipage}[h]{0.2\linewidth}
+        \vspace{-3cm}
+        \begin{tikzpicture}
+          \node[below left](O) at(0,0) {\small$\bm{O}$};
+          \draw(0,1)node[right]{\tiny$1$}--(0.1,1);
+          \clip(-1.2,-1.2) rectangle (2,1.5);
+          \draw[->,>=stealth](-1.2,0)--(2,0) node[below left] (x){$x$};
+          \draw[->,>=stealth](0,-1.2)--(0,1.5) node[below right] (y){$y$};
+          \draw[domain=-1.2:2,samples=1000] plot(\x,{cos((pi*(\x)+1/4*pi) r)});
+          \node[below] (A)at (0.25,0){$\frac{1}{4}$};
+          \node[below] (B)at (1.25,0){$\frac{5}{4}$};
+        \end{tikzpicture}
+      \end{minipage}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%《习题化知识清单》P72知识2-2
+      不等式$\tan x>a$在$x\in\Bigl(-\dfrac{\piup}4,\dfrac{\piup}2 \Bigr)$上恒成立，则$a$的取值范围是\xz
+      \xx{$(-\infty,-1]$}
+        {$(-\infty,-1)$}
+        {$(-\infty,1]$}
+        {$(-\infty,1]$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%福州三中中学2015-2016学年高一数学第二学期期末检测.docx-9
+      (福州三中中学2015-2016学年高一数学第二学期期末检测9)将函数$y=\sin\Bigl(x-\dfrac{\piup}3\Bigr)$的图像上所有点的横坐标伸长到原来的2倍（纵坐标不变），再将所得的图像向左平移$\dfrac{\piup}3$个单位，得到的函数图像对应的解析式是\xz
+      \xx{$y=\sin\dfrac x2$}
+        {$y=\sin\Bigl(\dfrac x2-\dfrac{\piup}2\Bigr)$}
+        {$y=\sin\Bigl(\dfrac{x}2-\dfrac{\piup}6\Bigr)$}
+        {$y=\sin\Bigl(2x-\dfrac{\piup}6\Bigr)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《习题化知识清单》P73易混清单例
+      函数$y=2\sin\Bigl(\dfrac{\piup}3-2x \Bigr)$的单调增区间为\tk.
+      \begin{answer}
+        $\Bigl[k\piup+\dfrac{5\piup}{12},k\piup+\dfrac{11\piup}{12} \Bigr],k\in\mathbb{Z}$
+      \end{answer}
+    \item%《习题化知识清单》P72例1
+      函数$\dfrac{\sin x+2}{\sin x+1},x\in\Bigl[0,\dfrac{\piup}2\Bigr]$的值域为\tk.
+      \begin{answer}
+        $\Bigl[\dfrac32,2\Bigr]$
+      \end{answer}
+    \item%LaTeX-master/sanjiaohanshu/gaokaosection.tex 31
+      把函数$ y=\sin 2x $的图象沿$x$轴向左平移$ \dfrac{\piup}{6} $个单位，纵坐标伸长到原来的2倍(横坐标不变)后得到函数$ y=f(x) $的图象，对于函数$ y=f(x) $有以下四个判断：\\
+      \ding{192} 该函数的解析式为$ y=2\sin \Bigl(2x+\dfrac{\piup}{6}\Bigr) $;\\
+      \ding{193} 该函数图象关于点$ \Bigl(\dfrac{\piup}{3},0\Bigr) $对称；\\
+      \ding{194} 该函数在$ \Bigl[0,\dfrac{\piup}{6}\Bigr] $上是增函数；\\
+      \ding{195} 若函数$ y=f(x)+a $在$ \Bigl[0,\dfrac{\piup}{2}\Bigr] $上的最小值为$ \sqrt{3},\  $则$ a=2\sqrt{3} .$\\
+      其中，正确判断的序号是\tk.
+      \begin{answer}
+        \circled{2}\circled{4}
+      \end{answer}
+    \newpage
+    \item%福州格致中学2015-2016学年高一数学第二学期期末检测.docx-22
+      (福州格致中学2015-2016学年高一数学第二学期期末检测22)已知函数$f(x)=A\sin(\omega x+\varphi)+B (A>0,\omega>0)$的一系列对应值如下表:
+      \begin{center}
+        \renewcommand{\arraystretch}{1.8}
+        \begin{tabular}{|*{8}{c|}}
+          \hline
+          $x$
+          &$-\dfrac{\piup}6$
+          &$-\dfrac{\piup}3$
+          &$-\dfrac{5\piup}6$
+          &$-\dfrac{4\piup}3$
+          &$-\dfrac{11\piup}6$
+          &$-\dfrac{7\piup}3$
+          &$-\dfrac{17\piup}6$\\
+          \hline
+          $y$
+          &$-1$
+          &$1$
+          &$3$
+          &$1$
+          &$-1$
+          &$1$
+          &$3$\\
+          \hline
+        \end{tabular}\\
+      \end{center}
+      (1)根据表格提供的数据求函数$f(x)$的一个解析式；\\
+      (2)根据(1)的结果：\\
+      \;(i)当$x\in\Bigl[0,\dfrac{\piup}3\Bigr]$时，方程$f(3x)=m$恰有两个不同的解，求实数$m$的取值范围；\\
+      \;(ii)若是$\alpha,\beta$是锐角三角形的两个内角，试比较$f(\sin \alpha)$与$f(\cos \beta)$的大小.
+      \begin{answer}
+        (1)$f(x)=2\sin\Bigl(x-\dfrac{\piup}3\Bigr)+1$；(2)(i)$[\sqrt{3}+1,3)$;(ii)易得$f(x)$在$[-\dfrac{\piup}6,\dfrac{5\piup}6]$上单调递增，故$f(x)$在$[0,1]$上单调递增；又$0<\dfrac{\piup}2-\beta<\alpha<\dfrac{\piup}2$，从而$\sin\alpha>\sin(\dfrac{\piup}2-\beta)=\cos\beta$，于是$f(\sin \alpha)>f(\cos \beta)$
+      \end{answer}
+    \vspace{6.5cm}
+    \item%高中数学习题解法辞典.pdf 2-2-9
+      已知函数$y=f(x)$的定义域为$\mathbb{R}$，若$f(x+2)=-f(x)$，且当$-1\leqslant x\leqslant 1$时，$f(x)=x$，求证：\\
+      (1)函数$y=f(x)$是最小正周期为4的周期函数；\\
+      (2)函数$y=f(x)$是奇函数；\\
+      (3)当$x\in[4k-1,4k+1](k\in\mathbb{Z})$时，$y=f(x)$是增函数；当$x\in[4k+1,4k+3](k\in\mathbb{Z})$时，$y=f(x)$是减函数.
+      % \begin{answer}
+      %
+      % \end{answer}
+  \end{exercise}
+
+\newpage
+\section{课后作业}
+  \begin{exercise}
+    \item%高中数学习题解法辞典.pdf 2-1-74
+      已知$1+\sin^2x=\cos x$，则$x=$\tk.
+      \begin{answer}
+        $2k\piup(k\in\mathbb{Z})$
+      \end{answer}
+    \item%《习题化知识清单》P72方法2-1
+      函数$\abs{\sin x}$的一个单调区间是\xz
+      \xx{$\Bigl(\dfrac{\piup}2,\piup\Bigr)$}
+        {$\Bigl(\piup,2\piup\Bigr)$}
+        {$\Bigl(\piup,\dfrac{3\piup}2\Bigr)$}
+        {$\Bigl(0,\piup\Bigr)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%LaTeX-master/sanjiaohanshu/gaokaosection.tex 13
+       已知函数$f(x)=\Bigg\{\begin{aligned}
+      \sin(x+a),x\le 0\\\cos (x+b),x>0
+      \end{aligned}$是偶函数，则下列结论可能成立的是\xz
+       \xx{$ a=\dfrac{\piup}{4},b=-\dfrac{\piup}{4}$}
+        {$ a=\dfrac{2\piup}{3},b=\dfrac{\piup}{6}$}
+        {$a=\dfrac{\piup}{3},b=\dfrac{\piup}{6} $}
+        {$ a=\dfrac{5\piup}{6},b=\dfrac{2\piup}{3}$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《习题化知识清单》P77单元检测10
+      定义在$\mathbb{R}$上的偶函数$f(x)$满足$f(x+1)=-\dfrac2{f(x)}(f(x)\neq0)$，且在区间$(2013,2014)$上单调递增.已知$\alpha,\beta$是锐角三角形的两个内角，则$f(\sin\alpha),f(\cos\beta)$的大小关系是\xz
+      \xx{$f(\sin\alpha)<f(\cos\beta)$}
+        {$f(\sin\alpha)>f(\cos\beta)$}
+        {$f(\sin\alpha)=f(\cos\beta)$}
+        {以上情况均有可能}
+    \item%《习题化知识清单》P72知识3-3
+      若函数$y=2\cos(2x+\varphi)$是偶函数，且在$\Bigl(0,\dfrac{\piup}4\Bigr)$上是增函数，则实数$\varphi$可能是\xz
+      \xx{$-\dfrac{\piup}2$}
+        {0}
+        {{$\dfrac{\piup}2$}}
+        {$\piup$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%高中数学习题解法辞典.pdf 2-1-74
+      比较$\sin 3$，$\cos 3$，$\tan 0.8$的大小关系为\tk.
+      \begin{answer}
+        $\tan 0.8>\sin 3>\cos 3$
+      \end{answer}
+    \item%LaTeX-master/sanjiaohanshu/gaokaosection.tex 26
+      已知函数$f(x)=\sin (2x+\varphi)$，若$    f\Bigl(\dfrac{\piup}{12}\Bigr)-f\Bigl(-\dfrac{5\piup}{12}\Bigr)=2 $，则函数$f(x)$的单调增区间为\tk.
+      \begin{answer}
+        $\Bigl[k\piup-\dfrac{5\piup}{12},k\piup+\dfrac{\piup}{12}\Bigr],k\in\mathbb{Z}$
+      \end{answer}
+    \item%函数y＝Asin(ωx＋φ)的图象及简单应用P11.9
+      若$f(x)=\cos\Bigl(2x+\dfrac{\piup}3+\varphi\Bigr)$$(\abs{\varphi}<\dfrac{\piup}2)$是奇函数，则$\varphi=$\tk.
+      \begin{answer}
+        $\dfrac{\piup}6$
+      \end{answer}
+    \item%《习题化知识清单》P77单元检测12
+      设$\omega>0$，若函数$f(x)=2\sin \omega x(\omega>0)$在区间$\Bigl[-\dfrac{\piup}3,\dfrac{\piup}4 \Bigr]$上单调递增，则$\omega$取值范围是\tk.
+      \begin{answer}
+        $\Bigl(0,\dfrac32\Bigr]$
+      \end{answer}
+    \vspace{1em}
+    \item%高中数学习题解法辞典.pdf 2-2-1
+      已知函数$f(x)=A\sin(\omega x+\varphi)(A,\omega,\varphi\text{为常数},\omega>0)$的图像上相邻两个最高点的坐标分别是$\Bigl(\dfrac{\piup}{12},2\Bigr)$，$\Bigl(\dfrac{13\piup}{12},2\Bigr)$.\\
+      (1) 求函数$f(x)$的一个表达式；\\
+      (2)画出函数$f(x)$在长度为一个周期的闭区间上的简图；\\
+      (3)说明经过怎样的变换，可以由$y=\sin x$的图像得到$y=f(x)$的图像.
+      \begin{answer}
+        (1)$y=2\sin\Bigl(2x+\dfrac{\piup}3\Bigr)(\varphi=k\piup-\dfrac{2\piup}3$即可)；(2)略；(3)将$y=\sin x$图像上所有点向左平移$\dfrac{\piup}3$个单位得到$y=\sin \Bigl(x+\dfrac{\piup}3\Bigr)$的图像；再把$y=\sin \Bigl(x+\dfrac{\piup}3\Bigr)$的图像上所有点的横坐标缩短到原来的$\dfrac12$(纵坐标不变)，得到$y=\sin \Bigl(2x+\dfrac{\piup}3\Bigr)$的图像；最后把$y=\sin \Bigl(2x+\dfrac{\piup}3\Bigr)$的图像上所有点的纵坐标伸长到原来的2倍(横坐标不变),即可得到函数$y=f(x)$的图像.
+      \end{answer}
+    \vspace{6cm}
+    \item%函数y＝Asin(ωx＋φ)的图象及简单应用P11.14
+      已知曲线$y=A\sin(\omega x+\varphi)$$(A>0,\omega>0,\abs{\varphi}\leqslant\dfrac{\piup}2)$上最高点为$(2,\sqrt{2})$，该最高点与相邻的最低点间的曲线与$x$轴交于点$(6,0)$.\\
+      (1)该函数的解析式；\\
+      (2)该函数在$x\in[-6,0]$上的值域.
+      \begin{answer}
+        (1)$y=\sqrt{2}\sin\Bigl(\dfrac{\piup}8x+\dfrac{\piup}4\Bigr)$；
+        (2)$[-\sqrt{2},0]$
+      \end{answer}
+    \vspace{5cm}
+    \item%高中数学习题解法辞典.pdf 2-2-44
+      已知函数$f(x)=2\sin\Bigl(\omega x+\dfrac{\piup}6\Bigr)(\omega>0)$，\\
+      (1)求$f(x)$的最大值$M$，最小值$m$以及最小正周期$T$；\\
+      (2)试求最小正整数$\omega$，使得自变量$x$在任意两个整数间(包括整数本身)变化时，函数$f(x)$至少有一个值是$M$，另一个值是$m$.
+      \begin{answer}
+        (1)$M=3,m=-1,T=\dfrac{2\piup}{\omega}$；(2)$\dfrac{2\piup}{\omega}\leqslant 1$，$\omega=7$
+      \end{answer}
+    \vspace{6cm}
+    \item%高中数学习题解法辞典.pdf 2-2-45
+      求证：(1)$f(x)=\sin x\cos x$的最小正周期为$\piup$；\\
+      (2)若函数$y=f(x)(x\in\mathbb{R})$的最小正周期为$T$，则$f(kx)(k>0)$的最小正周期为$\dfrac{T}k$.
+      \begin{answer}
+        (1)(提示：若$0<T<\piup$，令$x=0$，得$T=\dfrac{\piup}2$，不符)；(2)(提示：$f\biggl[k\Bigl(x+\dfrac{T}k\Bigr)\biggr]=f(kx+T)=f(kx)$)
+      \end{answer}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{部分参考答案}
+\printanswer

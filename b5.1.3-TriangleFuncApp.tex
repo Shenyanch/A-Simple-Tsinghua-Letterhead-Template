@@ -1,0 +1,66 @@
+\Topic{函数的平移与伸缩变换&函数$y=A\sin (\omega x+\varphi)$的图像及简单应用}
+  \Teach{函数$y=A\sin (\omega x+\varphi)$的图像变换}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+\begin{exercise}{\heiti 课前检测}\\
+\end{exercise}
+\section{函数的(线性)变换}
+  点$(x_0,y_0)$在图像$y=f(x)$上，则 $y_0=f(x_0)$\\
+  点$(x_0-1,y_0)$在图像$y=f(x+1)$上\\
+  点$(x_0,y_0-1)$在图像$y+1=f(x)$上\\
+  点$(2x_0,y_0)$在图像$y=f(x/2)$上\\
+  点$(x_0,2y_0)$在图像$y/2=f(x)$上\\
+  点$(-x_0,y_0)$在图像$y=f(-x)$上\\
+  点$(x_0,-y_0)$在图像$-y=f(x)$上\\
+  当$\begin{cases}
+      x_0=P(x')\\
+      y_0=Q(y')
+    \end{cases}$时，点$(x',y')$在图像$Q(y)=f(P(x))$上；也即\\
+  在图像$Q(y)=f(P(x))$上每一点可由图像$y=f(x)$上的点$(x_0,y_0)$
+  经变换$\begin{cases}
+          x‘=P^{-1}(x_0)\\
+          y’=Q^{-1}(y_0)
+        \end{cases}$得到.
+\section{函数$y=A\sin (\omega x+\varphi)$的图像}
+  \begin{description}
+    \item [label]
+  \end{description}
+  \begin{exercise}
+    \qs
+      函数$f(x)=\cos\left(\omega x+\varphi\right)$的部分图象如图所示，则$f(x)$的单调递减区间为\xx
+      \begin{center}
+      \begin{tikzpicture}
+        \node[below left](O) at(0,0) {\small$\bm{O}$};
+        \draw(0,1)node[right]{\tiny$1$}--(0.1,1);
+        \clip(-1.2,-1.2) rectangle (2,1.5);
+        \draw[->,>=stealth](-1.2,0)--(2,0) node[below left] (x){$x$};
+        \draw[->,>=stealth](0,-1.2)--(0,1.5) node[below right] (y){$y$};
+        \draw[domain=-1.2:2,samples=1000] plot(\x,{cos((pi*(\x)+1/4*pi) r)});
+        \node[below] (A)at (0.25,0){$\frac{1}{4}$};
+        \node[below] (B)at (1.25,0){$\frac{5}{4}$};
+      \end{tikzpicture}
+      \end{center}
+      \twochx{$ \left(k\pi-\dfrac{1}{4},k\pi+\dfrac{3}{4}\right),k\inZ$}
+        {$ \left(2k\pi-\dfrac{1}{4},2k\pi+\dfrac{3}{4}\right),k\inZ$}
+        {$ \left(k-\dfrac{1}{4},k+\dfrac{3}{4}\right),k\inZ$}
+        {$\left(2k-\dfrac{1}{4},2k+\dfrac{3}{4}\right),k\inZ $}
+  \end{exercise}
+\section{三角函数模型的简单应用-}
+ \fz[12]
+$f(x0)=d d$\fz[4]
+\section{课后作业}
+  \begin{exercise}
+
+  \end{exercise}
+\stopexercise
+\section{参考答案}
+\printanswer
