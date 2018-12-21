@@ -10,19 +10,23 @@
 \RequirePackage{titlesec}
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{zhnumber}
-\RequirePackage{latexexercise}
+% \RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
+\RequirePackage{multicol}%分栏
+  % \setlength{\columnsep}{12pt}​%将栏位之间的距离设为12pt(缺省是10pt)，
+  % \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
 %数学符号
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
 \RequirePackage[g]{esvect}%向量表示包
-\usepackage{enumitem}
-\setlist[enumerate]{itemsep=0mm}
+\RequirePackage{enumitem}
+  \setlist[enumerate]{itemsep=0mm}
 %绘图
 \RequirePackage{tikz,
             pgfplots,
             tkz-euclide}
-\usetikzlibrary{automata,
-                positioning}
+  \usetikzlibrary{calc,math,arrows.meta,graphs,intersections,angles,quotes}
+% \usetikzlibrary{automata,
+%                 positioning}
 \RequirePackage{fontspec,txfonts,setspace}
 \setmainfont{Times New Roman}
 % 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
@@ -133,7 +137,7 @@
 \small
 \arrayrulewidth=1pt
   \centering
-  \renewcommand{\arraystretch}{1.8}
+  \renewcommand{\arraystretch}{1.5}
   \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
   \hline
     {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei \wuhao 首课时间}&\QD@FirstTime&{\hei \wuhao 本课时间}  & \QD@CurrentTime  \\ \hline
@@ -244,7 +248,7 @@
 \setlength{\parskip}{2pt plus1pt minus1pt}
 
 % 定义行距
-\renewcommand{\baselinestretch}{1.2}
+\renewcommand{\baselinestretch}{1.6}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
@@ -295,3 +299,5 @@
 \newcommand{\dd}{{\mathrm d}}
 \newcommand{\ppi}{{\mathrm \pi}}
 \newcommand{\abs}[1]{\left| #1 \right|}
+%right-angle-mark；tikz作垂足；#2#1->#2#3为逆时针方向
+\newcommand{\rAm}[3]{($(#2)!6pt!(#1)$)--($(#2)!6pt!(#1)!6pt!90:(#1)$)--($(#2)!6pt!(#3)$)}

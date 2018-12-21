@@ -1,0 +1,367 @@
+% sty文件使用 \RequirePackage{latexexercise0}
+% 主文件使用 \documentclass[a3paper,twocolumn,2twoside,landscape,12pt,UTF8]{ctexart}
+\hspace{3cm}\\
+\vspace{0.5cm}
+% \part{\centering{\heiti \xiaoer 福州清大教育2018-2019学年高一数学期末考模拟卷}}\\
+\part{\mbox{\heiti \xiaoer 福州清大教育2018-2019学年高一数学期末考模拟卷}}
+  \vspace{-1.5cm}
+  \centering{\heiti \erhao 高一数学\quad 必修四}\\
+  \centering{\wuhao (考试时间：120分钟，满分：150分，另附加分30分)}\\
+  \vspace{-1.6em}
+  \startexercise
+  \begin{exercise}
+  \section{选择题(本大题共12小题，每小题5分，共60分.每题有且只有一个选项是正确的，请把答案填在答卷相应位置上)}
+    \item%福州三中2016-2017学年第二学期高一数学期末考试-1【弧度制与角度制】
+      关于角度制与弧度制的等式，正确的是\xz
+      \xx{$\piup=1\rm{rad}$}
+        {$\piup=180$}
+        {$1^{\textdegree}=\dfrac{180}{\piup}\rm{rad}$}
+        {$1\rm{rad}=\Bigl(\dfrac{180}{\piup}\Bigr)^\textdegree$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%格致中学2015-2016学年第四学段高一期末考试-3【任意角三角函数】
+      已知$\tan\alpha=-\sqrt3,0<\alpha<\piup$，那么$\cos\alpha-\sin\alpha$的值是\xz
+      \xx{$-\dfrac{1+\sqrt3}2$}
+        {$\dfrac{-1+\sqrt3}2$}
+        {$\dfrac{1-\sqrt3}2$}
+        {$\dfrac{1+\sqrt3}2$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%LaTeX-master/xiangliang/xiangliangsorting.tex 练习P7-10【向量共线、线性运算】
+      设$ D $为$\triangle ABC$所在平面内一点，$ \vv{BC}=3\vv{CD} $，则\xz
+      \xx{$ \vv{AD}=-\dfrac{1}{3}\vv{AB}+\dfrac{4}{3}\vv{AC}$}
+        {$ \vv{AD}=\dfrac{1}{3}\vv{AB}-\dfrac{4}{3}\vv{AC}$}
+        {$ \vv{AD}=\dfrac{4}{3}\vv{AB}+\dfrac{1}{3}\vv{AC}$}
+        {$ \vv{AD}=\dfrac{4}{3}\vv{AB}-\dfrac{1}{3}\vv{AC}$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%LaTeX-master/2018/qimo.tex-7【Asin(\omega x+\varphi)】
+      函数$f(x)=2\sin\left(\omega x+\varphi\right)\left(\omega>0,\abs{\varphi}<\dfrac{\pi}{2}\right)$的部分图象如图所示，则$ \omega,\varphi $的值分别是\xz
+      \begin{minipage}[b]{0.7\linewidth}
+        \vspace{1.5cm}
+        \xx{$ 2,-\dfrac{\pi}{3}$}{$2,-\dfrac{\pi}{6} $}{$4,-\dfrac{\pi}{6} $}{$ 4,\dfrac{\pi}{3}$}
+      \end{minipage}\hfill
+      \begin{minipage}[h]{0.3\linewidth}
+        \vspace{-1cm}
+        \begin{tikzpicture}[>=latex,scale=1]
+          \tikzmath{
+            \a = 5*pi/12;
+            \b=11*pi/12;
+          }
+          \draw[->](-1,0)--(4,0) node[below](x){$x$};
+          \draw[->](0,-2.3)--(0,2.3) node[left](y){$y$};
+          \node[below left](O) at(0,0){$\small O$};
+          \draw[domain=0:pi,samples=1000] plot (\x,{2*sin((2*(\x)-pi/3) r)});
+          \draw[dashed] (0,2)node[left](a){$2$}-|(\a,0)node[below](a1){$\dfrac{5\pi}{12}$} ;;
+          \draw[dashed](0,-2)node[left](b){$-2$}-|(\b,0)node[above](b1){$\dfrac{11\pi}{12}$} ;
+          %\draw[dashed] (0,2)-|($(5*pi/12,0)$);
+        \end{tikzpicture}
+      \end{minipage}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《习题化知识清单》P85方法3-4.1【向量夹角垂直】
+      向量$\bm a=(1,-2),\bm b=(2,1)$，则\xz
+      \xx{$\bm a\varparallel \bm b$}
+        {$\bm a\perp \bm b$}
+        {$\bm a$与$\bm b$的夹角为$60\textdegree$}
+        {$\bm a$与$\bm b$的夹角为$30\textdegree$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《习题化知识清单》P84知识5-23【数量积应用，三角形五心】
+      点$O$是$\triangle{ABC}$所在平面上的一点，且满足$\vv{OA}\cdot\vv{OB}=\vv{OB}\cdot\vv{OC}=\vv{OA}\cdot\vv{OC}$，则点$O$是$\triangle{ABC}$的\xz
+        \xx{重心}
+          {垂心}
+          {内心}
+          {外心}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《习题化知识清单》P71知识-4【诱导公式】
+      已知$\sin{\Bigl(\dfrac{\piup}3+\alpha\Bigr)}=-\dfrac{5}{13}$,则$\cos{\Bigl(\dfrac{\piup}6-\alpha \Bigr)}=$\xz
+      \xx{$-\dfrac{5}{12}$}
+        {$\dfrac{5}{13}$}
+        {$-\dfrac{5}{13}$}
+        {$\dfrac{1}{5}$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《习题化知识清单》P89知识3-3【三角恒等变换，综合】
+      若$\alpha\in(0,\piup)$，且$\cos\alpha+\sin\alpha=-\dfrac{1}{3}$，则$\cos{2\alpha}$等于\xz
+        \xx{$\dfrac{17}9$}
+          {$\pm\dfrac{17}9$}
+          {$-\dfrac{17}9$}
+          {$\dfrac{17}3$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《习题化知识清单》P90单元检测10【数量积；三角恒等变换，综合】
+      已知向量$\bm a=\Bigl(\cos\dfrac{3x}2,\sin\dfrac{3x}2\Bigr)$，$\bm b=\Bigl(\cos\dfrac{x}2,-\sin\dfrac{x}2\Bigr)$，且$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$，
+      若$\abs{\bm a+\bm b}=2\bm a\cdot\bm b$，则$\sin{2x}+\tan{x}=$\xz
+      \xx{$-1$}{$0$}{$2$}{$-2$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《习题化知识清单》P75方法2.3【三角函数图像】
+      设函数$f(x)=\sin{\Bigl(2x+\dfrac{\piup}3\Bigr)}$，则下列结论正确的是\xz
+      \xx{$f(x)$的图像关于直线$x=\dfrac{\piup}3$对称}
+        {$f(x)$的图像关于点$\Bigl(-\dfrac{\piup}4,0\Bigr)$对称}
+        {把$f(x)$的图像向左平移$\dfrac{\piup}{12}$个单位长度，得到一个偶函数的图像}
+        {$f(x)$的最小正周期为$\piup$，且在$\Bigl[0,\dfrac{\piup}6 \Bigr]
+        $上为增函数}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《习题化知识清单》P90单元检测8【向量投影】
+      在平面直角坐标系中，$AB=CD$，$A(0,3)$，$B(-4,0)$，$C(a,-1)(a>0)$，则向量$\vv{BC}$在$\vv{AB}$上的投影为\xz
+        \xx{$-5$}
+          {$-3$}
+          {$3$}
+          {$5$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《习题化知识清单》P90单元检测9【三角恒等变换，二次方程】
+      已知$\tan\alpha$，$\tan\beta$是方程$x^2-3x-5=0$的两根，则$\tan{2(\alpha+\beta)}$的值为\xz
+        \xx{$-\dfrac{24}{25}$}
+          {$\dfrac{24}7$}
+          {$-\dfrac{4}{5}$}
+          {$-\dfrac{4}{3}$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%《高中数学竞赛培优教程+一试(李名德 主编)》.pdf P122-5.2-3
+      (附加题，5分)
+      已知正方形$PQRS$对角线交点为$M$，坐标原点$O$不在正方形内部，$\vv{OP}=(0,3)$，$\vv{OS}=(4,0)$，则向量$\vv{RM}$为\xz
+      \xx{$\Bigl(-\dfrac{7}{2},-\dfrac{1}{2}\Bigr)$}
+        {$\Bigl(\dfrac{7}{2},\dfrac{1}{2}\Bigr)$}
+        {$(7,4)$}
+        {$\Bigl(\dfrac{7}{2},\dfrac{7}{2}\Bigr)$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《高中数学竞赛培优教程+一试(李名德 主编)》.pdf P92-4.1-4
+      (附加题，5分)
+      已知$\theta\in[0,\piup]$，$f(x)=\sin{(\cos\theta)}$的最大值为$a$，最小值为$b$,$g(\theta)=\cos{(\sin\theta)}$的最大值为$c$，最小值为$d$，则$a,b,c,d$从小到大的顺序是\xz
+      \xx{$b<d<a<c$}
+        {$d<b<c<a$}
+        {$b<d<c<a$}
+        {$d<b<a<c$}
+      \begin{answer}
+        A
+      \end{answer}
+  \section{填空题（本大题共4小题，每小题5分，共20分）}
+    \item%《习题化知识清单》P84方法1-1【向量夹角，参数】
+       已知$\abs{\bm a}=1,\abs{\bm b}=2$，$\bm a$与$\bm b$的夹角为$120\textdegree$，则使$\bm a+k\bm b$与$k\bm a+\bm b$的夹角为锐角的实数$k$的取值范围是\tk[5].
+      \begin{answer}
+        $\Bigl(\dfrac{5-\sqrt{21}}2,1\Bigr)\bigcup\Bigl(1,\dfrac{5+\sqrt{21}}2\Bigr)$
+      \end{answer}
+    \item%《习题化知识清单》P70方法3.2【同角三角函数关系化简】
+      已知$\sin\alpha\cos\alpha=-\dfrac{12}{25}$，$\alpha\in\Bigl(-\dfrac{\piup}4,0\Bigr)$，则$\sin\alpha+\cos\alpha=$\tk.
+      \begin{answer}
+        $\dfrac{1}{5}$
+      \end{answer}
+    \item%《习题化知识清单》P85方法4-5.2【数量积，数形结合】
+       已知正方形$ABCD$的边长为1，点$E$是$AB$边上的动点，则$\vv{DE}\cdot\vv{DC}$的最大值为\tk.
+       \begin{answer}
+         1
+       \end{answer}
+    \item%《习题化知识清单》P89方法1-1【三角恒等变换，函数性质】
+       已知函数$f(x)=\dfrac{(\sin x-\cos x)\sin {2x}}{\sin x}$，则$f(x)$的单调递减区间为\tk[6].
+      \begin{answer}
+        $\Bigl[k\piup+\dfrac{3\piup}8,k\piup+\dfrac{7\piup}8\Bigr](k\in\mathbb{Z})$
+      \end{answer}
+    \item%《高中数学奥林匹克竞赛解题方法大全(周沛耕 主编)》.pdf P93例3
+      (附加题，5分)
+      $\sqrt3\tan{18\textdegree}+\tan{18\textdegree}\tan{12\textdegree}+\sqrt3\tan{12\textdegree}=$\tk.
+      \begin{answer}
+        1
+      \end{answer}
+  \clearpage
+  \section{解答题（本大题共有6个小题，共70分. 解答应写出文字说明、演算步骤或证明过程）}
+    \item
+      （本小题满分10分）求值：\\
+      已知$\abs{\vv a}=\sqrt2,\abs{\vv{\mathstrut b}}=1$
+      (1)若$\vv a,\vv b$的夹角$\theta$为$45\textdegree$，求$\abs{\vv{\mathstrut a}-\vv{\mathstrut b}}$；\\
+      (2)若$(\vv{\mathstrut a}-\vv{\mathstrut b})\perp \vv{\mathstrut b}$，求$\vv{\mathstrut a}$与$\vv{\mathstrut b}$的夹角$\theta$.
+      \begin{answer}
+        解：(1) $\abs{\vv a-\vv b}=\sqrt{\vv a^2-2\vv a\!\cdot\!\vv b+\vv b^2}=\sqrt{2-2\times\sqrt2\times1\times\dfrac{\sqrt2}2+1}=1$\fz[5]
+        (2)$\because(\vv a-\vv b)\perp\vv b$,\\
+        $\therefore(\vv a-\vv b)\cdot\vv b=\vv a\cdot\vv b-\vv b^2=\sqrt2\times1\times\cos\theta-1=0$,\\
+        $\therefore\cos\theta=\dfrac{\sqrt2}2(0\le\theta\le\piup)$，$\therefore\theta=\dfrac{\piup}4.$\fz[10]
+      \end{answer}
+      \vspace{3cm}
+    \item
+      （本小题满分12分）\par
+      (1)化简：$\dfrac{\cos{\Bigl(\alpha-\dfrac{\piup}2\Bigr)}}{\sin{\Bigl(\dfrac{5\piup}2+\alpha\Bigr)}}\cdot\sin{(\alpha-2\piup)}\cdot\cos{(\piup-\alpha)}$；\\
+      (2)已知$\tan{a}=-2$，求$\dfrac{\sin{2a}-\cos^2{a}}{2+\cos{2a}}$的值.
+      \begin{answer}
+      解：(1)$\text{原式}=\dfrac{\sin\alpha}{\cos\alpha}\cdot\sin\alpha\cdot(-\cos\alpha)=-\sin^2\alpha$;\\
+      (2)$\because\tan\alpha=-2$，
+      $\therefore\text{原式}=\dfrac{2\sin\alpha\cdot\cos\alpha-\cos^2\alpha}{2\cos^2\alpha+1}
+      =\dfrac{2\sin\alpha\cdot\cos\alpha-\cos^2\alpha}{3\cos^2\alpha+\sin^2\alpha}
+      =\dfrac{\dfrac{2\sin\alpha\cdot\cos\alpha-\cos^2\alpha}{\cos^2\alpha}}{\dfrac{3\cos^2\alpha+\sin^2\alpha}{\cos^2\alpha}}
+      =\dfrac{2\tan\alpha-1}{3+\tan^2\alpha}=\dfrac{2\times(-2)-1}{3+(-2)^2}
+      =-\dfrac{5}{7}.$
+      \end{answer}
+    \vspace{4cm}
+    \item
+      （本小题满分12分）\\
+      设函数$f(x)=\bm a\cdot\bm b$，其中向量$\bm a=(\cos x,1)$,$\bm b=\bigl(\cos x,\sqrt3\sin x\cos x\bigr)$，$x\in\mathbb{R}$.\\
+      (1)求函数$f(x)$的解析式；\\
+      (2)求满足$f(x)\leqslant0$的$x$的集合；\\
+      (3)函数$y=\sin x$的图像可由函数$y=f(x)$的图像经过怎样的变换得到？\\
+      \begin{answer}
+        解：(1)$f(x)=\bm a\cdot\bm b
+        =\cos^2x+\sqrt3\sin x\cos x
+        =\dfrac{\cos{2x}+1}2+\dfrac{\sqrt3}{2}\sin{2x}
+        =\sin{\Bigl(2x+\dfrac{\piup}6\Bigr)}+\dfrac12.$\\
+        (2)$\because f(x)\leqslant0$，
+        $\therefore \sin{\Bigl(2x+\dfrac{\piup}6\Bigr)}\leqslant-\dfrac12.$\\
+        又$\because$不等式$\sin x\leqslant-\dfrac12$的解集为$\Bigl[2k\piup-\dfrac{5\piup}6,2k\piup-\dfrac{\piup}6\Bigr],k\in\mathbb{Z}.$\\
+        $\therefore 2k\piup-\dfrac{5\piup}6 \leqslant 2x+\dfrac{\piup}6 \leqslant 2k\piup-\dfrac{\piup}6$.\\
+        解得：$k\piup-\dfrac{\piup}2 \leqslant x \leqslant k\piup-\dfrac{\piup}6$
+        即：函数$f(x)\leqslant0$的$x$的解集为$\Bigl\{x\Bigm| k\piup-\dfrac{\piup}2 \leqslant x \leqslant k\piup-\dfrac{\piup}6,k\in\mathbb{Z}\Bigr\}$.\\
+        (3)函数$y=\sin x$的图像可由函数$y=f(x)$的图像经过以下步骤变换得到：\\
+        $\circled{1}$向下平移$\dfrac12$个单位，得到函数$y=\sin{\Bigl(2x+\dfrac{\piup}6\Bigr)}$的图像；\\
+        $\circled{2}$向右平移$\dfrac{\piup}{12}$个单位，得到函数$y=\sin {2x}$的图像；\\
+        $\circled{3}$横坐标伸长2倍，得到函数$y=\sin x$的图像.
+      \end{answer}
+    \item
+      （本小题满分12分）\\
+      已知函数$f(x)=2\sin^2{\Bigl(\dfrac{\piup}4+x\Bigr)}+\sqrt3\cos{2x}$．\\
+      (1)求函数$f(x)$的最小正周期和对称轴方程；\\
+      (2)若关于$x$的方程$f(x)-m=2$在$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$上有两个不同的解，求实数$m$的取值范围．\\
+      \begin{answer}
+        【分析】(1)利用三角函数的倍角公式以及辅助角公式将函数进行化简即可求最小正周期和对称轴方程；\\
+        (2)求出函数$f(x)$在$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$的取值情况，利用数形结合即可得到结论．\\
+        【解答】解：(1)由$f(x)=2\sin^2{\Bigl(\dfrac{\piup}4+x\Bigr)}+\sqrt3\cos{2x}
+        =1-\cos{\Bigl(\dfrac{\piup}2+2x\Bigr)}+\sqrt3\cos{2x}
+        =1+\sin{2x}+\sqrt3\cos{2x}=1+2\sin{\Bigl(\dfrac{\piup}3+2x\Bigr)}$,\\
+        $\because \omega=2$，$\therefore$函数$f(x)$的最小正周期为$\piup$.\\
+        由$2x+\dfrac{\piup}3=\dfrac{\piup}2+k\piup,k\in\mathbb{Z}$得：$x=\dfrac{\piup}{12}+\dfrac12k\piup,{k\in\mathbb{Z}}$,\\
+        故函数$f(x)$的对称轴方程为：$x=\dfrac{\piup}{12}+\dfrac12k\piup,{k\in\mathbb{Z}}$.\\
+        (2)由$f(x)-m=2$得$f(x)=m+2$，\\
+        \begin{tikzpicture}[declare function={f(\k)=1+2*sin(deg(2*\k+pi/3));}]
+          \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
+          \begin{axis}[axis x line=middle,
+                 axis y line=middle,
+                 xmin=-1.3,xmax=2.5,
+                 ymin=-1.6,ymax=3.5,
+                 xstep=1,ystep=1,
+                 ytick distance=1,
+                 ylabel=$y$,
+                 xlabel=$x$]
+                \addplot[elegant,orange,domain=0:pi/2]{f(x)};
+                \addplot[elegant,dashed,domain=-1.2:1.2]{3};
+                \addplot[elegant,domain=-1:2]{2.732};
+          \end{axis}
+        \end{tikzpicture}
+        当${x\in\Bigl[0,\dfrac{\piup}2\Bigr]}$时，$2x+\dfrac{\piup}3\in\Bigl[\dfrac{\piup}3,\dfrac{4\piup}3\Bigr]$，\\
+        由图象得$f(0)=1+2\sin{\dfrac{\piup}3}=1+\sqrt3$，\\
+        函数$f(x)$的最大值为$1+2=3$，\\
+        $\therefore$要使方程$f(x)-m=2$在$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$上有两个不同的解，
+        则$f(x)=m+2$在$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$上有两个不同的解，\\
+        即函数$f(x)$和$y=m+2$在$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$上有两个不同的交点，\\
+        即$1+\sqrt3\leqslant m+2<3$，\\
+        即 $\sqrt3-1\leqslant m<1$.
+      \end{answer}
+    \item
+      （本小题满分12分）\\
+      已知向量$\bm a=\Bigl(\dfrac{1}2,\sin x\Bigr)$，$\bm b=\biggl(-1,\cos{\Bigl(x-\dfrac{\piup}6\Bigr)}\biggr)$，$f(x)=\bm a\cdot\bm b+\dfrac{1}4$，$(x\in\mathbb{R})$.\\
+      (1)求函数$f(x)$的单调递减区间；\\
+      (2)若函数$g(x)=f(x)-m,\Bigl(\dfrac{\piup}3\leqslant x\leqslant\dfrac{13\piup}{12}\Bigr)$有两个不同的零点$x_1,x_2$，求实数$m$的取值范围及$x_1,x_2$的和.\\
+      \begin{answer}
+        解：(1)$f(x)=\bm a\cdot\bm b+\dfrac{1}4
+        =-\dfrac12+\sin{x}\cdot\cos{\Bigl(x-\dfrac{\piup}6\Bigr)}+\dfrac14
+        =\sin{x}\cdot \Bigl(\cos x\cos{\dfrac{\piup}6}+\sin x\sin{\dfrac{\piup}6}\Bigr)-\dfrac14
+        =\dfrac{\sqrt3}2\sin x\cos x+\dfrac12\sin^2x-\dfrac14
+        =\dfrac{\sqrt3}4\sin{2x}-\dfrac14\cos{2x}
+        =\dfrac12\sin{\Bigl(2x-\dfrac{\piup}6\Bigr)}$.\\
+        由$2x-\dfrac{\piup}6\in\Bigl[\dfrac{\piup}2+2k\piup,\dfrac{3\piup}2+2k\piup\Bigr]$，${k\in\mathbb{Z}}$，解得$x\in\Bigl[\dfrac{\piup}3+k\piup,\dfrac{5\piup}6+k\piup\Bigr]$，${k\in\mathbb{Z}}$.\\
+        $\therefore$函数$f(x)$的单调递减区间为$\Bigl[\dfrac{\piup}3+k\piup,\dfrac{5\piup}6+k\piup\Bigr]$，${k\in\mathbb{Z}}$.\\
+        (2) $\because$函数$g(x)=f(x)-m,\Bigl(\dfrac{\piup}3\leqslant x\leqslant\dfrac{13\piup}{12}\Bigr)$有两个不同的零点$x_1,x_2$，
+        $\therefore$函数$y=f(x)$的图像与函数$y=m$的图像在$\Bigl[\dfrac{\piup}3,\dfrac{13\piup}{12}\Bigr]$上有两个交点.\\
+        又$\because \dfrac{\piup}3\leqslant x\leqslant\dfrac{13\piup}{12}$，
+        $\therefore 2x-\dfrac{\piup}6\in\Bigl[\dfrac{\piup}2,2\piup\Bigr]$.
+      \end{answer}
+    \item
+      （本小题满分12分）\\
+      如图，某污水处理厂要在一个矩形污水处理池（$ABCD$）的池底水平铺设污水净化管道（$Rt\triangle{FHE}$，$H$是直角顶点）米处理污水，管道越长，污水净化效果越好。设计要求管道的接口$H$是$AB$的中点，$E$、$F$分别落在线段$BC$、$AD$上.已知$AB=20$米，$AD=10\sqrt3$米，记$\angle{BHE}=\theta$.\\
+      (1)试将污水净化管道的长度$l$表示为$\theta$的函数，并写出定义域；\\
+      (2)若$\sin\theta+\cos\theta=\sqrt2$，求此时管道的长度$l$；\\
+      (3)当$\theta$取何值时，污水净化效果好？并求出此时管道的长度.\\
+      \begin{flushleft}
+        \begin{tikzpicture}
+          \coordinate[label=left:$A$](A)at(0,0);
+          \coordinate[label=right:$B$](B)at(4,0);
+          \coordinate[label=left:$D$](D)at(0,3.5);
+          \coordinate[label=right:$C$](C)at(4,3.5);
+          \draw[dashed] (A)rectangle(C);
+          \coordinate[label=below:$H$](H)at(2,0);
+          \coordinate[label=right:$E$](E)at(4,3);
+          \path[name path=AD] (A)--(D);
+          % \coordinate (P)at($(H)!2!90:(E)$);
+          \path[name path=PH] ($(H)!1!90:(E)$)--(H);
+          \path[name intersections={of=AD and PH}];
+          \coordinate[label=left:$F$] (F)  at (intersection-1);
+          % \draw[red] ($(H)!6pt!(E)$)--($(H)!6pt!(E)!6pt!90:(E)$)--($(H)!6pt!(F)$);
+          \draw \rAm{E}{H}{F};
+          % \draw [--] ($(H)+(0.5,0)$) arc (0:30:1cm);
+          % \node at ($(H)+(0.8,0.3)$) {$\theta$};
+          % \pic["\alpha",draw=red,angle radius=0.5cm] {angle=A--B--C};
+          \path (B)--(H)--(E) pic [draw,"$\theta$",angle eccentricity=1.5] {angle=B--H--E};
+          \draw (H)--(E)--(F)--cycle;
+        \end{tikzpicture}
+      \end{flushleft}
+      \begin{answer}
+        解：
+      \end{answer}
+    \item%福州格致中学2015-2016学年高一数学第二学期期末检测.docx-22
+      （附加题：本小题满分15分）\\
+      (福州格致中学2015-2016学年高一数学第二学期期末检测22)已知函数$f(x)=A\sin(\omega x+\varphi)+B (A>0,\omega>0)$的一系列对应值如下表:
+      \begin{center}
+        \renewcommand{\arraystretch}{1.4}
+        \begin{tabular}{|*{8}{c|}}
+          \hline
+            $x$
+            &$-\dfrac{\piup}6$
+            &$-\dfrac{\piup}3$
+            &$-\dfrac{5\piup}6$
+            &$-\dfrac{4\piup}3$
+            &$-\dfrac{11\piup}6$
+            &$-\dfrac{7\piup}3$
+            &$-\dfrac{17\piup}6$\\
+          \hline
+            $y$
+            &$-1$
+            &$1$
+            &$3$
+            &$1$
+            &$-1$
+            &$1$
+            &$3$\\
+          \hline
+        \end{tabular}\\
+      \end{center}
+      (1)根据表格提供的数据求函数$f(x)$的一个解析式；\\
+      (2)根据(1)的结果：\\
+      \;(i)当$x\in\Bigl[0,\dfrac{\piup}3\Bigr]$时，方程$f(3x)=m$恰有两个不同的解，求实数$m$的取值范围；\\
+      \;(ii)若是$\alpha,\beta$是锐角三角形的两个内角，试比较$f(\sin \alpha)$与$f(\cos \beta)$的大小.
+      \begin{answer}
+        (1)$f(x)=2\sin\Bigl(x-\dfrac{\piup}3\Bigr)+1$；(2)(i)$[\sqrt{3}+1,3)$;(ii)易得$f(x)$在$[-\dfrac{\piup}6,\dfrac{5\piup}6]$上单调递增，故$f(x)$在$[0,1]$上单调递增；又$0<\dfrac{\piup}2-\beta<\alpha<\dfrac{\piup}2$，从而$\sin\alpha>\sin(\dfrac{\piup}2-\beta)=\cos\beta$，于是$f(\sin \alpha)>f(\cos \beta)$
+      \end{answer}
+    \vspace{6.5cm}
+  \end{exercise}
+  \stopexercise
+\hspace{2em}
+\newpage
+\centering{\heiti \xiaoer 福州清大教育2018-2019学年高一数学期末考模拟卷}\\
+\part{\mbox{\heiti \xiaoer 参考答案}}
+  \begin{multicols}{2}
+    \printanswer
+  \end{multicols}

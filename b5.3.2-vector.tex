@@ -1,9 +1,11 @@
 \Topic{平面向量坐标表示，数量积}
   \Teach{向量共线与数量积的坐标表示}
   \Grade{高一}
-  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
   % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
-  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117} 
   % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
   \newtheorem*{Theorem}{定理}
   \makefront
@@ -11,8 +13,162 @@
 
 
 \startexercise
+\begin{exercise}{\heiti 课前检测}\\
+  表格实例：
+  \begin{center}
+    \renewcommand{\arraystretch}{1.4}
+    \begin{tabular}{|*{8}{c|}}
+      \hline
+        $x$
+        &$-\dfrac{\piup}6$
+        &$-\dfrac{\piup}3$
+        &$-\dfrac{5\piup}6$
+        &$-\dfrac{4\piup}3$
+        &$-\dfrac{11\piup}6$
+        &$-\dfrac{7\piup}3$
+        &$-\dfrac{17\piup}6$\\
+      \hline
+        $y$
+        &$-1$
+        &$1$
+        &$3$
+        &$1$
+        &$-1$
+        &$1$
+        &$3$\\
+      \hline
+    \end{tabular}\\
+  \end{center}
+\end{exercise}
 
-\stopexercise
+\section{平面向量基本定理及坐标表示}
+  \subsection{基底}
+    \begin{Theorem}[平面向量基本定理]
+      如果$ \bm{e}_1,\bm{e}_2 $是同一平面内的两个\CJKunderdot{不共线}的向量，那么对于这一平面内的任意向量$ \bm{a} $，有且只有一对实数$ \lambda_1,~\lambda_2 $，使$\bm{a}=\lambda_1\bm{e}_1+\lambda_2\bm{e}_2$.\par 其中，不共线的向量$ \bm{e}_1,~\bm{e}_2 $叫做表示这一平面内所有向量的一组\CJKunderdot{基底}.
+    \end{Theroem}
+    {\kaishu 解决向量问题，需要注意两点：一是向量共线定理，一个是平面向量基本定理.\par
+    向量的基底的重要性在于一旦有了基底，你就可以将题目中涉及的所有向量都用基底向量唯一的表示出来(坐标表示就是一组特殊的基底)，计算和变形都有了方向，便于寻找和发现关系.如果题目没有明确给出基底，那么就需要自己指定了}
+  \subsection{坐标表示}
+    在不共线的向量中，垂直是一种重要的情形，把一个向量分解为两个互相垂直的向量，叫做把向量\CJKunderdot{正交分解}.\par
+    在平面直角坐标系$xOy$中，分别取与$x$轴、$y$轴方向相同的两个\CJKunderdot{单位向量}$~ \bm{i},~\bm{j} $作为基底.对于平面内的一个向量$ \bm{a} $，由平面向量基本定理可知，有且只有一对实数$ x,~y $使得\[\bm{a}=x\bm{i}+y\bm{j}\]
+    这样，平面内的任一向量$ \bm{a} $都可以由$ x,~y $唯一确定，我们把有序数对$ (x,y) $叫做向量$\bm{a}  $的坐标，记作
+    \begin{equation}\label{eq:axy}
+      \bm{a}=(x,y)
+    \end{equation}
+    其中$ x $叫做$ \bm{a} $在$x$轴上的坐标，$ y $叫做$ \bm{a} $在$y$轴上的坐标，(\ref{eq:axy})式叫做\textbf{向量的坐标表示}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+      \draw[->,>=stealth] (-1,0)--(3,0) node[below](x){$x$};
+      \draw[->,>=stealth] (0,-1)--(0,3) node[right](y){$y$};
+      \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
+      \draw[very thick,->,>=stealth](0,0)--(0,1)node[midway,left](j) {$\bm{j}$};
+      \coordinate(A) at (1.5,1.5);
+      \node[right](a1)at(1.5,1.5){$A(x,y)$};
+      \draw[dashed](A)--++(-1.5,0)node[left](y){$y$};
+      \draw[dashed](A)--++(0,-1.5)node[below](x){$x$};
+      \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
+    \end{tikzpicture}
+    \end{center}
+    \begin{description}
+      \item[三点共线的判定] 若$ A,~B,~C $三点共线，有$ \vv{OA}=\lambda \vv{OB}+\mu\vv{OC}~(\lambda+\mu=1) $.或$\vv{AB}=\lambda \vv{AC}$.
+      %\begin{enumerate}[1)]
+      %
+      %\end{enumerate}
+    \end{description}
+  \subsection{平面向量的坐标计算}
+    \begin{enumerate}
+      \item
+        设点$ A(x_1,y_1),~B(x_2,y_2) $,则$ \vv{AB}=(x_2-x_1,y_2-y_1) $.\par
+        一个向量的坐标等于表示此向量的有向线段的终点的坐标减去起始点的坐标.
+      \item
+        若$\bm{a}=\left(x_1,y_1\right),\bm{b}=\left(x_2,y_2\right)$.
+        \begin{description}
+          \item[加法:]
+            $\bm{a}+\bm{b}=(x_1+x_2,y_1+y_2)$
+            \begin{equation*}
+            \begin{aligned}
+            \bm{a}+\bm{b}=&\left(x_1\bm{i}+y_1\bm{j}\right)\left(x_2\bm{i}+y_2\bm{j}\right)\\
+            =&\left(x_1+x_2\right)\bm{i}+\left(y_1+y_2\right)\bm{j}\\
+            \text{即：}\bm{a}+\bm{b}=&(x_1+x_2,y_1+y_2)
+            \end{aligned}
+            \end{equation*}
+          \item[减法:] $\bm{a}-\bm{b}=\left(x_1-x_2,y_1-y_2\right)$.同加法可得
+          \item[数乘:]
+            $ \lambda \bm{a}=\left(\lambda x_1,\lambda y_1\right) $\begin{equation*}
+            \begin{aligned}
+             \lambda \bm{a} =&\lambda\left(x_1\bm{i}+y_1\bm{j}\right)=\lambda x_1\bm{i}+\lambda y_1\bm{j}\\
+            =&\left(\lambda x_1,\lambda y_1\right)
+            \end{aligned}
+            \end{equation*}
+          \item[模长]
+           $\abs{\bm{a}}=\sqrt{x_1^2+y_1^2}$\qquad
+           $\abs{\vv{AB}}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$\\
+           \qquad $\abs{\bm{a}+\bm{b}}=\sqrt{(\bm{a}+\bm{b})^2}=\sqrt{\bm{a}^2+2\bm{a}\bm{\cdot}\bm{b}+\bm{b}^2}$\\
+          \item[共线]
+            由向量共线的性质知$ \bm{a} $与$ \bm{b}(\bm{b}\ne\bm{0}) $共线，当且仅当存在实数$ \lambda $使得$ \bm{a}=\lambda \bm{b} .$\\用坐标表示为：
+            $$(x_1,y_1)=\lambda(x_2,y_2)$$
+            即$$\Bigg\{\begin{aligned}
+            x_1=&\lambda x_2\\
+            y_1=&\lambda y_2
+            \end{aligned}$$
+            消去$ \lambda $得到\[x_1y_2-x_2y_1=0\]
+          \item[垂直]
+            $\bm{a}\bm{\bot}\bm{b}\Leftrightarrow\bm{a}\bm{\cdot}\bm{b}=0\Leftrightarrow x_1x_2+y_1y_2=0 $
+            \begin{proof}
+              \begin{description}
+                \item[方法一]
+                  设$ \bm{a},~\bm{b} $所在直线分别为$ l_1,l_2 $，当$ \bm{a},~\bm{b} $所在直线的斜率都存在时，由直线垂直的性质，有$$ k_{l_1}\bm{\cdot}k_{l_2}=-1 $$
+                  其中$$ k_{l_1} =\dfrac{y_1-0}{x_1-0}=\dfrac{y_1}{x_1},\quad k_{l_2} =\dfrac{y_2-0}{x_2-0}=\dfrac{y_2}{x_2}$$
+                  即$$\dfrac{y_1}{x_1}\bm{\cdot}\dfrac{y_2}{x_2}=-1$$
+                  $$x_1x_2+y_1y_2=0$$
+                \item[方法二]
+                  由向量的数量积性质，当$ \bm{a}\bot\bm{b} $时，
+                  $\text{由}\cos\theta=\dfrac{\bm{a\cdot b}}{\abs{\bm{a}}\abs{\bm{b}}}\text{得到}$\\
+                  \centering $\bm{a\cdot b}=0$
+              \end{description}
+            \end{proof}
+        \end{description}
+    \end{enumerate}
+\section{第一章节}
+  \begin{description}
+    \item [label]
+  \end{description}
+  \begin{exercise}
+    \item%LaTeX-master/sanjiaohanshu/sanjiaohanshu-gaokao.tex 4
+      函数$f(x)=\cos(\omega x+\varphi)$的部分图象如图所示，则$f(x)$的单调递减区间为\xz
+      \begin{minipage}[b]{0.8\linewidth}
+        \vspace{2.5em}
+        \xx{$\Bigl(k\piup-\dfrac{1}{4},k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$ \Bigl(2k\piup-\dfrac{1}{4},2k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$ \Bigl(k-\dfrac{1}{4},k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+          {$\Bigl(2k-\dfrac{1}{4},2k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z} $}
+      \end{minipage}\hfill
+      \begin{minipage}[h]{0.2\linewidth}
+        \vspace{-3cm}
+        \begin{tikzpicture}
+          \node[below left](O) at(0,0) {\small$\bm{O}$};
+          \draw(0,1)node[right]{\tiny$1$}--(0.1,1);
+          \clip(-1.2,-1.2) rectangle (2,1.5);
+          \draw[->,>=stealth](-1.2,0)--(2,0) node[below left] (x){$x$};
+          \draw[->,>=stealth](0,-1.2)--(0,1.5) node[below right] (y){$y$};
+          \draw[domain=-1.2:2,samples=1000] plot(\x,{cos((pi*(\x)+1/4*pi) r)});
+          \node[below] (A)at (0.25,0){$\frac{1}{4}$};
+          \node[below] (B)at (1.25,0){$\frac{5}{4}$};
+        \end{tikzpicture}
+      \end{minipage}
+      \begin{answer}
+        D
+      \end{answer}
+  \end{exercise}
 \newpage
-\section{部分参考答案}
-\printanswer
+\section{课后作业}
+  \begin{exercise}
+
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}
