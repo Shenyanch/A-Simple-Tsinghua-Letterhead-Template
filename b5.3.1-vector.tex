@@ -1,5 +1,5 @@
 \Topic{向量基本概念与线性运算}
-  \Teach{向量共线定理}
+  \Teach{向量共线定理及其运用}
   \Grade{高一}
   %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
   % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
@@ -12,20 +12,45 @@
 \section{向量的基本相关概念}
   \begin{description}
     \item[有向线段]带有方向的线段.用$\vv{AB}$表示；线段AB的长度也叫做有向线段$\vv{AB}$的长度，记作$\abs{\vv{AB}}$.\par
-    {\kaishu 有向线段包含三要素：{\textbf 起点、方向、长度}}
+      {\kaishu 有向线段包含三要素：{\textbf 起点、方向、长度}}
     \item[向量] 既有大小，又有方向的量，用$ \vv{a},~\vv{AB},~\bm{a} $表示；向量的大小叫做向量的长度或向量的模，用$ \abs{\bm{a}} $表示.\par
-    \begin{itemize}[leftmargin=*]
-      \kaishu
-      \item 不同于有向线段，平面向量是自由向量(无源向量)；不同于有向线段，平面向量是自由向量(无源向量)；不同于有向线段，平面向量是自由向量(无源向量)；
-      \item 只有大小，没有方向的量称为数量；（物理学中称数量为标量，并把向量称为矢量）
-    \end{itemize}
+      \begin{itemize}[leftmargin=*]
+        \kaishu
+        \item 不同于有向线段，平面向量是自由向量(无源向量)；
+        \item 只有大小，没有方向的量称为数量；（物理学中通常称数量为标量，并把向量称为矢量）
+      \end{itemize}
     \item[零向量] 长度为零的向量，其方向是任意的，记作$ \vv{0} $或$ \bm{0} $；
     \item[相等向量] 长度相等且方向相同的向量；\par
-    {\kaishu 两个向量只能相等或者不相等，不能比较大小.}
+      {\kaishu 两个向量只能相等或者不相等，不能比较大小.}
     \item[相反向量] 长度相等且方向相反的向量\par
-    {\kaishu 规定：$\bm{0}$的相反向量为$\bm{0}$}
-    \item[单位向量] 长度等于一个单位长度的向量；
-    \item[平行向量(共线向量)]方向相同或相反的非零向量叫做平行向量或共线向量；规定零向量与任一向量平行共线.向量$\bm{a}$、$\bm{b}$平行记作$\bm{a}\varparallel \bm{b}$.
+      {\kaishu 规定：$\bm{0}$的相反向量为$\bm{0}$}
+    \item[单位向量] 长度等于一个单位长度的向量；\par
+      {\kaishu 与向量$\bm a$方向相同的向量通常记为$\hat{\bm a}(=\dfrac{\bm a}{\abs{\bm a}})$}(一般手写为$\hat a$即可).
+    \item[平行向量(共线向量)]方向相同或相反的非零向量叫做平行向量或共线向量；规定零向量与任一向量平行共线.
+      向量$\bm{a}$、$\bm{b}$平行记作$\bm{a}\varparallel \bm{b}$.\par
+      {\kaishu 向量平行不具有传递性}
+    \item[向量的夹角] 已知两个非零向量$\bm a$和$\bm b$，如图，做$\vv{OA}=\bm a$，$\vv{OB}=\bm b$，
+      则$\angle{AOB}=\theta$叫做向量$\bm a$和$\bm b$的夹角.记作$\vangle{\bm a}{\bm b}$或$\vangle{\bm b}{\bm a}$.\par
+      \begin{minipage}[b]{0.8\linewidth}
+        \begin{itemize}
+          \kaishu
+          \item 向量夹角的取值范围：$[0,\piup]$ ;
+          \item 当$\theta=0\textdegree$时，向量$\bm a,\bm b$共线且同向；
+          \item 当$\theta=90\textdegree$时，向量$\bm a,\bm b$相互垂直,记作$\bm a\perp \bm b$；
+          \item 当$\theta=180\textdegree$时，向量$\bm a,\bm b$共线且反向.
+        \end{itemize}
+      \end{minipage}\hfill
+      \begin{minipage}[h]{0.2\linewidth}
+        \vspace{-3.5cm}
+        \begin{tikzpicture}[scale=1.5]
+          \coordinate[lable=below:$O$](O) at (0,0);
+          \coordinate[label=below:$A$](A) at (2,0);
+          \coordinate[label=left:$B$](B) at(1,2);
+          \draw[->,>=latex] (O)--(A)node[midway ,below](a){\small$\bm{a}$};
+          \draw[->,>=latex] (O)--(B)node[midway, left](b){\small$\bm{b}$};
+          \path (A)--(O)--(B) pic [draw,"$\theta$",angle eccentricity=1.5] {angle=A--O--B};
+        \end{tikzpicture}
+      \end{minipage}
   \end{description}
   \begin{exercise}{\textbf{基础测试}}
     \item
@@ -34,8 +59,9 @@
       (2)$\abs{\bm{a}}$与$\abs{\bm{b}}$是否相等与$\bm{a}$,$\bm{b}$的方向无关．(　　)\\
       (3)若$\bm{a}\varparallel\bm{b}$,$\bm{b}\varparallel\bm{c}$，则$\bm{a}\varparallel\bm{c}$.(　　)\\
       (4)若向量$\vv{AB}$与向量$\vv{CD}$是共线向量，则$A,B,C,D$四点在一条直线上．(　　)\\
-      (5)若向量$\bm a$与任一向量$\bm b$平行，则$\bm a=\bm 0$．(　　)\\
-      (6)若两个向量共线，则其方向必定相同或相反．(　　)\\
+      (5)若向量$\vv{AB}$与向量$\vv{CD}$平行，则直线$AB$与$CD$平行.(　　)\\
+      (6)若向量$\bm a$与任一向量$\bm b$平行，则$\bm a=\bm 0$．(　　)\\
+      (7)若两个向量共线，则其方向必定相同或相反．(　　)
       \begin{answer}
         (2)(5)正确
       \end{answer}
@@ -45,9 +71,13 @@
       \circled{2}若$\abs{\bm{a}}=\abs{\bm{b}}$，则$\bm{a}=\bm{b}$；
       \circled{3}若$\abs{\vv{AB}}=\abs{\vv{CD}}$，则四边形$ABCD$是平行四边形；
       \circled{4}若$\bm{m}=\bm{n}$，$\bm{n}=\bm{k}$，则$\bm{m}=\bm{k}$；
-      \circled{5}若$\bm{a}\varparallel\bm{b}$，$\bm{c}\varparallel\bm{b}$，则$\bm{a}\varparallel\bm{c}$；
-      \circled{6}有向线段就是向量，向量就是有向线段．其中，错误的个数是\xz
+      \circled{5}位移、速率、重力加速度都是向量；
+      \circled{6}共线的向量，若起点不同，则终点一定不同．其中，错误的个数是\xz
       \xx{2}{3}{4}{5}
+    \item
+      正方形$ABCD$中，向量$\vv{AC}$与$\vv{BC}$的夹角为\tk，向量$\vv{AC}$与$\vv{CD}$的夹角为\tk.
+    \item
+      在平面内，若将所有单位向量的起点平移到同一点，则它们的终点构成的图形为\tk.
   \end{exercise}
 \section{向量的线性运算}
   向量的线性运算包括向量的加、减、数乘运算.
@@ -62,23 +92,25 @@
           \coordinate(B) at(1,2);
           \coordinate(C) at ($(A)+(B)$);
           \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{a}$};
-          \draw[->,>=latex] (O)--(C)node[midway,above,sloped](a){\small$\bm{a}+\bm{b}$};
-          \draw[->,>=latex] (A)--(C)node[midway, below](a){\small$\bm{b}$};
+          \draw[->,>=latex] (O)--(C)node[midway,above,sloped](c){\small$\bm{a}+\bm{b}$};
+          \draw[->,>=latex] (A)--(C)node[midway, below](b){\small$\bm{b}$};
           \begin{scope}[xshift=4cm]
             \coordinate(O) at (0,0);
             \coordinate(A) at (2,0);
             \coordinate(B) at(1,2);
             \coordinate(C) at ($(A)+(B)$);
             \draw[->,>=latex] (O)--(A)node[midway ,below](a){\small$\bm{a}$};
-            \draw[->,>=latex] (O)--(C)node[midway ,below,sloped](a){\small$\bm{a}+\bm{b}$};
-            \draw[->,>=latex] (O)--(B)node[midway, left](a){\small$\bm{b}$};
+            \draw[->,>=latex] (O)--(C)node[midway ,below,sloped](c){\small$\bm{a}+\bm{b}$};
+            \draw[->,>=latex] (O)--(B)node[midway, left](b){\small$\bm{b}$};
             \draw[dashed](B)--(C);
             \draw[dashed](A)--(C);
           \end{scope}
         \end{tikzpicture}
         \end{center}
         {\kaishu 对于零向量与任一向量$\bm{a}$，规定$$\bm{a}+\bm{0}=\bm{0}+\bm{a}=\bm{a}$$}\par
-        由三角形法则，可得向量不等式：$$\abs{\bm{a}}+\abs{\bm{b}}\leqslant \abs{\bm{a}+\bm{b}}\leqslant \abs{\bm{a}}+\abs{\bm{b}}$$
+        由三角形法则，可得向量不等式(有时称作“三角形不等式”)：
+        \[\bigm|{\abs{\bm{a}}-\abs{\bm{b}}\bigm|}\leqslant \abs{\bm{a}+\bm{b}}\leqslant \abs{\bm{a}}+\abs{\bm{b}}\]
+        若$\bm a$和$\bm b$为非零向量，则：当$\bm a$与$\bm b$反向时， 左边等式成立；当$\bm a$与$\bm b$同向时， 右边等式成立；\par
       \item[运算律]
         \begin{itemize}%[leftmargin=*]
           \item 交换律：$\bm{a}+\bm{b}=\bm{b}+\bm{a}$\
@@ -87,8 +119,8 @@
     \end{description}
   \subsection{减法}
     \begin{description}
-      \item[定义]减去一个向量相当于加上这个向量的相反向量，即$$\bm{a}-\bm{b}=\bm{a}+\bm{-b}$$
-      \item[运算法则]三角形法则、平行四边形法则，$\vv{AB}-\vv{AC}=\vv{CB}$.
+      \item[定义]减去一个向量相当于加上这个向量的相反向量，即$$\bm{a}-\bm{b}=\bm{a}+(\bm{-b})$$
+      \item[运算法则]三角形法则、平行四边形法则.%$\vv{AB}-\vv{AC}=\vv{CB}$.
       \begin{center}
       \begin{tikzpicture}
         \coordinate(O) at (0,0);
@@ -112,28 +144,41 @@
         \end{scope}
       \end{tikzpicture}
       \end{center}
+      {\kaishu
+        对于任意一点$P$，$\vv{AB}=\vv{PB}-\vv{PA}$,
+      }
     \end{description}
   \subsection{数乘}
     \begin{description}
       \item[定义] 求实数$ \lambda $与向量$\bm{a}$的积是一个向量，记作$\lambda\bm{a}$,长度与方向由以下法则规定：
       \item[法则]
-      \begin{enumerate}[label=\arabic*)]
-        \item $\abs{\lambda \bm{a}}=\abs{\lambda}\abs{\bm{a}} $;
-        \item 当$ \lambda>0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相同；
-        \item 当$ \lambda<0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相反.
-      \end{enumerate}
+        \begin{enumerate}[label=\arabic*)]
+          \item $\abs{\lambda \bm{a}}=\abs{\lambda}\abs{\bm{a}} $;
+          \item
+            \begin{itemize}
+              \item 当$ \lambda>0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相同；
+              \item 当$ \lambda<0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相反；
+              \item 当$ \lambda=0 $时，$ \lambda\bm{a}=\bm 0 $.
+            \end{itemize}
+        \end{enumerate}
       \item[运算律]
-      设$\lambda,\mu\in\mathbb{R}$，则：\par
-      \begin{itemize}
-          \item $\lambda(\mu\bm{a})=(\lambda\mu)\bm{a}$;
-          \item $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$;
-          \item $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambda\bm{b}$.
-      \end{itemize}
+        设$\lambda,\mu\in\mathbb{R}$，则：\par
+        \begin{itemize}
+            \item $\lambda(\mu\bm{a})=(\lambda\mu)\bm{a}$;
+            \item $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$;
+            \item $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambda\bm{b}$.
+        \end{itemize}
+      对于任意向量$\bm a,\bm b$以及任意实数$\lambda$，$\mu_1$，$\mu_2$，恒有：
+      \[\lambda({\mu_1\bm a}\pm{\mu_2\bm b})={\lambda\mu_1\bm a}+{\lambda\mu_2\bm b}\]
     \end{description}
     \begin{Theorem}[向量共线定理]
       向量$\bm{a}~(\bm{a}\ne\bm{0})$与向量$\bm{b}$共线,当且仅当存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.
     \end{Theorem}
-  \begin{exercise}{基础测试}
+    {\kaishu
+     证明三点共线的方法：\circled{1}$\vv{AB}=\lambda\vv{AC}$，则$A$，$B$，$C$三点共线；\circled{2}$\vv{OA}=\lambda\vv{OB}+\mu\vv{OC}$，若$\lambda+\mu=1$，则$A$，$B$，$C$三点共线.
+    }
+  \clearpage
+  \begin{exercise}{\textbf{基础测试}}
     \item
       如图，$\vv{AB}+\vv{BC}-\vv{AD}$等于\xz
       \begin{minipage}[b]{0.7\linewidth}
@@ -152,6 +197,11 @@
       \begin{answer}
         B
       \end{answer}
+    \item%1平面向量的基本概念.pdf P10-训练1
+      判断下列结论是否正确(请在括号中打“\checkmark”或“\XSolidBrush”)\\
+      (1)若向量$\bm b$与向量$\bm{a}$共线,则存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.(\hspace{2em})\\
+      (2)若$\bm{b}=\lambda\bm{a}$，则$\bm a$与$\bm b$共线.(\hspace{2em})\\
+      (3)若$\lambda\bm a=\bm 0$，则$\bm a=\bm 0$.(\hspace{2em})\\
     \item
       如图所示，在五边形$ABCDE$中，若四边形$ACDE$是平行四边形，且$\vv{AB}=\bm{a}$，$\vv{AC}=\bm{b}$，$\vv{AE}=\bm{c}$，试用向量$\bm a$，$\bm b$，$\bm c$表示向量$\vv{BD}$，$\vv{BC}$，$\vv{BE}$，$\vv{CD}$及$\vv{CE}$.
       \begin{flushright}
@@ -180,117 +230,137 @@
       \begin{answer}
         (1)$9\bm a$；(2)$\dfrac4{21}\bm a-\dfrac17\bm b+\dfrac17\bm c$；$-\bm a$.
       \end{answer}
+    \item%《习题化知识清单》P81知识4-3【向量共线】
+      已知向量$\bm a$、$\bm b$，且$\vv{AB}=\bm a+2\bm b$，$\vv{BC}=-5\bm a+6\bm b$，$\vv{CD}=7\bm a-2\bm b$，则一定共线的三点是\xz
+      \xx{$A$、$B$、$D$}
+        {$A$、$B$、$C$}
+        {$B$、$C$、$D$}
+        {$A$、$C$、$D$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《习题化知识清单》P81知识4-4【向量线性运算、向量共线】
+      已知向量$\bm a=\bm e_1+2\bm e_2$，$\bm b=2\bm e_1-\bm e_2$，则$\bm a+2\bm b$与$2\bm a-\bm b$\xz
+      \xx{一定共线}
+        {一定不共线}
+        {当且仅当$\bm e_1$与$\bm e_2$共线时共线}
+        {当且仅当$\bm e_1=\bm e_2$时共线}
+      \begin{answer}
+        C
+      \end{answer}
   \end{exercise}
 \newpage
 \section{习题}
-\begin{exercise}
-  \item
-    一辆汽车从$A $点出发向西行驶了100 km 到达$B $点，然后又改变方向向西偏北$50\textdegree$走了200 km到达$C$ 点，最后又改变方向，向东行驶了100 km 到达$D$ 点.\\
-    (1)作出向量$\vv{AB}$，$\vv{BC}$，$\vv{CD}$；\\
-    (2)求$\abs{\vv{AD}}$.\\
-  \vspace{4cm}\\
-  \begin{minipage}[b]{0.65\linewidth}
-  \item
-    在$\triangle ABC$中，点$ M$，$N $满足$ \vv{AM}=2\vv{MC}$，$\vv{BN}=\vv{NC}$.若$\vv{MN}=x\vv{AB}+y\vv{AC}$，则$ x= $\tk;$ y= ~$ \tk.
-    \begin{answer}
-      $x=\dfrac12$；$y=-\dfrac16$
-    \end{answer}
-  \end{minipage}
-  \begin{minipage}[htbp!]{0.3\linewidth}
-    \begin{center}
-    \begin{tikzpicture}
-      \draw(0,0)node[below](B){\small$B$}--(1,0)node[below](N){\small$N$}--(2,0)node[below](C){\small$C$};
-      \draw (0,0)--(1.1,2.1)node[above](A){\small$A$}--(2,0);
-      \draw (1,0)--(1.1,2.1);
-      \draw(1,0)--($(1.1,2.1)!0.7!(2,0)$)node[right](M){\small$M$};
-    \end{tikzpicture}
-    \end{center}
-  \end{minipage}
-  \item
-    (2018届贵州遵义航天高级中学一模)如图所示，向量$\vv{OA}=\bm{a}$，$\vv{OB}=\bm{b}$，$\vv{OC}=\bm{c}$，$A$，$B$，$C$在一条直线上，且$\vv{AC}=3\vv{CB}$，则\xz
-    \begin{minipage}[b]{0.7\linewidth}
-      \xx{$\bm{c}=\dfrac32\bm{b}-\dfrac12\bm{a}$}
-        {$\bm{c}=\dfrac32\bm{a}-\dfrac12\bm{b}$}
-        {$\bm{c}=-\bm{a}+2\bm{b}$}
-        {$\bm{c}=\bm{a}+2\bm{b}$}
-    \end{minipage}\hfill
+  \begin{exercise}
+    \item%1平面向量的基本概念.pdf P3训练3
+      一辆汽车从$A $点出发向西行驶了100 km 到达$B $点，然后又改变方向向西偏北$50\textdegree$走了200 km到达$C$ 点，最后又改变方向，向东行驶了100 km 到达$D$ 点.\\
+      (1)作出向量$\vv{AB}$，$\vv{BC}$，$\vv{CD}$；\\
+      (2)求$\abs{\vv{AD}}$.\\
+    \vspace{4cm}\\
+    \begin{minipage}[b]{0.65\linewidth}
+    \item%LaTeX-master/xiangliang/xiangliangsorting.tex P10-p48
+      在$\triangle ABC$中，点$ M$，$N $满足$ \vv{AM}=2\vv{MC}$，$\vv{BN}=\vv{NC}$.若$\vv{MN}=x\vv{AB}+y\vv{AC}$，则$ x= $\tk;$ y= ~$ \tk.
+      \begin{answer}
+        $x=\dfrac12$；$y=-\dfrac16$
+      \end{answer}
+    \end{minipage}
     \begin{minipage}[htbp!]{0.3\linewidth}
       \begin{center}
       \begin{tikzpicture}
-        \coordinate[label=left:$O$](O)at(0,0);
-        \coordinate[label=right:$C$](C)at(3,0);
-        \coordinate[label=left:$A$](A)at(-1,2.5);
-        \coordinate[label=right:$B$](B)at($(A)!0.66!(C)$);
-        \draw (A)--(B)--(C)--cycle;
-        \draw[->,>=latex] (O)--(C);
-        \draw[->,>=latex] (O)--(A);
-        \draw[->,>=latex] (O)--(B);
+        \draw(0,0)node[below](B){\small$B$}--(1,0)node[below](N){\small$N$}--(2,0)node[below](C){\small$C$};
+        \draw (0,0)--(1.1,2.1)node[above](A){\small$A$}--(2,0);
+        \draw (1,0)--(1.1,2.1);
+        \draw(1,0)--($(1.1,2.1)!0.7!(2,0)$)node[right](M){\small$M$};
       \end{tikzpicture}
       \end{center}
-  \end{minipage}
-    \begin{answer}
-      A
-    \end{answer}
-  \item
-    设向量$\bm a$，$\bm b$不共线，向量$\lambda\bm a+\bm b$与$\bm a+2\bm b$共线，则实数$\lambda=$\tk.
-    \begin{answer}
-      $\dfrac12$
-    \end{answer}
-  \item
-    如图，在$\triangle ABC$中，$D$，$E$为边$AB$的两个三等分点，$\vv{CA}=3\bm a$，$\vv{CB}=2\bm b$，求$\vv{CD}$，$\vv{CE}$(用$\bm a$，$\bm b$表示).
-    \begin{flushright}
-      \begin{tikzpicture}
-        \coordinate[label=left:$B$](B)at(0,0);
-        \coordinate[label=right:$C$](C)at(2.5,0);
-        \coordinate[label=above:$A$](A)at(3,3);
-        \coordinate[label=above:$E$](E)at($(B)!0.33!(A)$);
-        \coordinate[label=above:$D$](D)at($(B)!0.66!(A)$);
-        \draw (A)--(B)--(C) --cycle;
-        \draw (C)--(D) (C)--(E);
-        \draw[->,>=latex] (C)--(A);
-        \draw[->,>=latex] (C)--(B);
-      \end{tikzpicture}
-    \end{flushright}
-    \begin{answer}
-      $\vv{CD}=2\bm a+\dfrac23\bm b$；$\vv{CE}=\bm a+\dfrac43\bm b$
-    \end{answer}
-  \item
-    设$\bm a$，$\bm b$是不共线的两个非零向量.\\
-    (1)若$\vv{OA}=2\bm a-\bm b$，$\vv{OB}=3\bm a+\bm b$，$\vv{OC}=\bm a-3\bm b$，求证：$A$，$B$，$C$三点共线；\\
-    (2)若$8\bm a+k\bm b$与$k\bm a+\2\bm b$共线，求实数$k$的值；\\
-    (3)若$\vv{OM}=m\bm a$，$\vv{ON}=n\bm b$，$\vv{OP}=\alpha\bm a+\beta\bm b$，其中$m$，$n$，$\alpha$，$\beta$均为实数，且$m,n\neq 0$，若$M$，$P$，$N$三点共线，求证：$\dfrac{\alpha}m+\dfrac{\beta}n=1$
-    \begin{answer}
-      (1)$\because \vv{AB}=\bm a+2\bm b$，$\vv{CB}=2\bm a+4\bm b$；$\therefore \vv{CB}=2\vv{AB}$；
-      (2)$k=2\sqrt2$；
-    \end{answer}
-    \vspace{5cm}
-  \item
-    设点$G$为$\triangle ABC$重心，$D$，$E$，$F$分别为各边中点.试用向量证明：$AG=\dfrac23 AD$.
-    \begin{flushright}
-      \begin{tikzpicture}
-        \coordinate[label=left:$B$](B)at(0,0);
-        \coordinate[label=right:$C$](C)at(3,0);
-        \coordinate[label=above:$A$](A)at(2,2);
-        \coordinate[label=below:$D$](D)at($(B)!0.5!(C)$);
-        \coordinate[label=right:$E$](E)at($(A)!0.5!(C)$);
-        \coordinate[label=above:$F$](F)at($(B)!0.5!(A)$);
-        \coordinate[label=above:$G$](G)at($(D)!0.33!(A)$);
-        \draw (A)--(B)--(C) --cycle;
-        \draw (A)--(D) (B)--(E) (C)--(F);
-      \end{tikzpicture}
-    \end{flushright}
-  \vspace{2cm}
-\end{exercise}
+    \end{minipage}
+    \item
+      (2018届贵州遵义航天高级中学一模)如图所示，向量$\vv{OA}=\bm{a}$，$\vv{OB}=\bm{b}$，$\vv{OC}=\bm{c}$，$A$，$B$，$C$在一条直线上，且$\vv{AC}=3\vv{BC}$，则\xz
+      \begin{minipage}[b]{0.7\linewidth}
+        \xx{$\bm{c}=\dfrac32\bm{b}-\dfrac12\bm{a}$}
+          {$\bm{c}=\dfrac32\bm{a}-\dfrac12\bm{b}$}
+          {$\bm{c}=-\bm{a}+2\bm{b}$}
+          {$\bm{c}=\bm{a}+2\bm{b}$}
+      \end{minipage}\hfill
+      \begin{minipage}[htbp!]{0.3\linewidth}
+        \begin{center}
+        \begin{tikzpicture}
+          \coordinate[label=left:$O$](O)at(0,0);
+          \coordinate[label=right:$C$](C)at(3,0);
+          \coordinate[label=left:$A$](A)at(-1,2.5);
+          \coordinate[label=right:$B$](B)at($(A)!0.66!(C)$);
+          \draw (A)--(B)--(C)--cycle;
+          \draw[->,>=latex] (O)--(C);
+          \draw[->,>=latex] (O)--(A);
+          \draw[->,>=latex] (O)--(B);
+        \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+      \begin{answer}
+        A
+      \end{answer}
+    \item
+      设向量$\bm a$，$\bm b$不共线，向量$\lambda\bm a+\bm b$与$\bm a+2\bm b$共线，则实数$\lambda=$\tk.
+      \begin{answer}
+        $\dfrac12$
+      \end{answer}
+    \vspace{2em}
+    \item
+      如图，在$\triangle ABC$中，$D$，$E$为边$AB$的两个三等分点，$\vv{CA}=3\bm a$，$\vv{CB}=2\bm b$，求$\vv{CD}$，$\vv{CE}$(用$\bm a$，$\bm b$表示).
+      \begin{flushright}
+        \begin{tikzpicture}
+          \coordinate[label=left:$B$](B)at(0,0);
+          \coordinate[label=right:$C$](C)at(2.5,0);
+          \coordinate[label=above:$A$](A)at(3,3);
+          \coordinate[label=above:$E$](E)at($(B)!0.33!(A)$);
+          \coordinate[label=above:$D$](D)at($(B)!0.66!(A)$);
+          \draw (A)--(B)--(C) --cycle;
+          \draw (C)--(D) (C)--(E);
+          \draw[->,>=latex] (C)--(A);
+          \draw[->,>=latex] (C)--(B);
+        \end{tikzpicture}
+      \end{flushright}
+      \begin{answer}
+        $\vv{CD}=2\bm a+\dfrac23\bm b$；$\vv{CE}=\bm a+\dfrac43\bm b$
+      \end{answer}
+    \item%1平面向量的基本概念.pdf P10例2
+      设$\bm a$，$\bm b$是不共线的两个非零向量.\\
+      (1)若$\vv{OA}=2\bm a-\bm b$，$\vv{OB}=3\bm a+\bm b$，$\vv{OC}=\bm a-3\bm b$，求证：$A$，$B$，$C$三点共线；\\
+      (2)若$8\bm a+k\bm b$与$k\bm a+\2\bm b$共线，求实数$k$的值；\\
+      (3)若$\vv{OM}=m\bm a$，$\vv{ON}=n\bm b$，$\vv{OP}=\alpha\bm a+\beta\bm b$，其中$m$，$n$，$\alpha$，$\beta$均为实数，且$m,n\neq 0$，若$M$，$P$，$N$三点共线，求证：$\dfrac{\alpha}m+\dfrac{\beta}n=1$
+      \begin{answer}
+        (1)$\because \vv{AB}=\bm a+2\bm b$，$\vv{CB}=2\bm a+4\bm b$；$\therefore \vv{CB}=2\vv{AB}$；
+        (2)$k=2\sqrt2$；
+      \end{answer}
+      \vspace{5cm}
+    \item
+      设点$G$为$\triangle ABC$重心，$D$，$E$，$F$分别为各边中点.试用向量证明：$AG=\dfrac23 AD$.
+      \begin{flushright}
+        \begin{tikzpicture}
+          \coordinate[label=left:$B$](B)at(0,0);
+          \coordinate[label=right:$C$](C)at(3,0);
+          \coordinate[label=above:$A$](A)at(2,2);
+          \coordinate[label=below:$D$](D)at($(B)!0.5!(C)$);
+          \coordinate[label=right:$E$](E)at($(A)!0.5!(C)$);
+          \coordinate[label=above:$F$](F)at($(B)!0.5!(A)$);
+          \coordinate[label=above:$G$](G)at($(D)!0.33!(A)$);
+          \draw (A)--(B)--(C) --cycle;
+          \draw (A)--(D) (B)--(E) (C)--(F);
+        \end{tikzpicture}
+      \end{flushright}
+    \vspace{2cm}
+  \end{exercise}
+\clearpage
 \section{课后作业}
   \begin{exercise}
-    \item
+    \item%1平面向量的基本概念.pdf P2-训练1
       判断下列结论是否正确(请在括号中打“\checkmark”或“\XSolidBrush”)\\
       (1)向量就是有向线段．(　　)\\
       (2)如果$\abs{\vv{AB}}>\abs{\vv{CD}}$，那么$\vv{AB}>\vv{CD}$．(　　)\\
       (3)力、速度和质量都是向量.(　　)\\
       (4)若$\bm a$，$\bm b$都是单位向量，则$\bm a=\bm b$．(　　)\\
       (5)若$\bm a=\bm b$，且$\bm a$与$\bm b$的起点相同，则终点也相同．(　　)\\
-      (6)零向量的大小为0，没有方向．(　　)\\
+      (6)零向量的大小为0，没有方向．(　　)
       \begin{answer}
         (5)正确，其余皆误.
       \end{answer}
@@ -323,7 +393,7 @@
       \begin{answer}
         C
       \end{answer}
-    \item
+    \item%1平面向量的基本概念.pdf P13-4
       已知$AM$ 是$\triangle ABC$ 的边$BC$ 上的中线，若$\vv{AB}=\bm a$，$\vv{AC}=\bm b$，则$\vv{AM}$等于\xz
       \xx{$\dfrac12(\bm a-\bm b)$}
         {$-\dfrac12(\bm a-\bm b)$}
@@ -332,19 +402,28 @@
       \begin{answer}
         C
       \end{answer}
-    \item
+    \item%《习题化知识清单》P81知识4-1【向量共线】
+      已知向量$\bm a$、$\bm b$不共线，$\bm c=k\bm a+\bm b({k\in\mathbb{R}})$，$\bm d=\bm a-\bm b$。如果$\bm c\varparallel \bm d$，那么\xz
+      \xx{$k=1$且$\bm c$与$\bm d$同向}
+        {$k=1$且$\bm c$与$\bm d$反向}
+        {$k=-1$且$\bm c$与$\bm d$同向}
+        {$k=-1$且$\bm c$与$\bm d$反向}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%1平面向量的基本概念.pdf P13-10
       化简：\\
       \circled{1} $\vv{BC}+\vv{AB}$; \hspace{2em} \circled{2} $\vv{DB}+\vv{CD}+\vv{BC}$;\\
       \circled{3} $\vv{AB}-\vv{FD}+\vv{CD}-\vv{CB}+\vv{FA}$;\hspace{2em} \circled{4} $(\vv{AC}+\vv{BO}+\vv{OA})-(\vv{DC}-\vv{DO}-\vv{OB})$;\\
-      \vspace{4cm}
       \begin{answer}
         \circled{1}$\vv{AC}$；\circled{2}$\bm 0$；\circled{3}$\bm 0$；\circled{4}$\bm 0$
       \end{answer}
-    \item
+    \vspace{1.5cm}
+    \item%1平面向量的基本概念.pdf P8训练5
       一架飞机从$A$ 地按北偏东$35\textdegree$的方向飞行800 km 到达$B$ 地接到受伤人员，然后又从$B$ 地按南偏东$55\textdegree$的方向飞行600 km 送往$C $地医院，求这架飞机飞行的路程及两次位移的和．
-    \begin{answer}
-      路程1400km，位移1000km.
-    \end{answer}
+      \begin{answer}
+        路程1400km，位移1000km.
+      \end{answer}
     \vspace{4cm}
     \item
       设点$G$为$\triangle ABC$重心，$D$，$E$，$F$分别为各边中点.\\

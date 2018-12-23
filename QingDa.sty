@@ -248,8 +248,9 @@
 \setlength{\parskip}{2pt plus1pt minus1pt}
 
 % 定义行距
-\renewcommand{\baselinestretch}{1.6}
-
+\renewcommand{\baselinestretch}{1.2}%单倍行距
+% \renewcommand{\baselinestretch}{1.6}%双倍行距
+% \renewcommand{\baselinestretch}{1.4}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -299,5 +300,7 @@
 \newcommand{\dd}{{\mathrm d}}
 \newcommand{\ppi}{{\mathrm \pi}}
 \newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\ket}[1]{\ensuremath{|#1\rangle}}
+\newcommand{\vangle}[2]{\ensuremath{\langle #1,#2 \rangle}}
 %right-angle-mark；tikz作垂足；#2#1->#2#3为逆时针方向
 \newcommand{\rAm}[3]{($(#2)!6pt!(#1)$)--($(#2)!6pt!(#1)!6pt!90:(#1)$)--($(#2)!6pt!(#3)$)}
