@@ -250,9 +250,9 @@
 \setlength{\parskip}{2pt plus1pt minus1pt}
 
 % 定义行距
-\renewcommand{\baselinestretch}{1.2}%单倍行距
+% \renewcommand{\baselinestretch}{1.2}%单倍行距
 % \renewcommand{\baselinestretch}{1.6}%双倍行距
-% \renewcommand{\baselinestretch}{1.4}%
+\renewcommand{\baselinestretch}{1.4}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -274,6 +274,15 @@
 % }
 %
 % \newitemsep
+
+\newlength{\jeroenlen}
+\newenvironment{itemizeMy}[1][\hspace{0em}]
+ {\settowidth{\jeroenlen}{#1}%
+  \begin{description}[leftmargin=\jeroenlen,labelwidth=0pt,labelsep=0pt]
+  \item[\textbf{#1}]%
+  \begin{itemize}[leftmargin=1.5em,labelsep=.5em]}
+ {\end{itemize}\end{description}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 修改引用的格式，
@@ -300,9 +309,17 @@
 \newcommand{\ee}{{\mathrm e}}
 \newcommand{\ii}{{\mathrm i}}
 \newcommand{\dd}{{\mathrm d}}
-\newcommand{\ppi}{{\mathrm \pi}}
+\newcommand{\ppi}{{\piup}}
 \newcommand{\abs}[1]{\left| #1 \right|}
 \newcommand{\ket}[1]{\ensuremath{|#1\rangle}}
 \newcommand{\vangle}[2]{\ensuremath{\langle #1,#2 \rangle}}
 %right-angle-mark；tikz作垂足；#2#1->#2#3为逆时针方向
 \newcommand{\rAm}[3]{($(#2)!6pt!(#1)$)--($(#2)!6pt!(#1)!6pt!90:(#1)$)--($(#2)!6pt!(#3)$)}
+\def\inZ{\in\mathbb{Z}}
+\def\inR{\in\mathbb{R}}
+\def\inN{\in\mathbb{N}}
+\def\rad{\mathrm{rad}}
+\def\deg{\mathrm{deg}}
+\newcommand{\dfracp}[2]{\dfrac{#1\piup}{#2}}
+\newcommand{\Bp}[1]{\Bigl(#1\Bigr)}
+\newcommand{\bbp}[1]{\biggl(#1\biggr)}
