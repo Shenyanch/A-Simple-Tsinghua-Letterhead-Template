@@ -1,0 +1,540 @@
+% 节录自b5-FinExRev.tex
+\Topic{平面向量与三角恒等变换复习}
+  \Teach{}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20190112}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+\section{平面向量要点归纳}
+  \subsection{五种常见向量}
+    \begin{enumerate}[label=\arabic*)]
+      \item 单位向量：模为1的向量.
+      \item 零向量：模为0的向量.
+      \item 平行(共线向量)：方向相同或相反或其一为零向量的两个向量.
+      \item 相等向量：模相等，方向相同的向量.
+      \item 相反向量：模相等，方向相反的向量.
+    \end{enumerate}
+  \subsection{平面向量运算律}
+    \begin{enumerate}[label=\arabic*)]
+      \item 交换律：
+        $\bm a+\bm b=\bm b+\bm a$，\quad
+        $\bm a\cdot\bm b=\bm b\cdot\bm a$
+      \item 结合律：
+        $(\bm{a}+\bm{b})+\bm{c}=\bm{a}+(\bm{b}+\bm{c})$，\quad
+        $(\lambda \bm a)\cdot\bm{b}=\lambda(\bm a\cdot\bm b)=\bm{a}\cdot(\lambda\bm{b})$
+      \item 分配律：
+        $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$，\quad
+        $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambd+a\bm{b}$，\quad
+        $(\bm a+\bm b)\cdot \bm c=\bm a\cdot\bm c+\bm b\cdot \bm c$
+      \item 重要公式：(记号$\bm a^2=\bm a\cdot\bm a$)
+        $(\bm a+\bm b)(\bm a-\bm b)=\bm a^2-\bm b^2$，\quad
+        $(\bm a\pm\bm b)^2=\bm a^2\pm2\bm a\cdot\bm b+\bm b^2$.
+    \end{enumerate}
+  \subsection{两个重要定理}
+    \begin{enumerate}[label=\arabic*)]
+      \item 向量共线定理：
+        向量$\bm{a}~(\bm{a}\ne\bm{0})$与向量$\bm{b}$共线,当且仅当存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.\\
+        {\kaishu
+         证明三点共线的方法：\circled{1}$\vv{AB}=\lambda\vv{AC}$，则$A$，$B$，$C$三点共线；\circled{2}$\vv{OA}=\lambda\vv{OB}+\mu\vv{OC}$，若$\lambda+\mu=1$，则$A$，$B$，$C$三点共线.
+        }
+      \item 平面向量基本定理：
+        如果$ \bm{e}_1,\bm{e}_2 $是同一平面内的两个\CJKunderdot{不共线}的向量，
+        则那么对于这一平面内的任意向量$ \bm{a} $，有且只有一对实数$ \lambda_1,~\lambda_2 $，使$\bm{a}=\lambda_1\bm{e}_1+\lambda_2\bm{e}_2$.
+        其中，不共线的向量$\bm{e}_1, \bm{e}_2$叫做表示这一平面内所有向量的一组\CJKunderdot{基底}.\\
+        {\kaishu 平面向量基本定理应用技巧：
+          \begin{enumerate}[label=\circled{\arabic*}]
+            \item 构造某一向量在同一基底下的两种不同表达形式，
+              根据向量分解的唯一性求解.即：\\
+              {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2=x_2\bm e_1+y_2\bm e_2$，则$\begin{cases}x_1=x_2\\y_1=y_2\end{cases}$}
+            \item 构造两个共线向量在同一基底下的表达形式，
+              根据向量共线定理求解.即：\\
+              {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2$，$\bm b=x_2\bm e_1+y_2\bm e_2$，且$\bm a\varparallel\bm b$，则$x_1y_2-x_2y_1=0$}
+            \item 将题目中的已知条件转化成
+              $\lambda_1\bm e_1+\lambda_2\bm e_2=\bm 0$的形式($\bm e_1$，$\bm e_2$不共线)，根据$\lambda_1=\lambda_2=0$求解.
+          \end{enumerate}}
+    \end{enumerate}
+  \subsection{平面向量平行、垂直的等价条件}
+    设$\bm a=(x_1,y_1)$，$\bm b=(x_2,y_2)$，则：
+    \begin{enumerate}[label=\arabic*)]
+      \item $\bm a\varparallel\bm b$$\Leftrightarrow$$x_1y_2-x_2y_1=0$.
+      \item $\bm a\perp\bm b$
+            $\Leftrightarrow$$\bm a\cdot\bm b=0$
+            $\Leftrightarrow$$x_1x_2+y_1y_2=0$.
+    \end{enumerate}
+  \subsection{平面向量数量积相关量求解}
+    \begin{enumerate}[label=\arabic*)]
+      \item 向量夹角：设$\bm a=(x_1,y_1)$，$\bm b=(x_2,y_2)$，则
+        $\cos\vangle{\bm a}{\bm b}=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad (\vangle{\bm a}{\bm b}\in\left[0,\piup\right])$
+      \item 向量模长：若$\bm a=(x,y)$，则$\abs{\bm a}=\sqrt{\bm a\cdot\bm a}=\sqrt{x^2+y^2}$
+      \item 向量投影：向量$\bm a$在$\bm b$方向上的投影为  $\abs{\bm{a}}\cos\theta=\dfrac{\bm a\cdot\bm b}{\abs{\bm b}}$
+    \end{enumerate}
+  \begin{exercise}{\textbf{向量表示}}
+    \item
+      (2018届贵州遵义航天高级中学一模)如图所示，向量$\vv{OA}=\bm{a}$，$\vv{OB}=\bm{b}$，$\vv{OC}=\bm{c}$，$A$，$B$，$C$在一条直线上，且$\vv{AC}=3\vv{BC}$，则\xz
+      \begin{minipage}[b]{0.7\linewidth}
+        \xx{$\bm{c}=\dfrac32\bm{b}-\dfrac12\bm{a}$}
+          {$\bm{c}=\dfrac32\bm{a}-\dfrac12\bm{b}$}
+          {$\bm{c}=-\bm{a}+2\bm{b}$}
+          {$\bm{c}=\bm{a}+2\bm{b}$}
+      \end{minipage}\hfill
+      \begin{minipage}[htbp!]{0.3\linewidth}
+        \begin{center}
+        \begin{tikzpicture}
+          \coordinate[label=left:$O$](O)at(0,0);
+          \coordinate[label=right:$C$](C)at(3,0);
+          \coordinate[label=left:$A$](A)at(-1,2.5);
+          \coordinate[label=right:$B$](B)at($(A)!0.66!(C)$);
+          \draw (A)--(B)--(C)--cycle;
+          \draw[->,>=latex] (O)--(C);
+          \draw[->,>=latex] (O)--(A);
+          \draw[->,>=latex] (O)--(B);
+        \end{tikzpicture}
+        \end{center}
+      \end{minipage}
+      \begin{answer}
+        A
+      \end{answer}
+    {\begin{minipage}[b]{0.65\linewidth}
+      \item%LaTeX-master/xiangliang/xiangliangsorting.tex P10-p48
+        在$\triangle ABC$中，点$ M$，$N $满足$ \vv{AM}=2\vv{MC}$，$\vv{BN}=\vv{NC}$.若$\vv{MN}=x\vv{AB}+y\vv{AC}$，则$ x= $\tk;$ y= ~$ \tk.
+        \begin{answer}
+          $x=\dfrac12$；$y=-\dfrac16$
+        \end{answer}
+      \end{minipage}
+      \begin{minipage}[htbp!]{0.3\linewidth}
+        \begin{center}
+        \begin{tikzpicture}
+          \draw(0,0)node[below](B){\small$B$}--(1,0)node[below](N){\small$N$}--(2,0)node[below](C){\small$C$};
+          \draw (0,0)--(1.1,2.1)node[above](A){\small$A$}--(2,0);
+          \draw (1,0)--(1.1,2.1);
+          \draw(1,0)--($(1.1,2.1)!0.7!(2,0)$)node[right](M){\small$M$};
+        \end{tikzpicture}
+        \end{center}
+      \end{minipage}}
+    \item%【向量的线性运算】
+      (2017 \textbullet {\kaishu 广东深圳二模})如图所示，正方形$ABCD$中，$M$是$BC$的中点，若$\vv{AC}=\lambda\vv{AM}+\mu\vv{BD}$，则$\lambda+\mu$等于\xz
+      \xx{$\dfrac{4}3$}
+       {$\dfrac{5}3$}
+       {$\dfrac{15}8$}
+       {$2$}
+      \begin{center}
+        \begin{tikzpicture}
+          \coordinate[label=left:$A$](A)at(0,0);
+          \coordinate[label=right:$B$](B)at(3.5,0);
+          \coordinate[label=left:$D$](D)at(0,3.5);
+          \coordinate[label=right:$C$](C)at(3.5,3.5);
+          \coordinate[label=right:$M$](M)at($(B)!0.5!(C)$);
+          \draw (A)--(B)--(C)--(D)--cycle;
+          \draw[->,>=latex] (A)--(C);
+          \draw[->,>=latex] (A)--(M);
+          \draw[->,>=latex] (B)--(D);
+        \end{tikzpicture}
+      \end{center}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%【向量坐标法在平面几何的应用,三角函数定义】
+      %如图，
+      半径为$\sqrt{3}$的扇形$AOB$的圆心角为120\degree，点$C$在$\arc{AB}$上，且$\angle{COB}=30\degree$，若$\vv{OC}=\lambda\vv{OA}+\mu\vv{OB}$，则$\lambda+\mu$等于\xz
+      \xx{$\sqrt{3}$}
+       {$\dfrac{\sqrt{3}}3$}
+       {$\dfrac{4\sqrt{3}}3$}
+       {$2\sqrt{3}$}
+      \begin{answer}
+        A
+      \end{answer}
+  \end{exercise}
+  \begin{exercise}{\textbf{向量共线}}
+    \item%福州格致中学2015-2016学年高一数学第二学期期末检测.docx-8
+      (2016 \textbullet {\kaishu 格致中学} 8)
+      设$\bm e_1$，$\bm e_2$是两个不共线的向量，$\vv{AB}=2\bm e_1+k\bm e_2$，$\vv{CB}=2\bm e_1+3\bm e_2$，$\vv{CD}=2\bm e_1-\bm e_2$，若$A$，$B$，$D$三点共线，则$k=$\xz
+      \xx{$\dfrac12$}
+        {$-8$}
+        {$-\dfrac18$}
+        {$2$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%福州一中学2016-2017学年高一下学期期末考试数学…….doc-3【向量共线】
+      (2017 \textbullet {\kaishu 福州一中} 3)
+      已知向量$\bm a$，$\bm b$不共线，且$\bm c=\lambda\bm a+\bm b$，$\bm d=\bm a+(2\lambda-1)\bm b$，若$\bm c$与$\bm d$方向相反，则实数$\lambda$的值为\xz
+      \xx{$1$}
+       {$-\dfrac12$}
+       {$1$或$-\dfrac12$}
+       {$-1$或$-\dfrac12$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《习题化知识清单》P83方法2【向量共线条件应用】
+      平面内给定三个向量$\bm a=(3,2)$，$\bm b=(-1,2)$，$\bm c=(4,1)$，则\\
+      (1)若$(\bm a+k\bm c)\varparallel(2\bm b-\bm a)$，则实数$k=$\tk；\\
+      (2)设$\bm d=(x,y)$满足$(\bm d-\bm c) \varparallel (\bm a+\bm b)$且$\abs{\bm d-\bm c}=1$，则$\bm d=$\tk.
+      \begin{answer}
+        (1)$k=-\dfrac{16}{13}$；(2)$\bm d=\Bigl(\dfrac{20+\sqrt{5}}5,\dfrac{5+2\sqrt{5}}5\Bigr)$或$\Bigl(\dfrac{20-\sqrt{5}}5,\dfrac{5-2\sqrt{5}}5\Bigr)$
+      \end{answer}
+    \item%《习题化知识清单》P83方法2-2【向量共线条件应用】
+      若平面向量$\bm a$，$\bm b$满足$\abs{\bm a+\bm b}=1$，$\bm a+\bm b$平行于$x$轴,$\bm b=(2,-1)$，则$\bm a=$\tk.
+      \begin{answer}
+        $(-1,1)$或$(-3,1)$
+      \end{answer}
+    \item%《习题化知识清单》P91单元检测16【三点共线，向量共线】
+      设两个非零向量$\bm a$与$\bm b$不共线\\
+      (1)若$\vv{AB}=\bm a+\bm b$，$\vv{BC}=2\bm a+8\bm b$，$\vv{CD}=3(\bm a-\bm b)$，求证：$A$，$B$，$D$三点共线；\\
+      (2)试确定实数$k$，使$k\bm a+\bm b$与$\bm a+k\bm b$共线.
+      \begin{answer}
+        (1)略；(2)$k=\pm1$
+      \end{answer}
+    \vspace{5cm}
+  \end{exercise}
+  \begin{exercise}{\textbf{向量数量积、投影}}
+    \item%福州三中2017高一下数学期末卷…….doc-5【向量投影，基底表示】
+      (2017 \textbullet {\kaishu 福州三中} 5)
+      设$\bm e_1$，$\bm e_2$为单位向量，且$\bm e_1$，$\bm e_2$的夹角为$\dfrac{\piup}3$，若$\bm a=\bm e_1-3\bm e_2$，$\bm b=\bm e_1+\bm e_2$，则向量$\bm a$在$\bm b$方向上的射影为\xz
+      \xx{$-\sqrt3$}
+       {$\sqrt3$}
+       {$-\dfrac{\sqrt{10}}5$}
+       {$\dfrac{\sqrt{10}}5$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item%《习题化知识清单》P84知识5-3【数量积的应用，运算律】
+      已知$\abs{\bm a}=\abs{\bm b}=1$，$\bm a$，$\bm b$的夹角是直角，
+      $\bm c=2\bm a+3\bm b$，$\bm d=k\bm a-4\bm b$，$\bm c\perp\bm d$，则$k=$\tk.
+      \begin{answer}
+        6
+      \end{answer}
+      已知$\triangle{ABC}$是正三角形，若$\vv{AC}-\lambda\vv{AB}$与向量$\vv{AC}$的夹角大于90\degree，则实数$\lambda$的取值范围是\tk.
+      \begin{answer}
+        $(2,+\infty)$
+      \end{answer}
+    \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-17【数量积，几何】
+      (2017 \textbullet {\kaishu 师大附中} 17)
+      在$\triangle{ABC}$中，$|\vv{AD}|=|\vv{BD}|=|\vv{CD}|$，$|\vv{AB}|=3$，则$\vv{AB}\cdot\vv{AD}=$\tk.
+      \begin{answer}
+        $\dfrac92$
+      \end{answer}
+    \item%《高中数学竞赛培优教程+一试(李名德 主编)》.pdf P114-例5.8
+      已知$\bm a=(\cos\alpha,\sin\alpha)$，$\bm b=(\cos\beta,\sin\beta)$($0<\alpha<\beta<\piup$).\\
+      (1)求证：$\bm a+\bm b$与$\bm a-\bm b$相互垂直；\\
+      (2)若$k\bm a+\bm b$与$\bm a-k\bm b$大小相等，求$\beta-\alpha$(其中$k$为非零实数).
+      \begin{answer}
+        (1)略；(2)$\dfrac{\piup}2$
+      \end{answer}
+    \vspace{4cm}
+  \end{exercise}
+  \begin{exercise}{\textbf{向量求模、夹角}}
+    \item%%福建师大附中2016-2017高一下期末考试数学试题…….doc-15【向量夹角，线性运算模长】
+      (2017 \textbullet {\kaishu 师大附中} 15)
+      已知单位向量$\bm a$，$\bm b$的夹角为$\dfracp{}3$，那么$|\bm a-2\bm b|=$\tk.
+      \begin{answer}
+        $\sqrt3$
+      \end{answer}
+    \item%福州三中2017高一下数学期末卷…….doc-16【向量投影，基底表示】
+      (2017 \textbullet {\kaishu 福州三中} 16)
+      已知$\bm a$，$\bm b$是平面内两个相互垂直的单位向量，若向量$\bm c$满足$(\bm a-\bm c)\cdot(\bm b-\bm c)=0$，则$|\bm c|$的最大值是\tk.
+      \begin{answer}
+        $\sqrt2$
+      \end{answer}
+    \item%《习题化知识清单》P84方法1【求向量夹角基本方法】
+      已知$\abs{\bm a}=1$，$\abs{\bm b}=2$，$\bm a$与$\bm b$的夹角为120\degree，则使$\bm a+k\bm b$与$k\bm a+\bm b$的夹角为锐角的实数$k$的取值范围是\tk.
+      \begin{answer}
+        $\Bigl(\dfrac{5-\sqrt{21}}2,1\Bigr) \bigcup \Bigl(1,\dfrac{5-\sqrt{21}}2 \Bigr)$
+      \end{answer}
+    \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-19【向量共线、夹角、模长】
+      (2017 \textbullet {\kaishu 师大附中} 19)
+      已知$\bm a$，$\bm b$为两个不共线向量，$\abs{\bm a}=2$，$\abs{\bm b}=1$，$\bm c=2\bm a-\bm b$，$\bm d=\bm a+k\bm b$.\\
+      (I)若$\bm c\varparallel\bm d$，求实数$k$；\\
+      (II)若$k=-7$，且$\bm c\perp\bm d$，求$\bm a$与$\bm b$的夹角.
+      \begin{answer}
+        (I)$k=-\dfrac12$
+        (II)$\vangle{\bm a}{\bm b}=\dfrac{\piup}3$
+      \end{answer}
+    \vspace{4.5cm}
+    \item%福州一中学2016-2017学年高一下学期期末考试数学…….doc-15【数量积，垂直】
+      (2017 \textbullet {\kaishu 福州一中} 15)
+      已知$\bm a=(\cos\alpha,k\sin\alpha)$，$\bm b=(\cos\beta,\sin\beta)$($k>0$，$0<\alpha<\beta<\dfrac{\piup}2$)，且$\bm a+\bm b$与$\bm a-\bm b$相互垂直.\\
+      (1)求$k$的值；\\
+      (2)若$\bm a\cdot\bm b=\dfrac45$且$\cos\beta=\dfrac35$，求$\sin\alpha$的值.
+      \begin{answer}
+        (1)$k=1$；
+        (2)$\sin\alpha=\dfrac7{25}$
+      \end{answer}
+    \vspace{5.5cm}
+  \end{exercise}
+  \begin{exercise}{\textbf{平面几何应用}}
+    \item
+      已知四边形$ABCD$ 是菱形，则下列等式中成立的是\xz
+      \xx{$\vv{AB}+\vv{BC}=\vv{CA}$}
+        {$\vv{AB}+\vv{AC}=\vv{BC}$}
+        {$\vv{AC}+\vv{BA}=\vv{AD}$}
+        {$\vv{AC}+\vv{AD}=\vv{DC}$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%【平面向量几何应用：垂直问题】
+      直角坐标系$xOy$中，$\vv{AB}=(2,1)$，$\vv{AC}=(3,k)$，若$\triangle{ABC}$是直角三角形，则$k$的可能值个数是\xz
+      \xx{1}{2}{3}{4}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%福州一中学2016-2017学年高一下学期期末考试数学…….doc-14【数量积，外心】
+      (2017 \textbullet {\kaishu 福州一中} 14)
+      $\triangle{ABC}$中，$CA=4$，$CB=6$，点$O$为$\triangle{ABC}$的外心，则$\vv{CO}\cdot\vv{AB}=$\tk.
+      \begin{answer}
+        5
+      \end{answer}
+    \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-6【数量积，三角形形状】
+      (2017 \textbullet {\kaishu 师大附中} 6)
+      若点$O$是$\triangle{ABC}$平面内一点，且满足$(\vv{OB}-\vv{OC})\cdot(\vv{OB}+\vv{OC}-2\vv{OA})=0$，则$\triangle{ABC}$形状为\xz
+      \xx{钝角三角形}{等腰三角形}{直角三角形}{锐角三角形}
+      \begin{answer}
+        B
+      \end{answer}
+  \end{exercise}
+\newpage
+
+\section{三角恒等变换公式总结}
+  \begin{description}[leftmargin=0pt,labelsep=0pt]
+    \item%[两角的和与差]
+      \begin{itemizeMy}[两角的和与差\hspace{2em}]
+        \item $\mathrm{C}_{\alpha\pm\beta}$：
+        $\cos(\alpha\pm\beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$
+        \item $\mathrm{S}_{\alpha\pm\beta}$：
+        $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$
+        \item $\mathrm{T}_{\alpha\pm\beta}$：
+        $\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm \tan\beta}{1\mp\tan\alpha\tan\beta}$
+      \end{itemizeMy}
+    \item%[二倍角公式]
+      \begin{itemizeMy}[二倍角公式\hspace{3em}]
+        \item $\mathrm{S}_{2\alpha}$：
+        $\sin{2\alpha}=2\sin\alpha\cos\alpha$
+        \item $\mathrm{C}_{2\alpha}$：
+        $\cos{2\alpha}=\cos^2{\alpha}-\sin^2{\alpha}=2\cos^2\alpha-1=1-2\sin^2\alpha$
+        \item $\mathrm{T}_{2\alpha}$：
+        $\tan{2\alpha}=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
+      \end{itemizeMy}
+      \item%[半角公式]
+        \begin{itemizeMy}[半角公式\hspace{4em}]
+          \item $\sin{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1-\cos\alpha}2}$，
+                $\cos{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1+\cos\alpha}2}$
+          \item $\tan{\dfrac{\alpha}2}=\dfrac{\sin\alpha}{1+\cos\alpha}=\dfrac{1-\cos\alpha}{\sin\alpha}$
+        \end{itemizeMy}
+      % \item%[万能公式]
+      %   \begin{itemizeMy}[万能公式\hspace{4em}]
+      %     \item $\sin{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\cos{\alpha}=\dfrac{1-\tan^2{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\tan{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1-\tan^2{\dfrac{\alpha}2}}}$
+      %   \end{itemizeMy}
+      \item%[辅助角公式]
+        \begin{itemizeMy}[辅助角公式\hspace{3em}]
+          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$，
+            其中$\sin\varphi=\dfrac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi=\dfrac{a}{\sqrt{a^2+b^2}}$\\
+            $a>0$时，
+            令$\tan\varphi=\dfrac{b}a$，$
+            \varphi\in\Bigl(-\dfrac{\piup}2,\dfrac{\piup}2\Bigr)$
+          \item 令$\bm p=(b,a)$，$\bm q=(\cos x,\sin x)$，则由$\bm p\cdot\bm q=\abs{\bm p}\abs{\bm q} \cos\vangle{\bm p}{\bm q}$，得：\\
+          $a\sin x+b\cos x=\sqrt{a^2+b^2}\cos{(x-\phi)}$，其中角$\phi$终边经过点$(b,a)$.
+        \end{itemizeMy}
+  \end{description}
+  \begin{exercise}{\textbf{习题}}
+    \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题15三角恒等变换 P57p4【2008•山东】
+      (2008 \textbullet {\kaishu 山东})
+      已知$\cos{\Bigl(\alpha-\dfrac{\piup}6\Bigr)}+\sin\alpha=\dfrac{4}5\sqrt{3}}$，则$\sin{\Bigl(\alpha+\dfrac{7\piup}6\Bigr)}$的值是\xz
+      \xx{$-\dfrac{2\sqrt{3}}5$}
+       {$\dfrac{2\sqrt{3}}5$}
+       {$-\dfrac{4}5$}
+       {$\dfrac{4}5$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题15三角恒等变换 P57p7【2013•浙江】
+      (2013 \textbullet {\kaishu 浙江})
+      已知$\alpha\in\mathbb{R}$，$\sin\alpha+2\cos\alpha=\dfrac{\sqrt{10}}2$，则$\tan{2\alpha}=$\xz
+      \xx{$\dfrac{4}3$}{$\dfrac{3}4$}{$-\dfrac{3}4$}{$-\dfrac{4}3$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题15三角恒等变换 P57p5【2014•全国新课标】
+      (2014 \textbullet {\kaishu 全国新课标})
+      设$\alpha\in\Bigl(0,\dfrac{\piup}2\Bigr)$，$\beta\in\Bigl(0,\dfrac{\piup}2\Bigr)$，且$\tan\alpha=\dfrac{1+\sin\beta}{\cos\beta}$，则\xz
+      \xx{$3\alpha-\beta=\dfrac{\piup}2$}
+       {$3\alpha+\beta=\dfrac{\piup}2$}
+       {$2\alpha-\beta=\dfrac{\piup}2$}
+       {$2\alpha+\beta=\dfrac{\piup}2$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题13三角函数的概念、... P49p7【2011•福建】
+      (2011 \textbullet {\kaishu 福建})
+      若$\tan\alpha=3$，则$\dfrac{\sin{2\alpha}}{\cos^2\alpha}$的值等于\xz
+      \xx{2}{3}{4}{6}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%《习题化知识清单》P87方法1【三角函数式化简】
+      化简：
+      $\sin{\Bigl(3x+\dfrac{\piup}3\Bigr)}\cos{\Bigl(x-\dfrac{\piup}6\Bigr)}+\cos{\Bigl(3x+\dfrac{\piup}3\Bigr)}\cos{\Bigl(x+\dfrac{\piup}3\Bigr)}=$\tk.
+      \begin{answer}
+        \cos{2x}
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题14三角函数的图像与性质 P54p16【2013•全国新课标】
+      (2013 \textbullet {\kaishu 全国新课标})
+      设当$x=\theta$时，函数$f(x)=\sin x-2\cos x$取得最大值，则$\cos\theta=$\tk.
+      \begin{answer}
+        $-\dfrac{2\sqrt{5}}5$
+      \end{answer}
+    \item%《习题化知识清单》P87方法1【三角函数式化简】
+      函数$y=\sin{\Bigl(\dfrac{\piup}2+x\Bigr)\cos{\Bigl(\dfrac{\piup}6-x\Bigr)}}$的最大值为\tk.
+      \begin{answer}
+        $\dfrac{2+\sqrt{3}}4$
+      \end{answer}
+  \end{exercise}
+\newpage
+
+\section{课后作业}
+\begin{exercise}
+  \item%【向量的线性运算】
+    若点$D$在$\triangle{ABC}$的边$BC$上，且$\vv{CD}=4\vv{DB}=r\vv{AB}+s\vv{AC}$，则$3r+s$的值为\xz
+    \xx{$\dfrac{16}5$}
+     {$\dfrac{12}5$}
+     {$\dfrac{8}5$}
+     {$\dfrac{4}5$}
+    \begin{answer}
+      C
+    \end{answer}
+  \item%福州屏东中学2016-2017学年高一下学期期末考试数学试题.doc-4【向量共线】
+    (2017 \textbullet {\kaishu 屏东中学} 4)
+    若$A(-1,1)$，$B(1,3)$，$C(x,5)$，且$\vv{AB}=\lambda\vv{BC}$，则实数$\lambda$等于\xz
+    \xx{1}{2}{3}{4}
+    \begin{answer}
+      1
+    \end{answer}
+  \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-3【向量投影，坐标表示】
+    (2017 \textbullet {\kaishu 师大附中} 3)
+    若$\bm a=(2,1)$，$\bm b=(3,4)$，则向量$\bm b$在向量$\bm a$方向上的投影为\xz
+    \xx{$2\sqrt5$}
+     {$2$}
+     {$\sqrt5$}
+     {$10$}
+    \begin{answer}
+      A
+    \end{answer}
+  \item%【向量表示】
+    设$D$为$\triangle{ABC}$所在平面内一点，$\vv{BD}=3\vv{CD}$，则\xz
+    \xx{$\vv{AD}=-\dfrac13\vv{AB}+\dfrac43\vv{AC}$}
+     {$\vv{AD}=\dfrac43\vv{AB}-\dfrac13\vv{AC}$}
+     {$\vv{AD}=\dfrac23\vv{AB}-\dfrac12\vv{AC}$}
+     {$\vv{AD}=-\dfrac12\vv{AB}+\dfrac32\vv{AC}$}
+    \begin{answer}
+      D
+    \end{answer}
+  \item%【向量夹角、模长】
+    已知$|\bm a|=1$，$\bm a\cdot\bm b=\dfrac12$，$|\bm a-\bm b|^2=1$，则$\bm a$与$\bm b$的夹角等于\xz
+    \xx{30\degree}{45\degree}{60\degree}{120\degree}
+    \begin{answer}
+      C
+    \end{answer}
+  \item%【向量共线】
+    已知向量$\bm a=(2,3)$，$\bm b=(-1,2)$，若$m\bm a+4\bm b$与$\bm a-2\bm b$共线，则$m$的值为\xz
+    \xx{$\dfrac12$}{$2$}{$-\dfrac12$}{$-2$}
+    \begin{answer}
+      D
+    \end{answer}
+  \item%【向量几何应用】
+    在平面四边形$ABCD$中，若$AC=3$，$BD=2$，则$(\vv{AB}+\vv{DC})\cdot(\vv{AC}+\vv{BD})=$\tk.
+    \begin{answer}
+      5
+    \end{answer}
+  \item%《习题化知识清单》P84知识3-3【数量积的运算律】
+    已知不共线向量$\bm a$，$\bm b$，$\abs{\bm a}=2$，$\abs{\bm b}=3$，$\bm a\cdot(\bm b-\bm a)=1$，则$\abs{\bm b-\bm a}=$\tk.
+    \begin{answer}
+      $\sqrt{3}$
+    \end{answer}
+  \item%《习题化知识清单》P84方法2【求向量模的基本方法】
+    已知向量$\bm a$，$\bm b$夹角为45\degree，且$\abs{\bm a}=1$，$\abs{2\bm a-\bm b}=\sqrt{10}$，则$\abs{\bm b}=$\tk.
+    \begin{answer}
+      $3\sqrt{2}$
+    \end{answer}
+  \item%《2018天利38套：全国卷高考常考基础题(理)ISBN978-7-223-03393-0》练习8 三角恒等变换 P22p15
+    已知$\cos(x+2\theta)+2\sin\theta\sin(x+\theta)=\dfrac{1}3$，则$\cos{2x}$的值为\tk.
+    \begin{answer}
+      $-\dfrac{7}9$
+    \end{answer}
+  \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题15三角恒等变换 P58p11【2017•江苏】
+    (2017 \textbullet {\kaishu 江苏})
+    若$\tan{\Bigl(\alpha-\dfrac{\piup}4\Bigr)}=\dfrac{1}6$，则$\tan\alpha=$\tk.
+    \begin{answer}
+      $\dfrac{7}5$
+    \end{answer}
+  \item%《2018天利38套：全国卷高考常考基础题(理)ISBN978-7-223-03393-0》练习8 三角恒等变换 P22p20
+    已知$\sin{2\alpha}-2=2\cos{2\alpha}$，则$\sin^2\alpha+\sin{2\alpha}=$\tk.
+    \begin{answer}
+      $1$或$\dfrac{8}5$
+    \end{answer}
+  % \item%【向量垂直】
+  %   平面向量$\bm a=(\sqrt{3},-1)$，$\bm=\Bp{\dfrac12,\dfrac{\sqrt3}2}$，若存在不同时为0的实数$k$和$t$，
+  %   使$\bm x=\bm a+(t^2-3)\bm b$，$\bm y=-k\bm a+t\bm b$，且$\bm x\perp\bm y$，试求函数关系式$k=f(t)$.
+  %   \begin{answer}
+  %     $k=f(t)=\dfrac14(t^3-3t)$
+  %   \end{answer}
+  % \vspace{2.5cm}
+  \item%福州三中2017高一下数学期末卷…….doc-18【向量垂直，模长，共线】
+    (2017 \textbullet {\kaishu 福州三中} 18)
+    平面内的向量$\bm a=(3,2)$，$\bm b=(-1,2)$，$\bm c=(4,1)$.\\
+    (I)若$(\bm a+k\bm c)\perp(2\bm b-\bm a)$，求实数$k$的值；\\
+    (II)若向量$\bm d$满足$\bm d\varparallel\bm c$，且$\abs{\bm d}=\sqrt{34}$，求向量$\bm d$的坐标.
+    \begin{answer}
+      (I)$k=-\dfrac{11}{18}$
+      (II)$\bm d=(4\sqrt2,\sqrt2)$或$\bm d=(-4\sqrt2,-\sqrt2)$
+    \end{answer}
+  \vspace{5cm}
+  \item
+    已知点$P$是$\triangle{ABC}$内一点，且满足条件$\vv{AP}+\vv{AP}+\vv{AP}=\bm 0$，
+    设点$Q$为$CP$的延长线与$AB$的交点，令$\vv{CP}=\bm p$，试用向量$\bm p$表示$\vv{CQ}$.
+    \begin{answer}
+      $\vv{CQ}=2\bm p$
+    \end{answer}
+  \vspace{6cm}
+  \item%《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P63p31【2010•江苏】
+    (2010 \textbullet {\kaishu 江苏})
+    在平面直角坐标系$xOy$中，已知点$A(-1,-2)$，$B(2,3)$，$C(-2,-1)$.\\
+    (I)求以线段$AB$，$AC$为邻边的平行四边形的两条对角线的长；\\
+    (II)设实数$t$满足$(\vv{AB}-t\vv{OC})\cdot\vv{OC}=0$，求$t$的值.
+    \begin{answer}
+      (I)两条对角线长分别为$4\sqrt2$，$2\sqrt{10}$；
+      (II)$t=-\dfrac{11}5$
+    \end{answer}
+  \vspace{5.5cm}
+  % \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03438-8》专题18平面向量的应用 P72p17【2014•陕西】
+  %   (2014 \textbullet {\kaishu 陕西})
+  %   在直角坐标系$xOy$中，已知点$A(1,1)$，$B(2,3)$，$C(3,2)$，点$P(x,y)$在$\triangle{ABC}$三边围成的区域(含边界)上.\\
+  %   (I)若$\vv{PA}+\vv{PB}+\vv{PC}=\bm 0$，求$\abs{\vv{OP}}$；\\
+  %   (II)设$\vv{OP}=m\vv{AB}+n\vv{AC}$($m,n\inR$)，用$x$，$y$表示$m-n$，并求$m-n$的最大值.
+  %   \begin{answer}
+  %     (I)$\abs{\vv{OP}}=2\sqrt2$;
+  %     (II)$(x,y)=(m+2n,2m+n)$，$m-n$最大值为1.
+  %   \end{answer}
+  \item%福州屏东中学2016-2017学年高一下学期期末考试数学试题.doc-17【向量共线】
+    (2017 \textbullet {\kaishu 屏东中学} 17)
+    已知向量$\bm m=(\cos\alpha,1-\sin\alpha)$，$\bm n=(-\cos\alpha,\sin\alpha)$($\alpha\inR$)\\
+    (I)若$\bm m\perp\bm n$，求角$\alpha$的值；\qquad (II)若$\abs{\bm m-\bm n}=\sqrt3$，求$\cos{2\alpha}$的值.
+    \begin{answer}
+      (I)$\alpha=\dfrac{\piup}2$
+      (II)$\cos{2\alpha}=\dfrac{\sqrt2}2$
+    \end{answer}
+\end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

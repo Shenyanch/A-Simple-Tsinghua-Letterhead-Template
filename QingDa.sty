@@ -17,6 +17,7 @@
 \RequirePackage{multicol}%分栏
   % \setlength{\columnsep}{12pt}​%将栏位之间的距离设为12pt(缺省是10pt)，
   % \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
+% \RequirePackage{siunitx}%国际单位制符号
 %数学符号
 \RequirePackage{amsmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
 \RequirePackage[g]{esvect}%向量表示包
@@ -318,8 +319,25 @@
 \def\inZ{\in\mathbb{Z}}
 \def\inR{\in\mathbb{R}}
 \def\inN{\in\mathbb{N}}
-\def\rad{\mathrm{rad}}
-\def\deg{\mathrm{deg}}
+\def\rad{\,\mathrm{rad}}
+\def\deg{\,\mathrm{deg}}
 \newcommand{\dfracp}[2]{\dfrac{#1\piup}{#2}}
 \newcommand{\Bp}[1]{\Bigl(#1\Bigr)}
 \newcommand{\bbp}[1]{\biggl(#1\biggr)}
+%====================================================================
+%弧AB的符号
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+\newcommand{\arc@arc}[2]{%
+  \sbox0{$\m@th#1#2$}%
+  \vbox{
+    \hbox{\resizebox{\wd0}{\height}{\arc@char}}
+    \nointerlineskip
+    \box0
+  }%
+}
+\makeatother
+%====================================================================
