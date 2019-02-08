@@ -18,17 +18,17 @@
   %   \item [label]
   % \end{description}
   \begin{exercise}
-    \item%高中数学习题解法辞典.pdf 2-1-8
+    \item%高中数学习题解法辞典.pdf 例2-1-8
       已知$\abs{\cos \theta}\leqslant \abs{\sin\theta}$，则$\theta$的取值范围是\tk.
       \begin{answer}
         $\Bigl[k\piup+\dfrac{\piup}4,k\piup+\dfrac{3\piup}4\Bigr],k\in\mathbb{Z}$
       \end{answer}
-    \item%高中数学习题解法辞典.pdf 2-1-19
+    \item%高中数学习题解法辞典.pdf 例2-1-19
       已知$\sin\Bigl(\dfrac{\piup}2+2x\Bigr)=-\dfrac12$,则$x=$\tk.
       \begin{answer}
         k\piup\pm\dfrac{\piup}3(k\in\mathbb{Z})
       \end{answer}
-    \item%高中数学习题解法辞典.pdf 2-2-4
+    \item%高中数学习题解法辞典.pdf 例2-2-4
       函数$y=\sqrt{25-x^2}+\lg\sin\Bigl(x+\dfrac{\piup}3\Bigr)$的定义域为\tk.
       \begin{answer}
         $\Bigl[-5,-\dfrac{4\piup}3\Bigr)\bigcup\Bigl(-\dfrac{\piup}3,\dfrac{2\piup}3\Bigr)$
@@ -133,14 +133,30 @@
         (1)$f(x)=2\sin\Bigl(x-\dfrac{\piup}3\Bigr)+1$；(2)(i)$[\sqrt{3}+1,3)$;(ii)易得$f(x)$在$[-\dfrac{\piup}6,\dfrac{5\piup}6]$上单调递增，故$f(x)$在$[0,1]$上单调递增；又$0<\dfrac{\piup}2-\beta<\alpha<\dfrac{\piup}2$，从而$\sin\alpha>\sin(\dfrac{\piup}2-\beta)=\cos\beta$，于是$f(\sin \alpha)>f(\cos \beta)$
       \end{answer}
     \vspace{6.5cm}
-    \item%高中数学习题解法辞典.pdf 2-2-9
+    \item%高中数学习题解法辞典.pdf 例2-2-9
       已知函数$y=f(x)$的定义域为$\mathbb{R}$，若$f(x+2)=-f(x)$，且当$-1\leqslant x\leqslant 1$时，$f(x)=x$，求证：\\
       (1)函数$y=f(x)$是最小正周期为4的周期函数；\\
       (2)函数$y=f(x)$是奇函数；\\
       (3)当$x\in[4k-1,4k+1](k\in\mathbb{Z})$时，$y=f(x)$是增函数；当$x\in[4k+1,4k+3](k\in\mathbb{Z})$时，$y=f(x)$是减函数.
-      % \begin{answer}
-      %
-      % \end{answer}
+      \begin{answer}
+        (1)(提示：易证4为函数的一个周期；再用反证法证明4是最小正周期：设最小正周期$T$，且$0<T<4$,则$f(T)=f(0)=0$.分类讨论$0<T\leqslant 1$时，$1<T\leqslant 3$时，$3<T<4$时，三种情况都将推出矛盾，于是得证)
+        (2)任取$x\inR$，$x$可表示为$x=2k+x'$，其中$-1\leqslant x'\leqslant 1$，$k\inZ$.于是由$f(x+2)=-f(x)$及$y=f(x)$的周期性可得：
+        \[f(x)=f(2k+x')=
+          \begin{cases}
+            -f(x')=-x'\quad(k\text{为奇数})\\
+            f(x')=x'\quad(k\text{为偶数})
+          \end{cases}
+        \]
+        注意到$-1\leqslant x'\leqslant 1$，$-1\leqslant -x'\leqslant 1$，又有
+        \[f(-x)=f(-2k-x')=
+          \begin{cases}
+            -f(-x')=x'\quad(k\text{为奇数})\\
+            f(-x')=x'\quad(k\text{为偶数})
+          \end{cases}
+        \]
+        综上所述，无论$k$为奇数或偶数，对于$x\inR$，总有$f(-x)=-f(x)$，故$y=f(x)$是奇函数.
+        (3)(提示：利用$f(x)=f(4k+x')=f(x')=x'$，其中$-1\leqslant x'\leqslant 1$，$k\inZ$.)
+      \end{answer}
   \end{exercise}
 
 \newpage
@@ -186,7 +202,7 @@
       \begin{answer}
         D
       \end{answer}
-    \item%高中数学习题解法辞典.pdf 2-1-74
+    \item
       比较$\sin 3$，$\cos 3$，$\tan 0.8$的大小关系为\tk.
       \begin{answer}
         $\tan 0.8>\sin 3>\cos 3$
@@ -206,7 +222,7 @@
       \begin{answer}
         $\Bigl(0,\dfrac32\Bigr]$
       \end{answer}
-    \item%高中数学习题解法辞典.pdf 2-2-1
+    \item%高中数学习题解法辞典.pdf 例2-2-1
       已知函数$f(x)=A\sin(\omega x+\varphi)(A,\omega,\varphi\text{为常数},\omega>0)$的图像上相邻两个最高点的坐标分别是$\Bigl(\dfrac{\piup}{12},2\Bigr)$，$\Bigl(\dfrac{13\piup}{12},2\Bigr)$.\\
       (1) 求函数$f(x)$的一个表达式；\\
       (2)画出函数$f(x)$在长度为一个周期的闭区间上的简图；\\
@@ -229,7 +245,7 @@
       (1)求$f(x)$的最大值$M$，最小值$m$以及最小正周期$T$；\\
       (2)试求最小正整数$\omega$，使得自变量$x$在任意两个整数间(包括整数本身)变化时，函数$f(x)$至少有一个值是$M$，另一个值是$m$.
       \begin{answer}
-        (1)$M=3,m=-1,T=\dfrac{2\piup}{\omega}$；(2)$\dfrac{2\piup}{\omega}\leqslant 1$，$\omega=7$
+        (1)$M=3,m=-1,T=\dfrac{2\piup}{\omega}$；(2)$\dfrac{2\piup}{\omega}\leqslant 1$，$\omega=7$（周期为无理数，由“无理数无法表示为两整数之比”这一事实可得任一区间$[k,k+1]$，$k\inZ$内函数图像均不相同.由此,半周期必须不小于1才能满足题意）
       \end{answer}
     \vspace{6cm}
     \item%高中数学习题解法辞典.pdf 2-2-45
