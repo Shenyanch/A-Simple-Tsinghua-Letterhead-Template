@@ -1,0 +1,216 @@
+% \Topic{等差数列与其前n项和}
+\Topic{等比数列与其前n项和}
+  \Teach{}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+% \end{exercise}
+
+% \section{数列基本概念}
+%   按照一定的顺序排列的一列数叫做\CJKunderdot{数列}，数列中的每一个数叫做这个数列的\CJKunderdot{项}.排在第一位的数称作数列的\CJKunderdot{首项}，排在第二位的称为数列的第$ 2 $项$ \cdots\cdots $排在第$ n $位的称为这个数列的第$ n $项.数列的一般形式为\[a_1,~a_2,~a_3,~\cdots a_n,~\cdots, \]简记为$ \{a_n\} $.
+%   \subsection{数列与函数}
+%     在函数的意义下，数列是定义域为正整数集$ \mathbf{N^*} $(或它的有限子集$ \left\{1,2,3,\cdots,n\right\} $)的特殊函数，数列的通项公式就是相应的函数解析式，即$ a_n=f(n)~(n\in\mathbf{N^*}) $.
+%   \subsection{通项公式}
+%     如果数列$\{a_n\}$的第$ n $项与序号$ n $之间的关系可以用一个式子来表示，那么这个式子叫做这个数列的\CJKunderdot{通项公式}.
+%   \subsection{递推公式}
+%     如果已知数列$\{a_n\}$的第一项(或前几项)，且从第二项(或某一项)开始任何一项$ a_n $与它的前一项$ a_{n-1} $(或前几项)间的关系可以用一个式子来表示，那么这个式子叫做数列$\{a_n\}$的递推公式.
+%   \subsection{数列的分类}
+%     类比函数的性质及其分类，对数列进行恰当的分类可以更深刻的理解和认识数列.
+%     \begin{enumerate}[1)]
+%       \item 根据项的个数：
+%         \begin{enumerate}[i)]
+%           \item 有穷数列：项数有限的数列；
+%           \item 无穷数列：项数无限的数列；
+%         \end{enumerate}
+%       \item 根据项的变化趋势：
+%         \begin{enumerate}[i)]
+%           \item 递增数列：从第二项起每一项都大于它的前一项的数列；
+%           \item 递减数列：从第二项起每一项都小于它的前一项的数列；
+%           \item 常数列：各项相等的数列；
+%           \item 摆动数列：从第二项起，前后两项变化规律不定的数列.
+%         \end{enumerate}
+%       递增数列和递减数列统称单调数列；
+%       \item 根据项的(绝对值)大小是否有限制：
+%         \begin{enumerate}[i)]
+%           \item 有界数列：$ \forall n\in\mathbf{N^*},\abs{a_n}\le M~(M\text{为常数}) $；
+%           \item 无界数列：$ \forall M\in\mathbf{R^+} ,\exists n\in\mathbf{N^*},\text{使得}\abs{a_n}>M.$
+%         \end{enumerate}
+%     \end{enumerate}
+% \section{等差数列}
+%   \subsection{基本性质}
+%     \subsubsection{定义}
+%       一般地，如果一个数列从第二项开始，每一项与前一项的差等于同一个常数，那么这个数列就叫做等差数列，这个常数叫做这个数列的公差，常用字母$ d $表示.\\
+%       {\kaishu 注：目前大部分等差数列考题都可以通过转化为$ a_1 $和$ d $求出.}
+%     \subsubsection{通项公式}
+%       如果等差数列$\{a_n\}$的通项公式是$ a_n=a_1+(n-1)d ,n\in\mathbf{N^*}$,其中$ a_1 $为首项，$ d $为公差.\\
+%       % \begin{proof}
+%       %   由给定条件可得:\begin{equation*}
+%       %   \begin{aligned}
+%       %    a_2-a_1& =d\\
+%       %   a_3-a_2&=d\\
+%       %   \vdots&\\
+%       %   a_n-a_{n-1}&=d.
+%       %   \end{aligned}
+%       %   \end{equation*}
+%       %   等号两边累加可得:~$ a_n-a_1=(n-1)d .$即:~$$a_n=a_1+(n-1)d$$
+%       % \end{proof}
+%     \subsubsection{等差中项}
+%       \begin{enumerate}[1)]
+%         \item 如果$ A=\dfrac{a+b}{2} ,$则称$ A $为$ a $和$ b $的等差中项;
+%         \item 等差数列中，等间隔的三项$a_{n-p},~a_n,~a_{n+p} (n,p\in\mathbf{N^*}~\text{且}~n<p) $满足:$ 2a_n=a_{n-p}+a_{n+p} $;
+%         \item 在等差数列$ \left\{a_n\right\} $中,若有$ k+l=m+n \left(k,l,m,n\in\mathbf{N^*}\right)$，则有$ a_k+a_l=a_m+a_n $.
+%       \end{enumerate}
+%     \subsubsection{前$ n $项和公式}
+%       设等差数列$\{a_n\}$的公差为$ d $，则其前$ n $项和$ S_n=\dfrac{n\left(a_1+a_n\right)}{2} $或$ S_n=na_1+\dfrac{n(n-1)}{2}d $.
+%       % \begin{proof}
+%       %   在等差数列中，根据性质$ a_k+a_l=a_m+a_n~(k+l=m+n) $可得$$ a_1+a_n=a_2+a_{n-1}=\cdots=a_k+a_{n-k+1} ~\left(k\le\dfrac{n}{2}\right)$$
+%       %   \begin{equation*}
+%       %   \begin{aligned}
+%       %   S_n&=a_1+a_2+a_3+\cdots+a_n\\
+%       %    &=\left(a_1+a_n\right)+\left(a_2+a_{n-1}\right)+\cdots+\left(a_k+a_{n-k+1}\right)\\
+%       %   &=\dfrac{n(a_1+a_n)}{2}\\
+%       %   &=\dfrac{n(a_1+a_1+(n-1)d}{2}=na_1+\dfrac{n(n-1)}{2}d.
+%       %   \end{aligned}
+%       %   \end{equation*}
+%       % \end{proof}
+%   \subsection{性质扩充}
+%     \subsubsection{等差数列的常用性质}
+%       \begin{enumerate}[(1)]
+%       \item 通项公式的推广：$ a_n=a_m+\left(n-m\right)d \left(n,m\in\mathbf{N^*}\right)$;
+%       \item 若$\{a_n\}$是等差数列，公差为$ d $，则$\{a_{2n}\}$ 也是等差数列，公差为$ 2d $;
+%       \item 若$\{a_n\},~\{b_n\}$是等差数列，则$ \left\{pa_n+qb_n\right\}~(p,q\text{是常数}) $也是等差数列;
+%       \item 若$\{a_n\}$是等差数列，公差为$ d $，则$ a_k,~a_{k+m},~ a_{k+2m},~a_{k+3m},\cdots\left(k,m\in\mathbf{N^*}\right)$组成公差为$ md $的等差数列.
+%       \end{enumerate}
+%     \subsubsection{与和有关的性质}
+%       \begin{enumerate}[(1)]
+%         \item 若$\{a_n\}$是等差数列，则$ \dfrac{S_n}{n} $也是等差数列，其首项与$ \{a_n\} $的首项相同，公差是$\{a_n\}$的公差的$ \dfrac{1}{2} $；
+%         \item 若$ S_m,S_{2m},S_{3m} $分别是$\{a_n\}$的前$ m $项，前$ 2m $项，前$ 3m $项的和，则$ S_m,~S_{2m}-S_m,~S_{3m}-S_{2m} $成等差数列，公差为$m^2d$；
+%         \item 关于非零等差数列奇数项和与偶数项和的性质
+%         \begin{enumerate}[i)]
+%           \item 若项数为$ 2n $，则$ S_{\text{偶}}-S_{\text{奇}}=nd ,~\dfrac{S_{\text{偶}}}{S_{\text{奇}}}=\dfrac{a_{n+1}}{a_n}$.
+%           \item 若项数为$ 2n-1 $，则$  S_{\text{偶}}=(n-1)a_n,~S_{\text{奇}}-S_{\text{偶}}=a_n,~\dfrac{S_{\text{奇}}}{S_{\text{偶}}}=\dfrac{n}{n-1}$.
+%           \item 若两个等差数列$\{a_n\}$、$\{b_n\}$的前$ n $项和分别为$ S_n\text{、}~T_n,~ $则$ \dfrac{a_n}{b_n}=\dfrac{S_{2n-1}}{T_{2n-1}} $.
+%         \end{enumerate}
+%         \item $\{\dfrac{S_n}{n}\}$成等差数列.
+%       \end{enumerate}
+%     \subsubsection{等差数列前$ n $项和的最值问题}
+%       \begin{enumerate}[1)]
+%         \item 二次函数法：当公差$d\ne0$时，将$ S_n $看作关于$ n $的二次函数，运用配方法，借助函数的单调性及数形结合，使问题得解；
+%         \item 通项公式法：求使$ a_n\ge0 \left(\text{或}a_n\le0\right)$成立的最大$ n $值即可得到$ S_n $的最大(或最小)值；
+%         \item 不等式法：借助$ S_n $最大时，有$\Bigg\{\begin{aligned}
+%       S_n\ge S_{n-1},\\
+%       S_n\ge S_{n+1}.
+%       \end{aligned}~(n\ge2,n\in\mathbf{N^*})$，解此不等式组确定$ n $的范围，进而确定$ n $的值和对应$ S_n $的值.
+%       \end{enumerate}
+%   \begin{exercise}{\heiti 习题}\\
+%     \item 已知四个数成等差数列，它们的和为26，中间两项的积为40，求这四个数.
+%   \end{exercise}
+\section*{等比数列}
+    一般地，如果一个数列从第二项起，每一项与它的前一项的比等于同一个常数，那么这个数列就叫做等比数列（Geometric progression，G.P）.
+    这个常数叫做等比数列的公比，通常用字母$ q $表示.
+  \subsection*{思考}
+      \begin{itemize}[leftmargin=*]
+        \kaishu
+        \item 尝试写出几个等比数列的例子；
+        \item 理解分析定义：定义中出现了哪些数学概念？有哪些数量关系？能换种说法么？与其他概念间的联系？确定新概念最少需要知道哪些量？
+          \begin{itemize}%[leftmargin=*]
+            \item 理解下列概念并回顾这些概念有何性质：数列、数列的项、比、常数
+            \item 为什么要从第二项起？能改成从第一项起么？为什么是与前项的比，改成与后项的比呢？不用比值的概念，改成乘积的概念呢？
+            \item 公比是否可以取任意值？尝试取一些特殊值，并观察数列的形式，分析公比的不同取值对数列有什么影响？
+            \item 等比数列可以是等差数列么？可以是常数列么？可以是单调数列么？可以是周期数列么？可以是有界(无界)数列？
+          \end{itemize}
+        \item 引入更多的符号，与学习过的概念类比，进一步分析新概念的性质
+          \begin{itemize}%[leftmargin=*]
+            \item 尝试以符号表述等比数列的定义.
+            \item 等比数列用通项公式如何表示？用递推公式呢？用图表呢？等比数列和什么函数直接相关呢？
+            \item 与后项比值是常数，那与后两项呢？后三项呢？从数列中某一项开始的序列与原来的数列间有什么联系么？
+            \item 等比数列各项间进行某种运算后形成的新数列还是等比数列么？
+            \item 两个等比数列间的(运算)运算是还是等比数列么？两个等比数列各项间的运算还是等比数列么？
+            \item 等比数列有类似等差中项的量么？有什么性质？
+          \end{itemize}
+      \end{itemize}
+  \subsubsection{通项公式}如果等比数列$\{a_n\}$的首项为$a_1$，公比为$ q $，则它的通项公式为$ a_n=a_1q^{n-1}~(q\ne0). $
+    \begin{proof}
+      已知等比数列$\{a_n\}$中，有$\dfrac{a_n}{a_{n-1}}=q~(q\ne0)$.\\
+      则有$$ \begin{aligned}
+      \dfrac{a_2}{a_1}=&q\\
+      \dfrac{a_3}{a_2}=&q\\
+      \vdots&\\
+      \dfrac{a_n}{a_{n-1}}=&q
+      \end{aligned}
+      $$
+      左右两侧累乘即得到：$\dfrac{a_n}{a_1}=q^{n-1}$
+      即:$$ a_n=a_1q^{n-1} $$
+    \end{proof}
+  \subsubsection{等比中项}
+    \begin{enumerate}[(1)]
+      \item 如果三个数$ a,G,b $成等比数列，则$ G $叫做$ a $和$ b $的等比中项，且$ \dfrac{G}{a}=\dfrac{b}{G} $,即$ G^2=ab $;
+      \item 等比数列$ \{a_n\} $中，等间隔的三项$ a_{n-s},~a_n,~a_{n+s}~(s\in\mathbf{N^*},\text{且} s<n ) $有$ a_{n-s}a_{n+s}=a_n^2 $;
+      \item 等比数列$ \{a_n\} $中，若$ m+n=p+q $，则$ a_m\bm{\cdot}a_n=a_p\bm{\cdot}a_q $.
+    \end{enumerate}
+  \subsubsection{前$ n $项和}
+    $S_n=\Bigg\{\begin{aligned}
+    &na_1&\left(q=1\right)\\
+    &\dfrac{a_1\left(1-q^n\right)}{1-q}&\left(q\ne1\right)
+    \end{aligned}$
+    \begin{proof}
+      给定等比数列$\{a_n\}$.\\
+      \ding{192}~当$ q=1$时，有$ a_1=a_2=\cdots=a_n $，
+        $ S_n=a_1+a_2+\cdots+a_n=na_1. $\\
+      \ding{193}~当$ q\ne1 $时，有：
+        \begin{equation}\label{db1}
+          \begin{aligned}
+            S_n=&a_1+a_2+\cdots+a_n \\
+            =&a_1+a_1q+a_1q^2+\cdots+a_1q^{n-1};
+          \end{aligned}
+        \end{equation}
+        两边同时乘以公比$q$,有：
+        \begin{equation}\label{db2}
+          qS_n=a_1q+a_1q^2+\cdots+a_1q^{n-1}+a_1q^n
+        \end{equation}
+        (\ref{db1})-(\ref{db2})得到：
+        \begin{equation*}
+          \begin{aligned}
+            S_n-qS_n=&\left(a_1+a_1q+a_1q^2+\cdots+a_1q^{n-1}\right)-\left(a_1q+a_1q^2+a_1q^3+\cdots+a_1q^{n-1}+a_1q^n\right)\\
+            =&a_1+\left(a_1q-a_1q\right)+\left(a_1q^2-a_1q^2\right)+\cdots+\left(a_1q^{n-1}-a_1q^{n-1}\right)-a_1q^n\\
+            =&a_1-a_1q^n
+          \end{aligned}
+        \end{equation*}
+        化简得：$ S_n=\dfrac{a_1(1-q^n)}{1-q}~(q\ne1) $
+    \end{proof}
+  \subsubsection{等比数列的性质}
+    已知等比数列$\{a_n\}$的前$ n $项和为$S_n$.
+    \begin{enumerate}[(1)]
+      \item 数列$\{c\bm{\cdot}a_n\}~\left(c\ne0\right),~\left\{\abs{a_n}\right\},~\left\{a_n\bm{\cdot}b_n\right\}~\left(\left\{b_n\right\}\text{是等比数列}\right),~\left\{a^2_n\right\},~\left\{\dfrac{1}{a_n}\right\}$等也是等比数列;
+      \item 数列$ a_m,a_{m+k},a_{m+2k},a_{m+3k},\cdots $仍是等比数列;
+      \item $ a_1a_n=a_2a_{n-1}=\cdots=a_ma_{n-m+1} $;
+      \item 当数列$\{a_n\}$的公比$ q\ne-1$(或$ q=-1\text{且}m\text{为奇数} $)时，数列$ S_m,~S_{2m}-S_m,~S_{3m}-S_{2m} ,\cdots$是等比数列;
+      \item 当$ n $是偶数时，$ S_{\text{偶}}=S_{\text{奇}}\bm{\cdot}q  $；\\
+          当$ n $是奇数时，$ S_{\text{奇}}=S_{\text{偶}}\bm{\cdot}q. $
+    \end{enumerate}
+    \item （在数列{an}中每隔k（k∈N*）项取出一项，按原来的顺序排列，所得数列仍为等比数列）
+
+\newpage
+\section{课后作业}
+  \begin{exercise}
+
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

@@ -1,0 +1,102 @@
+\Topic{}
+  \Teach{}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+\begin{exercise}{\heiti 课前检测}\\
+
+\end{exercise}
+
+\section{数列求和相关问题}
+  \subsection{求前$ n $项和的方法}
+  \begin{enumerate}
+  \item 公式法\begin{enumerate}
+  \item 等差数列的前$ n $项和公式：$S_n=\dfrac{n(a_1+a_n)}{2}=na_1+\dfrac{n(n-1)}{2}d$.
+  \item 等比数列的前$ n $项和公式：$S_n=\Bigg\{\begin{aligned}
+  &na_1&\left(q=1\right)\\
+  &\dfrac{a_1\left(1-q^n\right)}{1-q}&\left(q\ne1\right)
+  \end{aligned}$
+  \end{enumerate}
+  \item 分组求和：把一个数列分成几个可以直接求和的数列；
+  \item 拆项相消：有时把一个数列的通项公式分成两项差的形式，相加过程中消去中间项，只剩下有限项再求和；
+  \item 错位相减：适用于一个等差数列和一个等比数列对应项相乘构成的数列求和；
+  \item 倒序相加：把数列正着写和倒着写再相加，例如等差数列前$ n $项和公式的推导方法.
+  \end{enumerate}
+  \subsection{裂项相消法}
+  \begin{enumerate}
+  \item 对于裂项后明显有能够相消的项的一类数列，在求和时常用“裂项相消法”，分式数列的求和多用此法；
+  \item 利用裂项相消法求和时，应注意抵消后并不一定只剩下第一项和最后一项，也可能有前面两相和最后两项，有些情况下，裂项时需要调整前面的系数，使裂开的两项之差和系数之积与原通项相等.
+  \item 常用的拆项公式：\begin{enumerate}
+  \item $ \dfrac{1}{n(n+1)}=\dfrac{1}{n}-\dfrac{1}{n+1}; $
+  \item $ \dfrac{1}{n(n+d)}=\dfrac{1}{d}\left(\dfrac{1}{n}-\dfrac{1}{n+d}\right) $;
+  \item $\dfrac{1}{\sqrt{n}+\sqrt{n+1}}=\sqrt{n+1}-\sqrt{n}$;
+  \item $\dfrac{1}{n(n+1)(n+2)}=\dfrac{1}{2}\left[\dfrac{1}{n(n+1)}-\dfrac{1}{(n+1)(n+2)}\right]$
+  \item 若数列$\{a_n\}$为等差数列，公差为$ d (d\ne0)$,则$ \dfrac{1}{a_n\bm{\cdot}a_{n+1}}=\dfrac{1}{d}\left(\dfrac{1}{a_n}-\dfrac{1}{a_{n+1}}\right). $
+  \end{enumerate}
+  \end{enumerate}
+  \begin{proof}
+  对于分式数列，通常会考虑裂项相消法进行消项，对于$ \dfrac{1}{n(n+d)} $式数列，可以使用待定系数法得到展开式,
+  假设:$$ \dfrac{1}{n(n+d)}=\dfrac{k}{n}-\dfrac{k}{n+d} ~(k\text{为待定系数})$$
+  右边通分有$$\dfrac{1}{n(n+d)}= \dfrac{k}{n}-\dfrac{k}{n+d}=\dfrac{kd}{n(n+d)} $$
+  即有$ kd=1 $，算得$ k=\dfrac{1}{d} $.即得证
+  \end{proof}
+  \subsection{错位相减法}
+  \begin{enumerate}
+  \item 一般地，如果数列$\{a_n\}$是等差数列，数列$\{b_n\}$是等比数列，求数列$ \left\{a_n\bm{\cdot}b_n\right\} $的前$ n $项和时，可以采用错位相减法.
+  \item 应用等比数列求和公式时，必须注意公比$ q\ne1 $这一前提条件，如果不能确定公比$ q $是否为$ 1 $，应分两种情况进行讨论.
+  \end{enumerate}
+  \begin{proof}
+  设数列$ \left\{a_n\right\} $为等差数列，公差为$ d $，数列$ \left\{b_n\right\} $为等比数列,公比为$ q ~(q\ne1)$，数列$ \left\{c_n\right\}$满足$ c_n=a_n\bm{\cdot}b_n  $，则数列$ \left\{c_n\right\} $有：\begin{equation*}
+  \begin{aligned}
+  S_n=&c_1+c_2+c_3+\cdots+c_n\\
+  =&a_1b_1+a_2b_2+a_3b_3+\cdots+a_nb_n\\
+  qS_n=&a_1b_1q+a_2b_2q+\cdots+a_nb_nq\\
+  =&a_1b_2+a_2b_3+a_3b_4+\cdots+a_nb_{n+1}\\
+  S_n-qS_n=&a_1b_1+b_2\left(a_2-a_1\right)+b_3\left(a_3-a_2\right)+\cdots++b_n\left(a_n-a_{n-1}\right)-a_nb_{n+1}\\
+  =&a_1b_1+db_2+db_3+\cdots+db_n-a_nb_{n+1}\\
+  =&a_1b_1+d\left(b_2+b_3+\cdots+b_n\right)-a_nb_{n+1}\\
+  =&a_1b_1-a_nb_{n+1}+\dfrac{b_2\left(1-q^{n-1}\right)}{1-q}d.
+  \end{aligned}
+  \end{equation*}
+  故而有:$$S_n=\dfrac{a_1b_1-a_nb_{n+1}+\dfrac{b_2\left(1-q^{n-1}\right)}{1-q}d}{1-q}$$
+  \end{proof}
+\section{数列通项求法}
+  \subsubsection{数列的前$ n $项和与通项公式的关系}
+  \begin{enumerate}[1)]
+  \item $ S_n=a_1+a_2+a_3+\cdots+a_n $;
+  \item $ a_n=\Bigg\{\begin{aligned}
+  &S_1&\left(n=1\right)\\
+  &S_n-S_{n-1}&\left(n\ge2\right)
+  \end{aligned} $
+  \end{enumerate}
+  注意：一定要验证$ n=1 $的情况.
+  \subsubsection{利用递推关系通项}
+  已知数列$\{a_n\}$的递推关系求通项时，通常用累加法、累乘法和构造法求解.
+  \begin{enumerate}
+  \item 形如$ a_n=a_{n-1}+m~ (n\ge 2,n\in\mathbf{N^*})$时，构造等差数列求解，形如$ a_n=xa_{n-1}+y~(n\ge2,n\in\mathbf{N^*}) $时，构造等比数列求解；
+  \item 形如$ a_n=a_{n-1} +f(n)~(n\ge 2,n\in\mathbf{N^*})$时，用累加法；
+  \item 形如$ \dfrac{a_n}{a_{n-1}}=f(n) ~(n\ge 2,n\in\mathbf{N^*})$时，用累乘法求解.
+  \end{enumerate}
+\newpage
+\section{课后作业}
+  \begin{exercise}
+
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

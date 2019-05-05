@@ -1,0 +1,85 @@
+\section{集合}
+  \subsection{选择题}
+  \begin{exercise}{\bf 选择题}
+    \item 【集合，定义】\\
+      设集合$A=\{x\in\mathbb{Q}\mid x>1\}$，则\xz
+        \xx{$\varnothing\in A$}
+        {$\sqrt2\notin A$}
+        {$\sqrt2\in A$}
+        {$\{\sqrt2\}\subseteq A$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item 【集合，补集、计算】【福州三中高一半期考】\\
+      （福州三中高一半期考）已知全集$U=\{-2,-1,2,3,4\}$，集合$A=\{-1,2,3\}$，$B=\{-2,2\}$，则$(\complement_UA)\bigcup B=$\xz
+      \xx{$\{-2\}$}
+        {$\{-2,2,4\}$}
+        {$\{-2,-1,2\}$}
+        {$\{-2,2,3,4\}$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item 【集合，新定义】\\
+      对于集合$M,N$，定义$M-N=\{x\mid x\in M,\text{且}x\notin N\}$，$M\oplus N=(M-N)\cup(N-M)$，设$A=\Bigl\{x\Bigm| x\geq-\dfrac{9}4\Bigr\}$，$B=\{x\mid x<0\}$，则$A\oplus B=$\xz
+        \xx{$(-\dfrac{9}4,0]$}
+        {$[-\dfrac{9}4,0)$}
+        {$(-\infty,-\dfrac{9}4)\bigcup[0,+\infty)$}
+        {$(-\infty,-\dfrac{9}4]\bigcup(0,+\infty)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item 福州三中高一上数学期中卷（2017-2018）.doc【集合，补集、子集、参数】\\
+      （17-18三中高一上期中考17）（本小题满分10分）已知全集 $U=\mathbb{R}$，集合$A=\{x\mid (x-3)(x+2)\leq0\} $，$B=\{x\mid 2a\leq x\leq a+2,a\in \mathbb{R} \} $.\\
+      （I）若$a=-2 $，求集合$(\complement_UA)\bigcup B $；
+      （II）若$B\subseteq A $，求实数$a $的取值范围.
+      \begin{answer}
+       (I) $\{x\mid-4\leq x<-2 \} $
+       (II) $[-1,1]\cup[2,+\infty] $
+      \end{answer}
+  \end{exercise}
+  \subsection{填空题}
+  \begin{exercise}{\bf 填空题}
+    \item 【集合，交集、计算】【福州三中高一半期考】\\
+      （福州三中高一半期考）设集合$M=\{x\in \mathbb{R}\mid x-1<0 \} $, $N=\{y\mid y=x^2,x\in\mathbb{R} \} $，则$M\cap N$\tk
+      \begin{answer}
+        $[0,1)$
+      \end{answer}
+  \end{exercise}
+  \subsection{解答题}
+  \begin{exercise}{\bf 解答题}
+    \item 福州三中高一上数学七中卷（2017-2018）.doc【集合，参数】【17-18三中高一上期中考17】\\
+      （17-18三中高一上期中考17）（本小题满分12分）已知全集 $U=\mathbb{R}$，集合$A=\{x\mid (x-3)(x+2)\leq0\} $，$B=\{x\mid 2a\leq x\leq a+2,a\in \mathbb{R} \} $.\\
+      （I）若$a=-2 $，求集合$(\complement_UA)\bigcup B $；
+      （II）若$B\subseteq A $，求实数$a $的取值范围.
+      \begin{answer}
+       (I) $\{x\mid -4\leq x<-2 \} $
+       (II) $[-1,1]\cup[2,+\infty] $
+      \end{answer}
+    \item 【集合，交集、参数】\\
+      （本小题满分10分）\\
+      设集合$A=\{x\mid 2\leq x\leq4\}$，$B=\{x\mid 0<\ln x<1\}$，$C=\{x\mid t+1<x<2t,t\in\mathbb{R}\}$.\\
+      (I)求$A\cap B$\\
+      (II)求$A\cap C=C$，求$t$的取值范围.\\
+      \begin{answer}
+      解：(I)$\because$ $B=\{x\mid 1<x<\mathrm{e}\}$，$\therefore$$A\cup B=\{x\mid 2\leq x<\mathrm{e}\}$\\
+      (II)$\because$ $A\cup C=C$，$\therefore$ $C\subseteq A$\\
+      $C=\varnothing$时，$t+1\geq 2t$，$t\leq 1$\\
+      $C\neq\varnothing$时，
+      $\begin{cases}
+        t+1<2t\\
+        t+1\geq 2\\
+        2t\leq 4
+      \end{cases}
+      $
+      $\therefore$ $1<t\leq 2$\\
+      综上，$t\in (-\infty,2]$
+      \end{answer}
+    \item 【集合，补集、并集、参数】【格致中学高一半期考】\\
+      （格致中学高一半期考）已知集合$M=\{-2\leq x\leq 5\} $，$N=\{x\mid a+1\leq x\leq 2a+1\} $.
+      (1)若$a=3 $，求$M\displaystyle \bigcap(\complement_{\mathbb{R} }{\large N}) $；
+      (2)若$M\cup N=M $，求实数$a $的取值范围．
+      \begin{answer}
+        (1) $[-2,4)$
+        (2) $(-\infty,2] $
+      \end{answer}
+  \end{exercise}

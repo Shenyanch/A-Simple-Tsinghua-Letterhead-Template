@@ -1,0 +1,397 @@
+\Topic{函数图像，零点，不等式，线性规划}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190502}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+% \end{exercise}
+\section{公式回顾}
+  \begin{exercise}{\heiti 课前检测}\\
+    \item %【正弦定理、余弦定理】\\
+      在$\triangle{ABC}$中，已知量分别为下列情况时，求边长$a$的大小.
+      \begin{enumerate}[label=\arabic*)]
+        \item 已知角$A$、$B$，以及边长$b$；
+        \item 已知角$A$、$B$，以及边长$c$；
+        \item 已知边$b$、$c$，以及角$A$；
+      \end{enumerate}
+      \begin{answer}
+          1) 由正弦定理：$\dfrac{\sin A}{\sin B}=\dfrac{a}b$，$\therefore a=\dfrac{b\sin A}{\sin B}$；
+          2) 由$A+B+C=\piup$，$\sin C=\sin\bigl(\piup-(A+B)\bigr)=\sin(A+B)$，故由正弦定理，
+             $a=\dfrac{c\sin A}{\sin (A+B)}$；
+          3) 由余弦定理，$a=b^2+c^2-2bc\cos A$；
+      \end{answer}
+    \vspace{4em}
+    \item %【诱导公式、同角三角函数关系】\\
+      已知$\sin\Bp{A-\dfrac{3\piup}2}-\cos(3\piup-A)=\dfrac1{2}$，且$\sin{A}<\cos{A}$，则$\tan(A+3\piup)=$\tk.
+      \begin{answer}
+        $-\sqrt{15}$.
+        【由$\sin\Bp{A-\dfrac{3\piup}2}-\cos(3\piup-A)=\cos A-(-\cos A)=\dfrac1{2}$，
+        故$\cos{A}=\dfrac1{4}$，$\therefore \sin{A}=\pm\dfrac{\sqrt{15}}4$，又$\sin{A}<\cos{A}$，
+        $\therefore \sin{A}=-\dfrac{\sqrt{15}}4$，$\therefore $，$\tan(A+3\piup)=\tan{A}=\sin{A}/\cos{A}=-\sqrt{15}$.】
+      \end{answer}
+    \item %【对数，指数，幂运算】\\
+      若集合$A=\{y\mid y=2^x,x\inR\}$，$B=\{x\mid y=2^x,x\inR\}$则下列结论错误的是\xz
+      \xx{$A\cap B=A$}
+       {$A\cap B=\varnothing$}
+       {$A\cup B=\RR$}
+       {$A\cup B=B$}
+       \begin{answer}
+         B
+       \end{answer}
+      \item 函数$y=\sqrt{32-2^x}$的定义域是\tk.
+      \begin{answer}
+        $(-\infty,5]$（或写为$\{x\mid x\leqslant5\}$）
+      \end{answer}
+  \end{exercise}
+\section{函数、方程、不等式的联系}
+  \subsection{方程/不等式解法}
+    \begin{description}
+      \item[简单方程/不等式标准解法]\hspace{0.5em}\\\vspace{-2.5em}\begin{enumerate}[label=\arabic*)]
+        \item 认准要解的是哪个变量，将含待解变量的式子写到左侧，（如此右侧只剩下常数）并以待解变量为判断标准，合并同类型的项；
+        \item 判断左式的函数类型，并将左式化为此种函数的基本形式.（注意此时右式相应的变化）常见的情况有如下几种：
+              \begin{enumerate}[label=\circled{\arabic*}]
+                \item 分式类型:如$x-\dfrac6{x-2}=1 \Rightarrow \dfrac{x(x-2)-6-(x-2)}{x-2}=0 \Rightarrow x^2-3x-4=0$.
+                \item 一次函数类型：如$3x=4$ \Rightarrow $x=\dfrac43$
+                \item 二次函数类型：如$2x^2-8x=-3$ \Rightarrow $x^2-4x=-\dfrac32$
+                  \Rightarrow $(x-2)^2=\dfrac52$ \Rightarrow $x=\pm\dfrac52+3$
+                \item 对数函数类型：如$3\log_2{x-3}=5$ \Rightarrow $\log_2x=\dfrac53$
+                  \Rightarrow $x-3=2^{\frac53}$ \Rightarrow $x=3+2^{\frac53}$
+                \item 指数函数类型：如$4\times 2^{3x}=9$ \Rightarrow $2^{3x+2}=9$
+                  \Rightarrow $3x+2=\log_29=2\log_3$ \Rightarrow $x=\dfrac23(\log_3-1)$
+                \item 三角函数类型：如$2\sin\Bp{2x-\dfrac{5\piup}{12}}=\sqrt3$
+                  \Rightarrow $\sin\Bp{2x-\dfrac{5\piup}{12}}=\dfrac{\sqrt3}2$
+                  \Rightarrow $2x-\dfrac{5\piup}{12}=\dfrac{\piup}3+2k\piup$或
+                   $2x-\dfrac{5\piup}{12}=\dfrac{2\piup}3+2k\piup$，$k\inZ$.
+                  \Rightarrow $x=\dfrac{3\piup}8+k\piup$或$x=\dfrac{13\piup}{24}+k\piup$，$k\inZ$.
+              \end{enumerate}
+      \end{enumerate}
+    \end{description}
+    \begin{exercise}{\heiti 练习}\\
+      \item 求解下列方程或不等式.
+        \begin{multicols}{2}\begin{enumerate}[label=\arabic*)]
+            \item $x^2-5x-6=0$;
+            \vspace{2cm}
+            \item $\dfrac4{2-x}-2x=5$;
+            \vspace{2cm}
+            \item $\log_3{\dfrac3{x-1}}\leqslant2$;
+            \vspace{2cm}
+            \item $2\cos\Bp{2x+\dfrac{\piup}4}=1$;
+            \vspace{2cm}
+          \end{enumerate}
+        \end{multicols}
+        \begin{answer}
+          \begin{enumerate}[itemindent=1em,listparindent=6em, label=\arabic*)]
+            \item $x=2$或$x=3$；
+            \item $x=-\dfrac12$或$x=\dfrac32$；
+            \item $x\geqslant\dfrac43$；
+            \item $x=\dfrac{\piup}{12}+k\piup$或$x=-\dfrac{7\piup}{12}+k\piup$，$k\inZ$.
+          \end{enumerate}
+        \end{answer}
+      \vspace{4em}
+    \end{exercise}
+    \clearpage
+    % \begin{exercise}
+    % \end{exercise}
+  \subsection{零点，方程与函数、不等式关系}
+    \begin{description}
+      \item [函数图像] 以自变量(如$x$)值为横坐标，函数(如$f(x)$)值为纵坐标，所有的点组成的集合.
+        ($\{(x,y)\mid y=f(x)\}$)
+      \item [零点]对于函数$y=f(x)$，是$f(x)=0$的实数$x$.即：方程$f(x)=0$的实数根.从图像上看，
+        也就是函数$y=f(x)$的图像与$y$轴交点的横坐标.
+    \end{description}
+    \begin{exercise}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p15【2018•广州一测】【集合运算，分式不等式】\\
+        \source{2018文}{广州一测}
+        设集合$A=\Bigl\{x\Bigm| \dfrac{x+3}{x-1}<0\Bigr\}$，$B=\{x\mid x\leqslant{-3}\}$，则集合$\{x\mid x\geqslant1\}=$\xz
+        \xx{$A\cap B$}
+         {$A\cup B$}
+         {$\bigl(\complement_{\RR}A\bigr)\cup \bigl(\complement_{\RR}B\bigr)$}
+         {$\bigl(\complement_{\RR}A\bigr)\cap \bigl(\complement_{\RR}B\bigr)$}
+        \begin{answer}
+          D
+        \end{answer}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p17【2018•陕西摸底检测】【集合，交集、补集，二次不等式】\\
+        \source{2018文}{陕西摸底检测}
+        已知集合$U=\mathbb{Z}$，集合$A=\{x\inZ\mid 3\leqslant x<7\}$，$B=\{x\inZ\mid x^2-7x+10>0\}$，则$A\bigcap\bigl(\complement_UB\bigr)=$\tk.
+        \begin{answer}
+          $\{3,4,5\}$
+        \end{answer}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P28p22【2014文•全国新课标】【分段函数、指数函数】\\
+        \source{2014文}{全国新课标}
+        设函数$f(x)=\left\{\begin{aligned}
+        &\ee^{x-1},\quad &x<1,\\
+        &x^{\frac13},\quad &x\geqslant1.
+        \end{aligned}\right.$则使得$f(x)\leqslant2$成立的$x$的取值范围是\tk.
+        \begin{answer}
+          $(-\infty,8]$
+        \end{answer}
+    \end{exercise}
+  % \subsection{零点，线性函数的图像，直线方程}
+\section{解不等式与线性规划}
+  \begin{exercise}{\heiti 例题}\\
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p4【2018•大连双基测试】【线性规划】\\
+    \source{2018文}{大连双基测试}
+    设实数$x$，$y$满足约束条件
+    $\left\{\begin{aligned}
+      &x-y+1\geqslant0\,,\\
+      &x+y-1\leqslant0\,,\\
+      &x-2y-1\leqslant0\,.
+    \end{aligned}\right.$则目标函数$z=2x+y$的取值范围为\xz
+    \xx{$[1,+\infty)$}{$[2,+\infty)$}{$[-8,1]$}{$[-8,2]$}
+    \begin{answer}
+      D
+      \begin{center}
+        \begin{tikzpicture}[smooth]
+          \draw[name path=F1,domain=-3.2:1] plot (\x,\x+1) node[right]{$x-y+1=0$};
+          \draw[name path=F2,domain=-1:2] plot (\x,-\x+1) node[right]{$x+y-1=0$};
+          \draw[name path=F3,domain=-3.2:2] plot (\x,\x/2-1/2) node[right]{$x-2y-1=0$};
+          \draw[name path=F0,dashed,domain=-3.5:-2.5] plot (\x,-\x*2-8);
+          \draw[name path=F02,dashed,domain=-0.5:2] plot (\x,-\x*2+2);
+          \path[name intersections={of=F1 and F2,by=F12}];
+          \path[name intersections={of=F2 and F3,by=F23}];
+          \path[name intersections={of=F3 and F1,by=F31}];
+          \filldraw[fill=gray,draw opacity=0.5] (F12)--(F23)--(F31)--cycle;
+          \draw[arrows={->Stealth[length=5pt, inset=3.5pt]}] (-3.5,0) -- (2,0)node[below] (xaxis){$x$};
+          \draw[arrows={->Stealth[length=5pt, inset=3.5pt]}] (0,-3) -- (0,3)node[left] (yaxis){$y$};
+          \draw  (-0.18,-0.18) node {$O$};
+        \end{tikzpicture}
+      \end{center}
+    \end{answer}
+  \end{exercise}
+  \clearpage
+  \vspace{3em}
+  \begin{exercise}{\heiti 练习}\\
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p11【2018•福州四校联考】【线性规划】\\
+      \source{2018文}{福州四校联考}
+      设$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &2x+y-3\leqslant0\,,\\
+        &2x-2y-1\leqslant0\,,\\
+        &x-a\geqslant0\,.
+      \end{aligned}\right.$其中$a>0$，若$\dfrac{x-y}{x+y}$的最大值为$2$，则$a$的值为\xz
+      \xx{$\dfrac12$}{$\dfrac14$}{$\dfrac38$}{$\dfrac59$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p7【2018•辽宁五校联考】【线性规划】\\
+      \source{2018文}{辽宁五校联考}
+      若实数$x$，$y$满足条件$\left\{\begin{aligned}
+        &y\geqslant 2|x|-1\,,\\
+        &y\leqslant x+1\,.
+      \end{aligned}\right.$则$z=x+y$的最大值为\xz
+      \xx{$-1$}{$-\dfrac1{2}$}{$5$}{$-5$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p12【2018•合肥一检】【线性规划、实际应用】\\
+      \source{2018文}{合肥一检}
+      某企业生产甲、乙两种产品，销售利润分别为2千元/件、1千元/件.甲、乙两种产品都需要在$A$、$B$两种设备上加工，生产一件甲产品需用$A$设备2小时，$B$设备6小时；生产一件乙产品需用$A$设备3小时，$B$设备1小时.$A$，$B$两种设备每月可使用时间数分别为480小时、960小时，若生产的产品都能及时售出，则该企业每月利润的最大值为\xz
+      \xx{320千元}{360千元}{400千元}{440千元}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p15【2018•湖北八校联考（一）】【线性规划】\\
+      \source{2018文}{湖北八校联考（一）}
+      已知$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-y+4\geqslant0\,,\\
+        &x\leqslant2\,,\\
+        &x+y+k\geqslant0\,.
+      \end{aligned}\right.$且$z=x+3y$的最小值为2，则常数$k=$\tk.
+      \begin{answer}
+        $-2$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p16【2018•石家庄二检】【线性规划】\\
+      \source{2018文}{石家庄二检}
+      设变量$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-3\leqslant0\,,\\
+        &x+y\geqslant3\,,\\
+        &y-2\leqslant0\,.
+      \end{aligned}\right.$则$\dfrac{y+1}{x}$的最大值为\tk.
+      \begin{answer}
+        3
+      \end{answer}
+  \end{exercise}
+\newpage
+\section{课后作业}
+  \begin{exercise}{\heiti 练习}
+    \item 求解下列方程或不等式.
+      \begin{multicols}{2}\begin{enumerate}[label=\arabic*)]
+          \item $x^2-x-6=0$;
+          \vspace{2cm}
+          \item $\dfrac2{x-2}\geqslant5$;
+          \vspace{2cm}
+          \item $\log_2(3x^2+4x)=2$;
+          \vspace{2cm}
+          \item $2\cos\Bp{2x+\dfrac{\piup}4}=1$;
+          \vspace{2cm}
+        \end{enumerate}
+      \end{multicols}
+      \begin{answer}
+        \begin{enumerate}[itemindent=1em,listparindent=6em, label=\arabic*)]
+          \item $x=-2$或$x=3$；
+          \item $2<x\leqslant\dfrac{12}5$；
+          \item $x=\dfrac23$或$x=-2$；
+          \item $x=\dfrac{\piup}{12}+k\piup$或$x=-\dfrac{7\piup}{12}+k\piup$，$k\inZ$.
+        \end{enumerate}
+      \end{answer}
+    \vspace{4em}
+  \end{exercise}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p5【2018•贵阳期末】【集合，交集，根式定义域】\\
+      \source{2018文}{贵阳期末}
+      设$A=\{x\mid -1<x<2\}$，$B=\{x\mid y=\sqrt{-x+1}\}$，则$A\cap B=$\xz
+      \xx{$(-1,1]$}
+       {$(-5,2)$}
+       {$(-3,2)$}
+       {$(-3,3)$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p11【2018•惠州二调】【集合，交集，二次不等式】\\
+      \source{2018文}{惠州二调}
+      已知集合$A=\{x\mid x<a\}$，$B=\{x\mid x^2-3x+2<0\}$，若$A\cap B=B$，则实数$A$的取值范围是\xz
+      \xx{$(-\infty,1)$}
+       {$(-\infty,1]$}
+       {$(2,+\infty)$}
+       {$[2,+\infty)$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P28p23【2014文•全国新课标】【分段函数、对数函数】\\
+      \source{2013文}{北京}
+      函数$f(x)=\left\{\begin{aligned}
+      &\log_{\frac12}x,\quad &x\geqslant1,\\
+      &2^x,\quad &x<1.
+      \end{aligned}\right.$的值域为\tk.
+      \begin{answer}
+        $(-\infty,2)$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p1【2017•全国I卷】【线性规划】\\
+      \source{2017文}{全国I卷}
+      设$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x+3y\leqslant3\,,\\
+        &x-y\geqslant1\,,\\
+        &y\geqslant0\,.
+      \end{aligned}\right.$
+      则$z=x+y$的最大值为\xz
+      \xx{0}{1}{2}{3}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p6【2018•南昌一模】【线性规划】\\
+      \source{2018文}{南昌一模}
+      设不等式组$\left\{\begin{aligned}
+        &x+y-3\geqslant0\,,\\
+        &x-y+1\geqslant0\,,\\
+        &3x-y-5\leqslant0\,.
+      \end{aligned}\right.$表示的平面区域为$M$，若直线$y=kx$经过区域$M$内的点，则实数$k$的取值范围为\xz
+      \xx{$(\dfrac1{2},2]$}
+       {$[\dfrac1{2},\dfrac4{3}]$}
+       {$[\dfrac1{2},2]$}
+       {$[\dfrac4{3},2]$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题6不等式的应用及线性规划P18p12【2017文•全国新课标】【线性规划】\\
+      \source{2017文}{全国新课标}
+      设$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &2x+3y-3\leqslant0\,,\\
+        &2x-3y+3\geqslant0\,,\\
+        &y+3\geqslant0\,.
+      \end{aligned}\right.$则$z=2x+y$的最小值是\xz
+      \xx{$-15$}{$-9$}{$1$}{$9$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题6不等式的应用及线性规划P18p4【2015文•福建】【线性规划】\\
+      \source{2015文}{福建}
+      变量$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x+y\geqslant0\,,\\
+        &x-2y+2\geqslant0\,,\\
+        &mx-y\leqslant0\,.
+      \end{aligned}\right.$若$z=2x-y$的最大值是$2$，则实数$m$等于\xz
+      \xx{$-2$}{$-1$}{$1$}{$2$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题6不等式的应用及线性规划P18p5【2017文•全国新课标】【线性规划】\\
+      \source{2017文}{全国新课标}
+      设$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &3x+2y-6\leqslant0\,,\\
+        &x\geqslant0\,,\\
+        &y\geqslant0\,.
+      \end{aligned}\right.$则$z=x-y$的取值范围是\xz
+      \xx{$[-3,0]$}{$[-3,2]$}{$[0,2]$}{$[0,3]$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题6不等式的应用及线性规划P18p6【2017文•山东】【线性规划】\\
+      \source{2017文}{山东}
+      已知$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-2y+5\leqslant0\,,\\
+        &x+3\geqslant0\,,\\
+        &y\leqslant2\,.
+      \end{aligned}\right.$则$z=x+2y$的最大值是\xz
+      \xx{$-3$}{$-1$}{$1$}{$3$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)》专题6不等式的应用及线性规划P18p12【2015文•陕西】【线性规划、实际应用】\\
+      \source{2015文}{陕西}
+      某企业生产甲、乙两种产品均需用$A$、$B$两种原料，已知生产1吨每种产品所需原料及每天原料的可用限额如表所示.如果生产1吨甲、乙产品可获利润分别为3万元、4万元，则该企业每天可获得最大利润为\xz
+      \begin{center}\begin{tabular}{|*{4}{c|}}
+          \hline
+
+            &甲
+            &乙
+            &原料限额\\
+          \hline
+            $A$(吨)
+            &3
+            &2
+            &12\\
+          \hline
+            $B$(吨)
+            &1
+            &2
+            &8\\
+          \hline
+        \end{tabular}\\
+        \end{center}
+      \xx{12万元}{16万元}{17万元}{18万元}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p13【2018•北京卷】【线性规划】\\
+      \source{2018文}{北京卷}
+      若$x$，$y$满足$x+1\leqslant y\leqslant 2x$，则$2y-x$的最小值为\tk.
+      \begin{answer}
+        3
+      \end{answer}
+
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

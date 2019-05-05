@@ -1,0 +1,325 @@
+% sty文件使用 \RequirePackage{latexexercise0}
+% 主文件使用 \documentclass[a3paper,twocolumn,2twoside,landscape,12pt,UTF8]{ctexart}
+\hspace{3cm}\\
+\vspace{0.5cm}
+\centering{\heiti \xiaoer 福州八中2018-2019学年第一学期末考试}\\
+\vspace{0.5cm}
+\centering{\heiti \erhao 高一数学\quad 必修4}\\
+\vspace{0.4cm}
+\centering{\wuhao 考试时间：120分钟\hspace{5em}试卷满分：150分}\\
+\vspace{0.4cm}
+\centering{\wuhao 命题：王芳玲\hspace{5em}审核：唐巧珍\hspace{5em}校对：陈楚\hspace{5em}2019.1.24}\\
+\vspace{-1.6em}
+\part{第I卷（100分）}
+\vspace{-3em}
+\startexercise
+\begin{exercise}
+\section{选择题(本大题共8小题，每小题5分，共40分.每题有且只有一个选项是正确的，请把答案填在答卷相应位置上)}
+  \item
+    下列说法\CJKunderdot{错误}的是\xz
+      \xx{向量$\vv{AB}$与$\vv{BA}$的长度相等}
+       {零向量没有方向}
+       {向量不能比较大小，向量的模可以比较大小}
+       {两个相等的向量若起点相同，则终点必相同}
+    \begin{answer}
+      B
+    \end{answer}
+  \item
+    若角$\alpha$为第二象限角，则化简$\dfrac{|\sin\alpha|}{\sin\alpha}-\dfrac{\cos\alpha}{|\cos\alpha|}$为\xz
+      \xx{$2$}{$0$}{$1$}{$-2$}
+    \begin{answer}
+      A
+    \end{answer}
+  \item
+    若一扇形的弧长为2，面积为1，则该扇形的圆心角的弧度数是\xz
+      \xx{4}{3}{2}{1}
+    \begin{answer}
+      C
+    \end{answer}
+  \item
+    将函数$f(x)=\sin\Bp{2x+\dfrac{\piup}6}$的图像向左平移$\dfrac{\piup}6$个单位，则所得的图像对应的函数是\xz
+      \xx{$y=\sin{2x}$}
+       {$y=\cos{2x}$}
+       {$y=\sin\Bp{2x+\dfrac{\piup}3}$}
+       {$y=\cos\Bp{2x+\dfrac{2\piup}3}$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item
+    在边长为2的正三角形$ABC$中，$\vv{AB}\cdot\vv{BC}$为\xz
+      \xx{$2\sqrt3$}
+        {$-2\sqrt3$}
+        {$2$}
+        {$-2$}
+    \begin{answer}
+      D
+    \end{answer}
+  \item
+    已知$\cos(\alpha+\beta)=-\dfrac35$，$\sin(\alpha-\beta)=\dfrac35$，且$\alpha+\beta\in\Bp{\dfrac{\piup}2,\piup}$，$\alpha-\beta\in\Bp{\dfrac{\piup}2,\piup}$，则$\cos{2\beta}$的值为\xz
+      \xx{$-1$}
+       {$1$}
+       {$\dfrac{24}{25}$}
+       {$-\dfrac{24}{25}$}
+    \begin{answer}
+      C
+    \end{answer}
+  \\\begin{minipage}[htbp!]{0.7\linewidth}\item
+    如图，正方形ABCD中，点E，F分别是DC，BC的中点，那么$\vv{EF}=$\xz
+    \xx{$\dfrac12\vv{AB}-\dfrac12\vv{AD}$}
+     {$-\dfrac12\vv{AB}+\dfrac12\vv{AD}$}
+     {$-\dfrac12\vv{AB}-\dfrac12\vv{AD}$}
+     {$\dfrac12\vv{AB}+\dfrac12\vv{AD}$}
+    \end{minipage}
+    \begin{minipage}[htbp!]{0.25\linewidth}
+      \begin{flushright}
+        \vspace{-1.5em}
+        \begin{tikzpicture}
+          \coordinate[label=left:$A$](A)at(0,0);
+          \coordinate[label=right:$B$](B)at(2,0);
+          \coordinate[label=left:$D$](D)at(0,2);
+          \coordinate[label=right:$C$](C)at(2,2);
+          \coordinate[label=right:$F$](F)at($(C)!0.5!(B)$);
+          \coordinate[label=above:$E$](E)at($(C)!0.5!(D)$);
+          \draw (A)--(B)--(C)--(D)--cycle;
+          \draw[->,>=latex] (A)--(B);
+          \draw[->,>=latex] (A)--(D);
+          \draw[->,>=latex] (E)--(F);
+        \end{tikzpicture}
+      \end{center}
+    \end{minipage}
+    \begin{answer}
+      A
+    \end{answer}
+  \item
+    已知$a=\dfrac{\sqrt2}2(\sin{18\degree}+\cos{18\degree})$，$b=2\cos^2{16\degree}-1$，$c=\dfrac{\sqrt3}2$，则\xz
+    \xx{$c<a<b$}{$b<c<a$}{$a<b<c$}{$b<a<c$}
+    \\
+    \begin{answer}
+      B
+    \end{answer}
+\par
+\section{填空题（本大题共4小题，每小题5分，共20分）}
+  \item
+     在平行四边形$ABCD$中，若$\vv{AB}=(2,4)$，$\vv{AD}=(-1,-1)$，则$\vv{BD}=$\tk
+    \begin{answer}
+      $(-3,-5)$
+    \end{answer}
+  \item
+     若角$\alpha$的终边过点$P\bigl(2\cos{120\degree},\sqrt2\sin(-45\degree)\bigr)$，则$\sin\alpha=$\tk
+     \begin{answer}
+       $-\dfrac{\sqrt2}2$
+     \end{answer}
+  \item
+     已知函数$y=A\sin(\omega x+\varphi)$($A>0$，$\omega>0$)的振幅是$3$，频率是$\dfrac5{2\piup}$，初相是$\dfrac{\piup}6$，则这个函数是$y=$\tk
+    \begin{answer}
+      $3\sin\Bp{5x+\dfrac{\piup}6}$
+    \end{answer}
+  \item
+    设$\bm a$，$\bm b$，$\bm c$为任意非零向量，且相互不共线，则下列命题中是真命题的序号为\tk\\
+    (1)$|\bm a|-|\bm b|<|\bm a-\bm b|$\hspace{4em}
+    (2)$(\bm a\cdot\bm b)\cdot\bm c-(\bm c\cdot\bm a)\cdot\bm b=0$\\
+    (3)$(\bm b\cdot\bm c)\cdot\bm a-(\bm c\cdot\bm a)\cdot\bm b$与$\bm c$垂直\hspace{2em}
+    (4)$(3\bm a+\bm b)\cdot(3\bm a-\bm b)=9|\bm a|^2-|\bm b|^2$
+    \begin{answer}
+      (1)(3)(4)
+    \end{answer}
+\section{解答题（本大题共有4个小题，共40分. 解答应写出文字说明、演算步骤或证明过程）}
+  \item
+    （本小题满分8分）\\
+    已知$\bm a=(1,2)$，$\bm b=(x,1)$，分别求实数$x$的值使得：\\
+    \circled{1} $(2\bm a+\bm b)\varparallel(\bm a-2\bm b)$；
+    \circled{2} $\bm a$与$\bm b$的夹角是60\degree.
+    \begin{answer}
+      \circled{1} $2\bm a+\bm b=(2+x,5)$，$\bm a-2\bm b=(1-2x,0)$；
+        $\because (2\bm a+\bm b)\varparallel(\bm a-2\bm b)$，
+        $\therefore 0+5(1-2x)=0$，$\therefore x=\dfrac12$；\par
+      \circled{2} $\bm a\cdot\bm b
+        =\abs{\bm a}\abs{\bm b}\cos{60\degree}
+        =\sqrt5\cdot\sqrt{x^2+1}\cdot\dfrac12=x+2$，即
+        $5(x^2+1)=4(x+2)^2$,
+        解得$x=8\pm 5\sqrt3$
+    \end{answer}
+  \vspace{4em}
+  \item
+    （本小题满分10分）\\
+    已知$\cos\alpha-\sin\alpha=\dfrac{3\sqrt2}5$，且$\piup<\alpha<\dfrac{3\piup}2$，化简$\dfrac{\sin{2\alpha}+2\sin^2\alpha}{1-\tan\alpha}$并求其值.
+    \begin{answer}
+      由$\cos\alpha-\sin\alpha=\dfrac{3\sqrt2}5$，
+      $\cos^2\alpha+\sin^2\alpha-2\sin\alpha\cos\alpha=\dfrac{3\sqrt2}{5}$，\\
+      $\therefore 2\sin\alpha\cos\alpha=1-\dfrac{18}{25}=\dfrac7{25}$；\\
+      $\therefore (\sin\alpha+\cos\alpha)^2=\sin^2\alpha+\cos^2\alpha+2\sin\alpha\cos\alpha
+      =1+\dfrac7{25}=\dfrac{32}{25}$；
+      又$\because \piup<\alpha<\dfrac{3\piup}2$，
+      $\therefore \sin\alpha<0$，$\cos\alpha<0$，\\
+      $\therefore \sin\alpha+\cos\alpha=\dfrac{4\sqrt2}5$，\\
+      $\therefore \dfrac{\sin{2\alpha}+2\sin^2\alpha}{1-\tan\alpha}
+      =\dfrac{2\sin\alpha\cos\alpha+2\sin^2\alpha}{1-\dfrac{\sin\alpha}{\cos\alpha}}
+      =\dfrac{2\sin\alpha\cos\alpha(\sin\alpha+\cos\alpha)}{\sin\alpha+\cos\alpha}
+      =\dfrac{\dfrac7{25}\cdot(-\dfrac{4\sqrt2}{5})}{\dfrac{3\sqrt2}{5}}
+      =-\dfrac{28}{75}$
+    \end{answer}
+  \vspace{4em}
+  \item
+    （本小题满分10分）\\
+    已知向量$\bm m=(1,1)$，向量$\bm n$与$\bm m$的夹角为$\dfrac{3\piup}4$，且$\bm m\cdot\bm n=-1$.\\
+    (1)求向量$\bm n$；\\
+    (2)设向量$\bm a=(1,0)$，$\bm b=(\cos x,\sin x)$，其中$x\inR$，若$\bm n\cdot\bm a=0$，试求$|\bm n+\bm b|$的取值范围.
+    \begin{answer}
+      (1)由$\bm m=(1,1)$，$\bm m$与x轴正半轴夹角为45\degree，
+        又$\bm n$与$\bm m$的夹角为$\dfrac{3\piup}4$，故$\bm n$在$x$轴或$y$轴负半轴上，\\
+        设$\bm n=(n_1,0)$或$\bm n=(0,n_2)$，又$\bm m\cdot\bm n=-1$，
+        $\therefore \bm n=(-1,0)$或$(0,-1)$.\par
+      (2)由$\bm n\cdot\bm a=0$，$\bm n=(0,-1)$；
+        $\therefore \abs{\bm n+\bm b}=\sqrt{\cos^2x+(\sin{x}-1)^2}
+        =\sqrt{\cos^2x+\sin^2x-2\sin x+1}=\sqrt{2-2\sin x} \in[0,2]$；
+    \end{answer}
+  \vspace{5em}
+  \item
+    （本小题满分12分）\\
+    已知函数$f(x)=\sqrt3\cos{\omega x}$，$g(x)=\sin\Bp{\omega x-\dfrac{\piup}3}$($\omega>0$)，且$g(x)$的最小正周期为$\piup$.\\
+    (1)若$f(\alpha)=\dfrac{\sqrt6}2$，$\alpha\in[0,\piup]$，求$\alpha$的值；\\
+    (2)求函数$y=f(x)+g(x)$的单调递增区间.
+    \begin{answer}
+      (1)$g(x)$的最小正周期为$\piup$，$\therefore \dfrac{2\piup}{\omega}=\piup$，
+        $\there \omega=2$\\
+        $\therefore f(\alpha)=\sqrt3\cos{2\alpha}=\dfrac{\sqrt6}2$，
+        $\therefore 2\alpha=\pm\dfrac{\piup}4+2k\pipu$，
+        $\therefore \alpha=\pm\dfrac{\piup}8+k\pipu$，$k\inZ$；\\
+        又$\alpha\in[0,\piup]$，
+        $\therefore$ $\alpha=\dfrac{\piup}8$或$\dfrac{7\piup}8$\par
+      (2)$y=f(x)+g(x)=\sqrt3\cos{2x}+\sin\Bp{2x-\dfrac{\piup}3}
+          =\dfrac12\sin{2x}+\dfrac{\sqrt3}2\cos{2x}=\sin\Bp{2x+\dfrac{\piup}3}$，\\
+          由$-\dfrac12\piup+2k\piup \leqslant 2x+\dfrac{\piup}3 \leqslant \dfrac12\piup+2k\piup$，得：
+          $-\dfrac{5\piup}{12}+k\piup \leqslant x \leqslant \dfrac{\piup}{12}+k\piup$，$k\inZ$；\\
+          故函数$y=f(x)+g(x)$的单调递增区间为
+          $\Bigl[-\dfrac{5\piup}{12}+k\piup,\dfrac{\piup}{12}+k\piup\Bigr]$，$k\inZ$
+    \end{answer}
+  \vspace{4em}
+\newpage
+\vspace{-3em}
+\part{第II卷（50分）}
+\vspace{-1.5em}
+\section{选择题(本大题共4小题，每小题4分，共16分.每题有且只有一个选项是正确的，请把答案填在答卷相应位置上)}
+  \item
+    若$\cos{165\degree}=a$，则$\tan{195\degree}=$\xz
+      \xx
+       {$\sqrt{1-a^2}$}
+       {$\dfrac{\sqrt{1+a^2}}a$}
+       {$\dfrac{\sqrt{1-a^2}}a$}
+       {$-\dfrac{\sqrt{1-a^2}}a$}
+    \begin{answer}
+      D
+    \end{answer}
+  \item
+    已知函数$f(x)=2\sin\Bp{\omega x+\dfrac{\piup}3}$图像的一个对称中心为$\Bp{\dfrac{\piup}3,0}$，其中$\omega$为常数，且$\omega\in(1,3)$，若对任意的实数$x$，恒有$f(x_1)\leq f(x)\leq f(x_2)$，则$|x_1-x_2|$的最小值是\xz
+      \xx{$1$}{$\dfrac{\piup}2$}{$2$}{$\piup$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item
+    已知$O$是$\triangle{ABC}$所在平面上一点，满足$|\vv{OA}|^2+|\vv{BC}|^2=|\vv{OB}|^2+|\vv{CA}|^2$，则点$O$\xz
+      \xx{在过点$C$与$AB$垂直的直线上}
+       {在$\angle{A}$的平分线所在直线上}
+       {在过点$C$边$AB$的中线所在直线上}
+       {以上都不对}
+    \begin{answer}
+      A
+    \end{answer}
+  \item
+    目前听说中国最高的摩天轮是“南昌之星”，它的最高点离地面160米，直径为156米，并以每30分钟一周的速度匀速旋转，若从最低点开始计时，则摩天轮运行5分钟后离地面的高度为\xz
+      \xx{31米}{43米}{58米}{63米}
+    \begin{answer}
+      B
+    \end{answer}
+\section{填空题（本大题共2小题，每小题4分，共8分）}
+  \item
+    若函数$f(x)=\tan{\omega x}$($\omega>0$)的图像相邻的两支截直线$y=\dfrac{\piup}4$所得线段的长为$\dfrac{\piup}4$，则$f(\dfrac{\piup}4)$的值是\tk
+    \begin{answer}
+      $0$
+    \end{answer}
+  \item
+    在矩形$ABCD$中，边$AB$、$AD$的长分别为2、1，若$M$、$N$分别是边$BC$、$CD$上的点，且满足$\dfrac{|\vv{BM}|}{|\vv{BC}|}=\dfrac{|\vv{CN}|}{|\vv{CD}|}$，则$\vv{AM}\cdot\vv{AN}$的取值范围是\tk
+    \begin{answer}
+      $[1,4]$
+    \end{answer}
+\newpage
+\section{解答题（本大题共有2个小题，共26分. 解答应写出文字说明、演算步骤或证明过程）}
+  \item
+    （本小题满分12分）\\
+    已知$O$为$\triangle{ABC}$的外心，以线段$OA$、$OB$为邻边作平行四边形，第四个顶点为$D$，再以$OC$、$OD$为邻边作平行四边形，它的第四个顶点为$H$.\\
+    (1) 若$\vv{OA}=\bm a$，$\vv{OB}=\bm b$，$\vv{OC}=\bm c$，$\vv{OH}=\bm h$，试用$\bm a$，$\bm b$，$\bm c$表示$\bm h$；\\
+    (2)证明：$\vv{AM}\perp\vv{BC}$；\\
+    (3)若$\triangle{ABC}$的$\angle{A}=60\degree$，$\angle{B}=45\degree$，外接圆的半径为$R$，用$R$表示$|\bm h|$.
+    \begin{answer}
+      (1)$\bm h=\bm a+\bm b+\bm c$\par
+      (2)\because $\vv{AH}=\vv{OH}-\vv{OA}=\bm b+\bm c$，$\vv{BC}=\bm c-\bm b$.\\
+         \therefore $\vv{AH}\cdot\vv{BC}=|\bm c|^2-|\bm b|^2=0$，\\
+         \therefore $\vv{AH}\perp\vv{BC}$.\par
+      (3)\because$|\bm h|^2=(\bm a+\bm b+\bm c)^2=3R^2+2R^2(\cos120\degree+\cos90\degree+\cos150\degree)=(2-\sqrt3)R^2$，\\
+         \therefore $|\bm h|=\dfrac{\sqrt6-\sqrt2}2 R$
+    \end{answer}
+  \vspace{12em}
+  \item
+    （本小题满分14分）\\
+    已知函数$f(x)=2\cos x\sin\Bp{x+\dfrac{\piup}3}-\sqrt3\sin^2x+\sin x\cos x$\\
+    (1) 当$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$时，求$f(x)$的值域；\\
+    (2) 解不等式：$f(x)+1\geq 0$；\\
+    (3) 若$x\in\Bigl[0,\dfrac{\piup}3\Bigr]$时，方程$f\Bp{\dfrac32x-\dfrac{\piup}3}=m$恰有两个不同的解，求实数$m$的取值范围
+    \begin{answer}
+      (1) $f(x)=2\cos x\sin\Bp{x+\dfrac{\piup}3}-\sqrt3\sin^2x+\sin x\cos x
+               =2\cos x(\dfrac12\sin x+\dfrac{\sqrt3}2\cos x)-\sqrt3\sin^2x+\sin x\cos x
+               =\sin{2x}+\sqrt3\cos{2x}
+               =2\sin\Bp{2x+\dfrac{\piup}3}$，\\
+          故$x\in\Bigl[0,\dfrac{\piup}2\Bigr]$时，$2x+\dfrac{\piup}3 \in\Bigl[\dfrac{\piup}3,\dfrac{4\piup}4\Bigr]$，\\
+          $f(x)$值域为$[-\sqrt3,2]$；\par
+      (2) 由$f(x)+1\geq 0$，得$\sin\Bp{2x+\dfrac{\piup}3}\geq -\dfrac12$\\
+          $\therefore -\dfrac{\piup}6+2k\piup \leqslant 2x+\dfrac{\piup}3 \leqslant \dfrac{7\piup}{6}+2k\piup$，$k\inZ$；\\
+          $\therefore \Bigl[-\dfrac{\piup}4+k\piup,\dfrac{5\piup}{12}+k\piup \Bigr]$，$k\inZ$；\par
+      (3) $x\in\Bigl[0,\dfrac{\piup}3\Bigr]$时，$f\Bp{\dfrac32x-\dfrac{\piup}3}=2\sin\Bp{3x-\dfrac{\piup}3}$，
+          \begin{center}
+            \begin{tikzpicture}[>=latex,,scale=1,declare function={f(\k)=2*sin(deg(3*\k-pi/3));}]
+              \tikzmath{
+                \xmin = 0;    \xmax = pi/3;
+                \ymin = -2;   \ymax = 2;
+                \xstep= pi/6; \ystep=1;
+                \xl=\xmin-0.5*\xstep; \xr=\xmax+0.5*\xstep;
+                \yl=\ymin-0.5*\ystep; \yr=\ymax+0.5*\ystep;
+              }
+              % \tikzset{elegant/.style={smooth,thick,samples=50,magenta}}
+              \begin{axis}[axis x line=middle,
+                     axis y line=middle,
+                     xmin=\xl,xmax=\xr,
+                     ymin=\yl,ymax=\yr,
+                     % xstep=\xstep,ystep=\ystep,
+                     xtick={0,1,2},
+                     ytick distance=\ystep,
+                     ylabel=$y$,
+                     xlabel=$x$]
+                    \addplot[elegant,orange,domain=0:1]{f(x)};
+                    \addplot[elegant,dashed,domain=0:\xstep]{2};
+                    \addplot[elegant,dashed,domain=\xl:\xr]{1.732};
+                    % \draw[dashed] (0,2)node[left](a){$2$}-|(\a,0)node[below](a1){$\dfrac{5\pi}{12}$};
+              \end{axis}
+              % \draw[->](\xl,0)--(\xr,0) node[below](x){$x$};
+              % \draw[->](0,\yl)--(0,\yr) node[left](y){$y$};
+              % \node[below left](O) at(0,0){$\small O$};
+              % \draw[domain=\xmin:\xmax,samples=300] plot (\x,{f(\x)});
+              % \draw[dashed] (0,2)node[left](a){$2$}-|(\a,0)node[below](a1){$\dfrac{5\pi}{12}$} ;;
+              % \draw[dashed](0,-2)node[left](b){$-2$}-|(\b,0)node[above](b1){$\dfrac{11\pi}{12}$} ;
+            \end{tikzpicture}
+          \end{center}
+          $\therefore 3x-\dfrac{\piup}3\in\Bigl[-\dfrac{\piup}3,\dfrac{2\piup}3\Bigr]$,\\
+          故方程$f\Bp{\dfrac32x-\dfrac{\piup}3}=m$恰有两个不同的解时，$m\in\Bigl[2\sin\dfrac{2\piup}3,2\Bigr]$，即\\
+          $m\in[\sqrt3,2)$；
+    \end{answer}
+  \vspace{8em}
+\end{exercise}
+\stopexercise
+\hspace{2em}
+\clearpage
+\hspace{3cm}\\
+\vspace{-2.5em}
+\part{\heiti \xiaoer 参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

@@ -1,0 +1,291 @@
+\Topic{集合运算；函数概念；对数与指数运算}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190428}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+% \end{exercise}
+\section{集合}
+  \subsection{集合的表示与常用符号}
+    一般地，我们把研究对象统称为{\fangsong 元素}(element)，把一些具有相同性质的元素组成的总体叫做{\fangsong 集合}(set)(简称为{\fangsong 集}).
+    \begin{itemize}
+      \item 元素$a${\fangsong 属于}(belong to)集合$A$，记为$a\in A$；
+        反之，若元素$a${\fangsong 不属于}集合$A$，记作$a\notin A$；
+      \item 不包含任何元素的集合称为{\fangsong 空集}，记为$\varnothing$；
+      \item 两个集合具有完全一样的元素，则称两集合{\fangsong 相等}，记作$A=B$
+      \item 如果集合$A$中的元素都属于集合$B$，那么称
+        \begin{itemize}
+          \item 集合$A${\fangsong 包含于}(contained)集合$B$，记作$A\subseteq B$，并称集合$A$是集合$B$的{\fangsong 子集}(subset)；
+          \item 集合$B${\fangsong 包含}(contain)集合$A$，记作$B\supseteq A$，并称集合$B$是集合$A$的{\fangsong 超集}(superset)；
+        \end{itemize}
+        进一步，如果$A\subseteq B$，且$A\neq B$（即：$B$中含有集合$A$中没有的元素），则称
+          \begin{itemize}
+            \item 集合$A$是集合$B$的{\fangsong 真子集}(proper subset)，记作$A\subsetneqq B$；
+            \item 集合$B$是集合$A$的{\fangsong 真超集}(proper superset)，记作$B\supsetneqq A$；
+          \end{itemize}
+        {\kaishu
+          规定空集 $\varnothing$是任何集合的子集
+          }
+      \item 几个特殊的集合：
+        \begin{itemize}
+          \item 全体{\fangsong 自然数}$0,1,2,3,\ldots ,$组成的集合，记作$\mathbb{N}$(natural)；
+          \item 全体正自然数组成的集合，记作$\mathbb{N}_+$或$\mathbb{N}*$
+          \item 全体{\fangsong 整数}$0,\pm1,\pm2,\pm3,\ldots ,$组成的集合，记作$\mathbb{Z}$；
+          \item 全体{\fangsong 有理数}组成的集合，记作$\mathbb{Q}$(quotient)；
+          \item 全体{\fangsong 实数}组成的集合，记作$\mathbb{R}$(real)
+          \item 全体{\fangsong 复数}组成的集合，记作$\mathbb{C}$(complex)
+        \end{itemize}
+      \item 集合的表示方法$\{x\in A\mid p(x)\}$.其中：
+        \begin{itemize}
+          \item $x\inA$指明集合元素用$x$表示，且元素$x$的取值范围是$A$;
+          \item $\mid$为分隔符号(有时用$\colon$表示)；
+          \item $p(x)$指明集合中的元素所具有的特征
+        \end{itemize}
+        几个示例：
+        \begin{itemize}
+          \item 所有偶数组成的集合：$\{x\mid x=2n,\,n\inZ \}$
+          \item 所有直线$y=x$上的点组成的集合：$\{(x,y)\mid y=2x\}$
+          \item {\fangsong 区间}$[a,b)$：$\{x\mid a\leqslant x<b,\,a<b\}$
+          \item {\fangsong 区间}$[a,+\infty)$：$\{x\mid x\geqslant a\}$
+        \end{itemize}
+    \end{itemize}
+  \subsection{集合的运算}
+    \begin{itemize}
+      \item {\fangsong 交集}：既属于集合$A$，又属于$B$的所有元素组成的集合，记为$A\cap B$；
+      \item {\fangsong 并集}：集合$A$中所有元素与集合$B$中的所有元素共同组成的集合，记为$A\cup B$；
+      \item {\fangsong 全集}：包含所研究问题中涉及的所有元素的集合；
+      \item {\fangsong 补集}：对于全集$U$的一个子集$A$(即$A\subseteq U$)，全集$U$中所有不属于集合$A$的元素组成的集合
+        称为子集$A$在全集$U$中的补集，记为$\complement_UA$；
+    \end{itemize}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p1【2018•全国I卷】【集合，交集】\\
+      {\kaishu [2018 \textbullet 全国I卷(文)]}
+      已知集合$A=\{0,2\}$，$B=\{-2,-1,0,1,2\}$，则$A\cap B=$\xz
+      \xx{$\{0,2\}$}
+       {$\{1,2\}$}
+       {$\{0\}$}
+       {$\{-1,-2.0,1,2\}$}
+      \begin{answer}
+        $\{1,8\}$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p2【2018•天津卷】【集合，补集交集，区间】\\
+      {\kaishu [2018 \textbullet 天津卷(文)]}
+      设全集为$\mathbb{R}$，集合$A=\{x\mid 0<x<2\}$，$B=\{x\mid x\geqslant1\}$，
+      则$A\bigcap\bigl(\complement_{\mathbb R}B\bigr)=$\xz
+      \xx{$\{x\mid 0<x\leqslant1\}$}
+       {$\{x\mid 0<x<1\}$}
+       {$\{x\mid 1\leqslantx<2\}$}
+       {$\{x\mid 0<x<2\}$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p3【2018•全国II卷】【集合，元素】\\
+      {\kaishu [2018 \textbullet 全国II卷(文)]}
+      已知集合$A=\{(x,y)\mid x^2+y^2\leqslant3,x\inZ,y\inZ\}$，则$A$中元素的个数为\xz
+      \xx{9}{8}{5}{4}
+      \begin{answer}
+        A
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p4【2018•济南模拟】【集合，并集，二次方程】\\
+      {\kaishu [2018 \textbullet 济南模拟(文)]}
+      已知集合$A=\{x\mid x^2+2x-3=0\}$，$B=\{-1,1\}$则$A\cup B=$\xz
+      \xx{$\{1\}$}
+       {$\{-1,1,3\}$}
+       {$\{-3,-1,1\}$}
+       {$\{-3,-1,1,3\}$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p8【2018•福州质检】【集合，元素，交集】\\
+      \source{2018}{福州质检(文)}
+      已知集合$A=\{x\mid x=2k+1,k\inZ\}$，$B=\{x\mid -1<x\leqslant4\}$，则集合$A\cap B$中元素的个数为\xz
+      \xx{1}{2}{3}{4}
+      \begin{answer}
+        B
+      \end{answer}
+    \end{exercise}
+  \end{exercise}
+\vspace{4em}
+\section{指数与对数运算}
+  \begin{exercise}{\heiti 课前检测}\\
+    求下列各式的值：
+    \begin{enumerate}[label=\arabic*)]
+      \begin{multicols}{2}
+        \item $\sqrt[3]{-8}$；
+        \item $\sqrt{(-10)^2}$；
+        \item $\sqrt[4]{(3-\piup)^4}$；
+        \item $\sqrt{(a-b)^2}$\quad($a>b$)；
+      \end{multicols}
+    \end{enumerate}
+  \end{exercise}
+  \subsection{乘方与开方}
+    \begin{description}[leftmargin=0pt]
+      \item [乘方] $n$个相同数字的乘积的运算叫做{\fangsong 乘方}，乘方的结果叫做{\fangsong 幂}. \par
+        实数$a$的$n$次幂$a^n=\underbrace{{a\cdot a\cdot a\cdot \cdots \cdot a}}_{n\text{个}a}$.
+        其中，$a$叫做{\fangsong 底数},$n$叫做{\fangsong 指数}.由于$n$是正整数，因此又称乘方$a^n$为{\fangsong 正整数指数幂}.
+      \item [开方] 乘方的逆运算称为{\fangsong 开方}.一般地，对于方程$x^n=a$，若$n>1$且$n\inN$,则解出所有$x$值的运算就叫做
+        {\fangsong $~a$开$n$次方}，相应地，$a$叫做{\fangsong 被开方数}(radicand)；方程的解$x$叫做$a$的 {\fangsong $~n$次方根}(nth root).
+        开二次方又称为{\fangsong 开平方}，开三次方又称为{\fangsong 开立方}.不致误解的情况下，开方常作为开平方的简称.
+
+        一个数的$n$次方根可能有不止一个值，其中与被开方数$a$符号相同的一个记为：$\sqrt[n]a$，此式称为{\fangsong 根式}(radical)，
+        这里$n$被称为{\fangsong 根指数(radical exponent)}.$n=2$时常省略不写，即：写成$\sqrt a$.
+      \item [运算性质]对于正整数指数幂，有以下运算律：(其中$a\inR$，$r,s\inN_+$)
+        \begin{itemize}%[leftmargin=*]
+          \item $a^ra^s=a^{r+s}$
+          \item $(a^r)^s=a^{rs}$
+          \item $(ab)^r=a^rb^r$
+        \end{itemize}
+    \end{description}
+  % \subsection{指数幂运算}
+  %   在乘方（正整数指数幂）的运算性质中，引入除法与开方，则为使运算性质保持一致性，可分别引入非负数的整数指数幂与分数指数幂.有：
+  %   \begin{itemize}
+  %     \item $a^0=1$，$a\neq 0$；
+  %     \item $a^{-n}=\dfrac1{a^n}$($n\inN_+$)，$a\neq 0$；
+  %     \item $a^{\frac{m}{n}}=\sqrt[n]m$($m,n\inN_+$,n>1)，$a\geqslant 0$；
+  %     \item $a^{-\frac{m}{n}}=\dfrac{1}{\sqrt[n]m}$($m,n\inN_+,~n>1$)，$a>0$；
+  %   \end{itemize}
+  \subsection{指数运算与对数运算}
+    对于$a^k=N$，满足一定条件时：
+    \begin{itemize}
+      \item {\fangsong 指数幂运算}：已知$a$、$k$可以求出$N$.如$2^3=8$，$2^{-3}=\dfrac18$，$2^{1/2}=\sqrt2$；
+      \item {\fangsong 开方运算}：已知$N$、$k$可以求出$a$.如$\sqrt[3]{-8}=-2$，$\sqrt4=2$，$\sqrt[4]{64}=2\sqrt2$；
+        需满足的条件：$n>1$且$n\inN$，且$n$为偶数时$N>0$；
+      \item {\fangsong 对数运算}：已知$a$、$N$可以求出$k$.如$\log_28=3$，$\log_2{\frac1{16}}=-4$.
+        需满足的条件：$a>0$且$a\neq 1$，$N>0$，
+    \end{itemize}
+    \begin{exercise}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p1【2016文•全国新课标】【对数指数，比大小】
+        \source{2016}{全国新课标(文)}
+        若$a>b>0$，$0<c<1$，则\xz
+        \xx{$\log_ac<\log_bc$}
+         {$\log_ca<\log_cb$}
+         {$a^c<b^c$}
+         {$c^a>c^b$}
+        \begin{answer}
+          B
+        \end{answer}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p3【2016文•浙江】【对数，定义】
+        \source{2010文}{浙江}
+        已知函数$f(x)=\log_2(x+1)$，若$f(a)=1$，则$a=$\xz
+        \xx{0}{1}{2}{3}
+        \begin{answer}
+          B
+        \end{answer}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p18【2016文•】【对数指数，定义】
+        \source{2014}{陕西(文)}
+        已知$4^a=2$，若$\lg x=a$，则$x=$\tk.
+        \begin{answer}
+          $\sqrt{10}$
+        \end{answer}
+    \end{exercise}
+\section{函数概念}
+  \begin{exercise}{\heiti 课前检测}\\
+    填写下表，写出各函数的定义域、值域 、单调性以及奇偶性.\
+    \vspace{-2em}
+    \begin{center}
+      \renewcommand{\arraystretch}{1.4}
+      \begin{tabular}{|c|c|c|c|c|}
+        \hline
+      $f(x)$&\mbox{\hspace{1.5em}定义域\hspace{1.5em}}&\mbox{\hspace{2em}值域\hspace{2em}}&\mbox{\hspace{8em}单调性\hspace{8em}}&\mbox{\hspace{1.2em}奇偶性\hspace{1.2em}}\\
+        \hline
+        $x$&&&&\\
+        \hline
+        $x^2$&&&&\\
+        \hline
+        $\log_2x$&&&&\\
+        \hline
+        $3^x$&&&&\\
+        \hline
+        $\dfrac{1}{x}$&&&&\\
+        \hline
+        $\sqrt{x}$&&&&\\
+        \hline
+        $\log_x2$&&&&\\
+        \hline
+      \end{tabular}\\
+    \end{center}
+  \end{exercise}
+  \begin{description}
+    \item [定义] 一般地，有：\\
+      设 $A$，$B$ 是非空的数集，如果按照某种确定的对应关系 $f$，使对于集合$A$中的任意一个数 $x$，在集合 $B$ 中都有唯一确定的数 $f(x)$ 和它对应，那么就称 $f\colon A\mapsto B$ 为从集合 $A$ 到集合 $B$ 的一个函数，记作
+      $$y=f(x),\qquad x\in A.$$
+      其中，$x$ 叫做自变量，$x$ 的取值范围 $A$ 叫做函数的定义域；与 $x$ 的值相对应的 $y $值叫做函数值，函数值的集合$\{f(x)|x\in A\}$叫做函数的值域，值域是集合$B$ 的子集．
+      \begin{itemize}[leftmargin=*]
+        \kaishu
+        \item 函数是两个数集间的一种对应关系；
+        \item 未指明定义域的情况下，默认定义域取使得对应关系有意义的所有实数. 具体如下:
+        \begin{enumerate}[label=\circled{\arabic*}]
+          \item 分式的分母不为0;
+          \item 偶次根式的被开方数不小于0；
+          \item 零次或负次指数次幂的底数不为零；
+          \item 对数的真数大于0；
+          \item 指数、对数函数的底数大于0且不等于1；
+          \item 实际问题对自变量的限制.
+        \end{enumerate}
+        \item 若函数$f(x)$定义域为$D$，且$f(a)$存在，则$a\in D$.
+      \end{itemize}
+  \end{description}
+  \clearpage
+  % \begin{exercise}
+  % \end{exercise}
+
+\newpage
+\section{课后作业}
+  % \begin{exercise}{\heiti 练习}
+  % \end{exercise}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p7【2018•郑州二测】【集合，并集，对数】\\
+      \source{2018}{郑州二测(文)}
+      已知集合$A=\{x\inR\mid \log_2(3-x)\leqslant 1\}$，$B=\{x\inR\mid 0\leqslant x\leqslant 2\}$，则$A\cup B=$\xz
+      \xx{$[0,3]$}
+       {$[1,2]$}
+       {$[0,3)$}
+       {$[1,3]$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p8【2018•南昌调研】【集合，交集，对数】\\
+      \source{2018}{南昌调研(文)}
+      设集合$A=\{x\mid -2\leqslant x\leqslant 1\}$，$B=\{x\mid y=\log_2{(x^2-2x-3)}\}$，则$A\cap B=$\xz
+      \xx{$[-2,1)$}
+       {$(-1,1]$}
+       {$[-2,-1)$}
+       {$[-1,1)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p9【2018•合肥一检】【集合，交集，定义域，值域】\\
+      \source{2018}{合肥一检(文)}
+      已知集合$M$是函数$y=\dfrac1{\sqrt{1-2x}}$的定义域，集合$N$是函数$y=x^2-4$的值域，则$M\cap N=$\xz
+      \xx{$\{x\mid x\leqslant \dfrac12\}$}
+       {$\{x\mid -4\leqslant x< \dfrac12\}$}
+       {$\{(x,y)\mid x< \dfrac12\text{且}\geqslant -4\}$}
+       {$\varnothing$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p16【2018•江苏卷】【集合，交集】\\
+      {\kaishu (2018 \textbullet 江苏卷(文))}
+      已知集合$A=\{0,1,2,8\}$，$B=\{-1,1,6,8\}$，那么$A\cap B=$\tk.
+      \begin{answer}
+        $\{1,8\}$
+      \end{answer}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

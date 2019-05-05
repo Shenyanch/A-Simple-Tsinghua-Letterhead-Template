@@ -1,0 +1,121 @@
+\Topic{}
+  \Teach{}
+  \Grade{高一}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+%   表格实例：
+%   \begin{center}
+%     \renewcommand{\arraystretch}{1.4}
+%     \begin{tabular}{|*{8}{c|}}
+%       \hline
+%         $x$
+%         &$-\dfrac{\piup}6$
+%         &$-\dfrac{\piup}3$
+%         &$-\dfrac{5\piup}6$
+%         &$-\dfrac{4\piup}3$
+%         &$-\dfrac{11\piup}6$
+%         &$-\dfrac{7\piup}3$
+%         &$-\dfrac{17\piup}6$\\
+%       \hline
+%         $y$
+%         &$-1$
+%         &$1$
+%         &$3$
+%         &$1$
+%         &$-1$
+%         &$1$
+%         &$3$\\
+%       \hline
+%     \end{tabular}\\
+%   \end{center}
+% \end{exercise}
+\section{不等关系与不等式}
+  \begin{description}
+    \item [符号说明]
+      \begin{itemize}[leftmargin=*]
+        % \kaishu
+        \item $\leqslant$ 表示“小于或等于”、“不大于”；$a\leqslant b\Rightarrow a<b$；
+        \item $\geqslant$ 表示“大于或等于”、“不小于”；$a\geqslant b\Rightarrow a>b$；
+        \item 连续不等式$a<b<c$的含义为$\begin{cases}a<b\\b<c\end{cases}$;
+        \item 式子$a<b=c$的含义为$\begin{cases}a<b\\b=c\end{cases}$;
+      \end{itemize}
+  \end{description}
+  \subsection{定义与性质}
+  \subsection{比较大小与不等式证明}
+  \begin{exercise}
+    \item
+  \end{exercise}
+\section{一元二次不等式及其解法}
+  \subsection{基础解法}
+  \subsection{含参问题}
+  \begin{description}
+    \item （连续）函数$f(x)$，函数定义域$I$.
+      \begin{itemize}[leftmargin=*]
+        % \kaishu
+        \item 若$f(x)>0$在区间$I$上恒成立 $\Leftrightarrow$ $f(x)$在区间$I$上恒大于0，则$f(x)$在$I$上的最小值大于0;
+        \item 若$f(x)>0$在区间$I$上有解 $\Leftrightarrow$ $\exists x_0\in I$，使得$f(x_0)>0$，则$f(x)$在$I$上的最大值大于0;
+        \item 若$f(x)>0$在区间$I$上无解 $\Leftrightarrow$ $f(x)\leqslant 0$在区间$I$上恒成立，则$f(x)$在$I$上的最大值不大于0.
+      \end{itemize}
+    \item  若（连续）函数$f(x)$由参变量$\lambda$确定，记为$f_\lambda(x)$.设参数取值范围$J$，函数定义域$I$.\\
+      则$f_\lambda(x)$亦可视为以$x$为参变量的函数$g_x(\lambda)$，函数定义域$J$，参数取值范围$I$；\\
+      亦可视为以“$x$”、“$\lambda$”为自变量的二元函数$H(x,\lambda)$.
+      \begin{itemize}[leftmargin=*]
+        % \kaishu
+        \item 当$\lambda\in J$时，$f_\lambda(x)>0$在$I$上恒成立；
+              $\Leftrightarrow$ 当$x\in I$，$\lambda\in J$时，$H(x,\lambda)>0$恒成立；
+              $\Leftrightarrow$ 当$x\in I$时，$g_x(\lambda)>0$在$J$上恒成立.
+          % \begin{itemize}
+          %   \kaishu
+          %   \item
+          % \end{itemize}
+      \end{itemize}
+  \end{description}
+  \begin{exercise}{\textbf{例题}}
+    \item 设函数$f(x)=mx^2-mx-1$.
+          (1) 若对于一切实数$x$，$f(x)<0$恒成立，求$m$的取值范围；
+          (2) 对于$x\in[1,3]$，$f(x)<-m+5$恒成立，求$m$的取值范围.
+          \begin{answer}
+            (1) [解法一] 依题意，有$\begin{cases}m<0\\ \Delta<0\end{cases}$，解得$-4<m\leqslant 0$；\\
+                [解法二] 令$h(m)=f(x)=(x^2-x)m-1$，则$h(m)$截距为$-1$，斜率$(x^2-x)\in\Bigl[-\dfrac14,+\infty\Bigr)$；
+                         于是$y=h(m)$在横轴的截距取值范围：$[-\infty,-4]\cup(0,+\infty)$，从而$-4<m\leqslant 0$时，$h(m)<0$恒成立.
+            (2) $m<\dfrac67$
+                \begin{itemize}
+                  \item 【解法一】 
+                  \item 【解法二】令$h(m)=f(x)+m-5=(x^2-x+1)m-6$，则$h(m)$截距为$-6$，斜率$(x^2-x+1)\in[2,7]$；
+                        故要使$h(m)<0$恒成立，必须$m<\dfrac67$
+                \end{itemize}
+          \end{answer}
+  \end{exercise}
+
+
+\section{基本不等式}
+  \subsection{比较大小与不等式证明}
+  \subsection{求最值}
+
+
+
+
+\newpage
+\section{课后作业}
+  \begin{exercise}
+
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

@@ -1,0 +1,292 @@
+\Topic{三角函数基础、三角恒等变换、复数}
+  \Teach{三角恒等变换}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190425}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+\startexercise
+% \begin{exercise}{\heiti 课前检测}\\
+% \end{exercise}
+\section{三角函数概念、同角关系与恒等变换}
+  \begin{description}[leftmargin=0pt,labelsep=0pt]
+    \item%[两角的和与差]
+      \begin{itemizeMy}[两角的和与差\hspace{2em}]
+        \item $\mathrm{C}_{\alpha\pm\beta}$：
+        $\cos(\alpha\pm\beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$
+        \item $\mathrm{S}_{\alpha\pm\beta}$：
+        $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$
+        \item $\mathrm{T}_{\alpha\pm\beta}$：
+        $\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm \tan\beta}{1\mp\tan\alpha\tan\beta}$
+      \end{itemizeMy}
+    \item%[二倍角公式]
+      \begin{itemizeMy}[二倍角公式\hspace{3em}]
+        \item $\mathrm{S}_{2\alpha}$：
+        $\sin{2\alpha}=2\sin\alpha\cos\alpha$
+        \item $\mathrm{C}_{2\alpha}$：
+        $\cos{2\alpha}=\cos^2{\alpha}-\sin^2{\alpha}=2\cos^2\alpha-1=1-2\sin^2\alpha$
+        \item $\mathrm{T}_{2\alpha}$：
+        $\tan{2\alpha}=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
+      \end{itemizeMy}
+      \item%[半角公式]
+        \begin{itemizeMy}[半角公式\hspace{4em}]
+          \item
+          $\sin{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1-\cos\alpha}2}$
+          \item $\cos{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1+\cos\alpha}2}$
+          \item $\tan{\dfrac{\alpha}2}=\dfrac{\sin\alpha}{1+\cos\alpha}=\dfrac{1-\cos\alpha}{\sin\alpha}$
+        \end{itemizeMy}
+      % \item%[万能公式]
+      %   \begin{itemizeMy}[万能公式\hspace{4em}]
+      %     \item $\sin{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\cos{\alpha}=\dfrac{1-\tan^2{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\tan{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1-\tan^2{\dfrac{\alpha}2}}}$
+      %   \end{itemizeMy}
+      \item%[辅助角公式]
+        \begin{itemizeMy}[辅助角公式\hspace{3em}]
+          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+          其中$\sin\varphi=\dfrac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi=\dfrac{a}{\sqrt{a^2+b^2}}$\\
+          $a>0$时，
+          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+          其中$\tan\varphi=\dfrac{b}a$，$
+          \varphi\in\Bigl(-\dfrac{\piup}2,\dfrac{\piup}2\Bigr)$
+        \end{itemizeMy}
+  \end{description}
+  \begin{exercise}
+    \item%福建师大附中2015-2016学年高一数学第二学期期末检测.doc-2【象限角】
+      (2016 \textbullet {\kaishu 师大附中} 2)
+      若点$P(\sin\theta\cos\theta,2\cos\theta)$位于第三象限，那么角$\theta$终边落在\xz
+      \xx{第一象限}{第二象限}{第三象限}{第四象限}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(文)》专题13三角函数的概念……P41p2【2015文•福建】【同角三角函数基本关系式】
+      {\kaishu (2015文 \textbullet 福建)}
+      若$\sin\alpha=-\dfrac5{13}$，且$\alpha$为第四象限角，则$\tan\alpha$的值等于\xz
+      \xx{$\dfrac{12}5$}
+       {$-\dfrac{12}5$}
+       {$\dfrac5{12}$}
+       {$-\dfrac5{12}$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(文)》专题13三角函数的概念……P41p2【2016文•全国新课标】【同角三角函数基本关系式、诱导公式】
+      {\kaishu (2016文 \textbullet 全国新课标)}
+      已知$\theta$是第四象限角，且$\sin\Bp{\theta+\dfracp{}4}=\dfrac35$，则$\tan\Bp{\theta-\dfracp{}4}=$\tk.
+      \begin{answer}
+        $-\dfrac43$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p3【2018•福州期末】【三角恒等变换】\\
+        {\kaishu (2018 \textbullet 福州期末(文))}
+        $\sqrt3\cos15\degree-4\sin^215\degree\cos15\degree=$\xz
+        \xx{$\dfrac12$}
+         {$\dfrac{\sqrt2}2$}
+         {$1$}
+         {$\sqrt2$}
+        \begin{answer}
+          D
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p4【2018•唐山五校联考】【三角恒等变换】\\
+        {\kaishu (2018 \textbullet 唐山五校联考(文))}
+        已知$\alpha$是第三象限角，且$\tan\alpha=2$，则$\sin\Bp{\alpha+\dfrac{\piup}4}=$\xz
+        \xx{$-\dfrac{3\sqrt{10}}{10}$}
+         {$\dfrac{3\sqrt{10}}{10}$}
+         {$-\dfrac{\sqrt{10}}{10}$}
+         {$\dfrac{\sqrt{10}}{10}$}
+        \begin{answer}
+          A
+        \end{answer}
+
+  \end{exercise}
+\vspace{4em}
+\section{复数}
+  \begin{description}[leftmargin=0pt,labelsep=0pt]
+    \item[]%[定义]
+      \begin{itemizeMy}[定义\hspace{3em}]
+        \item 形如$a+b\ii(a,b\inR)$的数叫做复数，通常用字母$z$来表示，即
+              \[z=a+b\ii(a,b\inR).\]
+              其中$a$叫做复数$z$的实部，$b$叫做复数$z$的虚部.
+        \item 当且仅当两个复数的实部和虚部分别相等时，两个复数相等.即：如果$a,b,c,d\inR$，那么
+              \[a+b\ii=c+d\ii \Leftrightarrow a=c\text{且}b=d\]
+        \item %分类
+          \[\text{复数}a+b\ii(a,b\inR)
+            \begin{cases}
+              \text{实数($b=0$)}\\
+              \text{虚数($b\neq0$)}\begin{cases} \text{纯虚数}(a=0)\\\text{非纯虚数}(a\neq0)\end{cases}
+            \end{cases}\]
+        \item 只有两个数都为实数时，这两个数才可以比较大小.如：$2+3\ii$与$3$之间不存在大小关系.
+      \end{itemizeMy}
+    \item[]%[表示]
+      \begin{itemizeMy}[表示\hspace{3em}]
+        \item %任何一个复数$z=a+b\ii(a,b\inR)$，都可以由一个有序实数对$(a,b)$唯一确定.
+          复数$z=a+b\ii(a,b\inR)$与坐标为$(a,b)$的点对应
+        \item 复数$z=a+b\ii(a,b\inR)$对应的点$(a,b)$与原点的距离叫做复数的模，记为$|z|$.即：
+          \[|z|=|a+b\ii|=\sqrt{a^2+b^2}\]
+          {\kaishu 复数的模是一个不小于0的实数.}
+      \end{itemizeMy}
+    \item[]%[复数的运算]
+      \begin{itemizeMy}[复数的运算\hspace{3em}]
+        $a,b,c,d\inR$
+        \item $(a+b\ii)+(c+d\ii)=(a+c)+(b+d)\ii$
+        \item $(a+b\ii)(c+d\ii)=ac+ad\ii+bc\ii+bd\ii^2$
+        \item 对于复数$z=a+b\ii$，称$\bar{z}=a-b\ii$为$z$的共轭复数.
+      \end{itemizeMy}
+  \end{description}
+  \clearpage
+  \begin{exercise}
+    \item %《习题化知识清单》P283方法1-1【复数】\\
+      已知$\dfrac{(1-\ii)^2}z=1+\ii$($\ii$为虚数单位)，则复数$z=$\xz
+      \xx{$1+\ii$}
+       {$1-\ii$}
+       {$-1+\ii$}
+       {$-1-\ii$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p1【2017•全国II新课标】【复数计算】\\
+        {\kaishu (2017 \textbullet 全国II新课标(文))}
+        $(1+\ii)(2+\ii)=$\xz
+        \xx{$1-\ii$}
+         {$1+3\ii$}
+         {$3+\ii$}
+         {$3+3\ii$}
+        \begin{answer}
+          B
+        \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p2【2016•全国新课标】【复数计算】\\
+        {\kaishu (2016 \textbullet 全国新课标(文))}
+        设$(1+2\ii)(a+\ii)$的实部与虚部相等，其中$a$为实数，则$a=$\xz
+        \xx{$-3$}{$-2$}{$2$}{$3$}
+        \begin{answer}
+          A
+        \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p3【2017•北京】【复数计算】\\
+        {\kaishu (2017 \textbullet 北京(文))}
+        若复数$(1-\ii)(a+\ii)$在复平面内对应的点在第二象限，则实数$a$的取值范围是\xz
+        \xx{$(-\infty,1)$}
+         {$(-\infty,-1)$}
+         {$(1,+\infty)$}
+         {$(-1,+\infty)$}
+        \begin{answer}
+          B
+        \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p4【2016•山东】【复数计算】\\
+        {\kaishu (2016 \textbullet 山东(文))}
+        若复数$z=\dfrac2{1-\ii}$，其中$\ii$为虚数单位，则$\bar z=$\xz
+        \xx{$1+\ii$}
+         {$1-\ii$}
+         {$-1+\ii$}
+         {$-1-\ii$}
+        \begin{answer}
+          B
+        \end{answer}
+    \item %《习题化知识清单》P283方法1-2【复数】\\
+      已知复数$z=1+\ii$,，则$\dfrac{z^2-2z}{z-1}=$\xz
+      \xx{$-2\ii$}
+       {$2\ii$}
+       {$-2$}
+       {$2$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p5【2015•全国新课标】【复数计算】\\
+        {\kaishu (2015 \textbullet 全国新课标(文))}
+        已知复数$z$满足$(z-1)\ii=1+\ii$，则$z=$\xz
+        \xx{$-2-\ii$}
+         {$-2+\ii$}
+         {$2-\ii$}
+         {$2+3\ii$}
+        \begin{answer}
+          C
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p8【2018•开封定位考试】【复数计算】\\
+        {\kaishu (2018 \textbullet 开封定位考试(文))}
+        已知复数$z=\dfrac{2}{-1+\ii}$，则下列选项中说法正确的是\xz
+        \xx{$z$的共轭复数为$1+\ii$}
+         {$z$的实部为$1$}
+         {$|z|=2$}
+         {$z$的虚部为$-1$}
+        \begin{answer}
+          D
+        \end{answer}
+  \end{exercise}
+\newpage
+\section{课后作业}
+  \begin{exercise}{\heiti 练习}\\
+    \item 求下列复数$z$的值： \begin{multicols}{2}
+          \begin{enumerate}[label=\arabic*)]
+            \item $(2+\ii)z=(4-3\ii)$;
+            \vspace{2cm}
+            \item $(1-\ii)^2=(1+\ii)z$;
+            \vspace{2cm}
+            \item $2+\ii(1-z\ii)=2z+3\ii$;
+            \vspace{2cm}
+            \item $(1+z\ii)(2+\ii)=3z-4\ii$;
+            \vspace{2cm}
+          \end{enumerate}
+          \begin{answer}
+            \begin{enumerate}[itemindent=1em,listparindent=6em, label=\arabic*)]
+              \item $z=1-2\ii$;
+              \item $z=-1-\ii$;
+              \item $z=2-2\ii$;
+              \item $z=\dfrac{-1+12\ii}{10}$;
+            \end{enumerate}
+          \end{answer}
+        \end{multicols}
+  \end{exercise}
+  \begin{exercise}
+    \item %【2017•新课标全国卷I】【复数计算】\\
+        {\kaishu (2017 \textbullet 全国I新课标(文))}
+        下列各式的运算结果为纯虚数的是\xz
+        \xx{$\ii(1+\ii)^2$}
+         {$\ii^2(1-\ii)$}
+         {$(1+\ii)^2$}
+         {$\ii(1+\ii)$}
+        \begin{answer}
+          C
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p1【2018•全国I卷】【复数计算】\\
+        {\kaishu (2018 \textbullet 全国I卷(文))}
+        设$z=\dfrac{1-\ii}{1+\ii}+2\ii$，则$\bar z=$\xz
+        \xx{$0$}
+         {$\dfrac12$}
+         {$1$}
+         {$\sqrt2$}
+        \begin{answer}
+          C
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p5【2018•太原一模】【复数计算】\\
+        {\kaishu (2018 \textbullet 太原一模(文))}
+        设复数$z$满足$\dfrac{1-z}{1+z}=\ii$，则$z$的共轭复数为\xz
+        \xx{$\ii$}{$-\ii$}{$2\ii$}{$-2\ii$}
+        \begin{answer}
+          A
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p7【2018•南昌二模】【复数计算】\\
+        {\kaishu (2018 \textbullet 南昌二模(文))}
+        若实数$x,y$满足$\dfrac{x}{1+\ii}+y=2+\ii$($\ii$为虚数单位)，则$x+y\ii$在复平面内对应的点位于\xz
+        \xx{第一象限}{第二象限}{第三象限}{第四象限}
+        \begin{answer}
+          B
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p13【2018•江苏卷】【复数计算】\\
+        {\kaishu (2018 \textbullet 江苏卷(文))}
+        若复数$z$满足$\ii\cdot z=1+2\ii$，其中$\ii$为虚数单位，则$z$的实部为\tk.
+        \begin{answer}
+          2
+        \end{answer}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

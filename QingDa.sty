@@ -1,7 +1,13 @@
  \ProvidesPackage{QingDa}
 %\RequirePackage[BoldFont,SlantFont]{xeCJK}
 %\RequirePackage[utf8x]{inputenc}
-\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2cm,footskip=1.5cm,headheight=2.5cm,headsep=0.1cm]{geometry}
+\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.2cm,footskip=1.2cm,headheight=2.5cm,headsep=0.1cm]{geometry}
+%与可打印区域(total body)边距(margins)： 靠近装订侧边距(inner)left、靠近翻页侧边距(outer)right、底部bottom、顶部top
+%可打印区域(total body)：文字区(body)、页眉(header)、页脚(footer)、边注区(\marginpar为边注命令)
+%边注区(marginal note)与邻区间距marginparsep、边注区(marginal note)宽度marginparwidth
+%文字区(body)：宽度textwidth即为默认width值、高度textheight即为默认height值、默认includemp参数true于是marginparsep和 marginparsep将包含到 width 中(即边注区在body内)
+%页眉(header):与body紧连；页眉区域高度headheight、页眉区域与下边区域间距headsep； 设置includehead参数时headheight 和 headsep 包含到 height 中
+%页脚(foot):与body紧连；页脚区域高度footskip；设置includefoot参数时将会使 footskip 包含到 height 中
 \RequirePackage{graphicx}
 \RequirePackage{fancyhdr}
 \RequirePackage[export]{adjustbox}
@@ -15,7 +21,7 @@
 % \RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
 \RequirePackage{multicol}%分栏
-  % \setlength{\columnsep}{12pt}​%将栏位之间的距离设为12pt(缺省是10pt)，
+  \setlength{\columnsep}{25pt}​%将栏位之间的距离设为15pt(缺省是10pt)，
   % \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
 % \RequirePackage{siunitx}%国际单位制符号
 %数学符号
@@ -74,42 +80,48 @@
 \newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont} % 五号
 \newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont} % 小五
 \newcommand{\liuhao}{\fontsize{8pt}{8pt}\selectfont} % 六号
-\newcommand{\defaultfont}{\renewcommand{\baselinestretch}{1.5}%
+\newcommand{\defaultfont}{\renewcommand{\baselinestretch}{1.56}%
 	\fontsize{12pt}{13pt}\selectfont}
 %
 % End of Font Setting
 %\CTEXsetup[name={第,节},number={\chinese{section}}]{section}
 \titleformat{\section}[block]{\bfseries}{\chinese{section} 、}{0.25em}{}
 \titlespacing{\section}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
-\titleformat{\subsection}[block]{\bfseries}{\arabic{subsection}.}{0.25em}{}
+\titleformat{\subsection}[block]{\bfseries}{\S\arabic{subsection}.}{0.25em}{}
 \titlespacing{\subsection}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
 \titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsection}.\arabic{subsubsection}}{0.25em}{}
 \titlespacing{\subsubsection}{4pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
 \titleformat{\part}{\centering\bfseries}{}{0.1em}{}
+\titleformat{\paragraph}[hang]{\bfseries}{\relax}{}{\hspace*{15pt}$\bullet$\hspace{1em}}[\relax]
 
 
 \fancypagestyle{plain}
 {\fancyhf{}
-\renewcommand{\headrulewidth}{1.2pt}
+\renewcommand{\headrulewidth}{1.6pt}
 \fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
-{\vspace{-0.8em}}
-\hspace{-4em}\includegraphics[height=2.32cm]{Logo.jpg}
-\end{tabular}
+  {\vspace{-6pt}}
+  \hspace{-55pt}\includegraphics[height=2.32cm]{LogoTwo_L.png}
+  \end{tabular}
 }
+\fancyhead[R]{\begin{tabular}[c]{cr@{}c@{}}
+  {\vspace{-6pt}}
+  \includegraphics[height=2.32cm]{LogoTwo_R.png}\hspace{-55pt}
+  \end{tabular}
+  }
 % \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
-\fancyhead[R]{\begin{tabular}[t]{@{} c @{}}
-      {\vspace{0.3em}}
-      \small{福州清大教育\hspace{6em}} \\
-      \small{FuZhou Qingda Education\hspace{6em}} \\
-\end{tabular}
-}
+% \fancyhead[R]{\begin{tabular}[t]{@{} c @{}}
+%       {\vspace{0.3em}}
+%       \small{福州清大教育\hspace{6em}} \\
+%       \small{FuZhou Qingda Education\hspace{6em}} \\
+% \end{tabular}
+% }
 
-\renewcommand{\footrulewidth}{.4pt}
+\renewcommand{\footrulewidth}{.5pt}
 \fancyfoot[C]{
-\resizebox{!}{0.9\baselineskip}
+\resizebox{!}{1.0\baselineskip}
 {\begin{tabular}[c]{@{} c @{}}
-      \Huge{\vspace{0.3em}\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}} \\
-      \LARGE{\vspace{0.5em}清大教学部内部版权所有\hspace{1em}未经允许\hspace{1em}严禁复制} \\
+      \Huge{\vspace{8pt}\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{爱琴海校区：87509388}} \\
+      \LARGE{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
       \LARGE{第\thepage 页}
 \end{tabular}}
 }
@@ -141,6 +153,7 @@
 \arrayrulewidth=1pt
   \centering
   \renewcommand{\arraystretch}{1.5}
+  \hspace{-2em}
   \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
   \hline
     {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei \wuhao 首课时间}&\QD@FirstTime&{\hei \wuhao 本课时间}  & \QD@CurrentTime  \\ \hline
@@ -148,6 +161,7 @@
    {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
    {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
 \end{tabular}
+\hspace{-2em}
 \end{table}
 }
 
@@ -305,6 +319,9 @@
 \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
 \renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
 %=======================================================================
+%特殊格式
+\newcommand{\source}[2]{[{\kaishu #1 \textbullet #2}]}%注明来源时加中括号
+%=======================================================================
 \newcommand{\circled}[1]{\textcircled{\scriptsize #1}}
 \newcommand{\dcircled}[1]{}
 \newcommand{\ee}{{\mathrm e}}
@@ -319,6 +336,9 @@
 \def\inZ{\in\mathbb{Z}}
 \def\inR{\in\mathbb{R}}
 \def\inN{\in\mathbb{N}}
+\def\ZZ{\mathbb{Z}}
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
 \def\rad{\,\mathrm{rad}}
 \def\deg{\,\mathrm{deg}}
 \newcommand{\dfracp}[2]{\dfrac{#1\piup}{#2}}
