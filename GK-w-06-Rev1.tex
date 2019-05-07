@@ -1,4 +1,4 @@
-\Topic{向量相关计算}
+\Topic{等差数列与等比数列}
   \Teach{}
   \Grade{高三}
   % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
@@ -9,543 +9,117 @@
   % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
   % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
   % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
-  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190506}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190505}
   \newtheorem*{Theorem}{定理}
   \makefront
 \vspace{-1.5em}
 \startexercise
-% \begin{exercise}{\heiti 课前检测}\\
-% \end{exercise}
-% \section{公式回顾}
-%   \begin{exercise}{\heiti 课前检测}\\
-%     \item %【正弦定理、余弦定理】\\
-%       在$\triangle{ABC}$中，已知量分别为下列情况时，求边长$a$的大小.
-%       \begin{enumerate}[label=\arabic*)]
-%         \item 已知角$A$、$B$，以及边长$b$；
-%         \item 已知角$A$、$B$，以及边长$c$；
-%         \item 已知边$b$、$c$，以及角$A$；
-%       \end{enumerate}
-%       \begin{answer}
-%           1) 由正弦定理：$\dfrac{\sin A}{\sin B}=\dfrac{a}b$，$\therefore a=\dfrac{b\sin A}{\sin B}$；
-%           2) 由$A+B+C=\piup$，$\sin C=\sin\bigl(\piup-(A+B)\bigr)=\sin(A+B)$，故由正弦定理，
-%              $a=\dfrac{c\sin A}{\sin (A+B)}$；
-%           3) 由余弦定理，$a=b^2+c^2-2bc\cos A$；
-%       \end{answer}
-%     \vspace{4em}
-%     \item %【诱导公式、同角三角函数关系】\\
-%       已知$\sin\Bp{A-\dfrac{3\piup}2}-\cos(3\piup-A)=\dfrac1{2}$，且$\sin{A}<\cos{A}$，则$\tan(A+3\piup)=$\tk.
-%       \begin{answer}
-%         $-\sqrt{15}$.
-%         【由$\sin\Bp{A-\dfrac{3\piup}2}-\cos(3\piup-A)=\cos A-(-\cos A)=\dfrac1{2}$，
-%         故$\cos{A}=\dfrac1{4}$，$\therefore \sin{A}=\pm\dfrac{\sqrt{15}}4$，又$\sin{A}<\cos{A}$，
-%         $\therefore \sin{A}=-\dfrac{\sqrt{15}}4$，$\therefore $，$\tan(A+3\piup)=\tan{A}=\sin{A}/\cos{A}=-\sqrt{15}$.】
-%       \end{answer}
-%     \item %【对数，指数，幂运算】\\
-%   \end{exercise}
-
-\section{平面向量运算与应用}
-  \subsection{五种常见向量}
-    \begin{enumerate}[label=\arabic*)]
-      \item 单位向量：模为1的向量.
-      \item 零向量：模为0的向量.
-      \item 平行(共线向量)：方向相同或相反或其一为零向量的两个向量.
-      \item 相等向量：模相等，方向相同的向量.
-      \item 相反向量：模相等，方向相反的向量.
+\section{数列基本概念}
+  按照一定的顺序排列的一列数叫做\CJKunderdot{数列}，数列中的每一个数叫做这个数列的\CJKunderdot{项}.排在第一位的数称作数列的\CJKunderdot{首项}，排在第二位的称为数列的第$ 2 $项$ \cdots\cdots $排在第$ n $位的称为这个数列的第$ n $项.数列的一般形式为\[a_1,~a_2,~a_3,~\cdots a_n,~\cdots, \]简记为$ \{a_n\} $.
+  \subsection{数列与函数}
+    在函数的意义下，数列是定义域为正整数集$ \mathbf{N^*} $(或它的有限子集$ \left\{1,2,3,\cdots,n\right\} $)的特殊函数，数列的通项公式就是相应的函数解析式，即$ a_n=f(n)~(n\in\mathbf{N^*}) $.
+  \subsection{通项公式}
+    如果数列$\{a_n\}$的第$ n $项与序号$ n $之间的关系可以用一个式子来表示，那么这个式子叫做这个数列的\CJKunderdot{通项公式}.
+  \subsection{递推公式}
+    如果已知数列$\{a_n\}$的第一项(或前几项)，且从第二项(或某一项)开始任何一项$ a_n $与它的前一项$ a_{n-1} $(或前几项)间的关系可以用一个式子来表示，那么这个式子叫做数列$\{a_n\}$的递推公式.
+  \subsection{数列的分类}
+    类比函数的性质及其分类，对数列进行恰当的分类可以更深刻的理解和认识数列.
+    \begin{enumerate}[1)]
+      % \item 根据项的个数：
+      %   \begin{enumerate}[i)]
+      %     \item 有穷数列：项数有限的数列；
+      %     \item 无穷数列：项数无限的数列；
+      %   \end{enumerate}
+      \item 根据项的变化趋势：
+        \begin{enumerate}[i)]
+          \item 递增数列：从第二项起每一项都大于它的前一项的数列；
+          \item 递减数列：从第二项起每一项都小于它的前一项的数列；
+          \item 常数列：各项相等的数列；
+          \item 摆动数列：从第二项起，前后两项变化规律不定的数列.
+        \end{enumerate}
+      % 递增数列和递减数列统称单调数列；
+      % \item 根据项的(绝对值)大小是否有限制：
+      %   \begin{enumerate}[i)]
+      %     \item 有界数列：$ \forall n\in\mathbf{N^*},\abs{a_n}\le M~(M\text{为常数}) $；
+      %     \item 无界数列：$ \forall M\in\mathbf{R^+} ,\exists n\in\mathbf{N^*},\text{使得}\abs{a_n}>M.$
+        \end{enumerate}
     \end{enumerate}
-  \subsection{坐标表示}
-    平面内的任一向量$ \bm{a} $都可以由$ x,~y $唯一确定，我们把有序数对$ (x,y) $叫做向量$\bm{a}  $的坐标，记作
-    \begin{equation}\label{eq:axy}
-      \bm{a}=(x,y)
-    \end{equation}
-    其中$ x $叫做$ \bm{a} $在$x$轴上的坐标，$ y $叫做$ \bm{a} $在$y$轴上的坐标，(\ref{eq:axy})式叫做\textbf{向量的坐标表示}
-    \begin{center}
-    \begin{tikzpicture}[scale=0.7]
-      \draw[->,>=stealth] (-1,0)--(3,0) node[below](x){$x$};
-      \draw[->,>=stealth] (0,-1)--(0,3) node[right](y){$y$};
-      \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
-      \draw[very thick,->,>=stealth](0,0)--(0,1)node[midway,left](j) {$\bm{j}$};
-      \coordinate(A) at (1.5,1.5);
-      \node[right](a1)at(1.5,1.5){$A(x,y)$};
-      \draw[dashed](A)--++(-1.5,0)node[left](y){$y$};
-      \draw[dashed](A)--++(0,-1.5)node[below](x){$x$};
-      \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
-    \end{tikzpicture}
-    \end{center}
-  \subsection{向量的线性运算与数量积}
-    向量的线性运算包括向量的加、减、数乘运算.
-    \subsubsection{加法}
-      \begin{description}
-        \item[定义] 两个向量和的运算；
-        \item[法则] 平行四边形法则或三角形法则
-          \begin{center}
-          \begin{tikzpicture}
-            \coordinate(O) at (0,0);
-            \coordinate(A) at (2,0);
-            \coordinate(B) at(1,2);
-            \coordinate(C) at ($(A)+(B)$);
-            \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{a}$};
-            \draw[->,>=latex] (O)--(C)node[midway,above,sloped](c){\small$\bm{a}+\bm{b}$};
-            \draw[->,>=latex] (A)--(C)node[midway, below](b){\small$\bm{b}$};
-            \begin{scope}[xshift=4cm]
-              \coordinate(O) at (0,0);
-              \coordinate(A) at (2,0);
-              \coordinate(B) at(1,2);
-              \coordinate(C) at ($(A)+(B)$);
-              \draw[->,>=latex] (O)--(A)node[midway ,below](a){\small$\bm{a}$};
-              \draw[->,>=latex] (O)--(C)node[midway ,below,sloped](c){\small$\bm{a}+\bm{b}$};
-              \draw[->,>=latex] (O)--(B)node[midway, left](b){\small$\bm{b}$};
-              \draw[dashed](B)--(C);
-              \draw[dashed](A)--(C);
-            \end{scope}
-          \end{tikzpicture}
-          \end{center}
-          {\kaishu 对于零向量与任一向量$\bm{a}$，规定$$\bm{a}+\bm{0}=\bm{0}+\bm{a}=\bm{a}$$}\par
-          由三角形法则，可得向量不等式(有时称作“三角形不等式”)：
-          \[\bigm|{\abs{\bm{a}}-\abs{\bm{b}}\bigm|}\leqslant \abs{\bm{a}+\bm{b}}\leqslant \abs{\bm{a}}+\abs{\bm{b}}\]
-          若$\bm a$和$\bm b$为非零向量，则：当$\bm a$与$\bm b$反向时， 左边等式成立；当$\bm a$与$\bm b$同向时， 右边等式成立；\par
-      \end{description}
-    \subsubsection{减法}
-      \begin{description}
-        \item[定义]减去一个向量相当于加上这个向量的相反向量，即$$\bm{a}-\bm{b}=\bm{a}+(\bm{-b})$$
-        \item[运算法则]三角形法则、平行四边形法则.%$\vv{AB}-\vv{AC}=\vv{CB}$.
-        \begin{center}
-        \begin{tikzpicture}
-          \coordinate(O) at (0,0);
-          \coordinate(A) at (2,0);
-          \coordinate(B) at(1.5,1.5);
-          \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{b}$};
-          \draw[->,>=latex] (O)--(B)node[midway, left](a){\small$\bm{a}$};
-          \draw[->,>=latex](A)--(B)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
-          \begin{scope}[xshift=6cm]
-            \coordinate(O) at (0,0);
-            \coordinate(B) at (2,0);
-            \coordinate(A) at(1.5,1.5);
-            \coordinate(B1) at (-2,0);
-            \coordinate(C)at($(B1)+(A)$);
-            \draw[->,>=latex] (O)--(B)node[midway,below](a){\small$\bm{b}$};
-            \draw[->,>=latex] (O)--(A)node[midway, left](a){\small$\bm{a}$};
-            \draw[->,>=latex](B)--(A)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
-            \draw[->,>=latex](O)--(B1)node[midway,below](b1){\small$\bm{-b}$};
-            \draw[->,>=latex](O)--(C)node[midway,below,sloped](b1){\small$\bm{a-b}$};
-            \draw[dashed] (B1)--(C) (A)--(C);
-          \end{scope}
-        \end{tikzpicture}
-        \end{center}
-        {\kaishu
-          对于任意一点$P$，$\vv{AB}=\vv{PB}-\vv{PA}$,
-        }
-      \end{description}
-    \subsubsection{数乘}
-      \begin{description}
-        \item[定义] 求实数$ \lambda $与向量$\bm{a}$的积是一个向量，记作$\lambda\bm{a}$,长度与方向由以下法则规定：
-        \item[法则]
-          \begin{enumerate}[label=\arabic*)]
-            \item $\abs{\lambda \bm{a}}=\abs{\lambda}\abs{\bm{a}} $;
-            \item
-              \begin{itemize}
-                \item 当$ \lambda>0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相同；
-                \item 当$ \lambda<0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相反；
-                \item 当$ \lambda=0 $时，$ \lambda\bm{a}=\bm 0 $.
-              \end{itemize}
-          \end{enumerate}
-        对于任意向量$\bm a,\bm b$以及任意实数$\lambda$，$\mu_1$，$\mu_2$，恒有：
-        \[\lambda({\mu_1\bm a}\pm{\mu_2\bm b})={\lambda\mu_1\bm a}\pm{\lambda\mu_2\bm b}\]
-      \end{description}
-    \subsection{数量积}
-      \begin{description}
-        \item[定义] 已知两个非零向量$ \bm{a} $与$\bm{b}$，我们把数量$ \abs{\bm{a}}\abs{\bm{b}}\cos\theta $叫做
-          $ \bm{a} $与$ \bm{b} $的\textbf{数量积}(又称点积、内积)，记作$ \bm{a}\bm{\cdot}\bm{b} $，即\[\bm{a}\bm{\cdot}\bm{b}=\abs{\bm{a}}\abs{\bm{b}}\cos\theta\]
-          其中$ \theta $为$ \bm{a} $与$ \bm{b} $的夹角.\\
-          $\abs{\bm{a}}\cos\theta$($\abs{\bm{b}}\cos\theta$)叫做向量$\bm a$在$\bm b$方向上($\bm b$在$\bm a$方向上)的\textbf{投影}，%记作$\mathrm{Prj}_{\bm b}{\bm a}$(或$\mathrm{Prj}_{\bm b}{\bm a}$)
-        \item[几何意义] 两个向量的数量积等于其中一个向量的模长与另一个向量在此向量方向上的投影的乘积\\%$ \bm{a}\bm{\cdot}\bm{b} $等于$\bm{a} $的模长$ \abs{\bm{a}} $与$ \bm{b} $在$ \bm{a} $的方向上的\textbf{投影}$ \abs{\bm{b}}\cos \theta $的乘积.\par
-        {\kaishu \textbf{注:}当$ \theta=0 $时，$ \cos\theta=1 $，所以有$ \bm{a\cdot b}=\bm{\abs{a}\abs{b}} $；\\\phantom{注:\ }当$ \theta=90^{\circ} $时，有$ \cos\theta =0$，所以有$ \bm{a\cdot b}=0 $ \\\phantom{注:\ }当$ \theta=180^{\circ} $时，有$ \cos\theta =-1$，所以有$ \bm{a\cdot b}=-\abs{\bm{a}}\abs{\bm{b}} $   }
-        \item[数量积坐标计算]$\bm{a}\bm{\cdot}\bm{b}=x_1x_2+y_1y_2$.
-        \item[夹角公式] \[ \cos\theta=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\theta\in\left[0,\pi\right],~\theta\text{也写作}\left<\bm{a},\bm{b}\right>\right).\]
-      \end{description}
-    \subsubsection{坐标运算}
-      \begin{enumerate}
-        \item
-          设点$ A(x_1,y_1),~B(x_2,y_2) $,则$ \vv{AB}=(x_2-x_1,y_2-y_1) $.\par
-          一个向量的坐标等于表示此向量的有向线段的终点的坐标减去起始点的坐标.
-        \item
-          若$\bm{a}=\left(x_1,y_1\right),\bm{b}=\left(x_2,y_2\right)$.
-          \begin{description}
-            \item[加法:]
-              $\bm{a}+\bm{b}=(x_1+x_2,y_1+y_2)$
-              \begin{equation*}
-              \begin{aligned}
-              \bm{a}+\bm{b}=&\left(x_1\bm{i}+y_1\bm{j}\right)+\left(x_2\bm{i}+y_2\bm{j}\right)\\
-              =&\left(x_1+x_2\right)\bm{i}+\left(y_1+y_2\right)\bm{j}\\
-              \text{即：}\bm{a}+\bm{b}=&(x_1+x_2,y_1+y_2)
-              \end{aligned}
-              \end{equation*}
-            \item[减法:] $\bm{a}-\bm{b}=\left(x_1-x_2,y_1-y_2\right)$.同加法可得
-            \item[数乘:]
-              $ \lambda \bm{a}=\left(\lambda x_1,\lambda y_1\right) $\begin{equation*}
-              \begin{aligned}
-               \lambda \bm{a} =&\lambda\left(x_1\bm{i}+y_1\bm{j}\right)=\lambda x_1\bm{i}+\lambda y_1\bm{j}\\
-              =&\left(\lambda x_1,\lambda y_1\right)
-              \end{aligned}
-              \end{equation*}
-            \item[模长]
-             $\abs{\bm{a}}=\sqrt{x_1^2+y_1^2}$\qquad
-             $\abs{\vv{AB}}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$\\
-             \qquad $\abs{\bm{a}+\bm{b}}=\sqrt{(\bm{a}+\bm{b})^2}=\sqrt{\bm{a}^2+2\bm{a}\bm{\cdot}\bm{b}+\bm{b}^2}$\\
-            \item[共线]$\bm{a} \varparallel \bm{b}\Leftrightarrow x_1y_2=y_2x_1 $\\
-              由向量共线的性质知$ \bm{a} $与$ \bm{b}(\bm{b}\ne\bm{0}) $共线，当且仅当存在实数$ \lambda $使得$ \bm{a}=\lambda \bm{b} .$\\用坐标表示为：
-              $$(x_1,y_1)=\lambda(x_2,y_2)$$
-              即$$\Bigg\{\begin{aligned}
-              x_1=&\lambda x_2\\
-              y_1=&\lambda y_2
-              \end{aligned}$$
-              消去$ \lambda $得到\[x_1y_2-x_2y_1=0\]
-            \item[垂直]
-              $\bm{a}\perp\bm{b}\Leftrightarrow\bm{a}\bm{\cdot}\bm{b}=0\Leftrightarrow x_1x_2+y_1y_2=0 $
-              \begin{proof}
-                \begin{description}
-                  % \item[方法一]
-                  %   设$ \bm{a},~\bm{b} $所在直线分别为$ l_1,l_2 $，当$ \bm{a},~\bm{b} $所在直线的斜率都存在时，由直线垂直的性质，有$$ k_{l_1}\bm{\cdot}k_{l_2}=-1 $$
-                  %   其中$$ k_{l_1} =\dfrac{y_1-0}{x_1-0}=\dfrac{y_1}{x_1},\quad k_{l_2} =\dfrac{y_2-0}{x_2-0}=\dfrac{y_2}{x_2}$$
-                  %   即$$\dfrac{y_1}{x_1}\bm{\cdot}\dfrac{y_2}{x_2}=-1$$
-                  %   $$x_1x_2+y_1y_2=0$$
-                  % \item[方法二]
-                    由向量的数量积性质，当$ \bm{a}\perp\bm{b} $时，
-                    $\text{由}\cos\theta=\dfrac{\bm{a\cdot b}}{\abs{\bm{a}}\abs{\bm{b}}}\text{得到}$\\
-                    \centering $\bm{a\cdot b}=0$
-                \end{description}
-              \end{proof}
-          \end{description}
+\section{等差数列}
+  \subsection{基本性质}
+    \subsubsection{定义}
+      一般地，如果一个数列从第二项开始，每一项与前一项的差等于同一个常数，那么这个数列就叫做等差数列，这个常数叫做这个数列的公差，常用字母$ d $表示.\\
+      {\kaishu 注：目前大部分等差数列考题都可以通过转化为$ a_1 $和$ d $求出.}
+    \subsubsection{通项公式}
+      如果等差数列$\{a_n\}$的通项公式是$ a_n=a_1+(n-1)d ,n\in\mathbf{N^*}$,其中$ a_1 $为首项，$ d $为公差.\\
+      % \begin{proof}
+      %   由给定条件可得:\begin{equation*}
+      %   \begin{aligned}
+      %    a_2-a_1& =d\\
+      %   a_3-a_2&=d\\
+      %   \vdots&\\
+      %   a_n-a_{n-1}&=d.
+      %   \end{aligned}
+      %   \end{equation*}
+      %   等号两边累加可得:~$ a_n-a_1=(n-1)d .$即:~$$a_n=a_1+(n-1)d$$
+      % \end{proof}
+    \subsubsection{等差中项}
+      \begin{enumerate}[1)]
+        \item 如果$ A=\dfrac{a+b}{2} ,$则称$ A $为$ a $和$ b $的等差中项;
+        \item 等差数列中，等间隔的三项$a_{n-p},~a_n,~a_{n+p} (n,p\in\mathbf{N^*}~\text{且}~n<p) $满足:$ 2a_n=a_{n-p}+a_{n+p} $;
+        \item 在等差数列$ \left\{a_n\right\} $中,若有$ k+l=m+n \left(k,l,m,n\in\mathbf{N^*}\right)$，则有$ a_k+a_l=a_m+a_n $.
       \end{enumerate}
-  \subsection{平面向量运算律}
-    \begin{enumerate}[label=\arabic*)]
-      \item 交换律：
-        $\bm a+\bm b=\bm b+\bm a$，\quad
-        $\bm a\cdot\bm b=\bm b\cdot\bm a$
-      \item 结合律：
-        $(\bm{a}+\bm{b})+\bm{c}=\bm{a}+(\bm{b}+\bm{c})$，\quad
-        $(\lambda \bm a)\cdot\bm{b}=\lambda(\bm a\cdot\bm b)=\bm{a}\cdot(\lambda\bm{b})$
-      \item 分配律：
-        $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$，\quad
-        $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambda\bm{b}$，\quad
-        $(\bm a+\bm b)\cdot \bm c=\bm a\cdot\bm c+\bm b\cdot \bm c$
-      \item 重要公式：(记号$\bm a^2=\bm a\cdot\bm a$)
-        $(\bm a+\bm b)(\bm a-\bm b)=\bm a^2-\bm b^2$，\quad
-        $(\bm a\pm\bm b)^2=\bm a^2\pm2\bm a\cdot\bm b+\bm b^2$.
-    \end{enumerate}
-  \subsection{两个重要定理}
-    \begin{enumerate}[label=\arabic*)]
-      \item 向量共线定理：
-        向量$\bm{a}~(\bm{a}\ne\bm{0})$与向量$\bm{b}$共线,当且仅当存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.\\
-        {\kaishu
-         证明三点共线的方法：\circled{1}$\vv{AB}=\lambda\vv{AC}$，则$A$，$B$，$C$三点共线；\circled{2}$\vv{OA}=\lambda\vv{OB}+\mu\vv{OC}$，若$\lambda+\mu=1$，则$A$，$B$，$C$三点共线.
-        }
-      \item 平面向量基本定理：
-        如果$ \bm{e}_1,\bm{e}_2 $是同一平面内的两个\CJKunderdot{不共线}的向量，
-        则那么对于这一平面内的任意向量$ \bm{a} $，有且只有一对实数$ \lambda_1,~\lambda_2 $，使$\bm{a}=\lambda_1\bm{e}_1+\lambda_2\bm{e}_2$.
-        其中，不共线的向量$\bm{e}_1, \bm{e}_2$叫做表示这一平面内所有向量的一组\CJKunderdot{基底}.\\
-        % {\kaishu 平面向量基本定理应用技巧：
-        %   \begin{enumerate}[label=\circled{\arabic*}]
-        %     \item 构造某一向量在同一基底下的两种不同表达形式，
-        %       根据向量分解的唯一性求解.即：\\
-        %       {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2=x_2\bm e_1+y_2\bm e_2$，则$\begin{cases}x_1=x_2\\y_1=y_2\end{cases}$}
-        %     \item 构造两个共线向量在同一基底下的表达形式，
-        %       根据向量共线定理求解.即：\\
-        %       {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2$，$\bm b=x_2\bm e_1+y_2\bm e_2$，且$\bm a\varparallel\bm b$，则$x_1y_2-x_2y_1=0$}
-        %     \item 将题目中的已知条件转化成
-        %       $\lambda_1\bm e_1+\lambda_2\bm e_2=\bm 0$的形式($\bm e_1$，$\bm e_2$不共线)，根据$\lambda_1=\lambda_2=0$求解.
-        %   \end{enumerate}}
-    \end{enumerate}
-  \subsection{平面向量数量积相关量求解}
-    \begin{enumerate}[label=\arabic*)]
-      \item 向量模长：若$\bm a=(x,y)$，则$\abs{\bm a}=\sqrt{\bm a\cdot\bm a}=\sqrt{x^2+y^2}$
-      \item 向量投影：向量$\bm a$在$\bm b$方向上的投影为
-        $\abs{\bm{a}}\cos\theta=\dfrac{\bm a\cdot\bm b}{\abs{\bm b}}$
-      \item 向量夹角：设$\bm a=(x_1,y_1)$，$\bm b=(x_2,y_2)$，则
-        $\cos\vangle{\bm a}{\bm b}=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\vangle{\bm a}{\bm b}\in\left[0,\piup\right]\right)$
-    \end{enumerate}
-  \clearpage
-  \begin{exercise}{\textbf{基础测试与习题}}
-    \item%【向量表示】
-      如图，$\vv{AB}+\vv{BC}-\vv{AD}$等于\xz
-      \begin{minipage}[b]{0.7\linewidth}
-        \xx{$\vv{AD}$}{$\vv{DC}$}{$\vv{DB}$}{$\vv{AB}$}
-      \end{minipage}\hfill
-      \begin{minipage}[h]{0.3\linewidth}
-        \begin{tikzpicture}
-          \coordinate[label=left:$B$](B)at(0,0);
-          \coordinate[label=right:$C$](C)at(3,0);
-          \coordinate[label=above:$A$](A)at(1.5,2);
-          \coordinate[label=below:$D$](D)at($(B)!0.4!(C)$);
-          \draw (A)--(B)--(C)--cycle;
-          \draw (A)--(D);
-        \end{tikzpicture}
-      \end{minipage}
-      \begin{answer}
-        B
-      \end{answer}
-    \item
-      如图所示，在五边形$ABCDE$中，若四边形$ACDE$是平行四边形，且$\vv{AB}=\bm{a}$，$\vv{AC}=\bm{b}$，$\vv{AE}=\bm{c}$，试用向量$\bm a$，$\bm b$，$\bm c$表示向量$\vv{BD}$，$\vv{BC}$，$\vv{BE}$，$\vv{CD}$及$\vv{CE}$.
-      \begin{flushright}
-        \begin{tikzpicture}
-          \coordinate[label=left:$D$](D)at(0,0);
-          \coordinate[label=right:$E$](E)at(3,0);
-          \coordinate[label=above:$C$](C)at(1,1.5);
-          \coordinate[label=below:$A$](A)at($(C)+(E)$);
-          \coordinate[label=below:$B$](B)at(3.5,2.5);
-          \draw (A)--(B)--(C)--(D)--(E) --cycle;
-          \draw (B)--(D) (B)--(E) (C)--(E);
-          \draw[->,>=latex] (A)--(B);
-          \draw[->,>=latex] (A)--(C);
-          \draw[->,>=latex] (A)--(E);
-        \end{tikzpicture}
-      \end{flushright}
-      \begin{answer}
-        $\vv{BD}=-\bm a+\bm c+\bm b$；$\vv{BC}=\bm b-\bm a$；$\vv{BE}=\bm a-\bm a$；$\vv{CD}=\bm c$；$\vv{CE}=\bm c-\bm b$.
-      \end{answer}
-    \begin{minipage}[b]{0.65\linewidth}
-    \item%LaTeX-master/xiangliang/xiangliangsorting.tex P10-p48
-      在$\triangle ABC$中，点$ M$，$N $满足$ \vv{AM}=2\vv{MC}$，$\vv{BN}=\vv{NC}$.若$\vv{MN}=x\vv{AB}+y\vv{AC}$，则$ x= $\tk;$ y= ~$ \tk.
-      \begin{answer}
-        $x=\dfrac12$；$y=-\dfrac16$
-      \end{answer}
-    \end{minipage}
-    \begin{minipage}[htbp!]{0.3\linewidth}
-      \begin{center}
-      \begin{tikzpicture}
-        \draw(0,0)node[right](B){\small$B$}--(1,0)node[below](N){\small$N$}--(2,0)node[below](C){\small$C$};
-        \draw (0,0)--(1.1,2.1)node[above](A){\small$A$}--(2,0);
-        \draw (1,0)--(1.1,2.1);
-        \draw(1,0)--($(1.1,2.1)!0.7!(2,0)$)node[right](M){\small$M$};
-      \end{tikzpicture}
-      \end{center}
-    \end{minipage}
-    \item
-      (2018届贵州遵义航天高级中学一模)如图所示，向量$\vv{OA}=\bm{a}$，$\vv{OB}=\bm{b}$，$\vv{OC}=\bm{c}$，$A$，$B$，$C$在一条直线上，且$\vv{AC}=3\vv{BC}$，则\xz
-      \begin{minipage}[b]{0.7\linewidth}
-        \xx{$\bm{c}=\dfrac32\bm{b}-\dfrac12\bm{a}$}
-          {$\bm{c}=\dfrac32\bm{a}-\dfrac12\bm{b}$}
-          {$\bm{c}=-\bm{a}+2\bm{b}$}
-          {$\bm{c}=\bm{a}+2\bm{b}$}
-      \end{minipage}\hfill
-      \begin{minipage}[htbp!]{0.3\linewidth}
-        \begin{center}
-        \begin{tikzpicture}
-          \coordinate[label=left:$O$](O)at(0,0);
-          \coordinate[label=right:$C$](C)at(3,0);
-          \coordinate[label=left:$A$](A)at(-1,2.5);
-          \coordinate[label=right:$B$](B)at($(A)!0.66!(C)$);
-          \draw (A)--(B)--(C)--cycle;
-          \draw[->,>=latex] (O)--(C);
-          \draw[->,>=latex] (O)--(A);
-          \draw[->,>=latex] (O)--(B);
-        \end{tikzpicture}
-        \end{center}
-      \end{minipage}
-      \begin{answer}
-        A
-      \end{answer}
-    \item%《习题化知识清单》P82知识2-1【向量坐标运算】
-      设平面向量$\bm a=(3,5)$，$\bm b=(-2,1)$，则$\bm a-2\bm b=$\xz
-      \xx{(7,3)}{(7,7)}{(1,7)}{(1,3)}
-      \begin{answer}
-        A
-      \end{answer}
-    \item%《习题化知识清单》P82知识2-2【向量坐标运算，单位向量】
-      已知$\bm a=(3,4)$，则与$\bm a$同向的单位向量的坐标是\xz
-      \xx{$(3,4)$}
-       {$(-\dfrac{3}5,\dfrac{4}5)$}
-       {$(-\dfrac{3}5,-\dfrac{4}5)$}
-       {$(\dfrac{3}5,\dfrac{4}5)$}
-      \begin{answer}
-        D
-      \end{answer}
-    \item%《习题化知识清单》P82知识2-3【向量坐标运算，中点坐标公式】
-      已知平面直角坐标系$xOy$内的三点分别是$A(2,-5)$，$B(3,4)$，$C(-1,-3)$，$D$为线段$BC$的中点，则向量$\vv{DA}$的坐标为\tk.
-      \begin{answer}
-        $(1,-\dfrac{11}2)$
-      \end{answer}
-    \item%《习题化知识清单》P83知识1-1【数量积的定义、性质】
-      在$\triangle{ABC}$中，$AB=BC=2$，$\angle{B}=\dfrac{\piup}4$，$AD$是边$BC$上的高，则$\vv{AD}\cdot\vv{AC}$的值为\xz
-      \xx{0}{2}{4}{8}
-      \begin{answer}
-        B
-      \end{answer}
-    \item%《习题化知识清单》P83知识1-2【数量积的定义、性质】
-      已知$\triangle{ABC}$中，$AB=AC=BC=6$，平面内一点$M$满足$\vv{BM}=\dfrac{2}3\vv{BC}-\dfrac{1}3\vv{BA}$，则$\vv{AC}\cdot\vv{MB}$等于\xz
-      \xx{$-9$}{$-18$}{$12$}{$18$}
-      \begin{answer}
-        B
-      \end{answer}
+    \subsubsection{前$ n $项和公式}
+      设等差数列$\{a_n\}$的公差为$ d $，则其前$ n $项和$ S_n=\dfrac{n\left(a_1+a_n\right)}{2} $或$ S_n=na_1+\dfrac{n(n-1)}{2}d $.
+      % \begin{proof}
+      %   在等差数列中，根据性质$ a_k+a_l=a_m+a_n~(k+l=m+n) $可得$$ a_1+a_n=a_2+a_{n-1}=\cdots=a_k+a_{n-k+1} ~\left(k\le\dfrac{n}{2}\right)$$
+      %   \begin{equation*}
+      %   \begin{aligned}
+      %   S_n&=a_1+a_2+a_3+\cdots+a_n\\
+      %    &=\left(a_1+a_n\right)+\left(a_2+a_{n-1}\right)+\cdots+\left(a_k+a_{n-k+1}\right)\\
+      %   &=\dfrac{n(a_1+a_n)}{2}\\
+      %   &=\dfrac{n(a_1+a_1+(n-1)d}{2}=na_1+\dfrac{n(n-1)}{2}d.
+      %   \end{aligned}
+      %   \end{equation*}
+      % \end{proof}
+  \subsection{性质扩充}
+    \subsubsection{等差数列的常用性质}
+      \begin{enumerate}[(1)]
+      \item 通项公式的推广：$ a_n=a_m+\left(n-m\right)d \left(n,m\in\mathbf{N^*}\right)$;
+      \item 若$\{a_n\}$是等差数列，公差为$ d $，则$\{a_{2n}\}$ 也是等差数列，公差为$ 2d $;
+      \item 若$\{a_n\},~\{b_n\}$是等差数列，则$ \left\{pa_n+qb_n\right\}~(p,q\text{是常数}) $也是等差数列;
+      \item 若$\{a_n\}$是等差数列，公差为$ d $，则$ a_k,~a_{k+m},~ a_{k+2m},~a_{k+3m},\cdots\left(k,m\in\mathbf{N^*}\right)$组成公差为$ md $的等差数列.
+      \end{enumerate}
+    \subsubsection{与和有关的性质}
+      \begin{enumerate}[(1)]
+        \item 若$\{a_n\}$是等差数列，则$ \dfrac{S_n}{n} $也是等差数列，其首项与$ \{a_n\} $的首项相同，公差是$\{a_n\}$的公差的$ \dfrac{1}{2} $；
+        \item 若$ S_m,S_{2m},S_{3m} $分别是$\{a_n\}$的前$ m $项，前$ 2m $项，前$ 3m $项的和，则$ S_m,~S_{2m}-S_m,~S_{3m}-S_{2m} $成等差数列，公差为$m^2d$；
+        \item 关于非零等差数列奇数项和与偶数项和的性质
+        \begin{enumerate}[i)]
+          \item 若项数为$ 2n $，则$ S_{\text{偶}}-S_{\text{奇}}=nd ,~\dfrac{S_{\text{偶}}}{S_{\text{奇}}}=\dfrac{a_{n+1}}{a_n}$.
+          \item 若项数为$ 2n-1 $，则$  S_{\text{偶}}=(n-1)a_n,~S_{\text{奇}}-S_{\text{偶}}=a_n,~\dfrac{S_{\text{奇}}}{S_{\text{偶}}}=\dfrac{n}{n-1}$.
+          \item 若两个等差数列$\{a_n\}$、$\{b_n\}$的前$ n $项和分别为$ S_n\text{、}~T_n,~ $则$ \dfrac{a_n}{b_n}=\dfrac{S_{2n-1}}{T_{2n-1}} $.
+        \end{enumerate}
+        \item $\{\dfrac{S_n}{n}\}$成等差数列.
+      \end{enumerate}
+    \subsubsection{等差数列前$ n $项和的最值问题}
+      \begin{enumerate}[1)]
+        \item 二次函数法：当公差$d\ne0$时，将$ S_n $看作关于$ n $的二次函数，运用配方法，借助函数的单调性及数形结合，使问题得解；
+        \item 通项公式法：求使$ a_n\ge0 \left(\text{或}a_n\le0\right)$成立的最大$ n $值即可得到$ S_n $的最大(或最小)值；
+        \item 不等式法：借助$ S_n $最大时，有$\Bigg\{\begin{aligned}
+      S_n\ge S_{n-1},\\
+      S_n\ge S_{n+1}.
+      \end{aligned}~(n\ge2,n\in\mathbf{N^*})$，解此不等式组确定$ n $的范围，进而确定$ n $的值和对应$ S_n $的值.
+      \end{enumerate}
+  \begin{exercise}{\heiti 习题}\\
+    \item 已知四个数成等差数列，它们的和为26，中间两项的积为40，求这四个数.
   \end{exercise}
-  \begin{exercise}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p20【高考真题】【2017•全国新课标】【向量，垂直】\\
-      \source{2017文}{全国新课标}
-      已知向量$\bm a=(-1,2)$，$\bm b=(m,1)$.若向量$\bm a+\bm b$与$\bm a$垂直，则$m=$\tk.
-      \begin{answer}
-        7
-      \end{answer}
-    \item %《《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p22【高考真题】【2016•北京】【向量，夹角】\\
-      \source{2016文}{北京}
-      已知向量$\bm a=(1,\sqrt3)$，$\bm b=(\sqrt3,1)$.则$\bm a$与$\bm b$夹角的大小为\tk.
-      \begin{answer}
-        $\dfrac{\piup}6$
-      \end{answer}
-    \item %《《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p28【高考真题】【2016•山东】【向量，垂直】\\
-      \source{2016文}{山东}
-      已知向量$\bm a=(1,-1)$，$\bm b=(6,-4)$.若$\bm a\perp (t\bm a+\bm b)$，则实数$t$的值为\tk.
-      \begin{answer}
-        $-5$
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p1【2018•全国II卷】【向量运算，数量积，模】\\
-      \source{2018文}{全国II卷}
-      已知向量$\bm a$，$\bm b$满足$|\bm a|=1$，$\bm a\cdot\bm b=-1$，则$\bm a\cdot (2\bm a-\bm b)=$\xz
-      \xx{4}{3}{2}{0}
-      \begin{answer}
-        B
-      \end{answer}
-    % \item %《《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p29【高考真题】【2016•浙江】【向量，数量积，三角，最值】\\
-    %   \source{2016文}{浙江}
-    %   已知平面向量$\bm a$，$\bm b$，$|\bm a|=1$，$|\bm b|=2$，，$\bm a\cdot \bm b=1$，若$\bm e$为平面单位向量，则$\abs{\bm a\cdot \bm e}+\abs{\bm b\cdot \bm e}$的最大值是\tk.
-    %   \begin{answer}
-    %     $\sqrt7$
-    %   \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p2【2018•全国I卷】【向量表示】\\
-      \source{2018文}{全国I卷}
-      在$\triangle{ABC}$中，$AD$为$BC$边上的中线，$E$为$AD$的中点，则$\vv{EB}=$\xz
-      \xx{$\dfrac34 \vv{AB}-\dfrac14 \vv{AC}$}
-       {$\dfrac14 \vv{AB}-\dfrac34 \vv{AC}$}
-       {$\dfrac34 \vv{AB}+\dfrac14 \vv{AC}$}
-       {$\dfrac14 \vv{AB}+\dfrac34 \vv{AC}$}
-      \begin{answer}
-        A
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p3【2018•昆明摸底调研】【向量运算，模】\\
-      \source{2018文}{昆明摸底调研}
-      已知向量$\bm a=(-1,2)$，$\bm b=(1,3)$，则$\abs{2\bm a-\bm b}=$\xz
-      \xx{$\sqrt2$}{$2$}{$\sqrt{10}$}{$10$}
-      \begin{answer}
-        C
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p5【2018•惠州一调】【向量表示，数量积，几何】\\
-      \source{2018文}{惠州一调}
-      已知正方形$ABCD$的中心为$O$且其边长为1，则$(\vv{OD}-\vv{OA})\cdot(\vv{BA}+\vv{BC})=$\xz
-      \xx{$\sqrt3$}{$\dfrac12$}{$2$}{$1$}
-      \begin{answer}
-        D
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p10【2018•武汉二月调研】【向量，数量积，模】\\
-      \source{2018文}{武汉二月调研}
-      已知平面向量$\bm a$，$\bm b$，$\bm e$满足$|\bm e|=1$，$\bm a\cdot\bm e=1$，$\bm b\cdot\bm e=-2$，$\abs{\bm a+\bm b}=2$，则$\bm a\cdot \bm b$的最大值\xz
-      \xx{$-1$}{$-2$}{$-\dfrac52$}{$-\dfrac54$}
-      \begin{answer}
-        $D$
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p7【2018•郑州测试】【向量，投影，几何】\\
-      \source{2018文}{郑州测试}
-      $\triangle{ABC}$的外接圆圆心为$O$，半径为1，$2\vv{AO}=\vv{AB}+\vv{AC}$，且$|\vv{OA}|=|\vv{AB}|$，则向量$\vv{CA}$在向量$\vv{CB}$方向上的投影为\xz
-      \xx{$\dfrac12$}{$-\dfrac32$}{$-\dfrac12$}{$\dfrac32$}
-      \begin{answer}
-        D
-      \end{answer}
 
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p13【2018•北京卷】【向量，垂直】\\
-      \source{2018文}{北京卷}
-      设向量$\bm a=(1,0)$，$\bm b=(-1,m)$.若$\bm a\perp(m\bm a-\bm b)$，则$m=$\tk.
-      \begin{answer}
-        $-1$
-      \end{answer}
-  \end{exercise}
-    \clearpage
-    % \begin{exercise}
-    % \end{exercise}
+
 \newpage
 \section{课后作业}
   % \begin{exercise}{\heiti 练习}
   % \end{exercise}
   \begin{exercise}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P61p1【高考真题】【2017•全国新课标】【向量】\\
-      \source{2017文}{全国新课标}
-      设非零向量$\bm a$，$\bm b$满足$\abs{\bm a+\bm b}=\abs{\bm a-\bm b}$，则\xz
-      \xx{$\bm a\perp\bm b$}
-       {$|\bm a|=|\bm b|$}
-       {$\bm a\varparallel \bm b$}
-       {$|\bm a|>|\bm b|$}
-      \begin{answer}
-        A
-      \end{answer}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P61p2【高考真题】【2016•全国新课标】【向量夹角，坐标】\\
-      \source{2016文}{全国新课标}
-      已知向量$\vv{BA}=\Bp{\dfrac12,\dfrac{\sqrt3}2}$，$\vv{BC}=\Bp{\dfrac{\sqrt3}2,\dfrac12}$，则$\angle{ABC}=$\xz
-      \xx{30\degree}{45\degree}{60\degree}{120\degree}
-      \begin{answer}
-        A
-      \end{answer}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P61p3【高考真题】【2015•全国新课标】【向量，表示，坐标】\\
-      \source{2015文}{全国新课标}
-      已知点$A(0,1)$，$B(3,2)$，向量$\vv{AC}=(-4,-3)$，则向量$\vv{BC}=$\xz
-      \xx{$(-7,-4)$}{$(7,4)$}{$(-1,4)$}{$(1,4)$}
-      \begin{answer}
-        A
-      \end{answer}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题19平面向量的应用 P65p1【高考真题】【2015•广东】【向量，数量积，几何】\\
-      \source{2015文}{广东}
-      在平面直角坐标系$xOy$中，已知四边形$ABCD$是平行四边形，$\vv{AB}=(1,-2)$，$\vv{AD}=(2,1)$，则$\vv{AD}\cdot\vv{AC}=$\xz
-      \xx{5}{4}{3}{2}
-      \begin{answer}
-        A
-      \end{answer}
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题19平面向量的应用 P65p1【高考真题】【2016•天津】【向量，数量积，几何】\\
-      \source{2016文}{天津}
-      已知$\triangle{ABC}$是边长为1的等边三角形，点$D$、$E$分别是边$AB$、$BC$的中点，连接$DE$并延长到点$F$，使得$DE=2EF$，则$\vv{AF}\cdot\vv{BC}$的值为\xz
-      \xx{$-\dfrac58$}{$-\dfrac18$}{$-\dfrac14$}{$-\dfrac{11}8$}
-      \begin{answer}
-        B
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p9【2018•西宁一检】【向量，几何，外心】\\
-      \source{2018文}{西宁一检}
-      已知$\triangle{ABC}$中，$AB=6$，$AC=3$，$N$是边$BC$上的点，且$\vv{BN}=2\vv{NC}$，$O$为$\triangle{ABC}$的外心，则$\vv{AN}\cdot\vv{AO}$的值为\xz
-      \xx{8}{10}{18}{9}
-      \begin{answer}
-        D
-      \end{answer}
-
-
-    \item %《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p20【高考真题】【2017•全国新课标】【向量，垂直】\\
-      \source{2017文}{全国新课标}
-      已知向量$\bm a=(-1,2)$，$\bm b=(m,1)$.若向量$\bm a+\bm b$与$\bm a$垂直，则$m=$\tk.
-      \begin{answer}
-        7
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p14【2018•长春监测（一）】【向量，夹角】\\
-      \source{2018文}{长春监测（一）}
-      已知向量$\bm a=(1,2)$，$\bm b=(-2,1)$.$\bm a$与$\bm b$的夹角为\tk.
-      \begin{answer}
-        $\dfrac{\piup}2$
-      \end{answer}
-    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型7平面向量的运算及应用P7p15【2018•辽宁五校联考】【向量，坐标】\\
-      \source{2018文}{辽宁五校联考}
-      已知平面向量$\bm a=(x_1,y_1)$，$\bm b=(x_2,y_2)$.若$|\bm a|=3$，$|\bm b|=4$，$\bm a\cdot \bm b=12$，则$\dfrac{x_1+y_1}{x_2+y_2}=$\tk.
-      \begin{answer}
-        $-\dfrac34$
-      \end{answer}
-    \item %《《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p22【高考真题】【2016•北京】【向量，夹角】\\
-      \source{2016文}{北京}
-      已知向量$\bm a=(1,\sqrt3)$，$\bm b=(\sqrt3,1)$.则$\bm a$与$\bm b$夹角的大小为\tk.
-      \begin{answer}
-        $\dfrac{\piup}6$
-      \end{answer}
-    \item %《《2018天利38套：高考真题单元专题训练(文)》专题18平面向量的概念与运算 P62p21【高考真题】【2017•全国新课标】【向量，垂直】\\
-      \source{2017文}{全国新课标}
-      已知向量$\bm a=(-2,3)$，$\bm b=(3,m)$.且$\bm a\perp \bm b$垂直，则$m=$\tk.
-      \begin{answer}
-        2
-      \end{answer}
-    \item %《《2018天利38套：高考真题单元专题训练(文)》专题19平面向量的应用 P65p10【高考真题】【2017•北京】【向量，几何，最值】\\
-      \source{2017文}{北京}
-      已知点$P$在圆$x^2+y^2=1$上，点$A$的坐标为$(-2,0)$，$O$为原点，则$\vv{AO}\cdot\vv{AP}$的最大值为\tk.
-      \begin{answer}
-        6
-      \end{answer}
   \end{exercise}
 \stopexercise
 

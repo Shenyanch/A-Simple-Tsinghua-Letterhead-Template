@@ -1,0 +1,42 @@
+% https://www.jianshu.com/p/2d01d5eaaa77
+\documentclass[UTF8]{ctexart}
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+
+\begin{document}
+\pagestyle{empty} % 无页眉页脚
+
+\tikzstyle{startstop} = [rectangle,rounded corners,minimum height=1.2em,minimum width=3em,text centered, draw=black]
+\tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=1.2em,minimum width=3em,text centered,draw=black]
+\tikzstyle{process} = [rectangle,minimum height=1.2em,minimum width=3em,text centered,draw=black]
+\tikzstyle{decision} = [diamond,shape aspect=2,minimum height=1.2em,minimum width=3em,text centered,draw=black]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.5cm,scale=0.6,transform shape]
+  \node (start) [startstop] {开始};
+  \node (init1) [process,below of=start] {$N=0,T=0$};
+  \node (init2) [process,below of=init1] {$i=1$};
+  \node (dec1) [decision,below of=init2,yshift=-0.5cm] {$i<100$};
+  \node (pro1a) [process,below left of=dec1,xshift=-1cm,yshift=-0.5cm] {$N=N+\dfrac1{i}$};
+  \node (pro2a) [process,below of=pro1a] {$T=T+\dfrac1{i+1}$};
+  \node (pro3a) [process,below of=pro2a] {};
+
+  % \node (p2) [right of=dec1,xshift=1cm,coordinate]  {};
+  \node (pro1b) [process,below right of=dec1,xshift=1cm,yshift=-0.5cm] {$S=N-T$};
+  \node (out1) [io,below of=pro1b] {输出$S$};
+  \node (stop) [startstop,below of=out1] {结束};
+
+  \draw [arrow] (start) -- (init1);
+  \draw [arrow] (init1) -- (init2);
+  \draw [arrow] (init2) -- (dec1);
+  \draw [arrow] (dec1) -| node[anchor=south] {是} (pro1a);
+  \draw [arrow] (pro1a) -- (pro2a);
+  \draw [arrow] (pro2a) -- (pro3a);
+  \path (init2) -- (dec1) coordinate[pos=0.5](p);
+  \draw [arrow] (pro3a.west) -- ++(-0.8cm,0) |- (p);
+  \draw [arrow] (dec1) -| node[anchor=south] {否} (pro1b);
+  \draw [arrow] (pro1b) -- (out1);
+  \draw [arrow] (out1) -- (stop);
+  \end{tikzpicture}
+\end{center}\vspace{-0.7em}
+\end{document}

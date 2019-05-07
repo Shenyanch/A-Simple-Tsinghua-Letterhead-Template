@@ -62,18 +62,18 @@
         \item 判断左式的函数类型，并将左式化为此种函数的基本形式.（注意此时右式相应的变化）常见的情况有如下几种：
               \begin{enumerate}[label=\circled{\arabic*}]
                 \item 分式类型:如$x-\dfrac6{x-2}=1 \Rightarrow \dfrac{x(x-2)-6-(x-2)}{x-2}=0 \Rightarrow x^2-3x-4=0$.
-                \item 一次函数类型：如$3x=4$ \Rightarrow $x=\dfrac43$
-                \item 二次函数类型：如$2x^2-8x=-3$ \Rightarrow $x^2-4x=-\dfrac32$
-                  \Rightarrow $(x-2)^2=\dfrac52$ \Rightarrow $x=\pm\dfrac52+3$
-                \item 对数函数类型：如$3\log_2{x-3}=5$ \Rightarrow $\log_2x=\dfrac53$
-                  \Rightarrow $x-3=2^{\frac53}$ \Rightarrow $x=3+2^{\frac53}$
-                \item 指数函数类型：如$4\times 2^{3x}=9$ \Rightarrow $2^{3x+2}=9$
-                  \Rightarrow $3x+2=\log_29=2\log_3$ \Rightarrow $x=\dfrac23(\log_3-1)$
+                \item 一次函数类型：如$3x=4 \Rightarrow x=\dfrac43$
+                \item 二次函数类型：如$2x^2-8x=-3 \Rightarrow x^2-4x=-\dfrac32$
+                  $\Rightarrow(x-2)^2=\dfrac52 \Rightarrow x=\pm\dfrac52+3$
+                \item 对数函数类型：如$3\log_2(x-3)=5 \Rightarrow \log_2(x-3)=\dfrac53$
+                  $\Rightarrow x-3=2^{\frac53} \Rightarrow x=3+2^{\frac53}$
+                \item 指数函数类型：如$4\times 2^{3x}=9 \Rightarrow 2^{3x+2}=9$
+                  $\Rightarrow 3x+2=\log_29=2\log_23 \Rightarrow x=\dfrac23(\log_23-1)$
                 \item 三角函数类型：如$2\sin\Bp{2x-\dfrac{5\piup}{12}}=\sqrt3$
-                  \Rightarrow $\sin\Bp{2x-\dfrac{5\piup}{12}}=\dfrac{\sqrt3}2$
-                  \Rightarrow $2x-\dfrac{5\piup}{12}=\dfrac{\piup}3+2k\piup$或
-                   $2x-\dfrac{5\piup}{12}=\dfrac{2\piup}3+2k\piup$，$k\inZ$.
-                  \Rightarrow $x=\dfrac{3\piup}8+k\piup$或$x=\dfrac{13\piup}{24}+k\piup$，$k\inZ$.
+                  $\Rightarrow \sin\Bp{2x-\dfrac{5\piup}{12}}=\dfrac{\sqrt3}2$
+                  $\Rightarrow 2x-\dfrac{5\piup}{12}=\dfrac{\piup}3+2k\piup$或
+                  $2x-\dfrac{5\piup}{12}=\dfrac{2\piup}3+2k\piup$，$k\inZ$.
+                  $\Rightarrow x=\dfrac{3\piup}8+k\piup$或$x=\dfrac{13\piup}{24}+k\piup$，$k\inZ$.
               \end{enumerate}
       \end{enumerate}
     \end{description}
@@ -162,8 +162,8 @@
           \path[name intersections={of=F2 and F3,by=F23}];
           \path[name intersections={of=F3 and F1,by=F31}];
           \filldraw[fill=gray,draw opacity=0.5] (F12)--(F23)--(F31)--cycle;
-          \draw[arrows={->Stealth[length=5pt, inset=3.5pt]}] (-3.5,0) -- (2,0)node[below] (xaxis){$x$};
-          \draw[arrows={->Stealth[length=5pt, inset=3.5pt]}] (0,-3) -- (0,3)node[left] (yaxis){$y$};
+          \draw[arrows={-Stealth[length=5pt, inset=3.5pt]}] (-3.5,0) -- (2,0)node[below] (xaxis){$x$};
+          \draw[arrows={-Stealth[length=5pt, inset=3.5pt]}] (0,-3) -- (0,3)node[left] (yaxis){$y$};
           \draw  (-0.18,-0.18) node {$O$};
         \end{tikzpicture}
       \end{center}

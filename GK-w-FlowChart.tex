@@ -1,0 +1,219 @@
+\Topic{等差数列与等比数列}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190505}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+  \tikzstyle{startstop} = [rectangle,rounded corners,minimum height=0.7cm,minimum width=1.5cm,text centered, draw=black]
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=0.7cm,minimum width=2cm,text centered,draw=black]
+  \tikzstyle{process} = [rectangle,minimum height=0.7cm,minimum width=2cm,text centered,draw=black]
+  \tikzstyle{decision} = [diamond,shape aspect=2.5,minimum height=0.5cm,text centered,draw=black]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+\startexercise
+\section{数列基本概念}
+
+\begin{multicols}{2}
+\begin{exercise}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p1【2018•全国II卷】【框图】\\
+    \source{2018文}{全国II卷}
+    为计算$S=1-\dfrac12+\dfrac13-\dfrac14+\cdots+\dfrac1{99}-\dfrac1{100}$，设计了如图所示的程序框图，则在空白框中应填入\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.5cm,scale=0.6,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [process,below of=start] {$N=0,T=0$};
+      \node (init2) [process,below of=init1] {$i=1$};
+      \node (dec1) [decision,below of=init2,yshift=-0.5cm] {$i<100$};
+      \node (pro1a) [process,below left of=dec1,xshift=-1cm,yshift=-0.5cm] {$N=N+\dfrac1{i}$};
+      \node (pro2a) [process,below of=pro1a] {$T=T+\dfrac1{i+1}$};
+      \node (pro3a) [process,below of=pro2a] {};
+
+      % \node (p2) [right of=dec1,xshift=1cm,coordinate]  {};
+      \node (pro1b) [process,below right of=dec1,xshift=1cm,yshift=-0.5cm] {$S=N-T$};
+      \node (out1) [io,below of=pro1b] {输出$S$};
+      \node (stop) [startstop,below of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (init2);
+      \draw [arrow] (init2) -- (dec1);
+      \draw [arrow] (dec1) -| node[anchor=south] {是} (pro1a);
+      \draw [arrow] (pro1a) -- (pro2a);
+      \draw [arrow] (pro2a) -- (pro3a);
+      \path (init2) -- (dec1) coordinate[pos=0.5](p);
+      \draw [arrow] (pro3a.west) -- ++(-0.8cm,0) |- (p);
+      \draw [arrow] (dec1) -| node[anchor=south] {否} (pro1b);
+      \draw [arrow] (pro1b) -- (out1);
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.7em}
+    \xx{$i=i+1$}{$i=i+2$}{$i=i+3$}{$i=i+4$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p2【2018•天津卷】【框图】\\
+    \source{2018文}{天津卷}
+    阅读如图所示的程序框图，运行相应的程序，若输入$N$的值为20，则输出$T$的值为\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=\linewidth/27cm,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [io,below of=start] {输入$N$};
+      \node (init2) [process,below of=init1] {$i=1$，$T=0$};
+      \node (dec1) [decision,below of=init2,yshift=-0.3cm] {$\frac{N}{i}$\small 是整数？};
+      \node (pro1a) [process,below of=dec1,yshift=-0.3cm] {$T=T+1$};
+      \node (pro1) [process,below of=pro1a] {$i=i+1$};
+      \node (dec2) [decision,below of=pro1,yshift=-0.2cm] {$i\geqslant5}$？};
+
+      \node (out1) [io,below of=dec2,yshift=-0.3cm] {输出$T$};
+      \node (stop) [startstop,below of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (init2);
+      \draw [arrow] (init2) -- (dec1);
+      \draw [arrow] (dec1) -- node[anchor=west] {是} (pro1a);
+      \draw [arrow] (pro1a) -- (pro1);
+      \draw [arrow] (pro1) -- (dec2);
+      \draw [arrow] (dec2) -- node[anchor=west] {是} (out1);
+      \path (init2) -- (dec1) coordinate[pos=0.5](p1);
+      \draw [arrow] (dec2.west) -- node[anchor=south,xshift=-0.2cm]{否}++(-0.7cm,0) |- (p1);
+      \path (pro1a) -- (pro1) coordinate[pos=0.5](p2);
+      \draw [arrow] (dec1.east) -- node[anchor=south] {否}++(0.5cm,0) |-(p2);
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.5em}
+    \xx{1}{2}{3}{4}
+    \begin{answer}
+      B
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p3【2018•太原一模】【框图】\\
+    \source{2018文}{太原一模}
+    执行如图所示的程序框图，输出的$S$的值为\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [process,below of=start] {$S=3$，$i=1$};
+      \node (dec1) [decision,below of=init1,yshift=-0.3cm] {$i\leqslant3$};
+      \node (pro1a) [process,below of=dec1,yshift=-0.3cm] {$S=S+\log_2\sqrt{\frac{i+1}i}$};
+      \node (pro2a) [process,below of=pro1a] {$i=i+1$};
+      \node (pro1b) [process,below right of=dec1,xshift=2.5cm,yshift=-0.1cm] {$S=\log_2S$};
+      \node (out1) [io,below of=pro1b] {输出$S$};
+      \node (stop) [startstop,below of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (dec1);
+      \draw [arrow] (dec1) -- node[anchor=east] {是} (pro1a);
+      \draw [arrow] (pro1a) -- (pro2a);
+      \path (init1) -- (dec1) coordinate[pos=0.5](p1);
+      \draw [arrow] (pro2a.south) |- node[anchor=south]++(-2cm,-0.2cm) |- (p1);
+      \draw [arrow] (dec1) -| node[anchor=south,xshift=-1cm] {否} (pro1b);
+      \draw [arrow] (pro1b) -- (out1);
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.7em}
+    \xx{$3+\dfrac12\log_23$}{$\log_23$}{3}{2}
+    \begin{answer}
+      D
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p4【2018•郑州测试】【框图】\\
+    \source{2018文}{郑州测试}
+    如图所示的程序框图的算法思路源于数学名著《几何原本》中的“辗转相除法”，执行该程序框图（图中“$m$~MOD~$n$”表示
+    $m$除以$n$的余数），若输入的$m$，$n$分别为495，135，则输出的$m=$\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [io,below of=start] {输入$m$，$n$};
+      \node (pro1) [process,below of=init1] {$r=m$~MOD~$n$};
+      \node (pro2) [process,below of=pro1] {$m=n$};
+      \node (pro3) [process,below of=pro2] {$n=r$};
+      \node (dec1) [decision,below of=pro3,yshift=-0.2cm] {$r=0$？};
+      \node (out1) [io,below of=dec1,yshift=-0.2cm] {输出$m$};
+      \node (stop) [startstop,below of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (pro1);
+      \draw [arrow] (pro1) -- (pro2);
+      \draw [arrow] (pro2) -- (pro3);
+      \draw [arrow] (pro3) -- (dec1);
+      \draw [arrow] (dec1) -- node[anchor=west] {是} (out1);
+      \path (in1) -- (pro1) coordinate[pos=0.5](p1);
+      \draw [arrow] (dec1.east) -- node[anchor=south,xshift=0.1cm]{否}++(0.8cm,0) |- (p1);
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.7em}
+    \xx{0}{5}{45}{90}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p5【2018•合肥二检】【框图】\\
+    \source{2018文}{合肥二检}
+    执行如图所示的程序框图，若输出的结果为1，则输出的$x$的值是\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [io,below of=start] {输入$x$};
+      \node (dec1) [decision,below of=init1,yshift=-0.2cm] {$x>2$？};
+      \node (pro1a) [process,below of=dec1] {$y=-2x-3$};
+      \node (pro1b) [process,right of=pro1a] {$y=\log_3(x^2-2x)$};
+      \node (out1) [io,below of = pro1a,yshift=-0.2cm] {输出$y$};
+      \node (stop) [startstop,below of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (dec1);
+      \draw [arrow] (dec1) -- node[anchor=west] {否} (pro1a);
+      \draw [arrow] (dec1) -| node[anchor=south,xshift=0.2cm]{是} (pro1b);
+      \path (out1) -- (pro1b) coordinate[pos=0.5](p);
+      \draw [arrow] (pro1b) |- node[anchor=south,xshift=0.2cm]{是} (p);
+      \draw [arrow] (pro1a) -- (out1)
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.5em}
+    \xx{$3$或$-2$}{$2$或$-2$}{$3$或$-1$}{$3$或$-1$或$-2$}
+    \begin{answer}
+      A
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p9【2018•南昌一模】【框图】\\
+    \source{2018文}{南昌一模}
+    执行如图所示的程序框图，则输出的$n$等于\xz
+    \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+      \node (start) [startstop] {开始};
+      \node (init1) [io,right of=start] {$n=0,\,x=\frac{13\piup}{12}$};
+      \node (pro1) [decision,right of=init1,xshift=1cm] {$a=\sin x$};
+      \node (dec1) [decision,right of=pro1,xshift=1cm] {$a=\frac{\sqrt3}2$？};
+      \node (pro1a) [process,below left of=dec1,xshift=-1cm,yshift=-0.2cm] {$n=n+1$};
+      \node (pro2a) [process,left of=pro1a] {$x=x-\frac{2n-1}{12}\piup$};
+      \node (out1) [io,right of = dec1] {输出$n$};
+      \node (stop) [startstop,right of=out1] {结束};
+
+      \draw [arrow] (start) -- (init1);
+      \draw [arrow] (init1) -- (pro1);
+      \draw [arrow] (pro1) -- (dec1);
+      \draw [arrow] (dec1) -- node[anchor=south] {是} (out1);
+      \draw [arrow] (dec1) |- node[anchor=west]{否} (pro1a);
+      \path (init1) -- (pro1) coordinate[pos=0.5](p);
+      \draw [arrow] (pro1a) -| (p);
+      \draw [arrow] (out1) -- (stop);
+      \end{tikzpicture}
+    \end{center}\vspace{-0.5em}
+    \xx{$3$或$-2$}{$2$或$-2$}{$3$或$-1$}{$3$或$-1$或$-2$}
+    \begin{answer}
+      A
+    \end{answer}
+\end{exercise}
+\end{multicols}
+
+
+\newpage
+\section{课后作业}
+  % \begin{exercise}{\heiti 练习}
+  % \end{exercise}
+  \begin{exercise}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}
