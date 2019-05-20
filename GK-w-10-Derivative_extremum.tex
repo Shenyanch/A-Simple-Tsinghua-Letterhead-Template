@@ -1,0 +1,293 @@
+% \usepackage{latexexercise0}
+\Topic{导数与极值}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190514}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+  \tikzstyle{startstop} = [rectangle,rounded corners,minimum height=0.7cm,minimum width=1.2cm,text centered, draw=black]
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{process} = [rectangle,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{decision} = [diamond,shape aspect=2.5,minimum height=0.5cm,text centered,draw=black]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+\startexercise
+% \section{利用导数的概念解题}
+%   \subsection{导数的定义}
+%     {\kaishu 若函数$f(x)$的在$x_0$附近有定义，当自变量$x$在$x_0$处取得一个增量$ \triangle x $时$ (\triangle x\text{充分小}) $，因变量$ y $也随之取得增量$ \triangle y~\left(\triangle y=f(x_0+\triangle x)-f(x_0)\right). $若$ \lim\limits_{\triangle x \to 0}\dfrac{\triangle y}{\triangle x} $存在，则称$f(x)$在$x_0$处可导，此极限值称为$ f(x) $在点$x_0$处的导数(或变化率)，记作$ f'(x_0) $或$ \left.y'~\right|_{x=x_0} $或$\left.\dfrac{ dy}{dx }~\right|_{x_0}$，即$ f'(x_0)= \lim\limits_{\triangle x \to 0}\dfrac{f(x)-f(x_0)}{x-x_0}$.}
+%   \subsection{常用函数的导数和基本运算}
+%     \subsubsection{常用函数的导数}
+%       \begin{center}\begin{tabular}{|c|c|}
+%         \hline
+%         原函数&导数\\
+%         \hline
+%         $y=C~(C\text{为常数})$&$y'=0$\\
+%         \hline
+%         $y=x^n~(n\in\mathbf{Q^*})$&$y'=nx^{n-1}$\\
+%         \hline
+%         $y=\sin x$&$y'=\cos x$\\
+%         \hline
+%         $y=\cos x$&$y'=-\sin x$\\
+%         \hline
+%         $y=e^x$&$y'=e^x$\\
+%         \hline
+%         $y=\ln x$&\Gape[9pt]{$y'=\dfrac{1}{x}$}\\
+%         \hline
+%       \end{tabular}\end{center}
+%     \subsubsection{四则运算}
+%       \begin{enumerate}[1)]
+%         \item $ \left(f(x)\pm g(x)\right)'=f'(x)\pm g'(x) $;
+%         \item $\left(f(x)g(x)\right)'=f'(x)g(x)+f(x)g'(x)$;
+%         \item $\left(\dfrac{f(x)}{g(x)}\right)'=\dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2}$
+%       \end{enumerate}
+%     % \subsubsection{复合函数导数}
+%     % $ y=f\left[u(x)\right] $的导函数为$ y'_x=y'_u\bm{\cdot}u'_x~(\text{其中}~y'_x~\text{表示}~y~\text{关于}~x~\text{的导数}) $.
+%     % \begin{proof}
+%     %   将$ y=f\left[u(x)\right] $分拆成$ \Bigg\{\begin{aligned}
+%     %   y=f(u)\\
+%     %   u=u(x).
+%     %   \end{aligned} $.根据导数的定义：\begin{equation*}
+%     %   \begin{aligned}
+%     %     y'_x&=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta x}=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\dfrac{\Delta u}{\Delta x}\\
+%     %     &=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\lim \limits_{\Delta x \to 0}\dfrac{\Delta u}{\Delta x}\\
+%     %     &=y'_u\bm{\cdot}u'_x
+%     %   \end{aligned}
+%     %   \end{equation*}
+%     % \end{proof}
+% \section{切线方程}
+%   \subsection{导数的几何意义}
+%     {\kaishu 函数$y=f(x)$在$x_0$处的导数$ f'(x_0) $的几何意义是：曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线的斜率(瞬时速度就是位移$ s(t) $对时间$ t $的导数).}\par
+%   \subsection{求曲线切线方程的步骤：}
+%     \subsubsection{点$ P(x_0,y_0) $在曲线上}
+%       {\kaishu \begin{enumerate}[(1)]
+%       \item 求出函数$y= f(x) $在点$ x=x_0 $的导数，即曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处切线的斜率;
+%       \item 在已知切点坐标$ P(x_0,f(x_0)) $和切线斜率的条件下，求得切线方程为$ y-y_0=f'(x_0)(x-x_0) $
+%       \end{enumerate}
+%       注：\ding{192} 当曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线平行于$y$轴时(此时导数不存在)，由切线的定义可知，切线方程为$ x=x_0 $;\par
+%       \ding{193} 当切点坐标未知时，应首先设出切点坐标，再求解.}
+%     \subsubsection{点$ P(x_0,y_0) $不在曲线上}
+%       {\kaishu \begin{enumerate}[1)]
+%       \item 设出切点$P'\left(x_1,f\left(x_1\right)\right)$；
+%       \item 写出过点$P'\left(x_1,f\left(x_1\right)\right)$的切线方程$ y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $;
+%       \item 将点$ P $的坐标$ \left(x_0,y_0\right) $代入切线方程，求出$ x_1 $；
+%       \item 将$ x_1 $的值代入方程$y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $，可得过点$ P(x_0,y_0) $的切线方程.
+%       \end{enumerate}}
+%     \subsubsection{切线方程已知}
+%       当曲线的切线方程是已知时，常合理选择以下三个条件的表达式解题：
+%       {\kaishu \begin{enumerate}[1)]
+%       	\item 切点在切线上;
+%       	\item 切点在曲线上；
+%       	\item 切点横坐标处的导数等于切线的斜率.
+%       \end{enumerate}
+%
+%
+%     }
+\vspace{-2em}
+\begin{exercise}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p5【2018•沈阳监测（一）】【导数，极值】\\
+    \source{2018文}{沈阳监测（一）}
+    设函数$f(x)=x\ee^x+1$，则\xz
+    \xx{$x=1$为$f(x)$的极大值点}
+     {$x=1$为$f(x)$的极小值点}
+     {$x=-1$为$f(x)$的极大值点}
+     {$x=-1$为$f(x)$的极小值点}
+    \begin{answer}
+      D
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p8【2018•西安八校联考】【导数，零点】\\
+    \source{2018文}{西安八校联考}
+    已知函数$f(x)=\ln x-ax^2$，若$f(x)$恰有两个不同的零点，则$a$的取值范围为\xz
+    \xx{$\bigl(\mfrac1{2\ee},+\infty\bigr)$}
+     {$\bigl[\mfrac1{2\ee},+\infty\bigr)$}
+     {$\bigl(0,\mfrac1{2\ee}\bigr)$}
+     {$\bigl(0,\mfrac1{2\ee}\bigr]$}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p10【2018•湖北八校联考】【导数，单调性】\\
+    \source{2018文}{湖北八校联考}
+    已知实数$a>0$，$a\neq1$，函数$f(x)=\Bigg\{\begin{aligned}
+      &a^x\,,x<1\\
+      &x^2+\mfrac4{x}+a\ln x\,,x\geqslant1
+    \end{aligned}$在$\RR$上单调递增，则实数$a$的取值范围是\xz
+    \xx{$(1,5]$}{$[2,5]$}{$[2,+\infty)$}{$(2,5]$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p8【2018•陕西一检】【导数，单调性，切线】\\
+    \source{2018文}{陕西一检}
+    设函数$f(x)=x^3-12x+b$，则下列结论正确的是\xz
+    \xx{函数$f(x)$在$(-\infty,-1)$上单调递增}
+     {函数$f(x)$在$(-\infty,-1)$上单调递减}
+     {若$b=-6$，则函数$f(x)$的图像在$\bigl(-2,f(-2)\bigr)$处的切线方程为$y=10$}
+     {若$b=0$，则函数$f(x)$的图像与直线$y=10$只有一个公共点}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p13【2018•江苏卷】【导数，零点，最值】\\
+    \source{2018文}{江苏卷}
+    若函数$f(x)=2x^3-ax^2+1$（$a\inR$）在$(0,+\infty)$内有且只有一个零点，则$f(x)$在$[-1,1]$上的最大值与最小值的和为\tk.
+    \begin{answer}
+      $-3$
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p15【2018•昆明摸底调研】【导数，零点】\\
+    \source{2018文}{昆明摸底调研}
+    已知函数$f(x)=\Bigg\{\begin{aligned}
+      &\log_2(x-1)\,,x>1,\\
+      &x^3-3x+1\,,x\leqslant1,
+    \end{aligned}$则函数$f(x)$的零点个数为\tk.
+    \begin{answer}
+      3
+    \end{answer}
+  \item %福建省泉州市2018届高三1月单科质量检查数学（文）…….pdf【2019•泉州1月质检】【导数，切线，不等式】\\
+    \source{2018文}{泉州1月质检}
+    已知函数$f(x)=\ee^x-ax$.\\
+    (I)设$F(x)=f(x)-a$，若曲线$y=F(x)$在$\bigl(0,F(0)\bigr)$处的切线恒过定点$A$，求$A$的坐标；\\
+    (II)设$f'(x)$为$f(x)$的导函数.当$x\geqslant1$时，$f(x)-f'(1)\geqslant1-\mfrac1x$，求$a$的取值范围.
+    \begin{answer}
+      【解】:
+      (I)依题意，$F(x)=\ee^x-ax-a$，$F'(x)=\ee^x-a$.\fz[1]
+         $F(0)=1-a$，$F'(0)=1-a$.\fz[2]
+         则曲线$y=F(x)$在$\bigl(0,F(0)\bigr)$处的切线为$y-(1-a)=(1-a)x$，
+         即$y=(1-a)(x+1)$.\fz[3]
+         故切线必过定点$A(-1,0)$.\fz[4]
+      (II)设$g(x)=f(x)-f'(1)-\bigl(1-\mfrac1x\bigr)=\ee^x+\mfrac1x-ax+(a-\ee-1)$.\\
+         则$g'(x)=\ee^x-\mfrac1{x^2}-a$.\fz[5]
+         设$h(x)=\ee^x-\mfrac1{x^2}-a$，则$h'(x)=\ee^x+\mfrac2{x^3}$.\fz[6]
+         因为$h'(x)=\ee^x+\mfrac2{x^3}>0$在$x\in[1,+\infty)$恒成立，\\
+         所以$h(x)=\ee^x-\mfrac1{x^2}-a$在$x\in[1,+\infty)$上单调递增，\\
+         则$g'(x)=h(x)\geqslant h(1)=\ee-1-a$.\fz[8]
+         \circled{1}当$\ee-1-a\geqslant0$，即$a\leqslant\ee-1$时，$g'(x)\geqslant0$，\\
+         故$g(x)$在$x\in[1,+\infty)$上单调递增，则$g(x)\geqslant g(1)=0$.
+         故$a\leqslant\ee-1$符合题意.\fz[10]
+         \circled{2}当$\ee-1-a<0$，即$a>\ee-1$时，……【下略】
+    \end{answer}
+  \vspace{15em}
+  \item %2018年福州市高中毕业班质量检测 数学（文科）…….pdf【2018•福州质检】【导数，切线，不等式】\\
+    \source{2018文}{福州质检}
+    已知函数$f(x)=(\ee^x-1)(x-a)+ax$.\\
+    (I)当$a=1$时，求$f(x)$在$x=1$处的切线方程；\\
+    (II)若当$x>0$时，$f(x)>0$，求$a$的取值范围.
+    \begin{answer}
+      【解】:
+      (1)当$a=1$时，$f(x)=x\ee^x-\ee^x+1$，$f'(x)=x\ee^x$.\fz[1]
+         所以切线斜率$k=f'(1)=\ee$.\fz[2]
+         又$f(1)=1$，所以$f(x)$在$x=1$处的切线方程为$y-1=\ee(x-1)$，
+         即$y=\ee x-\ee+1$.\fz[4]
+      (2)$f'(x)=(1+x-a)\ee^x+(a-1)$，
+         令$g(x)=(1+x-a)\ee^x+(a-1)$，则$g'(x)=(2+x-a)\ee^x$，\fz[5]
+         \circled{1}当$a\leqslant2$时，$g'(x)>0$对一切$x>0$恒成立，\\
+         故$g(x)$在区间$(0,+\infty)$单调递增，\\
+         故$x>0$时，$g(x)>g(0)=0$，即$f'(x)>0$.\fz[7]
+         所以$f(x)$在区间$(0,+\infty)$单调递增，\\
+         故$x>0$时，$f(x)>f(0)=0$，即$f(x)>0$对一切$x>0$恒成立.\fz[9]
+         \circled{2}当$a>2$时，……【下略】
+    \end{answer}
+  \vspace{15em}
+  \item %厦门市2018届高三年级第一学期期末质检文科数学…….pdf【2018•厦门质检】【导数，单调性，不等式】\\
+    \source{2018文}{厦门质检}
+    已知函数$f(x)=a\ln x+\mfrac{a}2 x^2-(a^2+1)x$.\\
+    (1)讨论函数$f(x)$的单调性；\\
+    (2)当$a>1$时，记函数$f(x)$的极小值为$g(a)$，若$g(a)<b-\mfrac14(2a^3-2a^2+5a)$恒成立，求满足条件的最小整数$b$.
+    \begin{answer}
+      【解】:
+      (1)$f(x)$的定义域为$(0,+\infty)$，\\
+         $f'(x)=\mfrac{a}x+ax-(a^2+1)=\mfrac{ax^2-(a^2+1)x+a}{x}=\mfrac{(ax-1)(x-a)}x$\fz[2]
+         \circled{1}若$a\leqslant0$，当$x\in(0,+\infty)$时，$f'(x)\leqslant0$，故$f(x)$在$(0,+\infty)$单调递减；\fz[3]
+         \circled{2}若$a>0$，由$f'(x)=0$，得$x_1=\mfrac1a$，$x_2=a$\\
+         (i) 若$0<a<1$，当$x\in\bigl(a,\mfrac1a\bigr)$时，$f'(x)<0$，
+             当$x\in(0,a)\bigcup\bigl(\mfrac1a,+\infty\bigr)$时，$f'(x)>0$，\\
+             故$f(x)$在$\bigl(a,\mfrac1a\bigr)$单调递减，在$(0,a)$，$\bigl(\mfrac1a,+\infty\bigr)$单调递增；\\
+         (ii)若$a=1$，则$f'(x)\geqslant0$，$f(x)$在$(0,+\infty)$单调递增；\\
+         (iii) 若$a>1$，当$x\in\bigl(\mfrac1a,a\bigr)$时，$f'(x)<0$，
+             当$x\in(a,+\infty)\bigcup\bigl(0,\mfrac1a\bigr)$时，$f'(x)>0$，\\
+             故$f(x)$在$\bigl(\mfrac1a,a\bigr)$单调递减，在$(a,+\infty)$，$\bigl(0,\mfrac1a\bigr)$单调递增.\fz[5]
+      % (2)
+    \end{answer}
+  \vspace{15em}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》名校信息卷（二） P22p21【2018•武汉元月调研】【导数，单调性，不等式】\\
+    \source{2018文}{武汉元月调研}
+    已知函数$f(x)=\ln x+\mfrac{a}x$，$a\inR$.\\
+    (1)讨论函数$f(x)$的单调性；\\
+    (2)当$a>0$时，证明$f(x)\geqslant\mfrac{2a-1}a$.
+    \begin{answer}
+      【解】:
+      (1)$f'(x)=\mfrac1x-\mfrac{a}{x^2}=\mfrac{x-a}{x^2}$($x>0$).\\
+         当$a\leqslant0$时，$f'(x)>0$，$f(x)$在$(0,\infty)$上单调递增；\\
+         当$a>0$时，若$x>a$，则$f'(x)>0$，$f(x)$在$(a,+\infty)$上单调递增；\\
+         若$0<x<a$，则$f'(x)<0$，$f(x)$在$(0,a)$上单调递减；\fz[4]
+      % (2)
+    \end{answer}
+   \vspace{8em}
+
+\end{exercise}
+
+
+% \newpage
+% \section{课后作业}
+%   \begin{exercise}{\heiti 练习}
+%     \item 求下列函数的导数： \begin{multicols}{2}
+%           \begin{enumerate}[label=\arabic*)]
+%             \item $f(x)=a\ee^x-\ln x-1$;
+%             \vspace{2cm}
+%             \item $f(x)=\mfrac{ax^2+x-1}{\ee^x}$;
+%             \vspace{2cm}
+%             \item $f(x)=(x-1)\ee^x-\mfrac{k}2x^2$;
+%             \vspace{2cm}
+%             \item $f(x)=x\ee^x+(a-2)\ee^x-x$;
+%             \vspace{2cm}
+%           \end{enumerate}
+%           \begin{answer}
+%             \begin{enumerate}[itemindent=1em,listparindent=6em, label=\arabic*)]
+%               \item $f'(x)=a\ee^x-\mfrac1x$;
+%               \item $f'(x)=(-ax^2-x+2ax+2)\ee^{-x}$;
+%               \item $f'(x)=x\ee^x-kx$;
+%               \item $f'(x)=(x+a-1)\ee^x-1$;
+%             \end{enumerate}
+%           \end{answer}
+%         \end{multicols}
+%   \end{exercise}
+%   \vspace{3em}
+%   \begin{exercise}
+%     \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p3【2018•广州调研】【导数，切线】\\
+%       \source{2018文}{广州调研}
+%       已知直线$y=kx-2$与曲线$y=x\ln x$相切，则实数$k$的值为\xz
+%       \xx{$\ln 2$}{$1$}{$1-\ln2$}{$1+\ln 2$}
+%       \begin{answer}
+%         D
+%       \end{answer}
+%     \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p3【2018•太原一模】【导数，切线】\\
+%       \source{2018文}{太原一模}
+%       曲线$y=\sin x+\ee^x$在点$(0,1)$处的切线方程是\xz
+%       \xx{$x-2y+2=0$}{$2x-y+1=0$}{$x+2y-4=0$}{$x-y+1=0$}
+%       \begin{answer}
+%         B
+%       \end{answer}
+%     \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p13【2018•全国III卷】【导数，切线】\\
+%       \source{2018文}{全国III卷}
+%       曲线$y=(ax+1)\ee^x$在点$(0,1)$处的切线的斜率为$-2$，则$a=$\tk.
+%       \begin{answer}
+%         $-3$
+%       \end{answer}
+%     \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p14【2018•南昌一模】【导数，求导】\\
+%       \source{2018文}{南昌一模}
+%       设函数$f(x)$在$(0,+\infty)$内可导，其导函数为$f'(x)$，且$f(\ln x)=x+\ln x$，则$f'(1)=$\tk.
+%       \begin{answer}
+%         $1+\ee$
+%       \end{answer}
+%   \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

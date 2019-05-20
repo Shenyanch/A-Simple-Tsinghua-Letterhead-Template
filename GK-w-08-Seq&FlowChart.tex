@@ -1,0 +1,626 @@
+\Topic{数列与框图}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190510}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+
+\startexercise
+\section{数列基本概念}
+  按照一定的顺序排列的一列数叫做\CJKunderdot{数列}，数列中的每一个数叫做这个数列的\CJKunderdot{项}.排在第一位的数称作数列的\CJKunderdot{首项}，排在第二位的称为数列的第$ 2 $项$ \cdots\cdots $排在第$ n $位的称为这个数列的第$ n $项.数列的一般形式为\[a_1,~a_2,~a_3,~\cdots a_n,~\cdots, \]简记为$ \{a_n\} $.
+  \subsection{数列与函数}
+    在函数的意义下，数列是定义域为正整数集$ \mathbf{N^*} $(或它的有限子集$ \left\{1,2,3,\cdots,n\right\} $)的特殊函数，数列的通项公式就是相应的函数解析式，即$ a_n=f(n)~(n\in\mathbf{N^*}) $.
+  \subsection{通项公式}
+    如果数列$\{a_n\}$的第$ n $项与序号$ n $之间的关系可以用一个式子来表示，那么这个式子叫做这个数列的\CJKunderdot{通项公式}.
+  \subsection{递推公式}
+    如果已知数列$\{a_n\}$的第一项(或前几项)，且从第二项(或某一项)开始任何一项$ a_n $与它的前一项$ a_{n-1} $(或前几项)间的关系可以用一个式子来表示，那么这个式子叫做数列$\{a_n\}$的递推公式.
+  \subsection{数列的分类}
+    % 类比函数的性质及其分类，对数列进行恰当的分类可以更深刻的理解和认识数列.
+    % \begin{enumerate}[1)]
+      % \item 根据项的个数：
+      %   \begin{enumerate}[i)]
+      %     \item 有穷数列：项数有限的数列；
+      %     \item 无穷数列：项数无限的数列；
+      %   \end{enumerate}
+      % \item 根据项的变化趋势：
+        \begin{enumerate}[i)]
+          \item 递增数列：从第二项起每一项都大于它的前一项的数列；
+          \item 递减数列：从第二项起每一项都小于它的前一项的数列；
+          \item 常数列：各项相等的数列；
+          \item 摆动数列：从第二项起，前后两项变化规律不定的数列.
+        \end{enumerate}
+      % 递增数列和递减数列统称单调数列；
+      % \item 根据项的(绝对值)大小是否有限制：
+      %   \begin{enumerate}[i)]
+      %     \item 有界数列：$ \forall n\in\mathbf{N^*},\abs{a_n}\le M~(M\text{为常数}) $；
+      %     \item 无界数列：$ \forall M\in\mathbf{R^+} ,\exists n\in\mathbf{N^*},\text{使得}\abs{a_n}>M.$
+        % \end{enumerate}
+    % \end{enumerate}
+\section{等差数列}
+  \subsection{基本性质}
+    \subsubsection{定义}
+      一般地，如果一个数列从第二项开始，每一项与前一项的差等于同一个常数，那么这个数列就叫做等差数列，这个常数叫做这个数列的公差，常用字母$ d $表示.\\
+      {\kaishu 注：目前大部分等差数列考题都可以通过转化为$ a_1 $和$ d $求出.}
+    \subsubsection{通项公式}
+      如果等差数列$\{a_n\}$的通项公式是$ a_n=a_1+(n-1)d ,n\in\mathbf{N^*}$,其中$ a_1 $为首项，$ d $为公差.
+      % \begin{proof}
+      %   由给定条件可得:\begin{equation*}
+      %   \begin{aligned}
+      %    a_2-a_1& =d\\
+      %   a_3-a_2&=d\\
+      %   \vdots&\\
+      %   a_n-a_{n-1}&=d.
+      %   \end{aligned}
+      %   \end{equation*}
+      %   等号两边累加可得:~$ a_n-a_1=(n-1)d .$即:~$$a_n=a_1+(n-1)d$$
+      % \end{proof}
+    \subsubsection{等差中项}
+      \begin{enumerate}[1)]
+        \item 如果$ A=\mfrac{a+b}{2} ,$则称$ A $为$ a $和$ b $的等差中项;
+        \item 等差数列中，等间隔的三项$a_{n-p},~a_n,~a_{n+p} (n,p\in\mathbf{N^*}~\text{且}~n<p) $满足:$ 2a_n=a_{n-p}+a_{n+p} $;
+        \item 在等差数列$ \left\{a_n\right\} $中,若有$ k+l=m+n \left(k,l,m,n\in\mathbf{N^*}\right)$，则有$ a_k+a_l=a_m+a_n $.
+      \end{enumerate}
+    \subsubsection{前$ n $项和公式}
+      设等差数列$\{a_n\}$的公差为$ d $，则其前$ n $项和$ S_n=\mfrac{n\left(a_1+a_n\right)}{2} $或$ S_n=na_1+\mfrac{n(n-1)}{2}d $.
+      % \begin{proof}
+      %   在等差数列中，根据性质$ a_k+a_l=a_m+a_n~(k+l=m+n) $可得$$ a_1+a_n=a_2+a_{n-1}=\cdots=a_k+a_{n-k+1} ~\left(k\le\mfrac{n}{2}\right)$$
+      %   \begin{equation*}
+      %   \begin{aligned}
+      %   S_n&=a_1+a_2+a_3+\cdots+a_n\\
+      %    &=\left(a_1+a_n\right)+\left(a_2+a_{n-1}\right)+\cdots+\left(a_k+a_{n-k+1}\right)\\
+      %   &=\mfrac{n(a_1+a_n)}{2}\\
+      %   &=\mfrac{n(a_1+a_1+(n-1)d}{2}=na_1+\mfrac{n(n-1)}{2}d.
+      %   \end{aligned}
+      %   \end{equation*}
+      % \end{proof}
+  \subsection{性质扩充}
+    \subsubsection{等差数列的常用性质}
+      \begin{enumerate}[(1)]
+        \item 通项公式的推广：$ a_n=a_m+\left(n-m\right)d \left(n,m\in\mathbf{N^*}\right)$;
+        \item 若$\{a_n\}$是等差数列，公差为$ d $，则$\{a_{2n}\}$ 也是等差数列，公差为$ 2d $;
+        \item 若$\{a_n\},~\{b_n\}$是等差数列，则$ \left\{pa_n+qb_n\right\}~(p,q\text{是常数}) $也是等差数列;
+        \item 若$\{a_n\}$是等差数列，公差为$ d $，则$ a_k,~a_{k+m},~ a_{k+2m},~a_{k+3m},\cdots\left(k,m\in\mathbf{N^*}\right)$组成公差为$ md $的等差数列.
+        \item 若$ S_m,S_{2m},S_{3m} $分别是$\{a_n\}$的前$ m $项，前$ 2m $项，前$ 3m $项的和，则$ S_m,~S_{2m}-S_m,~S_{3m}-S_{2m} $成等差数列，公差为$m^2d$；
+      \end{enumerate}
+    \subsubsection{等差数列前$ n $项和的最值问题}
+      \begin{enumerate}[1)]
+        \item 二次函数法：当公差$d\ne0$时，将$ S_n $看作关于$ n $的二次函数，运用配方法，借助函数的单调性及数形结合，使问题得解；
+        \item 通项公式法：求使$ a_n\ge0 \left(\text{或}a_n\le0\right)$成立的最大$ n $值即可得到$ S_n $的最大(或最小)值；
+        \item 不等式法：借助$ S_n $最大时，有$\Bigg\{\begin{aligned}
+      S_n\ge S_{n-1},\\
+      S_n\ge S_{n+1}.
+      \end{aligned}~(n\ge2,n\in\mathbf{N^*})$，解此不等式组确定$ n $的范围，进而确定$ n $的值和对应$ S_n $的值.
+      \end{enumerate}
+\section{等比数列}
+  一般地，如果一个数列从第二项起，每一项与它的前一项的比等于同一个常数，那么这个数列就叫做等比数列（Geometric progression，G.P）.
+  这个常数叫做等比数列的公比，通常用字母$ q $表示.
+  \subsection{通项公式}如果等比数列$\{a_n\}$的首项为$a_1$，公比为$ q $，则它的通项公式为$ a_n=a_1q^{n-1}~(q\ne0). $
+  \subsection{等比中项}
+    \begin{enumerate}[(1)]
+      \item 如果三个数$ a,G,b $成等比数列，则$ G $叫做$ a $和$ b $的等比中项，且$ \mfrac{G}{a}=\mfrac{b}{G} $,即$ G^2=ab $;
+      \item 等比数列$ \{a_n\} $中，等间隔的三项$ a_{n-s},~a_n,~a_{n+s}~(s\in\mathbf{N^*},\text{且} s<n ) $有$ a_{n-s}a_{n+s}=a_n^2 $;
+      \item 等比数列$ \{a_n\} $中，若$ m+n=p+q $，则$ a_m\bm{\cdot}a_n=a_p\bm{\cdot}a_q $.
+    \end{enumerate}
+  \subsection{前$ n $项和}
+    $S_n=\Bigg\{\begin{aligned}
+    &na_1&\left(q=1\right)\\
+    &\mfrac{a_1\left(1-q^n\right)}{1-q}&\left(q\ne1\right)
+    \end{aligned}$
+    \begin{proof}
+      给定等比数列$\{a_n\}$.\\
+      \ding{192}~当$ q=1$时，有$ a_1=a_2=\cdots=a_n $，
+        $ S_n=a_1+a_2+\cdots+a_n=na_1. $\\
+      \ding{193}~当$ q\ne1 $时，有：
+        \begin{equation}\label{db1}
+          \begin{aligned}
+            S_n=&a_1+a_2+\cdots+a_n \\
+            =&a_1+a_1q+a_1q^2+\cdots+a_1q^{n-1};
+          \end{aligned}
+        \end{equation}
+        两边同时乘以公比$q$,有：
+        \begin{equation}\label{db2}
+          qS_n=a_1q+a_1q^2+\cdots+a_1q^{n-1}+a_1q^n
+        \end{equation}
+        (\ref{db1})-(\ref{db2})得到：
+        \begin{equation*}
+          \begin{aligned}
+            S_n-qS_n=&\left(a_1+a_1q+a_1q^2+\cdots+a_1q^{n-1}\right)-\left(a_1q+a_1q^2+a_1q^3+\cdots+a_1q^{n-1}+a_1q^n\right)\\
+            =&a_1+\left(a_1q-a_1q\right)+\left(a_1q^2-a_1q^2\right)+\cdots+\left(a_1q^{n-1}-a_1q^{n-1}\right)-a_1q^n\\
+            =&a_1-a_1q^n
+          \end{aligned}
+        \end{equation*}
+        化简得：$ S_n=\mfrac{a_1(1-q^n)}{1-q}~(q\ne1) $
+    \end{proof}
+  \subsection{等比数列的性质}
+    已知等比数列$\{a_n\}$的前$ n $项和为$S_n$.
+    \begin{enumerate}[(1)]
+      \item 数列$\{c\bm{\cdot}a_n\}~\left(c\ne0\right),~\left\{\abs{a_n}\right\},~\left\{a_n\bm{\cdot}b_n\right\}~\left(\left\{b_n\right\}\text{是等比数列}\right),~\left\{a^2_n\right\},~\left\{\mfrac{1}{a_n}\right\}$等也是等比数列;
+      \item 数列$ a_m,a_{m+k},a_{m+2k},a_{m+3k},\cdots $仍是等比数列;
+      \item $ a_1a_n=a_2a_{n-1}=\cdots=a_ma_{n-m+1} $;
+      \item 当数列$\{a_n\}$的公比$ q\ne-1$(或$ q=-1\text{且}m\text{为奇数} $)时，数列$ S_m,~S_{2m}-S_m,~S_{3m}-S_{2m} ,\cdots$是等比数列;
+    \end{enumerate}
+\begin{exercise}{\heiti 习题}\\
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p1【2018•全国I卷】【等差数列，和，通项】\\
+    \source{2018文}{全国I卷}
+    记$S_n$为等差数列$\{a_n\}$的前$n$项和.若$3S_3=S_2+S_4$，$a_1=2$，则$a_5=$\xz
+    \xx{$-12$}{$-10$}{$10$}{$12$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p11【2018•广州一测】【数列，递推】\\
+    \source{2018文}{广州一测}
+    已知数列$\{a_n\}$满足$a_1=2$，$2a_n a_{n+1}=a_n^2+1$，设$b_n=\mfrac{a_n-1}{a_n+1}$，则数列$b_n$是\xz
+    \xx{常数列}{摆动数列}{递增数列}{递减数列}
+    \begin{answer}
+      D
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p4【2018•西安八校联考】【等差数列，和 】\\
+    \source{2018文}{西安八校联考}
+    设数列$\{a_n\}$是等差数列，且$a_2=-6$，$a_6=6$，$S_n$是数列$\{a_n\}$的前$n$项和，则\xz
+    \xx{$S_4<S_3$}{$S_4=S_3$}{$S_4>S_1$}{$S_4=S_1$}
+    \begin{answer}
+      B
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p5【2018•长春监测（一）】【等差数列，和，最值】\\
+    \source{2018文}{长春监测（一）}
+    在数列$\{a_n\}$中，且$a_6+a_{11}=0$，且公差$d>0$，则数列$\{a_n\}$的前$n$项和取最小值时$n$的值为\xz
+    \xx{6}{7}{8}{9}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p12【2018•福州质检】【数列，和】\\
+    \source{2018文}{福州质检}
+    在首项都为3的数列$\{a_n\}$，$\{b_n\}$中，$a_{n+1}-a_n=3$，$b_2=9$，$b_{n+1}-b_n<2\times 3^n+\mfrac13$，$b_{n+2}-b_n>8\times 3^n-1$，且$b_n\inZ$,则数列$\{a_n+b_n\}$的前50项和为\xz
+    \xx{$\mfrac{3^{50}+7647}2$}
+     {$3^{50}+3825$}
+     {$\mfrac{3^{51}+7647}2$}
+     {$3^{51}+3825$}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p14【2018•重庆一调】【等比数列，和，对数】\\
+    \source{2018文}{重庆一调}
+    在各项均为正数的等比数列$\{a_n\}$中，若$a_5=5$，则$\log_5a_1+\log_5a_2+\cdots+\log_5a_9=$\tk.
+    \begin{answer}
+      9
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》名校信息卷（二） P22p17【2018•重庆六校联考（一）】【数列，证明，求和】\\
+    \source{2018文}{重庆六校联考（一）}
+    若数列$\{a_n\}$的前$n$项和$S_n$满足$S_n=2a_n+n$.\\
+    (1)求证：数列$\{a_n-1\}$是等比数列；\\
+    (2)设$b_n=\log_2(1-a_n)$，求数列$\Bigl\{\mfrac1{b_nb_{n+1}}\Bigr\}$的前$n$项和$T_n$.
+    \begin{answer}
+      % (1)略;
+      (2)$T_n=\mfrac{n}{n+1}$.
+      \\【解】:
+      (1)当$n=1$时，$a_1=S_1=2a_1+1$，解得$a_1=-1$\fz[1]
+         当$n>1$时，$S_n=2a_n+n$，$S_{n-1}=2a_{n-1}+(n-1)$，\\
+         则$S_n-S_{n-1}=(2a_n+n)-[2a_{n-1}+(n-1)]=2a_n-2a_{n-1}+1$，即$a_n=2a_{n-1}-1$，\fz[3]
+         $\therefore$ $a_n-1=2(a_{n-1}-1)$，又$a_1-1=-2$，\\
+         $\therefore$数列$\{a_n-1\}$是首项为$-2$，公比为$2$的等比数列.\fz[6]
+      (2)由(1)得$a_n-1=-2\cdot 2^{n-1}=-2^n$，即$1-a_n=2^n$\fz[8]
+        $\therefore$ $b_n=\log_2(1-a_n)=\log_2{2^n}=n$，$\mfrac1{b_nb_{n+1}}=\mfrac1{n(n+1)}=\mfrac1n-\mfrac1{n+1}$\fz[10]
+        $\therefore$ $T_n=(1-\mfrac12)+(\mfrac12-\mfrac13)+\cdots+(\mfrac1n-\mfrac1{n+1})=1-\mfrac1{n+1}=\mfrac{n}{n+1}$.\fzn[12]
+    \end{answer}
+  \clearpage
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》名校信息卷（四） P24p17【2018•武汉元月调研】【数列，证明，求和】\\
+    \source{2018文}{武汉元月调研}
+    已知数列$\{a_n\}$的前$n$项和$S_n=2a_n-2$.\\
+    (1)求数列$\{a_n\}$的通项公式；\\
+    (2)令$b_n=a_n\cdot\log_2a_n$，求数列$\{b_n\}$的前$n$项和$T_n$.
+    \begin{answer}
+      (1)$a_n=2^n$;
+      (2)$T_n=(n-1)2^{n+1}+2$.
+      \\【解】:
+      (1)当$n=1$时，$a_1=2a_1-2$，解得$a_1=2$\fz[1]
+         当$n>1$时，$S_n=2a_n-2$，$S_{n-1}=2a_{n-1}-2$，\\
+         则$S_n-S_{n-1}=(2a_n-2)-(2a_{n-1}-2)=2a_n-2a_{n-1}$，即$a_n=2a_{n-1}$，\fz[3]
+         $\therefore$数列$\{a_n\}$是首项为$2$，公比为$2$的等比数列，$\therefore$ $a_n=2^n$.\fz[6]
+      (2)由(1)得$b_n=2^n\log_2{2^n}=n\cdot 2^n$，\fz[8]
+         $\therefore$ $T_n=1\times2^1+2\times2^2+3\times2^3+\cdots+(n-1)\times2^{n-1}+n\times2^n$，\\
+          $2T_n=1\times2^2+2\times2^3+3\times2^4+\cdots+(n-1)\times2^{n}+n\times2^{n+1}$，\fz[10]
+         两式相减，得：$-T_n=2^1+2^2+2^3+\cdots+2^n-n\times2^{n+1}=\mfrac{2(1-2^n)}{1-2}-n\times2^{n+1}=(1-n)2^{n+1}-2$.\\
+         $\therefore$ $T_n=(n-1)2^{n+1}+2$\fzn[12]
+    \end{answer}
+  \vspace{12em}
+  \item %“作业帮APP” 2018年湖南衡阳二模（文） p17【2018•河南衡阳二模】【数列，证明，求和】\\
+    \source{2018文}{河南衡阳二模}
+    已知各项均不为零的数列$\{a_n\}$的前$n$项和为$S_n$，且对任意的$n\inN^*$，满足$S_n=\mfrac13 a_1(a_n-1)$.\\
+    (1)求数列$\{a_n\}$的通项公式；；\\
+    (2)设数列$\{b_n\}$满足$a_nb_n=\log_4a_n$，数列$\{b_n\}$的前$n$项和为$T_n$，求证：$T_n<\mfrac49$.
+    \begin{answer}
+      (1)$a_n=4^n$;
+      \\【解】:
+      (1)当$n=1$时，$a_1=S_1=\mfrac13 a_1(a_1-1)$，$a_1\neq0$，解得$a_1=4$\fz[2]
+         $\therefore$ $S_n=\mfrac43 a_1(a_n-1)$，\\
+         当$n>1$时，$S_{n-1}=\mfrac43 (a_{n-1}-1)$，\\
+         两式相减得$a_n=4a_{n-1}$，\fz[4]
+         $\therefore$ 数列$\{a_n\}$是首项为$4$，公比为$4$的等比数列.
+         $\therefore$ $a_n=4^n$.\fz[6]
+      (2)数列$\{b_n\}$满足$a_nb_n=\log_4a_n=n$，\\
+         $\therefore$ $b_n=\mfrac{n}{a_n}=\mfrac{n}{4^n}$，\\
+         $\therefore$ $T_n=\mfrac1{4^1}+\mfrac2{4^2}+\mfrac3{4^3}+\cdots+\mfrac{n}{4^n}$\quad \circled{1}，\\
+          $\mfrac14 T_n=\mfrac1{4^2}+\mfrac2{4^3}+\mfrac3{4^4}+\cdots+\mfrac{n}{4^{n+1}}$\quad \circled{2}，\\
+         \circled{1}$-$\circled{2} 得：
+         $\mfrac34T_n=\mfrac1{4^1}+\mfrac1{4^2}+\mfrac1{4^3}+\cdots+\mfrac1{4^n}-\mfrac{n}{4^{n+1}}
+         =\mfrac{\mfrac14(1-\mfrac1{4^n})}{1-\mfrac14}-\mfrac{n}{4^{n+1}}
+         =\mfrac13-\mfrac{3n+4}{12\times4^n}$.\fz[10]
+         $\therefore$ $T_n=\mfrac49-\mfrac{3n+4}{9\times 4^n}<\mfrac49$，即证.\fzn[12]
+    \end{answer}
+  \vspace{12em}
+\end{exercise}
+\begin{exercise}{\heiti 框图}
+  \begin{multicols}{2}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p1【2018•全国II卷】【框图】\\
+      \source{2018文}{全国II卷}
+      为计算$S=1-\mfrac12+\mfrac13-\mfrac14+\cdots+\mfrac1{99}-\mfrac1{100}$，设计了如图所示的程序框图，则在空白框中应填入\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [process,below of=start] {$N=0,T=0$};
+        \node (init2) [process,below of=init1] {$i=1$};
+        \node (dec1) [decision,below of=init2,yshift=-0.5cm] {$i<100$};
+        \node (pro1a) [process,below left of=dec1,xshift=-1cm,yshift=-0.5cm] {$N=N+\mfrac1{i}$};
+        \node (pro2a) [process,below of=pro1a] {$T=T+\mfrac1{i+1}$};
+        \node (pro3a) [process,below of=pro2a] {};
+
+        % \node (p2) [right of=dec1,xshift=1cm,coordinate]  {};
+        \node (pro1b) [process,below right of=dec1,xshift=1cm,yshift=-0.5cm] {$S=N-T$};
+        \node (out1) [io,below of=pro1b] {输出$S$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (init2);
+        \draw [arrow] (init2) -- (dec1);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=0.1cm] {是} (pro1a);
+        \draw [arrow] (pro1a) -- (pro2a);
+        \draw [arrow] (pro2a) -- (pro3a);
+        \path (init2) -- (dec1) coordinate[pos=0.5](p);
+        \draw [arrow] (pro3a.west) -- ++(-0.8cm,0) |- (p);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=-0.1cm] {否} (pro1b);
+        \draw [arrow] (pro1b) -- (out1);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{$i=i+1$}{$i=i+2$}{$i=i+3$}{$i=i+4$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p2【2018•天津卷】【框图】\\
+      \source{2018文}{天津卷}
+      阅读如图所示的程序框图，运行相应的程序，若输入$N$的值为20，则输出$T$的值为\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [io,below of=start] {输入$N$};
+        \node (init2) [process,below of=init1] {$i=1$，$T=0$};
+        \node (dec1) [decision,below of=init2,yshift=-0.3cm] {$\frac{N}{i}$\small 是整数？};
+        \node (pro1a) [process,below of=dec1,yshift=-0.3cm] {$T=T+1$};
+        \node (pro1) [process,below of=pro1a] {$i=i+1$};
+        \node (dec2) [decision,below of=pro1,yshift=-0.2cm] {$i\geqslant5}$？};
+
+        \node (out1) [io,below of=dec2,yshift=-0.3cm] {输出$T$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (init2);
+        \draw [arrow] (init2) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=west] {是} (pro1a);
+        \draw [arrow] (pro1a) -- (pro1);
+        \draw [arrow] (pro1) -- (dec2);
+        \draw [arrow] (dec2) -- node[anchor=west] {是} (out1);
+        \path (init2) -- (dec1) coordinate[pos=0.5](p1);
+        \draw [arrow] (dec2.west) -- node[anchor=south]{否}++(-0.7cm,0) |- (p1);
+        \path (pro1a) -- (pro1) coordinate[pos=0.5](p2);
+        \draw [arrow] (dec1.east) -- node[anchor=south] {否}++(0.5cm,0) |-(p2);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{1}{2}{3}{4}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p3【2018•太原一模】【框图】\\
+      \source{2018文}{太原一模}
+      执行如图所示的程序框图，输出的$S$的值为\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [process,below of=start] {$S=3$，$i=1$};
+        \node (dec1) [decision,below of=init1,yshift=-0.3cm] {$i\leqslant3$};
+        \node (pro1a) [process,below of=dec1,yshift=-0.3cm] {$S=S+\log_2\sqrt{\frac{i+1}i}$};
+        \node (pro2a) [process,below of=pro1a] {$i=i+1$};
+        \node (pro1b) [process,below right of=dec1,xshift=2.5cm,yshift=-0.1cm] {$S=\log_2S$};
+        \node (out1) [io,below of=pro1b] {输出$S$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=east] {是} (pro1a);
+        \draw [arrow] (pro1a) -- (pro2a);
+        \path (init1) -- (dec1) coordinate[pos=0.5](p1);
+        \draw [arrow] (pro2a.south) |- node[anchor=south]++(-2cm,-0.2cm) |- (p1);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=-1cm] {否} (pro1b);
+        \draw [arrow] (pro1b) -- (out1);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{$3+\mfrac12\log_23$}{$\log_23$}{3}{2}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p4【2018•郑州测试】【框图】\\
+      \source{2018文}{郑州测试}
+      如图所示的程序框图的算法思路源于数学名著《几何原本》中的“辗转相除法”，执行该程序框图（图中“$m$~MOD~$n$”表示
+      $m$除以$n$的余数），若输入的$m$，$n$分别为495，135，则输出的$m=$\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.25cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [io,below of=start] {输入$m$，$n$};
+        \node (pro1) [process,below of=init1] {$r=m$~MOD~$n$};
+        \node (pro2) [process,below of=pro1] {$m=n$};
+        \node (pro3) [process,below of=pro2] {$n=r$};
+        \node (dec1) [decision,below of=pro3,yshift=-0.2cm] {$r=0$？};
+        \node (out1) [io,below of=dec1,yshift=-0.2cm] {输出$m$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (pro1);
+        \draw [arrow] (pro1) -- (pro2);
+        \draw [arrow] (pro2) -- (pro3);
+        \draw [arrow] (pro3) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=west] {是} (out1);
+        \path (init1) -- (pro1) coordinate[pos=0.5](p1);
+        \draw [arrow] (dec1.east) -- node[anchor=south,xshift=0.1cm]{否}++(0.8cm,0) |- (p1);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{0}{5}{45}{90}
+      \begin{answer}
+        C
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P118p19【2016•全国新课标】【框图】\\
+      \source{2016}{全国新课标}
+      执行如图的程序框图，如果输入的$x=0$，$y=1$，$n=1$，则输出$x$，$y$的值满足\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.2cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [io,below of=start] {输入$x$，$y$，$n$};
+        \node (pro1) [process,below of=init1,yshift=-0.3cm] {$x=x+\mfrac{n-1}2$，$y=ny$};
+        \node (dec1) [decision,below of=pro1,yshift=-0.7cm] {$x^2+y^2\geqslant36$};
+        \node (pro1b) [process,left of=pro1,xshift=-2.5cm] {$n=n+1$};
+        \node (out1) [io,below of = dec1,yshift=-0.6cm] {输出$x$，$y$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (pro1);
+        \draw [arrow] (pro1) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=east] {是} (out1);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=0.4cm]{否} (pro1b);
+        \path (init1) -- (pro1) coordinate[pos=0.3](p);
+        \draw [arrow] (pro1b) |- (p);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{$y=2x$}{$y=3x$}{$y=4x$}{$y=5x$}
+      \begin{answer}
+        C
+      \end{answer}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p9【2018•南昌一模】【框图】\\
+        \source{2018文}{南昌一模}
+        执行如图所示的程序框图，则输出的$n$等于\tk.
+        \begin{center}\vspace{-1.8em}\hspace{-0.7em}\begin{tikzpicture}[node distance=1.8cm,scale=0.6,transform shape]
+          \node (start) [startstop] {开始};
+          \node (init1) [process,right of=start,xshift=0.6cm] {$n=0,\,x=\frac{13\piup}{12}$};
+          \node (pro1) [process,right of=init1,xshift=1.8cm] {$a=\sin x$};
+          \node (dec1) [decision,right of=pro1,xshift=1.8cm] {$a=\frac{\sqrt3}2$？};
+          \node (pro1a) [process,below left of=dec1,xshift=-0.1cm] {$n=n+1$};
+          \node (pro2a) [process,left of=pro1a,xshift=-0.9cm] {$x=x-\frac{2n-1}{12}\piup$};
+          \node (out1) [io,right of = dec1,xshift=1.6cm] {输出$n$};
+          \node (stop) [startstop,right of=out1,xshift=0.1cm] {结束};
+
+          \draw [arrow] (start) -- (init1);
+          \draw [arrow] (init1) -- (pro1);
+          \draw [arrow] (pro1) -- (dec1);
+          \draw [arrow] (dec1) -- node[anchor=south,xshift=-0.1cm] {是} (out1);
+          \draw [arrow] (dec1) |- node[anchor=south,xshift=0.2cm]{否} (pro1a);
+          \draw [arrow] (pro1a) -- (pro2a);
+          \path (init1) -- (pro1) coordinate[pos=0.15](p);
+          \draw [arrow] (pro2a) -| (p);
+          \draw [arrow] (out1) -- (stop);
+          \end{tikzpicture}
+        \end{center}\vspace{-0.5em}
+        \begin{answer}
+          3
+        \end{answer}
+  \end{multicols}
+\end{exercise}
+
+\newpage
+\section{课后作业}
+  % \begin{exercise}{\heiti 练习}
+  % \end{exercise}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p2【2018•北京卷】【等比数列，通项】\\
+      \source{2018文}{北京卷}
+      “十二平均律”是通用的音律体系，明代朱载堉最早用数学方法计算出半音比例，为这个理论的发展做出了重要贡献.十二平均律将一个纯八度音程分成十二份，依次得到十三个单音，从第二个单音起，每一个单音的频率与它的前一个单音的频率的比都等于$\sqrt[12]2$.若第一个单音的频率为$f$，则第八个单音的频率为\xz
+      \xx{$\sqrt[3]2f$}{$\sqrt[3]{2^2}f$}{$\sqrt[3]{2^5}f$}{$\sqrt[3]{2^7}f$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p6【2018•昆明摸底调研】【数列，等比中项，等差通项】\\
+      \source{2018文}{昆明摸底调研}
+      已知等差数列$\{a_n\}$的公差为2，且$a_4$是$a_2$与$a_8$的等比中项，则$\{a_n\}$的通项公式$a_n=$\xz
+      \xx{$-2n$}{$2n$}{$2n-1$}{$2n+1$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 数列 P8p13【2018•北京卷】【等差数列，通项】\\
+      \source{2018文}{北京卷}
+      设$\{a_n\}$是等差数列，且$a_1=3$，$a_2+a_5=36$，则$\{a_n\}$的通项公式为\tk.
+      \begin{answer}
+        $a_n=6n-3$
+      \end{answer}
+    \begin{multicols}{2}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型15程序框图 P15p5【2018•合肥二检】【框图】\\
+      \source{2018文}{合肥二检}
+      执行如图所示的程序框图，若输出的结果为1，则输出的$x$的值是\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.2cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init1) [io,below of=start] {输入$x$};
+        \node (dec1) [decision,below of=init1,yshift=-0.2cm] {$x>2$？};
+        \node (pro1a) [process,below of=dec1,yshift=-0.2cm] {$y=-2x-3$};
+        \node (pro1b) [process,right of=pro1a,xshift=2cm] {$y=\log_3(x^2-2x)$};
+        \node (out1) [io,below of = pro1a,yshift=-0.2cm] {输出$y$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init1);
+        \draw [arrow] (init1) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=west] {否} (pro1a);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=-1cm]{是} (pro1b);
+        \path (out1) -- (pro1a) coordinate[pos=0.5](p);
+        \draw [arrow] (pro1b) |- (p);
+        \draw [arrow] (pro1a) -- (out1);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{$3$或$-2$}{$2$或$-2$}{$3$或$-1$}{$3$或$-1$或$-2$}
+      \begin{answer}
+        A
+      \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p15【2017•北京】【框图】\\
+        \source{2017文}{北京}
+        执行如图所示的程序框图，输出的$s$值是\xz
+        \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.2cm,scale=0.6,transform shape]
+          \node (start) [startstop] {开始};
+          \node (init1) [process,below of=start] {$k=0$，$s=1$};
+          \node (dec1) [decision,below of=init1,yshift=-3cm] {$k<3$};
+          \node (pro1a) [process,above right of=dec1,xshift=1.6cm,yshift=0.5cm] {$k=k+1$};
+          \node (pro2a) [process,above of=pro1a,yshift=0.2cm] {$a=\mfrac{s+1}s$};
+          \node (out1) [io,below of = dec1,yshift=-0.2cm] {输出$s$};
+          \node (stop) [startstop,below of=out1] {结束};
+
+          \draw [arrow] (start) -- (init1);
+          \draw [arrow] (init1) -- (dec1);
+          \draw [arrow] (dec1) -| node[anchor=south,xshift=-0.2cm]{是}  (pro1a);
+          \draw [arrow] (pro1a) -- (pro2a);
+          \path (init1) -- (dec1) coordinate[pos=0.1](p);
+          \draw [arrow] (pro2a) |- (p);
+          \draw [arrow] (dec1) -| node[anchor=west,yshift=-0.2cm]{否} (out1);
+          \draw [arrow] (out1) -- (stop);
+          \end{tikzpicture}
+        \end{center}\vspace{-0.8em}
+        \xx{$2$}{$\mfrac32$}{$\mfrac53$}{$\mfrac85$}
+        \begin{answer}
+          C
+        \end{answer}
+    \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P118p17【2017•全国新课标】【框图】\\
+      \source{2017}{全国新课标}
+      执行如图所示的程序框图，为使输出$S$的值小于91，则输入的正整数$N$的最小值为\xz
+      \begin{center}\vspace{-1.8em}\begin{tikzpicture}[node distance=1.3cm,scale=0.6,transform shape]
+        \node (start) [startstop] {开始};
+        \node (init0) [io,below of=start] {输入$N$};
+        \node (init1) [process,below of=init0] {$t=1$，$M=100$，$S=0$};
+        \node (dec1) [decision,below of=init1,yshift=-0.3cm] {$t \leqslant N$};
+        \node (pro1a) [process,below of=dec1,yshift=-0.3cm] {$S=S+M$};
+        \node (pro2a) [process,below of=pro1a] {$M=-\mfrac{M}{10}$};
+        \node (pro3a) [process,below of=pro2a] {$t=t+1$};
+        \node (out1) [io,right of=pro1a,xshift=1.6cm] {输出$S$};
+        \node (stop) [startstop,below of=out1] {结束};
+
+        \draw [arrow] (start) -- (init0);
+        \draw [arrow] (init0) -- (init1);
+        \draw [arrow] (init1) -- (dec1);
+        \draw [arrow] (dec1) -- node[anchor=west] {是} (pro1a);
+        \draw [arrow] (pro1a) -- (pro2a);
+        \draw [arrow] (pro2a) -- (pro3a);
+        \path (init1) -- (dec1) coordinate[pos=0.5](p1);
+        \draw [arrow] (pro3a) -- ++(-2cm,0cm) |- (p1);
+        \draw [arrow] (dec1) -| node[anchor=south,xshift=-1cm] {否} (out1);
+        \draw [arrow] (out1) -- (stop);
+        \end{tikzpicture}
+      \end{center}\vspace{-0.8em}
+      \xx{5}{4}{3}{2}
+      \begin{answer}
+        D
+      \end{answer}
+
+    \end{multicols}
+    \clearpage
+    \item %“作业帮APP” 2018年山东泰安二模（文） p17【2018•山东泰安二模】【数列，通项，求和】\\
+      \source{2018文}{山东泰安二模}
+      已知数列$\{a_n\}$为等差数列，$S_n$为其前$n$项和，$a_1+a_3=8$，$S_5=30$.\\
+      (1)求数列$\{a_n\}$的通项公式；；\\
+      (2)已知数列$\{b_n\}$满足$2b_n=4^n\cdot a_n$，求数列$\{b_n\}$的前$n$项和$T_n$.
+      \begin{answer}
+        (1)$a_n=2n$;
+        (2)$T_n=\mfrac{(3n-1)\cdot4^{n+1}+4}9$.
+        \\【解】:
+        (1)设等差数列$\{a_n\}$的公差为$d$，\\
+           由$S_5=5a_3=30$得$a_3=6$，\\
+           又$a_1+a_3=8$，$\therefore$ $a_1=2$\fz[3]
+           $\therefore$ $d=\mfrac{a_3-a_1}2=2$，\\
+           $\therefore$ $a_n=2+2(n-1)=2n$.\fz[6]
+        (2)$\because$ 数列$\{b_n\}$满足$2b_n=4^n\cdot a_n=4^n\times2n$\\
+           $\therefore$ $b_n=n\cdot 4^n$.\fz[8]
+           $\therefore$ $T_n=1\times4^1+2\times4^2+3\times4^3+\cdots+n\cdot4^n$\\
+            $\therefore$$4T_n=1\times4^2+2\times4^3+3\times4^4+\cdots+n\cdot4^{n+1}$\\
+           $\therefore$ $-3T_n=4^1+4^2+4^3+\cdots+4^n-n\cdot4^{n+1}=\mfrac{4(1-4^n)}{1-4}-n\cdot4^{n+1}$\fz[10]
+           $\therefore$ $T_n=\mfrac{(3n-1)\cdot4^{n+1}+4}9$\fzn[12]
+      \end{answer}
+    \vspace{14em}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》好题精编卷（五） P33p17【2018•全国I卷】【数列，证明，通项】\\
+      \source{2018文}{全国I卷}
+      已知数列$\{a_n\}$满足$a_1=1$，$na_{n+1}=2(n+1)a_n$.设$b_n=\mfrac{a_n}{n}$\\
+      (1)求$b_1$，$b_2$，$b_3$；\\
+      (2)判断数列$\{b_n\}$是否为等比数列，并说明理由；\\
+      (2)求$\{a_n\}$的通项公式.
+      \begin{answer}
+        (1)$b_1=1$，$b_2=2$，$b_3=4$;
+        (2)$\{b_n\}$是首项为1，公比为2的等比数列；
+        (3)$a_n=n\cdot 2^{n-1}$
+        \\【解】:
+        (1)由条件可得$a_{n+1}=\mfrac{2(n+1)}n a_n$.\\
+           将$n=1$代入得：$a_2=4a_1=4$.\\
+           将$n=2$代入得：$a_3=3a_2=12$.\\
+           从而$b_1=1$，$b_2=2$，$b_3=4$.\fz[4]
+        (2)$\{b_n\}$是首项为$1$，公比为$2$的等比数列.\\
+           由条件可得$\mfrac{a_{n+1}}{n+1}=\mfrac{2a_n}n$，即$b_{n+1}=2b_n$，\\
+           又$b_1=1$，所以$\{b_n\}$是首项为$1$，公比为$2$的等比数列.\fz[8]
+        (3)由(2)可得$\mfrac{a_n}n=2^{n-1}$，$\therefore$ $a_n=n\cdot 2^{n-1}$.\fzn[12]
+      \end{answer}
+    \vspace{14em}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》名校原创卷（二） P26p17【数列，通项】\\
+      已知正项等比数列$\{a_n\}$中，$a_1=1$，且$3a_1$，$a_3$，$5a_2$成等差数列.\\
+      (1)求数列$\{a_n\}$的通项公式；\\
+      (2)设$b_n=\mfrac{n}{a_n}$，求数列$\{b_n\}$的前$n$项和$T_n$.
+      \begin{answer}
+        (1)$a_n=3^{n-1}$;
+        (2)$T_n=\mfrac94-\mfrac{3+2n}{4\cdot 3^{n-1}}$
+        \\【解】:
+        (1)设等比数列$\{a_n\}$的公比为$q$($q>0$)，\\
+           $\because$ $a_1=1$，$\therefore$ $a_2=q$，$a_3=q^2$，\\
+           $\because$ $3a_1$，$a_3$，$5a_2$成等差数列，$\therefore$ $2q^2=3+5q$，\fz[3]
+           解得$q=3$或$q=-\mfrac12$(负值舍去)，$\therefore$ $a_n=a_1q^{n-1}=3^{n-1}$.\\
+           $\therefore$ 数列$\{a_n\}$的通项公式为$a_n=3^{n-1}$.\fz[6]
+        (2)$\because$ $b_n=\mfrac{n}{a_n}=\mfrac{n}{3^{n-1}}$，\\
+           $\therefore$ $T_n=\mfrac1{3^0}+\mfrac2{3^1}+\mfrac3{3^2}+\cdots+\mfrac{n-1}{3^{n-2}}+\mfrac{n}{3^{n-1}}$\quad \circled{1}，\\
+            $\mfrac13T_n=\mfrac1{3^1}+\mfrac2{3^2}+\mfrac3{3^3}+\cdots+\mfrac{n-1}{3^{n-1}}+\mfrac{n}{3^n}$\quad \circled{2}，\\
+           \circled{1}$-$\circled{2} 得：$\mfrac23T_n=\mfrac1{3^0}+\mfrac1{3^1}+\mfrac1{3^2}+\cdots+\mfrac1{3^{n-1}}-\mfrac{n}{3^n}
+           =\mfrac{1-\mfrac1{3^n}}{1-\mfrac13}-\mfrac{n}{3^n}
+           =\mfrac32-\mfrac{3+2n}{2\cdot3^n}$.\fz[10]
+           $\therefore$ $T_n=\mfrac94-\mfrac{3+2n}{4\cdot 3^{n-1}}$\fzn[12]
+      \end{answer}
+    \vspace{15em}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

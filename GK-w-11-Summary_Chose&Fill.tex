@@ -1,0 +1,1024 @@
+\Topic{填空题与选择题小结}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190514}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+  \tableofcontents
+% \vspace{-1.5em}
+\clearpage
+\startexercise
+\section{集合}
+  \subsection{集合的表示与常用符号}
+    \begin{itemize}
+      \item 几个特殊的集合：
+        \begin{itemize}
+          \item 全体{\fangsong 自然数}$0,1,2,3,\ldots ,$组成的集合，记作$\mathbb{N}$(natural)；
+          \item 全体正自然数组成的集合，记作$\mathbb{N}_+$或$\mathbb{N}^*$
+          \item 全体{\fangsong 整数}$0,\pm1,\pm2,\pm3,\ldots ,$组成的集合，记作$\mathbb{Z}$；(Zheng shu)
+          \item 全体{\fangsong 有理数}组成的集合，记作$\mathbb{Q}$(quotient)；
+          \item 全体{\fangsong 实数}组成的集合，记作$\mathbb{R}$(real)
+          \item \mysout{全体{\fangsong 复数}组成的集合，记作$\mathbb{C}$(complex)}
+        \end{itemize}
+      \item 元素$a${\fangsong 属于}(belong to)集合$A$，记为$a\in A$；
+        反之，若元素$a${\fangsong 不属于}集合$A$，记作$a\notin A$；
+        \\\eg{$-1\inZ$，$0\notin \NN^*$.}
+      \item 两个集合具有完全一样的元素，则称两集合{\fangsong 相等}，记作$A=B$；
+        \\\eg{$\NN^*=\NN_+$.}
+      \item 不包含任何元素的集合称为{\fangsong 空集}，记为$\varnothing$；
+        \\\eg{$\{\}=\varnothing$；$a<b$时，$\{x\mid b<x<a\}=\varnothing$.}
+      \item 如果集合$A$中的元素都属于集合$B$，那么称
+        \begin{itemize}
+          \item 集合$A${\fangsong 包含于}(contained)集合$B$，记作$A\subseteq B$，并称集合$A$是集合$B$的{\fangsong 子集}(subset)；
+          \item 集合$B${\fangsong 包含}(contain)集合$A$，记作$B\supseteq A$ \mysout{，并称集合$B$是集合$A$的{\fangsong 超集}(superset)}；
+        \end{itemize}
+        进一步，如果$A\subseteq B$，且$A\neq B$（即：$B$中含有集合$A$中没有的元素），则称
+          \begin{itemize}
+            \item 集合$A$是集合$B$的{\fangsong 真子集}(proper subset)，记作$A\subsetneqq B$；
+            \item \mysout{集合$B$是集合$A$的{\fangsong 真超集}(proper superset)，}记作$B\supsetneqq A$；
+          \end{itemize}
+        {\kaishu
+          规定空集 $\varnothing$是任何集合的子集.
+          }
+        \\\eg{$\varnothing\subsetneqq \{1,2\}$，$\NN \subseteq \ZZ$}
+      \item 集合的表示方法$\{x\in A\mid p(x)\}$.其中：
+        \begin{itemize}
+          \item $x\inA$指明集合元素用$x$表示，且元素$x$的取值范围是$A$;
+          \item $\mid$为分隔符号(有时用$\colon$表示)；
+          \item $p(x)$指明集合中的元素所具有的特征
+        \end{itemize}
+        \eg{
+          \begin{itemize}
+            \item 所有偶数组成的集合：$\{x\mid x=2n,\,n\inZ \}$
+            \item 所有直线$y=x$上的点组成的集合：$\{(x,y)\mid y=2x\}$
+            \item {\fangsong 区间}$[a,b)$：$\{x\mid a\leqslant x<b,\,a<b\}$
+            \item {\fangsong 区间}$[a,+\infty)$：$\{x\mid x\geqslant a\}$
+          \end{itemize}}
+    \end{itemize}
+  \subsection{集合的运算}
+    \begin{itemize}
+      \item {\fangsong 交集}：既属于集合$A$，又属于$B$的所有元素组成的集合，记为$A\cap B$；
+        \\\eg{
+         $\{1,2,3\}\cap \{2,3,5\}=\{2,3\}$，$[2,+\infty)\cap[-1,3)=[2,3)$.
+         }
+      \item {\fangsong 并集}：集合$A$中所有元素与集合$B$中的所有元素共同组成的集合，记为$A\cup B$；
+        \\\eg{
+         $\{1,2,3\}\cup \{2,3,5\}=\{1,2,3,5\}$，$[2,+\infty)\cup[-1,3)=[-1,+\infty)$.
+         }
+      \item {\fangsong 全集}：包含所研究问题中涉及的所有元素的集合；
+      \item {\fangsong 补集}：对于全集$U$的一个子集$A$(即$A\subseteq U$)，全集$U$中所有不属于集合$A$的元素组成的集合
+        称为子集$A$在全集$U$中的补集，记为$\complement_UA$；
+        \\\eg{$U=\{1,2,3,5\}$，$A=\{2,3\}$，$B=[-1,3)$时，
+         $\complement_UA=\{1,5\}$，$\complement_{\RR}B=(-\infty,-1)\cup[3,+\infty)$.
+         }
+    \end{itemize}
+  % \begin{exercise}
+  %   \item %【2017•全国I卷】【集合，不等式，交集并集】\\
+  %     \source{2017文}{全国卷I}
+  %     已知集合$A=\{x\mid x<2\}$，$B=\{x\mid 3-2x>0\}$，则\xz
+  %     \xx{$A\cap B=\bigl\{x\bigm| x<\mfrac32\bigr\} $}
+  %      {$A\cap B=\varnothing$}
+  %      {$A\cup B=\bigl\{x\bigm| x<\mfrac32\bigr\} $}
+  %      {$A\cap B=\RR$}
+  %     \begin{answer}
+  %       A
+  %     \end{answer}
+  %   \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p1【2018•全国I卷】【集合，交集】\\
+  %     \source{2018文}{全国I卷}
+  %     已知集合$A=\{0,2\}$，$B=\{-2,-1,0,1,2\}$，则$A\cap B=$\xz
+  %     \xx{$\{0,2\}$}
+  %      {$\{1,2\}$}
+  %      {$\{0\}$}
+  %      {$\{-1,-2.0,1,2\}$}
+  %     \begin{answer}
+  %       A
+  %     \end{answer}
+  % \end{exercise}
+\section{复数}
+  \subsection{定义}
+    \begin{itemize}
+      \item 形如$a+b\ii(a,b\inR)$的数叫做{\fangsong 复数}，通常用字母$z$来表示，即
+            \[z=a+b\ii(a,b\inR).\]
+            其中$a$叫做复数$z$的{\fangsong 实部}，$b$叫做复数$z$的{\fangsong 虚部}.\\
+            {\kaishu 一个复数的实部或虚部一定是实数.}
+            \\\eg{
+               $3-2\ii$的实部是$3$，虚部是$-2$；$2\ii$的实部是$0$，虚部是$2$；$3$的实部是$3$，虚部是$0$.}
+      \item 当且仅当两个复数的实部和虚部分别相等时，两个复数{\fangsong 相等}.即：如果$a,b,c,d\inR$，那么
+            \[a+b\ii=c+d\ii \Leftrightarrow a=c\text{且}b=d\]
+            \eg{
+               若$3-2\ii=3+b\ii$，则$b=-2$；\circled{注} 结论“若$x+y\ii=a+b\ii$，那么$a=c\text{且}b=d$”是错误的，因为$x$，$y$，$a$，$b$可能不是实数.}
+      \item %分类
+        \[\text{复数}\,a+b\ii(a,b\inR)
+          \left\{\begin{aligned}
+            &\text{实数($b=0$)}\\
+            &\text{虚数($b\neq0$)}\left\{\begin{aligned} &\text{纯虚数}(a=0)\\ &\text{非纯虚数}(a\neq0)\end{aligned}\right.
+          \end{aligned}\right.\]
+          \\\eg{
+             $3$是实数；$-1+3\ii$与$2\ii$是虚数，并且$2\ii$是纯虚数，$-1+3\ii$是非纯虚数；以上三个数都是复数.}
+      \item 只有两个数都为实数时，这两个数才可以比较大小.
+      \\\eg{
+         $2+3\ii$与$3$之间不存在大小关系；若$a+b\ii>3$($a,b\inR$)，那么$a+b\ii$必为实数，即：$b=0$，上式化为$a>3$.}
+    \end{itemize}
+  \subsection{复数的表示}
+    \begin{itemize}
+      \item %任何一个复数$z=a+b\ii(a,b\inR)$，都可以由一个有序实数对$(a,b)$唯一确定.
+        任何一个复数$z=a+b\ii(a,b\inR)$都可以由平面上坐标为$(a,b)$的点来表示.即：{\kaishu 复数与平面上的点是一一对应的}.\\
+        此时，这个建立了直角坐标系来表示复数的平面就被称作{\fsong 复平面},相应的，$x$轴被称作{\fsong 实轴}，$y$轴被称作{\fsong 虚轴}.
+        显然，{\kaishu 实轴上的点都表示实数；虚轴上的点除原点外都表示纯虚数}.\\
+        {\kaishu 乔丹扣篮时跳得很高好像在飞，所以被称作“飞人乔丹”；“复平面”与此类似：平面上的点可以用来表示复数，所以这个平面被称作复平面；
+         类似的还有“坐标平面”：在平面上建立坐标系，平面上的点可以用坐标表示，故称为坐标平面；
+         “实轴”与“虚轴”也是一样的道理：横坐标表示复数的实部，纵坐标表示复数的虚部.}\\
+        由于平面直角坐标系下，平面上的点与平面向量一一对应，故复数与平面向量也是一一对应的.\\
+        \begin{center}\vspace{-2em}\begin{tikzpicture}[scale=1]
+          \tikzmath{
+            \a=2.5;\b=2;
+          }
+          \draw[->,>=stealth] (-1,0)--(3.5,0) node[below](x){$x$};
+          \draw[->,>=stealth] (0,-0.5)--(0,2.5) node[left](y){$y$};
+          % \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
+          % \draw[very thick,->,>=stealth](0,0)--(0,1)node[midway,left](j) {$\bm{j}$};
+          \coordinate[label=below left:$O$] (O) at (0,0);
+          \coordinate[label=right:$Z\colon a+b\ii$] (Z) at (\a,\b);
+          \draw[->,>=stealth] (O)--(Z);
+          % \node[right](a1)at(1.5,1.5){$A(x,y)$};
+          \draw[dashed](Z)--++(-\a,0)node[left](y){$b$};
+          \draw[dashed](Z)--++(0,-\b)node[below](x){$a$};
+          % \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
+        \end{tikzpicture}\vspace{-1.5em}
+        \end{center}
+        设复平面内的点$Z$表示复数$z=a+b\ii$，则向量$\vv{OZ}$与复数$z$对应.由此，为方便起见，常把复数$z=a+b\ii$说成点$Z$或向量$\vv{OZ}$，并且规定：相等的向量表示同一个复数.
+        \\ \eg{设点$O(0,0)$，$A(3,0)$，$B(0,-2)$，$C(3,-2)$，则点$O$可表示实数$0$，可表示零向量；点$C$可表示复数$3-2\ii$，可表示向量$\vv{OC}$；
+               点$B$可表示复数$-2\ii$，可表示向量$\vv{OB}$；向量$\vv{AC}=\vv{OB}=(0,-2)$，所以$\vv{OB}$与$\AC$都可以表示复数$-2\ii$}
+      \item 复数$z=a+b\ii(a,b\inR)$对应的向量$\vv{OZ}$的模，也即点$Z(a,b)$与原点$O$的距离叫做复数的模，记为$|z|$.即：
+        \[|z|=|a+b\ii|=\sqrt{a^2+b^2}\]
+        显然，$|z|\geqslant0$.
+        {\kaishu 复数的模是一个不小于0的实数.}
+        \\\eg{$|3-4\ii|=5$；$|2\ii|=2$；}
+    \end{itemize}
+  \subsection{复数的运算}
+    设$a,b,c,d\inR$，那么，
+    \begin{itemize}
+      \item $(a+b\ii)+(c+d\ii)=(a+c)+(b+d)\ii$；
+      \item $(a+b\ii)(c+d\ii)=ac+ad\ii+bc\ii+bd\ii^2=(ac-bd)+(ad+bc)\ii$；
+      \item 对于复数$z=a+b\ii$，称$\bar{z}=a-b\ii$为$z$的共轭复数；易得$z \bar{z}=a^2+b^2=|z|^2$.
+    \end{itemize}
+    \eg{$(2+3\ii)-(-1+\ii)=3+2\ii$；$(2+3\ii)(-1+\ii)=-5-5\ii$；$\mfrac{1+\ii}{1-\ii}=\mfrac{(1+\ii)^2}{(1-\ii)(1+\ii)}=\mfrac{2\ii}2=\ii$；$(3+4\ii) \bar{3+4\ii}=3^2+4^2=25$.}\\
+    {\kaishu 复数是一个数，与实数运算满足同样的运算律. 方程$4z+5=3\ii(z-5)$ $\Longrightarrow$ $(4-3\ii)z=-5-15\ii$ $\Longrightarrow$ $z=\mfrac{-5-15\ii}{4-3\ii}=1-3\ii$}
+  \subsection{补充}
+    共轭复数与复数的模具有以下性质，适当使用可大大简化计算.
+    \begin{itemize}
+      \item $z\bar{z}=|z|^2$；
+      \item $\overline{z_1+z_2}=\overline{z_1}+\overline{z_2}$，$\overline{z_1-z_2}=\overline{z_1}-\overline{z_2}$；
+      \item $\overline{z_1\cdot z_2}=\overline{z_1}\cdot \overline{z_2}$，$\overline{\Bp{\mfrac{z_1}{z_2}}}=\mfrac{\overline{z_1}}{\overline{z_2}}$（$z_2\neq0$）；
+      \item $|z_1\cdot z_2|=|z_1|\cdot|z_2|$，$\Bigl|\mfrac{z_1}{z_2}\Bigr|=\mfrac{|z_1|}{|z_2|}$.
+    \end{itemize}
+    \eg{$\overline{(2+\ii)-(3-\2\ii)}=\overline{2+\ii}-\overline{3-\2\ii}=(2-\ii)-(3+2\ii)=-1-3\ii$；\\
+    $|2\ii(2-3\ii)|=|2\ii|\cdot|2-3\ii|=2\times \sqrt{13}=2\sqrt{13}$；$\Bigl|\mfrac{2+\ii}{3+4\ii}}\Bigr|=\mfrac{|2+\ii|}{|3+4\ii|}=\mfrac{\sqrt5}5$；}
+  \clearpage
+  % \begin{exercise}
+  %   \item %《习题化知识清单》P283方法1-1【复数】\\
+  %     已知$\dfrac{(1-\ii)^2}z=1+\ii$($\ii$为虚数单位)，则复数$z=$\xz
+  %     \xx{$1+\ii$}
+  %      {$1-\ii$}
+  %      {$-1+\ii$}
+  %      {$-1-\ii$}
+  %     \begin{answer}
+  %       D
+  %     \end{answer}
+  %   \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p1【2017•全国II新课标】【复数计算】\\
+  %       {\kaishu (2017 \textbullet 全国II新课标(文))}
+  %       $(1+\ii)(2+\ii)=$\xz
+  %       \xx{$1-\ii$}
+  %        {$1+3\ii$}
+  %        {$3+\ii$}
+  %        {$3+3\ii$}
+  %       \begin{answer}
+  %         B
+  %       \end{answer}
+  %   \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p2【2016•全国新课标】【复数计算】\\
+  %       {\kaishu (2016 \textbullet 全国新课标(文))}
+  %       设$(1+2\ii)(a+\ii)$的实部与虚部相等，其中$a$为实数，则$a=$\xz
+  %       \xx{$-3$}{$-2$}{$2$}{$3$}
+  %       \begin{answer}
+  %         A
+  %       \end{answer}
+  %   \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p3【2017•北京】【复数计算】\\
+  %       {\kaishu (2017 \textbullet 北京(文))}
+  %       若复数$(1-\ii)(a+\ii)$在复平面内对应的点在第二象限，则实数$a$的取值范围是\xz
+  %       \xx{$(-\infty,1)$}
+  %        {$(-\infty,-1)$}
+  %        {$(1,+\infty)$}
+  %        {$(-1,+\infty)$}
+  %       \begin{answer}
+  %         B
+  %       \end{answer}
+  %   \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p4【2016•山东】【复数计算】\\
+  %       {\kaishu (2016 \textbullet 山东(文))}
+  %       若复数$z=\dfrac2{1-\ii}$，其中$\ii$为虚数单位，则$\bar z=$\xz
+  %       \xx{$1+\ii$}
+  %        {$1-\ii$}
+  %        {$-1+\ii$}
+  %        {$-1-\ii$}
+  %       \begin{answer}
+  %         B
+  %       \end{answer}
+  %   \item %《习题化知识清单》P283方法1-2【复数】\\
+  %     已知复数$z=1+\ii$,，则$\dfrac{z^2-2z}{z-1}=$\xz
+  %     \xx{$-2\ii$}
+  %      {$2\ii$}
+  %      {$-2$}
+  %      {$2$}
+  %     \begin{answer}
+  %       B
+  %     \end{answer}
+  %   \item %《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p5【2015•全国新课标】【复数计算】\\
+  %       {\kaishu (2015 \textbullet 全国新课标(文))}
+  %       已知复数$z$满足$(z-1)\ii=1+\ii$，则$z=$\xz
+  %       \xx{$-2-\ii$}
+  %        {$-2+\ii$}
+  %        {$2-\ii$}
+  %        {$2+3\ii$}
+  %       \begin{answer}
+  %         C
+  %       \end{answer}
+  %   \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p8【2018•开封定位考试】【复数计算】\\
+  %       {\kaishu (2018 \textbullet 开封定位考试(文))}
+  %       已知复数$z=\dfrac{2}{-1+\ii}$，则下列选项中说法正确的是\xz
+  %       \xx{$z$的共轭复数为$1+\ii$}
+  %        {$z$的实部为$1$}
+  %        {$|z|=2$}
+  %        {$z$的虚部为$-1$}
+  %       \begin{answer}
+  %         D
+  %       \end{answer}
+  % \end{exercise}
+\section{指数与对数运算}
+  \begin{exercise}{\heiti 课前检测}\\
+    求下列各式的值：
+    \begin{enumerate}[label=\arabic*)]
+      \begin{multicols}{2}
+        \item $\sqrt[3]{-8}$；
+        \item $\sqrt{(-10)^2}$；
+        \item $\sqrt[4]{(3-\piup)^4}$；
+        \item $\sqrt{(a-b)^2}$\quad($a>b$)；
+      \end{multicols}
+    \end{enumerate}
+  \end{exercise}
+  \subsection{乘方与开方}
+    \begin{description}[leftmargin=0pt]
+      \item [乘方] $n$个相同数字的乘积的运算叫做{\fangsong 乘方}，乘方的结果叫做{\fangsong 幂}. \par
+        实数$a$的$n$次幂$a^n=\underbrace{{a\cdot a\cdot a\cdot \cdots \cdot a}}_{n\text{个}a}$.
+        其中，$a$叫做{\fangsong 底数}，$n$叫做{\fangsong 指数}.由于$n$是正整数，因此又称乘方$a^n$为{\fangsong 正整数指数幂}.
+      \\\eg{$2^3=8$，$(-3)^3=-27$，$0^2=0$.}
+      % \item [开方] 乘方的逆运算称为{\fangsong 开方}.一般地，对于方程$x^n=a$，若$n>1$且$n\inN$,则解出所有$x$值的运算就叫做
+      %   {\fangsong $~a$开$n$次方}，相应地，$a$叫做{\fangsong 被开方数}(radicand)；方程的解$x$叫做$a$的 {\fangsong $~n$次方根}(nth root).
+      %   开二次方又称为{\fangsong 开平方}，开三次方又称为{\fangsong 开立方}.不致误解的情况下，开方常作为开平方的简称.
+      \item [$n$次方根与根式]
+        一般地，设关于$x$的方程：$x^n=a$($n>1$且$n\inN$)，则方程的解$x$叫做$a$的 {\fangsong $~n$次方根}(nth root).一个数的$n$次方根可能有不止一个值(当$n$为偶数时)，其中与{\fangsong 被开方数}$a$符号相同的解记为：$\sqrt[n]a$，此式称为{\fangsong 根式}(radical)，
+        %这里$n$被称为{\fangsong 根指数(radical exponent)}.
+        $n=2$时常省略不写，即：写成$\sqrt a$.
+        \\\eg{方程$x^2=4$的解为$x=2$或$x=-2$（简记为$x=\pm2$），因此$4$的二次方根为$\pm2$，或记为$\pm\sqrt4$，其中根式$\sqrt4=2$；\\
+        方程$x^3=-9$只有一个解，解为$\sqrt[3]{-9}=-\sqrt[3]9$，因此$-9$的三次方根为$\sqrt[3]{-9}=-\sqrt[3]9$.
+        }
+      \item [运算性质]对于正整数指数幂，有以下运算律：(其中$a\inR$，$r,s\inN_+$)
+        \begin{itemize}%[leftmargin=*]
+          \item $a^ra^s=a^{r+s}$
+          \item $(a^r)^s=a^{rs}$
+          \item $(ab)^r=a^rb^r$
+        \end{itemize}
+    \end{description}
+  \subsection{指数幂运算}
+    在乘方（正整数指数幂）的运算性质中，引入除法与开方，则为使运算性质保持一致性，可分别引入非负数的整数指数幂与分数指数幂.有：
+    \begin{itemize}
+      \item $a^0=1$，$a\neq 0$；
+      \item $a^{-n}=\dfrac1{a^n}$($n\inN_+$)，$a\neq 0$；
+      \item $a^{\frac{m}{n}}=\sqrt[n]m$($m,n\inN_+$,n>1)，$a\geqslant 0$；
+      \item $a^{-\frac{m}{n}}=\dfrac{1}{\sqrt[n]m}$($m,n\inN_+,~n>1$)，$a>0$；
+    \end{itemize}
+  \subsection{指数运算与对数运算}
+    对于$a^k=N$，满足一定条件时：
+    \begin{itemize}
+      \item {\fangsong 指数幂运算}：已知$a$、$k$可以求出$N$.如$2^3=8$，$2^{-3}=\dfrac18$，$2^{1/2}=\sqrt2$；
+      \item {\fangsong 开方运算}：已知$N$、$k$可以求出$a$.如$\sqrt[3]{-8}=-2$，$\sqrt4=2$，$\sqrt[4]{64}=2\sqrt2$；
+        需满足的条件：$n>1$且$n\inN$，且$n$为偶数时$N>0$；
+      \item {\fangsong 对数运算}：已知$a$、$N$可以求出$k$.如$\log_28=3$，$\log_2{\frac1{16}}=-4$.
+        需满足的条件：$a>0$且$a\neq 1$，$N>0$，
+    \end{itemize}
+    \begin{exercise}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p1【2016文•全国新课标】【对数指数，比大小】
+        \source{2016}{全国新课标(文)}
+        若$a>b>0$，$0<c<1$，则\xz
+        \xx{$\log_ac<\log_bc$}
+         {$\log_ca<\log_cb$}
+         {$a^c<b^c$}
+         {$c^a>c^b$}
+        \begin{answer}
+          B
+        \end{answer}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p3【2016文•浙江】【对数，定义】
+        \source{2010文}{浙江}
+        已知函数$f(x)=\log_2(x+1)$，若$f(a)=1$，则$a=$\xz
+        \xx{0}{1}{2}{3}
+        \begin{answer}
+          B
+        \end{answer}
+      \item %《2018天利38套：高考真题单元专题训练(文)》专题9幂函数、指数函数、对数函数P27p18【2016文•】【对数指数，定义】
+        \source{2014}{陕西(文)}
+        已知$4^a=2$，若$\lg x=a$，则$x=$\tk.
+        \begin{answer}
+          $\sqrt{10}$
+        \end{answer}
+    \end{exercise}
+\section{函数、方程与不等式}
+  \begin{description}
+    \item [定义] 一般地，有：\\
+      设 $A$，$B$ 是非空的数集，如果按照某种确定的对应关系 $f$，使对于集合$A$中的任意一个数 $x$，在集合 $B$ 中都有唯一确定的数 $f(x)$ 和它对应，那么就称 $f\colon A\mapsto B$ 为从集合 $A$ 到集合 $B$ 的一个函数，记作
+      $$y=f(x),\qquad x\in A.$$
+      其中，$x$ 叫做自变量，$x$ 的取值范围 $A$ 叫做函数的定义域；与 $x$ 的值相对应的 $y $值叫做函数值，函数值的集合$\{f(x)|x\in A\}$叫做函数的值域，值域是集合$B$ 的子集．
+      \begin{itemize}[leftmargin=*]
+        \kaishu
+        \item 函数是两个数集间的一种对应关系；
+        \item 未指明定义域的情况下，默认定义域取使得对应关系有意义的所有实数. 具体如下:
+        \begin{enumerate}[label=\circled{\arabic*}]
+          \item 分式的分母不为0;
+          \item 偶次根式的被开方数不小于0；
+          \item 零次或负次指数次幂的底数不为零；
+          \item 对数的真数大于0；
+          \item 指数、对数函数的底数大于0且不等于1；
+          \item 实际问题对自变量的限制.
+        \end{enumerate}
+        \item 若函数$f(x)$定义域为$D$，且$f(a)$存在，则$a\in D$.
+      \end{itemize}
+  \end{description}
+\section{指数函数、对数函数、幂函数}
+\section{平面向量}
+  \subsection{五种常见向量}
+    \begin{enumerate}[label=\arabic*)]
+      \item 单位向量：模为1的向量.
+      \item 零向量：模为0的向量.
+      \item 平行(共线向量)：方向相同或相反或其一为零向量的两个向量.
+      \item 相等向量：模相等，方向相同的向量.
+      \item 相反向量：模相等，方向相反的向量.
+    \end{enumerate}
+  \subsection{坐标表示}
+    平面内的任一向量$ \bm{a} $都可以由$ x,~y $唯一确定，我们把有序数对$ (x,y) $叫做向量$\bm{a}  $的坐标，记作
+    \begin{equation}\label{eq:axy}
+      \bm{a}=(x,y)
+    \end{equation}
+    其中$ x $叫做$ \bm{a} $在$x$轴上的坐标，$ y $叫做$ \bm{a} $在$y$轴上的坐标，(\ref{eq:axy})式叫做\textbf{向量的坐标表示}
+    \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+      \draw[->,>=stealth] (-1,0)--(3,0) node[below](x){$x$};
+      \draw[->,>=stealth] (0,-1)--(0,3) node[right](y){$y$};
+      \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
+      \draw[very thick,->,>=stealth](0,0)--(0,1)node[midway,left](j) {$\bm{j}$};
+      \coordinate(A) at (1.5,1.5);
+      \node[right](a1)at(1.5,1.5){$A(x,y)$};
+      \draw[dashed](A)--++(-1.5,0)node[left](y){$y$};
+      \draw[dashed](A)--++(0,-1.5)node[below](x){$x$};
+      \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
+    \end{tikzpicture}
+    \end{center}
+  \subsection{向量的线性运算与数量积}
+    向量的线性运算包括向量的加、减、数乘运算.
+    \subsubsection{加法}
+      \begin{description}
+        \item[定义] 两个向量和的运算；
+        \item[法则] 平行四边形法则或三角形法则
+          \begin{center}
+          \begin{tikzpicture}
+            \coordinate(O) at (0,0);
+            \coordinate(A) at (2,0);
+            \coordinate(B) at(1,2);
+            \coordinate(C) at ($(A)+(B)$);
+            \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{a}$};
+            \draw[->,>=latex] (O)--(C)node[midway,above,sloped](c){\small$\bm{a}+\bm{b}$};
+            \draw[->,>=latex] (A)--(C)node[midway, below](b){\small$\bm{b}$};
+            \begin{scope}[xshift=4cm]
+              \coordinate(O) at (0,0);
+              \coordinate(A) at (2,0);
+              \coordinate(B) at(1,2);
+              \coordinate(C) at ($(A)+(B)$);
+              \draw[->,>=latex] (O)--(A)node[midway ,below](a){\small$\bm{a}$};
+              \draw[->,>=latex] (O)--(C)node[midway ,below,sloped](c){\small$\bm{a}+\bm{b}$};
+              \draw[->,>=latex] (O)--(B)node[midway, left](b){\small$\bm{b}$};
+              \draw[dashed](B)--(C);
+              \draw[dashed](A)--(C);
+            \end{scope}
+          \end{tikzpicture}
+          \end{center}
+          {\kaishu 对于零向量与任一向量$\bm{a}$，规定$$\bm{a}+\bm{0}=\bm{0}+\bm{a}=\bm{a}$$}\par
+          由三角形法则，可得向量不等式(有时称作“三角形不等式”)：
+          \[\bigm|{\abs{\bm{a}}-\abs{\bm{b}}\bigm|}\leqslant \abs{\bm{a}+\bm{b}}\leqslant \abs{\bm{a}}+\abs{\bm{b}}\]
+          若$\bm a$和$\bm b$为非零向量，则：当$\bm a$与$\bm b$反向时， 左边等式成立；当$\bm a$与$\bm b$同向时， 右边等式成立；\par
+      \end{description}
+    \subsubsection{减法}
+      \begin{description}
+        \item[定义]减去一个向量相当于加上这个向量的相反向量，即$$\bm{a}-\bm{b}=\bm{a}+(\bm{-b})$$
+        \item[运算法则]三角形法则、平行四边形法则.%$\vv{AB}-\vv{AC}=\vv{CB}$.
+        \begin{center}
+        \begin{tikzpicture}
+          \coordinate(O) at (0,0);
+          \coordinate(A) at (2,0);
+          \coordinate(B) at(1.5,1.5);
+          \draw[->,>=latex] (O)--(A)node[midway,below](a){\small$\bm{b}$};
+          \draw[->,>=latex] (O)--(B)node[midway, left](a){\small$\bm{a}$};
+          \draw[->,>=latex](A)--(B)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
+          \begin{scope}[xshift=6cm]
+            \coordinate(O) at (0,0);
+            \coordinate(B) at (2,0);
+            \coordinate(A) at(1.5,1.5);
+            \coordinate(B1) at (-2,0);
+            \coordinate(C)at($(B1)+(A)$);
+            \draw[->,>=latex] (O)--(B)node[midway,below](a){\small$\bm{b}$};
+            \draw[->,>=latex] (O)--(A)node[midway, left](a){\small$\bm{a}$};
+            \draw[->,>=latex](B)--(A)node[midway, above,sloped](a){\small$\bm{a}-\bm{b}$};
+            \draw[->,>=latex](O)--(B1)node[midway,below](b1){\small$\bm{-b}$};
+            \draw[->,>=latex](O)--(C)node[midway,below,sloped](b1){\small$\bm{a-b}$};
+            \draw[dashed] (B1)--(C) (A)--(C);
+          \end{scope}
+        \end{tikzpicture}
+        \end{center}
+        {\kaishu
+          对于任意一点$P$，$\vv{AB}=\vv{PB}-\vv{PA}$,
+        }
+      \end{description}
+    \subsubsection{数乘}
+      \begin{description}
+        \item[定义] 求实数$ \lambda $与向量$\bm{a}$的积是一个向量，记作$\lambda\bm{a}$,长度与方向由以下法则规定：
+        \item[法则]
+          \begin{enumerate}[label=\arabic*)]
+            \item $\abs{\lambda \bm{a}}=\abs{\lambda}\abs{\bm{a}} $;
+            \item
+              \begin{itemize}
+                \item 当$ \lambda>0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相同；
+                \item 当$ \lambda<0 $时，$ \lambda\bm{a} $的方向与$\bm{a}$的方向相反；
+                \item 当$ \lambda=0 $时，$ \lambda\bm{a}=\bm 0 $.
+              \end{itemize}
+          \end{enumerate}
+        对于任意向量$\bm a,\bm b$以及任意实数$\lambda$，$\mu_1$，$\mu_2$，恒有：
+        \[\lambda({\mu_1\bm a}\pm{\mu_2\bm b})={\lambda\mu_1\bm a}\pm{\lambda\mu_2\bm b}\]
+      \end{description}
+    \subsection{数量积}
+      \begin{description}
+        \item[定义] 已知两个非零向量$ \bm{a} $与$\bm{b}$，我们把数量$ \abs{\bm{a}}\abs{\bm{b}}\cos\theta $叫做
+          $ \bm{a} $与$ \bm{b} $的\textbf{数量积}(又称点积、内积)，记作$ \bm{a}\bm{\cdot}\bm{b} $，即\[\bm{a}\bm{\cdot}\bm{b}=\abs{\bm{a}}\abs{\bm{b}}\cos\theta\]
+          其中$ \theta $为$ \bm{a} $与$ \bm{b} $的夹角.\\
+          $\abs{\bm{a}}\cos\theta$($\abs{\bm{b}}\cos\theta$)叫做向量$\bm a$在$\bm b$方向上($\bm b$在$\bm a$方向上)的\textbf{投影}，%记作$\mathrm{Prj}_{\bm b}{\bm a}$(或$\mathrm{Prj}_{\bm b}{\bm a}$)
+        \item[几何意义] 两个向量的数量积等于其中一个向量的模长与另一个向量在此向量方向上的投影的乘积\\%$ \bm{a}\bm{\cdot}\bm{b} $等于$\bm{a} $的模长$ \abs{\bm{a}} $与$ \bm{b} $在$ \bm{a} $的方向上的\textbf{投影}$ \abs{\bm{b}}\cos \theta $的乘积.\par
+        {\kaishu \textbf{注:}当$ \theta=0 $时，$ \cos\theta=1 $，所以有$ \bm{a\cdot b}=\bm{\abs{a}\abs{b}} $；\\\phantom{注:\ }当$ \theta=90^{\circ} $时，有$ \cos\theta =0$，所以有$ \bm{a\cdot b}=0 $ \\\phantom{注:\ }当$ \theta=180^{\circ} $时，有$ \cos\theta =-1$，所以有$ \bm{a\cdot b}=-\abs{\bm{a}}\abs{\bm{b}} $   }
+        \item[数量积坐标计算]$\bm{a}\bm{\cdot}\bm{b}=x_1x_2+y_1y_2$.
+        \item[夹角公式] \[ \cos\theta=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\theta\in\left[0,\pi\right],~\theta\text{也写作}\left<\bm{a},\bm{b}\right>\right).\]
+      \end{description}
+    \subsubsection{坐标运算}
+      \begin{enumerate}
+        \item
+          设点$ A(x_1,y_1),~B(x_2,y_2) $,则$ \vv{AB}=(x_2-x_1,y_2-y_1) $.\par
+          一个向量的坐标等于表示此向量的有向线段的终点的坐标减去起始点的坐标.
+        \item
+          若$\bm{a}=\left(x_1,y_1\right),\bm{b}=\left(x_2,y_2\right)$.
+          \begin{description}
+            \item[加法:]
+              $\bm{a}+\bm{b}=(x_1+x_2,y_1+y_2)$
+              \begin{equation*}
+              \begin{aligned}
+              \bm{a}+\bm{b}=&\left(x_1\bm{i}+y_1\bm{j}\right)+\left(x_2\bm{i}+y_2\bm{j}\right)\\
+              =&\left(x_1+x_2\right)\bm{i}+\left(y_1+y_2\right)\bm{j}\\
+              \text{即：}\bm{a}+\bm{b}=&(x_1+x_2,y_1+y_2)
+              \end{aligned}
+              \end{equation*}
+            \item[减法:] $\bm{a}-\bm{b}=\left(x_1-x_2,y_1-y_2\right)$.同加法可得
+            \item[数乘:]
+              $ \lambda \bm{a}=\left(\lambda x_1,\lambda y_1\right) $\begin{equation*}
+              \begin{aligned}
+               \lambda \bm{a} =&\lambda\left(x_1\bm{i}+y_1\bm{j}\right)=\lambda x_1\bm{i}+\lambda y_1\bm{j}\\
+              =&\left(\lambda x_1,\lambda y_1\right)
+              \end{aligned}
+              \end{equation*}
+            \item[模长]
+             $\abs{\bm{a}}=\sqrt{x_1^2+y_1^2}$\qquad
+             $\abs{\vv{AB}}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$\\
+             \qquad $\abs{\bm{a}+\bm{b}}=\sqrt{(\bm{a}+\bm{b})^2}=\sqrt{\bm{a}^2+2\bm{a}\bm{\cdot}\bm{b}+\bm{b}^2}$\\
+            \item[共线]$\bm{a} \varparallel \bm{b}\Leftrightarrow x_1y_2=y_2x_1 $\\
+              由向量共线的性质知$ \bm{a} $与$ \bm{b}(\bm{b}\ne\bm{0}) $共线，当且仅当存在实数$ \lambda $使得$ \bm{a}=\lambda \bm{b} .$\\用坐标表示为：
+              $$(x_1,y_1)=\lambda(x_2,y_2)$$
+              即$$\Bigg\{\begin{aligned}
+              x_1=&\lambda x_2\\
+              y_1=&\lambda y_2
+              \end{aligned}$$
+              消去$ \lambda $得到\[x_1y_2-x_2y_1=0\]
+            \item[垂直]
+              $\bm{a}\perp\bm{b}\Leftrightarrow\bm{a}\bm{\cdot}\bm{b}=0\Leftrightarrow x_1x_2+y_1y_2=0 $
+              \begin{proof}
+                \begin{description}
+                  % \item[方法一]
+                  %   设$ \bm{a},~\bm{b} $所在直线分别为$ l_1,l_2 $，当$ \bm{a},~\bm{b} $所在直线的斜率都存在时，由直线垂直的性质，有$$ k_{l_1}\bm{\cdot}k_{l_2}=-1 $$
+                  %   其中$$ k_{l_1} =\dfrac{y_1-0}{x_1-0}=\dfrac{y_1}{x_1},\quad k_{l_2} =\dfrac{y_2-0}{x_2-0}=\dfrac{y_2}{x_2}$$
+                  %   即$$\dfrac{y_1}{x_1}\bm{\cdot}\dfrac{y_2}{x_2}=-1$$
+                  %   $$x_1x_2+y_1y_2=0$$
+                  % \item[方法二]
+                    由向量的数量积性质，当$ \bm{a}\perp\bm{b} $时，
+                    $\text{由}\cos\theta=\dfrac{\bm{a\cdot b}}{\abs{\bm{a}}\abs{\bm{b}}}\text{得到}$\\
+                    \centering $\bm{a\cdot b}=0$
+                \end{description}
+              \end{proof}
+          \end{description}
+      \end{enumerate}
+  \subsection{平面向量运算律}
+    \begin{enumerate}[label=\arabic*)]
+      \item 交换律：
+        $\bm a+\bm b=\bm b+\bm a$，\quad
+        $\bm a\cdot\bm b=\bm b\cdot\bm a$
+      \item 结合律：
+        $(\bm{a}+\bm{b})+\bm{c}=\bm{a}+(\bm{b}+\bm{c})$，\quad
+        $(\lambda \bm a)\cdot\bm{b}=\lambda(\bm a\cdot\bm b)=\bm{a}\cdot(\lambda\bm{b})$
+      \item 分配律：
+        $(\lambda+\mu)\bm{a}=\lambda\bm{a}+\mu\bm{a}$，\quad
+        $\lambda(\bm{a}+\bm{b})=\lambda\bm{a}+\lambda\bm{b}$，\quad
+        $(\bm a+\bm b)\cdot \bm c=\bm a\cdot\bm c+\bm b\cdot \bm c$
+      \item 重要公式：(记号$\bm a^2=\bm a\cdot\bm a$)
+        $(\bm a+\bm b)(\bm a-\bm b)=\bm a^2-\bm b^2$，\quad
+        $(\bm a\pm\bm b)^2=\bm a^2\pm2\bm a\cdot\bm b+\bm b^2$.
+    \end{enumerate}
+  \subsection{两个重要定理}
+    \begin{enumerate}[label=\arabic*)]
+      \item 向量共线定理：
+        向量$\bm{a}~(\bm{a}\ne\bm{0})$与向量$\bm{b}$共线,当且仅当存在唯一的实数$ \lambda $，使得$\bm{b}=\lambda\bm{a}$.\\
+        {\kaishu
+         证明三点共线的方法：\circled{1}$\vv{AB}=\lambda\vv{AC}$，则$A$，$B$，$C$三点共线；\circled{2}$\vv{OA}=\lambda\vv{OB}+\mu\vv{OC}$，若$\lambda+\mu=1$，则$A$，$B$，$C$三点共线.
+        }
+      \item 平面向量基本定理：
+        如果$ \bm{e}_1,\bm{e}_2 $是同一平面内的两个\CJKunderdot{不共线}的向量，
+        则那么对于这一平面内的任意向量$ \bm{a} $，有且只有一对实数$ \lambda_1,~\lambda_2 $，使$\bm{a}=\lambda_1\bm{e}_1+\lambda_2\bm{e}_2$.
+        其中，不共线的向量$\bm{e}_1, \bm{e}_2$叫做表示这一平面内所有向量的一组\CJKunderdot{基底}.\\
+        % {\kaishu 平面向量基本定理应用技巧：
+        %   \begin{enumerate}[label=\circled{\arabic*}]
+        %     \item 构造某一向量在同一基底下的两种不同表达形式，
+        %       根据向量分解的唯一性求解.即：\\
+        %       {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2=x_2\bm e_1+y_2\bm e_2$，则$\begin{cases}x_1=x_2\\y_1=y_2\end{cases}$}
+        %     \item 构造两个共线向量在同一基底下的表达形式，
+        %       根据向量共线定理求解.即：\\
+        %       {\kaishu 以$\bm e_1$，$\bm e_2$为基底，且$\bm a=x_1\bm e_1+y_1\bm e_2$，$\bm b=x_2\bm e_1+y_2\bm e_2$，且$\bm a\varparallel\bm b$，则$x_1y_2-x_2y_1=0$}
+        %     \item 将题目中的已知条件转化成
+        %       $\lambda_1\bm e_1+\lambda_2\bm e_2=\bm 0$的形式($\bm e_1$，$\bm e_2$不共线)，根据$\lambda_1=\lambda_2=0$求解.
+        %   \end{enumerate}}
+    \end{enumerate}
+  \subsection{平面向量数量积相关量求解}
+    \begin{enumerate}[label=\arabic*)]
+      \item 向量模长：若$\bm a=(x,y)$，则$\abs{\bm a}=\sqrt{\bm a\cdot\bm a}=\sqrt{x^2+y^2}$
+      \item 向量投影：向量$\bm a$在$\bm b$方向上的投影为
+        $\abs{\bm{a}}\cos\theta=\dfrac{\bm a\cdot\bm b}{\abs{\bm b}}$
+      \item 向量夹角：设$\bm a=(x_1,y_1)$，$\bm b=(x_2,y_2)$，则
+        $\cos\vangle{\bm a}{\bm b}=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\vangle{\bm a}{\bm b}\in\left[0,\piup\right]\right)$
+    \end{enumerate}
+\section{三角函数概念、同角关系与恒等变换}
+  \begin{description}[leftmargin=0pt,labelsep=0pt]
+    \item%[两角的和与差]
+      \begin{itemizeMy}[两角的和与差\hspace{2em}]
+        \item $\mathrm{C}_{\alpha\pm\beta}$：
+        $\cos(\alpha\pm\beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$
+        \item $\mathrm{S}_{\alpha\pm\beta}$：
+        $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$
+        \item $\mathrm{T}_{\alpha\pm\beta}$：
+        $\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm \tan\beta}{1\mp\tan\alpha\tan\beta}$
+      \end{itemizeMy}
+    \item%[二倍角公式]
+      \begin{itemizeMy}[二倍角公式\hspace{3em}]
+        \item $\mathrm{S}_{2\alpha}$：
+        $\sin{2\alpha}=2\sin\alpha\cos\alpha$
+        \item $\mathrm{C}_{2\alpha}$：
+        $\cos{2\alpha}=\cos^2{\alpha}-\sin^2{\alpha}=2\cos^2\alpha-1=1-2\sin^2\alpha$
+        \item $\mathrm{T}_{2\alpha}$：
+        $\tan{2\alpha}=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
+      \end{itemizeMy}
+      \item%[半角公式]
+        \begin{itemizeMy}[半角公式\hspace{4em}]
+          \item
+          $\sin{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1-\cos\alpha}2}$
+          \item $\cos{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1+\cos\alpha}2}$
+          \item $\tan{\dfrac{\alpha}2}=\dfrac{\sin\alpha}{1+\cos\alpha}=\dfrac{1-\cos\alpha}{\sin\alpha}$
+        \end{itemizeMy}
+      % \item%[万能公式]
+      %   \begin{itemizeMy}[万能公式\hspace{4em}]
+      %     \item $\sin{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\cos{\alpha}=\dfrac{1-\tan^2{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+      %     \item $\tan{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1-\tan^2{\dfrac{\alpha}2}}}$
+      %   \end{itemizeMy}
+      \item%[辅助角公式]
+        \begin{itemizeMy}[辅助角公式\hspace{3em}]
+          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+          其中$\sin\varphi=\dfrac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi=\dfrac{a}{\sqrt{a^2+b^2}}$\\
+          $a>0$时，
+          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+          其中$\tan\varphi=\dfrac{b}a$，$
+          \varphi\in\Bigl(-\dfrac{\piup}2,\dfrac{\piup}2\Bigr)$
+        \end{itemizeMy}
+  \end{description}
+  \begin{exercise}
+    \item%福建师大附中2015-2016学年高一数学第二学期期末检测.doc-2【象限角】
+      (2016 \textbullet {\kaishu 师大附中} 2)
+      若点$P(\sin\theta\cos\theta,2\cos\theta)$位于第三象限，那么角$\theta$终边落在\xz
+      \xx{第一象限}{第二象限}{第三象限}{第四象限}
+      \begin{answer}
+        B
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(文)》专题13三角函数的概念……P41p2【2015文•福建】【同角三角函数基本关系式】
+      {\kaishu (2015文 \textbullet 福建)}
+      若$\sin\alpha=-\dfrac5{13}$，且$\alpha$为第四象限角，则$\tan\alpha$的值等于\xz
+      \xx{$\dfrac{12}5$}
+       {$-\dfrac{12}5$}
+       {$\dfrac5{12}$}
+       {$-\dfrac5{12}$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item%《2018天利38套：高考真题单元专题训练(文)》专题13三角函数的概念……P41p2【2016文•全国新课标】【同角三角函数基本关系式、诱导公式】
+      {\kaishu (2016文 \textbullet 全国新课标)}
+      已知$\theta$是第四象限角，且$\sin\Bp{\theta+\dfracp{}4}=\dfrac35$，则$\tan\Bp{\theta-\dfracp{}4}=$\tk.
+      \begin{answer}
+        $-\dfrac43$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p3【2018•福州期末】【三角恒等变换】\\
+        {\kaishu (2018 \textbullet 福州期末(文))}
+        $\sqrt3\cos15\degree-4\sin^215\degree\cos15\degree=$\xz
+        \xx{$\dfrac12$}
+         {$\dfrac{\sqrt2}2$}
+         {$1$}
+         {$\sqrt2$}
+        \begin{answer}
+          D
+        \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p4【2018•唐山五校联考】【三角恒等变换】\\
+        {\kaishu (2018 \textbullet 唐山五校联考(文))}
+        已知$\alpha$是第三象限角，且$\tan\alpha=2$，则$\sin\Bp{\alpha+\dfrac{\piup}4}=$\xz
+        \xx{$-\dfrac{3\sqrt{10}}{10}$}
+         {$\dfrac{3\sqrt{10}}{10}$}
+         {$-\dfrac{\sqrt{10}}{10}$}
+         {$\dfrac{\sqrt{10}}{10}$}
+        \begin{answer}
+          A
+        \end{answer}
+
+  \end{exercise}
+\section{三角函数的图像和性质}
+  \subsection{三角函数的图像和性质}
+    \subsubsection{正弦函数}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.7]
+          \coordinate[label=below right:$O$] (O) at(0,0);
+          \coordinate[label=below :\small$-\piup$] (t1) at(-pi,0);
+          \coordinate[label=below :\small$\piup$] (t2) at(pi,0);
+          \draw[->,>=latex](-3.5*pi,0)--(3.5*pi,0)node[below](x) {$x$};
+          \draw[->,>=latex](0,-1.5)--(0,1.5)node[right](y) {\small $y=\sin(x)$};
+          \draw [domain=-3*pi:3*pi,samples=1000] plot(\x,{sin(\x r)});
+          \draw[densely dashed](pi/2,0)node[below](pi){$\dfrac{\piup}{2}$}--++(0,1);
+          \draw[densely dashed](-pi/2,0)node[above](-pi){$-\dfrac{\piup}{2}$}--++(0,-1);
+          \draw[densely dashed](0,1)node[left](max){$1$}--++(pi/2,0);
+          \draw[densely dashed](0,-1)node[right](min){$-1$}--++(-pi/2,0);
+        \end{tikzpicture}
+      \end{center}
+      \vspace{-0.9cm}
+      \begin{enumerate}[label=\circled{\arabic*}]
+        \item 定义域：$x\inR$；\quad 值域：$ \left[-1,1\right] $ ；\quad 奇偶性：奇函数；
+        \item 对称轴：$x=k\piup+\dfrac{\piup}{2}\left(k\inZ\right)$；\quad 对称中心：$\left(k\piup,0\right)\left(k\inZ\right)$；\quad 最小正周期：$T=2\piup$;
+        \item 单调递增区间：$ \left[2k\piup-\dfrac{\piup}{2},2k\piup+\dfrac{\piup}{2}\right]\left(k\inZ\right) $；\quad
+              单调递减区间：$ \left[2k\piup+\dfrac{\piup}{2},2k\piup+\dfrac{3\piup}{2}\right] \left(k\inZ\right)$.
+      \end{enumerate}
+    \subsubsection{余弦函数}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.7]
+          \coordinate[label=below right:\small$O$] (O) at(0,0);
+          \coordinate[label=below :\small $\frac{\piup}{2}$] (t1) at(pi/2,0);
+          \coordinate[label=below :\small $-\frac{\piup}{2}$] (t2) at(-pi/2,0);
+          \coordinate[label=below left :\small $1$] (t3) at(0,1);
+          \draw[->,>=latex](-3.5*pi,0)--(3.5*pi,0)node[below](x) {$x$};
+          \draw[->,>=latex](0,-1.5)--(0,1.5)node[right](y) {\small $y=\cos(x)$};
+          \draw [domain=-3*pi:3*pi,samples=1000] plot(\x,{cos(\x r)});
+          \draw[densely dashed](pi,0)node[below left](pi){\small $\piup$}--++(0,-1);
+          \draw[densely dashed](-pi,0)node[below left](-pi){\small $-\piup$}--++(0,-1);
+          \draw[densely dashed](-pi,-1)--(0,-1)node[below left](min){$-1$}--++(pi,0);
+        \end{tikzpicture}
+      \end{center}
+      \vspace{-0.7cm}
+      \begin{enumerate}[label=\circled{\arabic*}]
+        \item 定义域：$x\inR$；\quad 值域：$ \left[-1,1\right] $；\quad 奇偶性：偶函数；
+        \item 对称轴：$ x=k\piup \left(k\inZ\right) $；\quad 对称中心：$\left(k\piup+\dfrac{\piup}{2},0\right)\left(k\inZ\right)$;\quad 最小正周期：$ T=2\piup  $；
+        \item 单调递增区间：$ \left[2k\piup-\piup,2k\piup\right] \left(k\inZ\right)$;\quad
+              单调递减区间：$ \left[2k\piup,2k\piup+\piup\right]\left(k\inZ\right) $.
+      \end{enumerate}
+    \subsubsection{正切函数}
+      \vspace{-0.5cm}
+      \begin{center}
+        \begin{tikzpicture}[scale=0.7]
+          \coordinate[label=below right:$O$] (O) at(0,0);
+          %\coordinate[label=below :$\dfrac{\pi}{2}$] (t1) at(pi/2,0);
+          %\coordinate[label=below :$2\pi$] (t2) at(2*pi,0);
+          \draw[->,>=latex](-pi,0)--(pi,0)node[below](x) {$x$};
+          \draw[->,>=latex](0,-1.5)--(0,2)node[right](y) {\small $y=\tan(x)$};
+          \draw [domain=-pi/3:1/3*pi,samples=1000] plot(\x,{tan(\x r)});
+          \draw[densely dashed](2*pi/5,1.5)--++(0,-1.5)node[below right](pi){$\frac{\pi}{2}$}--++(0,-1.5);
+          \draw[densely dashed](-2*pi/5,1.5)--++(0,-1.5)node[below left](pi){$-\frac{\pi}{2}$}--++(0,-1.5);
+        \end{tikzpicture}
+      \end{center}
+      \vspace{-0.7cm}
+      \begin{enumerate}[label=\circled{\arabic*}]
+        \item 定义域：$\Bigl\{x\Bigm|x\ne k\piup+\dfrac{\piup}2,k\inZ\Bigr\}$；\quad 值域：$ \mathbf{R} $；\quad 奇偶性：奇函数；
+        \item 对称中心：$\left(\dfrac{k\piup}2,0\right)\left(k\inZ\right)$；\quad 无对称轴；\quad 最小正周期：$ T=\piup  $;
+        \item 单调递增区间：$ \left(k\piup-\dfrac{\piup}{2},k\piup+\dfrac{\piup}{2}\right) \left(k\inZ\right)$;
+        \end{enumerate}
+    \begin{exercise}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p1【2018•全国III卷】【三角函数，恒等变换，周期】\\
+        \source{2018文}{全国III卷}
+        函数$f(x)=\dfrac{\tan\alpha}{1+\tan^2\alpha}$的最小正周期为\xz
+        \xx{$\dfrac{\piup}4$}
+         {$\dfrac{\piup}2$}
+         {$\piup$}
+         {$2\piup$}
+        \begin{answer}
+          C
+        \end{answer}
+      \vspace{1.5em}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p2【2018•全国I卷】【三角函数，恒等变换，周期】\\
+        \source{2018文}{全国I卷}
+        已知函数$f(x)=2\cos^2x-\sin^2x+2$，则\xz
+        \xx{$f(x)$的最小正周期为$\piup$，最大值为3}
+         {$f(x)$的最小正周期为$\piup$，最大值为4}
+         {$f(x)$的最小正周期为$2\piup$，最大值为3}
+         {$f(x)$的最小正周期为$2\piup$，最大值为4}
+        \begin{answer}
+          B
+        \end{answer}
+      \vspace{1.5em}
+      \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-14【三角函数取值范围】
+        % (2017 \textbullet {\kaishu 师大附中} 14)
+        函数$y=\sqrt{\cos x-\dfrac12}$的定义域为\tk.
+        \begin{answer}
+          $\Bigl[-\dfrac{\piup}3+2k\piup,\dfrac{\piup}3+2k\piup\Bigr]$，$k\inZ$
+        \end{answer}
+      \vspace{1.5em}
+      \item%福州第三中中学2015-2016学年高一数学第二学期期末检测.doc-14【三角函数性质 综合判断】
+        % (2016 \textbullet {\kaishu 福州三中} 14)
+        关于函数$f(x)=2\sin\Bp{2x+\dfrac{\piup}3}$($x\inR$)，有下列说法：\\
+        \circled{1}由$f(x_1)=f(x_2)=0$可得$x_1-x_2$必是$\piup$的整数倍；
+        \circled{2}$y=f(x)$的表达式可改写为$f(x)=2\cos\Bp{2x-\dfrac{\piup}6}$；
+        \circled{3}$y=f(x)$的图像关于点$\Bp{-\dfrac{\piup}6,0}$对称；
+        \circled{4}$y=f(x)$的图像关于直线$x=\dfrac{7\piup}{12}$对称.\\
+        其中说法正确的序号是\tk.
+        \begin{answer}
+          \circled{2}\circled{3}\circled{4}
+        \end{answer}
+      \vspace{1.5em}
+      \item%福建师大附中2016-2017高一下期末考试数学试题…….doc-10【三角函数取值范围，方程解】
+        % (2017 \textbullet {\kaishu 师大附中} 10)
+        若方程$\cos\Bp{2x+\dfracp{}4}=m$在区间$\Bigl[0,\dfracp{}2\Bigr]$上有两个实根，则实数$m$取值范围是\xz
+        \xx{$\Bigl[-1,-\dfrac{\sqrt2}2\Bigr]$}
+         {$\Bigl(-1,-\dfrac{\sqrt2}2\Bigr]$}
+         {$\Bigl[\dfrac{\sqrt2}2,1\Bigr]$}
+         {$\Bigl[\dfrac{\sqrt2}2,1\Bigr)$}
+        \begin{answer}
+          B
+        \end{answer}
+      \vspace{1.5em}
+      \item%福建师大附中2015-2016学年高一数学第二学期期末检测.doc-22【三角函数性质】
+        % (2016 \textbullet {\kaishu 师大附中} 22)
+        已知函数$f(x)=3\sin\Bp{\dfrac{x}2+\dfrac{\piup}6}+3$，$x\inR$.\\
+        (I)求函数$f(x)$的单调增区间；\\
+        (II)若$x\in\Bigl[\dfrac{\piup}3,\dfrac{4\piup}3\Bigr]$，求$f(x)$的最大值和最小值，
+        并指出$f(x)$取得最值时相应$x$的值.
+        \begin{answer}
+          (I)$\Bigl[-\dfrac{4\piup}3+4k\piup,\dfrac{2\piup}3+4k\piup\Bigr]$，$k\inZ$；
+          (II)当$x=\dfrac{4\piup}3$时，取最小值$f(x)_{\min}=\dfrac92$；当$x=\dfrac{2\piup}3$时，取最大值$f(x)_{\max}=6$.
+        \end{answer}
+      \vspace{5cm}
+    \end{exercise}
+  \subsection{三角函数图像的(线性)变换}
+    \begin{description}
+      \item 函数$y=f(x)$图像经平移或伸缩变换后的图像解析式：{\kaishu 坐标变量的变化与图像相反}
+        \[\begin{aligned}
+          y=f(x)&\xrightarrow[\text{平移}\abs{a}\text{个单位}]{\text{向左}(a>0)\text{或向右}(a<0)}y=f(x+a)\hspace{3em}
+          y=f(x)\xrightarrow[\text{纵坐标不变}]{\text{横坐标变为原来的}k\text{倍}}y=f\Bp{\dfrac{x}{k}}\\
+          y=f(x)&\xrightarrow[\text{平移}\abs{a}\text{个单位}]{\text{向下}(a>0)\text{或向上}(a<0)}y+a=f(x)\hspace{3em}
+          y=f(x)\xrightarrow[\text{横坐标不变}]{\text{纵坐标变为原来的}A\text{倍}}\dfrac{y}{A}=f(x)
+        \end{aligned}\]
+      \item 由函数$y=\sin(x)$的图象经过变换得到$y=A\sin\left(\omega x+\varphi\right)$的图象方法\\
+        \begin{minipage}[h]{0.45\linewidth}
+          \hspace{-2em}\circled{1} 先平移后伸缩
+            \[\begin{aligned}
+              y=\sin x&\xrightarrow[\text{平移}\abs{\varphi}\text{个单位}]{\text{向左}(\varphi>0)\text{或向右}(\varphi<0)}y=\sin\left(x+\varphi\right)\\
+              &\xrightarrow[\text{纵坐标不变}]{\text{横坐标变为原来的}\tfrac{1}{\omega}}y=\sin\left(\omega x+\varphi\right)\\
+              &\xrightarrow[\text{横坐标不变}]{\text{纵坐标变为原来的}A\text{倍}}y=A\sin\left(\omega x+\varphi\right)
+            \end{aligned}\]
+        \end{minipage}\hfill
+        \begin{minipage}[h]{0.55\linewidth}
+          \circled{2} 先伸缩后平移
+            \[\begin{aligned}
+              y=\sin x&\xrightarrow[\text{纵坐标不变}]{\text{横坐标变为原来的}\tfrac{1}{\omega}}y=\sin\omega x\\
+              &\xrightarrow[\text{平移}\abs{\tfrac{\varphi}{\omega}}\text{个单位}]{\text{向左}(\varphi>0)\text{或向右}(\varphi<0)}y=\sin\biggl[\omega\Bp{x+\dfrac{\varphi}{\omega}}\biggr]\\
+              &\xrightarrow[\text{横坐标不变}]{\text{纵坐标变为原来的}A\text{倍}}y=A\sin\left(\omega x+\varphi\right)
+            \end{aligned}\]
+        \end{minipage}
+      \item 由图象求函数$y=A\sin\left(\omega x+\varphi\right)$的解析式一般步骤：
+        \begin{enumerate}[label=\arabic*\degree]
+          \item 由函数的最值确定$ A $的取值；
+          \item 由函数的周期确定$ \omega $的值, 周期：$ T=\dfrac{2\pi}{\abs{\omega}} $；
+          \item 由函数图象最高点(最低点)的坐标得到关于$ \varphi $的方程，再由$ \varphi $的范围确定$ \varphi $的值.
+        \end{enumerate}
+    \end{description}
+    \begin{exercise}
+      \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03393-0》专题14三角函数的图像与性质P53p4【2015•全国新课标】【正弦曲线图像】
+           %LaTeX-master/sanjiaohanshu/sanjiaohanshu-gaokao.tex 4
+        {\kaishu (2015 \textbullet 全国新课标)}
+        函数$f(x)=\cos(\omega x+\varphi)$的部分图象如图所示，则$f(x)$的单调递减区间为\xz
+        \begin{minipage}[b]{0.8\linewidth}
+          \vspace{2.5em}
+          \xx{$\Bigl(k\piup-\dfrac{1}{4},k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+            {$ \Bigl(2k\piup-\dfrac{1}{4},2k\piup+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+            {$ \Bigl(k-\dfrac{1}{4},k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z}$}
+            {$\Bigl(2k-\dfrac{1}{4},2k+\dfrac{3}{4}\Bigr),k\in\mathbb{Z} $}
+        \end{minipage}\hfill
+        \begin{minipage}[h]{0.2\linewidth}
+          \vspace{-3cm}
+          \begin{tikzpicture}[scale=0.9]
+            \node[below left](O) at(0,0) {\small$\bm{O}$};
+            \draw(0,1)node[right]{\tiny$1$}--(0.1,1);
+            \clip(-1.2,-1.2) rectangle (2,1.5);
+            \draw[->,>=stealth](-1.2,0)--(2,0) node[below left] (x){$x$};
+            \draw[->,>=stealth](0,-1.2)--(0,1.5) node[below right] (y){$y$};
+            \draw[domain=-1.2:2,samples=1000] plot(\x,{cos((pi*(\x)+1/4*pi) r)});
+            \node[below] (A)at (0.25,0){$\frac{1}{4}$};
+            \node[below] (B)at (1.25,0){$\frac{5}{4}$};
+          \end{tikzpicture}
+        \end{minipage}
+        \begin{answer}
+          D
+        \end{answer}
+      \vspace{1.5em}
+      \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型5三角函数、三角恒等变换P15p6【2018•南宁摸底联考】【正弦曲线图像】\\
+          {\kaishu (2018 \textbullet 南宁摸底联考(文))}
+          如图，函数$f(x)=A\sin(2x+\varphi)$（$A>0$，$|\varphi|<\dfrac{\piup}2$）的图像经过点$(0,\sqrt3)$，则函数$f(x)$的解析式为\xz
+          \begin{minipage}[t]{0.7\linewidth}
+            \xx{$f(x)=2\sin\Bigl(2x-\dfrac{\piup}3\Bigr)$}
+             {$f(x)=2\sin\Bigl(2x+\dfrac{\piup}3\Bigr)$}
+             {$f(x)=2\sin\Bigl(2x+\dfrac{\piup}6\Bigr)$}
+             {$f(x)=2\sin\Bigl(2x-\dfrac{\piup}6\Bigr)$}
+          \end{minipage}\hfill
+          \begin{minipage}[h]{0.3\linewidth}
+             \vspace{0.5cm}
+             \begin{center}
+               \begin{tikzpicture}[scale=0.8]
+                 \coordinate[label=below left:$O$] (O) at(0,0);
+                 % \coordinate[label=above :\small$\tfrac{\piup}3$] (t1) at(pi/3,0);
+                 \draw[->,>=latex](-0.2*pi,0)--(1.2*pi,0)node[below](x) {$x$};
+                 \draw[->,>=latex](0,-1.5)--(0,1.5)node[right](y) {\small $y$};
+                 \draw [domain=-0.1*pi:0.9*pi,samples=100] plot(\x,{sin((4*\x+pi/3) r)});
+                 % \draw[densely dashed](7*pi/12,0)node[above](pi){$\tfrac{7\piup}{12}$}--++(0,-1);
+                 \draw[densely dashed](0,-1)node[left](min){$-2$}--++(7*pi/12,0);
+               \end{tikzpicture}
+             \end{center}
+          \end{minipage}
+          \begin{answer}
+            B
+          \end{answer}
+      \vspace{1.5em}
+      \item%福州三中中学2015-2016学年高一数学第二学期期末检测.docx-9【正弦曲线图像】
+        % (2016 \textbullet {\kaishu 福州三中} 9)
+        将函数$y=\sin\Bigl(x-\dfrac{\piup}3\Bigr)$的图像上所有点的横坐标伸长到原来的2倍（纵坐标不变），再将所得的图像向左平移$\dfrac{\piup}3$个单位，得到的函数图像对应的解析式是\xz
+        \xx{$y=\sin\dfrac x2$}
+          {$y=\sin\Bigl(\dfrac x2-\dfrac{\piup}2\Bigr)$}
+          {$y=\sin\Bigl(\dfrac{x}2-\dfrac{\piup}6\Bigr)$}
+          {$y=\sin\Bigl(2x-\dfrac{\piup}6\Bigr)$}
+        \begin{answer}
+          C
+        \end{answer}
+      \vspace{1.5em}
+      \item%福州一中2015-2016学年高一数学第二学期期末检测.docx-5【正弦曲线图像】
+        % (2016 \textbullet {\kaishu 福州一中} 5)
+        函数$y=\sin\Bp{2x+\dfracp{}3}$的图像向右平移$\dfrac{\piup}6$个单位，所得的图像对应的函数\xz
+        \xx{为非奇非偶函数}
+         {图像的对称中心为$(2k\piup,0)$($k\inZ$)}
+         {为奇函数}
+         {在$\Bigl[-\dfrac{\piup}3,\dfrac{\piup}6\Bigr]$上单调递增}
+        \begin{answer}
+          C
+        \end{answer}
+      \vspace{1.5em}
+      \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03393-0》专题14三角函数的图像与性质P53p8【2017•天津】【正弦曲线解析式】
+            % {\kaishu (2017 \textbullet 天津)}
+            设函数$f(x)=2\sin(\omega x+\varphi)$，$x\inR$，其中$\omega>0$，$\abs{\varphi}<\piup$，若$f\Bp{\dfrac{5\piup}8}=2$，$f\Bp{\dfrac{11\piup}8}=0$，且$f(x)$的最小正周期大于$\piup$，则\xz
+            \xx{$\omega=\dfrac23$，$\varphi=\dfrac{\piup}{12}$}
+             {$\omega=\dfrac23$，$\varphi=-\dfrac{11\piup}{12}$}
+             {$\omega=\dfrac13$，$\varphi=-\dfrac{11\piup}{24}$}
+             {$\omega=\dfrac13$，$\varphi=\dfrac{7\piup}{24}$}
+            \begin{answer}
+              A
+            \end{answer}
+      \vspace{1.5em}
+      \item%《2018天利38套：高考真题单元专题训练(理)ISBN978-7-223-03393-0》专题14三角函数的图像与性质P54p18【2017•山东】【正弦曲线解析式，三角恒等变换】
+            % {\kaishu (2017 \textbullet 山东)}
+            设函数$f(x)=\sin\Bp{\omega x-\dfrac{\piup}6}+\sin\Bp{\omega x-\dfrac{\piup}2}$，其中$0<\omega<3$.已知$f\Bp{\dfrac{\piup}6}=0$.\\
+            (I)求$\omega$；\\
+            (II)将函数$y=f(x)$的图像上各点的横坐标伸长为原来的2倍(纵坐标不变)，再将得到的图像向左平移$\dfrac{\piup}4$个单位，得到函数$y=g(x)$的图像，求$g(x)$在$\Bigl[-\dfrac{\piup}4,\dfrac{3\piup}4\Bigr]$上的最小值.
+            \begin{answer}
+              (I)$f(x)=\sqrt3\sin\Bp{\omega x-\dfrac{\piup}3}$，$\omega=2$.
+              (II)$g(x)=\sqrt3\sin\Bp{x-\dfrac{\piup}{12}}$，当$x=-\dfrac{\piup}4$时,$g(x)$取得最小值$-\dfrac32$
+            \end{answer}
+      \vspace{5cm}
+    \end{exercise}
+\section{直线与圆方程}
+\section{导数}
+  \subsection{导数的定义}
+    {\kaishu 若函数$f(x)$的在$x_0$附近有定义，当自变量$x$在$x_0$处取得一个增量$ \triangle x $时$ (\triangle x\text{充分小}) $，因变量$ y $也随之取得增量$ \triangle y~\left(\triangle y=f(x_0+\triangle x)-f(x_0)\right). $若$ \lim\limits_{\triangle x \to 0}\dfrac{\triangle y}{\triangle x} $存在，则称$f(x)$在$x_0$处可导，此极限值称为$ f(x) $在点$x_0$处的导数(或变化率)，记作$ f'(x_0) $或$ \left.y'~\right|_{x=x_0} $或$\left.\dfrac{ dy}{dx }~\right|_{x_0}$，即$ f'(x_0)= \lim\limits_{\triangle x \to 0}\dfrac{f(x)-f(x_0)}{x-x_0}$.}
+  \subsection{常用函数的导数和基本运算}
+    \subsubsection{常用函数的导数}
+      \begin{center}\begin{tabular}{|c|c|}
+        \hline
+        原函数&导数\\
+        \hline
+        $y=C~(C\text{为常数})$&$y'=0$\\
+        \hline
+        $y=x^n~(n\in\mathbf{Q^*})$&$y'=nx^{n-1}$\\
+        \hline
+        $y=\sin x$&$y'=\cos x$\\
+        \hline
+        $y=\cos x$&$y'=-\sin x$\\
+        \hline
+        $y=e^x$&$y'=e^x$\\
+        \hline
+        $y=\ln x$&\Gape[9pt]{$y'=\dfrac{1}{x}$}\\
+        \hline
+      \end{tabular}\end{center}
+    \subsubsection{四则运算}
+      \begin{enumerate}[1)]
+        \item $ \left(f(x)\pm g(x)\right)'=f'(x)\pm g'(x) $;
+        \item $\left(f(x)g(x)\right)'=f'(x)g(x)+f(x)g'(x)$;
+        \item $\left(\dfrac{f(x)}{g(x)}\right)'=\dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2}$
+      \end{enumerate}
+    % \subsubsection{复合函数导数}
+    % $ y=f\left[u(x)\right] $的导函数为$ y'_x=y'_u\bm{\cdot}u'_x~(\text{其中}~y'_x~\text{表示}~y~\text{关于}~x~\text{的导数}) $.
+    % \begin{proof}
+    %   将$ y=f\left[u(x)\right] $分拆成$ \Bigg\{\begin{aligned}
+    %   y=f(u)\\
+    %   u=u(x).
+    %   \end{aligned} $.根据导数的定义：\begin{equation*}
+    %   \begin{aligned}
+    %     y'_x&=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta x}=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\dfrac{\Delta u}{\Delta x}\\
+    %     &=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\lim \limits_{\Delta x \to 0}\dfrac{\Delta u}{\Delta x}\\
+    %     &=y'_u\bm{\cdot}u'_x
+    %   \end{aligned}
+    %   \end{equation*}
+    % \end{proof}
+  \subsection{切线方程}
+  \subsection{导数的几何意义}
+    {\kaishu 函数$y=f(x)$在$x_0$处的导数$ f'(x_0) $的几何意义是：曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线的斜率(瞬时速度就是位移$ s(t) $对时间$ t $的导数).}\par
+  \subsection{求曲线切线方程的步骤：}
+    \subsubsection{点$ P(x_0,y_0) $在曲线上}
+      {\kaishu \begin{enumerate}[(1)]
+      \item 求出函数$y= f(x) $在点$ x=x_0 $的导数，即曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处切线的斜率;
+      \item 在已知切点坐标$ P(x_0,f(x_0)) $和切线斜率的条件下，求得切线方程为$ y-y_0=f'(x_0)(x-x_0) $
+      \end{enumerate}
+      注：\ding{192} 当曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线平行于$y$轴时(此时导数不存在)，由切线的定义可知，切线方程为$ x=x_0 $;\par
+      \ding{193} 当切点坐标未知时，应首先设出切点坐标，再求解.}
+    \subsubsection{点$ P(x_0,y_0) $不在曲线上}
+      {\kaishu \begin{enumerate}[1)]
+      \item 设出切点$P'\left(x_1,f\left(x_1\right)\right)$；
+      \item 写出过点$P'\left(x_1,f\left(x_1\right)\right)$的切线方程$ y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $;
+      \item 将点$ P $的坐标$ \left(x_0,y_0\right) $代入切线方程，求出$ x_1 $；
+      \item 将$ x_1 $的值代入方程$y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $，可得过点$ P(x_0,y_0) $的切线方程.
+      \end{enumerate}}
+    \subsubsection{切线方程已知}
+      当曲线的切线方程是已知时，常合理选择以下三个条件的表达式解题：
+      {\kaishu \begin{enumerate}[1)]
+        \item 切点在切线上;
+        \item 切点在曲线上；
+        \item 切点横坐标处的导数等于切线的斜率.
+      \end{enumerate}
+    }
+\section{线性规划}
+\section{等差数列与等比数列}
+\section{框图}
+\section{基本不等式}
+\section{概率与统计}
+
+\section{}
+
+
+% \newpage
+% \section{课后作业}
+%   \begin{exercise}{\heiti 练习}
+%
+%   \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

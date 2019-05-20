@@ -1,0 +1,189 @@
+\Topic{导数与切线}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190513}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+  \tikzstyle{startstop} = [rectangle,rounded corners,minimum height=0.7cm,minimum width=1.2cm,text centered, draw=black]
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{process} = [rectangle,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{decision} = [diamond,shape aspect=2.5,minimum height=0.5cm,text centered,draw=black]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+\startexercise
+\section{利用导数的概念解题}
+  \subsection{导数的定义}
+    {\kaishu 若函数$f(x)$的在$x_0$附近有定义，当自变量$x$在$x_0$处取得一个增量$ \triangle x $时$ (\triangle x\text{充分小}) $，因变量$ y $也随之取得增量$ \triangle y~\left(\triangle y=f(x_0+\triangle x)-f(x_0)\right). $若$ \lim\limits_{\triangle x \to 0}\dfrac{\triangle y}{\triangle x} $存在，则称$f(x)$在$x_0$处可导，此极限值称为$ f(x) $在点$x_0$处的导数(或变化率)，记作$ f'(x_0) $或$ \left.y'~\right|_{x=x_0} $或$\left.\dfrac{ dy}{dx }~\right|_{x_0}$，即$ f'(x_0)= \lim\limits_{\triangle x \to 0}\dfrac{f(x)-f(x_0)}{x-x_0}$.}
+  \subsection{常用函数的导数和基本运算}
+    \subsubsection{常用函数的导数}
+      \begin{center}\begin{tabular}{|c|c|}
+        \hline
+        原函数&导数\\
+        \hline
+        $y=C~(C\text{为常数})$&$y'=0$\\
+        \hline
+        $y=x^n~(n\in\mathbf{Q^*})$&$y'=nx^{n-1}$\\
+        \hline
+        $y=\sin x$&$y'=\cos x$\\
+        \hline
+        $y=\cos x$&$y'=-\sin x$\\
+        \hline
+        $y=e^x$&$y'=e^x$\\
+        \hline
+        $y=\ln x$&\Gape[9pt]{$y'=\dfrac{1}{x}$}\\
+        \hline
+      \end{tabular}\end{center}
+    \subsubsection{四则运算}
+      \begin{enumerate}[1)]
+        \item $ \left(f(x)\pm g(x)\right)'=f'(x)\pm g'(x) $;
+        \item $\left(f(x)g(x)\right)'=f'(x)g(x)+f(x)g'(x)$;
+        \item $\left(\dfrac{f(x)}{g(x)}\right)'=\dfrac{f'(x)g(x)-f(x)g'(x)}{\left[g(x)\right]^2}$
+      \end{enumerate}
+    % \subsubsection{复合函数导数}
+    % $ y=f\left[u(x)\right] $的导函数为$ y'_x=y'_u\bm{\cdot}u'_x~(\text{其中}~y'_x~\text{表示}~y~\text{关于}~x~\text{的导数}) $.
+    % \begin{proof}
+    %   将$ y=f\left[u(x)\right] $分拆成$ \Bigg\{\begin{aligned}
+    %   y=f(u)\\
+    %   u=u(x).
+    %   \end{aligned} $.根据导数的定义：\begin{equation*}
+    %   \begin{aligned}
+    %     y'_x&=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta x}=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\dfrac{\Delta u}{\Delta x}\\
+    %     &=\lim \limits_{\Delta x \to 0}\dfrac{\Delta y}{\Delta u}\bm{\cdot}\lim \limits_{\Delta x \to 0}\dfrac{\Delta u}{\Delta x}\\
+    %     &=y'_u\bm{\cdot}u'_x
+    %   \end{aligned}
+    %   \end{equation*}
+    % \end{proof}
+\section{切线方程}
+  \subsection{导数的几何意义}
+    {\kaishu 函数$y=f(x)$在$x_0$处的导数$ f'(x_0) $的几何意义是：曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线的斜率(瞬时速度就是位移$ s(t) $对时间$ t $的导数).}\par
+  \subsection{求曲线切线方程的步骤：}
+    \subsubsection{点$ P(x_0,y_0) $在曲线上}
+      {\kaishu \begin{enumerate}[(1)]
+      \item 求出函数$y= f(x) $在点$ x=x_0 $的导数，即曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处切线的斜率;
+      \item 在已知切点坐标$ P(x_0,f(x_0)) $和切线斜率的条件下，求得切线方程为$ y-y_0=f'(x_0)(x-x_0) $
+      \end{enumerate}
+      注：\ding{192} 当曲线$y=f(x)$在点$ P(x_0,f(x_0)) $处的切线平行于$y$轴时(此时导数不存在)，由切线的定义可知，切线方程为$ x=x_0 $;\par
+      \ding{193} 当切点坐标未知时，应首先设出切点坐标，再求解.}
+    \subsubsection{点$ P(x_0,y_0) $不在曲线上}
+      {\kaishu \begin{enumerate}[1)]
+      \item 设出切点$P'\left(x_1,f\left(x_1\right)\right)$；
+      \item 写出过点$P'\left(x_1,f\left(x_1\right)\right)$的切线方程$ y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $;
+      \item 将点$ P $的坐标$ \left(x_0,y_0\right) $代入切线方程，求出$ x_1 $；
+      \item 将$ x_1 $的值代入方程$y-f\left(x_1\right)=f'\left(x_1\right)(x-x_1) $，可得过点$ P(x_0,y_0) $的切线方程.
+      \end{enumerate}}
+    \subsubsection{切线方程已知}
+      当曲线的切线方程是已知时，常合理选择以下三个条件的表达式解题：
+      {\kaishu \begin{enumerate}[1)]
+      	\item 切点在切线上;
+      	\item 切点在曲线上；
+      	\item 切点横坐标处的导数等于切线的斜率.
+      \end{enumerate}
+
+
+    }
+\begin{exercise}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p1【2018•全国I卷】【导数，切线】\\
+    \source{2018文}{全国I卷}
+    设函数$f(x)=x^3+(a-1)x^2+ax$.若$f(x)$为奇函数，则曲线$y=f(x)$在点$(0,0)$处的切线方程为\xz
+    \xx{$y=-2x$}{$y=-x$}{$y=2x$}{$y=x$}
+    \begin{answer}
+      D
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p2【2018•广州二测】【导数，切线】\\
+    \source{2018文}{广州二测}
+    已知函数$f(x)=\ee^x-x^2$的图像在点$\bigl(1,f(1)\bigr)$处的切线过点$(0,a)$，则$a=$\xz
+    \xx{$1$}{$-1$}{$2$}{$-2$}
+    \begin{answer}
+      A
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p4【2018•大连双基测试】【导数，切线】\\
+    \source{2018文}{大连双基测试}
+    已知函数$f(x)=x^3-2x^2+(a-1)x$的图像与$x$轴相切，则实数$a$的值为\xz
+    \xx{1}{2}{1或2}{0}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p5【2018•合肥一检】【导数，切线】\\
+    \source{2018文}{合肥一检}
+    已知直线$2x-y+1=0$与曲线$y=a\ee^x+x$相切，其中$\ee$为自然对数的底数，则实数$a$的值是\xz
+    \xx{$\ee$}{$2\ee$}{$1$}{$2$}
+    \begin{answer}
+      C
+    \end{answer}
+  \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p13【2018•天津卷】【导数，切线】\\
+    \source{2018文}{天津卷}
+    已知$a\inR$，设函数$f(x)=ax-\ln x$的图像在$\bigl(1,f(1)\bigr)$处的切线为$l$，则$l$在$y$轴上的截距为\tk.
+    \begin{answer}
+      $1$
+    \end{answer}
+\end{exercise}
+
+
+\newpage
+\section{课后作业}
+  \begin{exercise}{\heiti 练习}
+    \item 求下列函数的导数： \begin{multicols}{2}
+          \begin{enumerate}[label=\arabic*)]
+            \item $f(x)=a\ee^x-\ln x-1$;
+            \vspace{2cm}
+            \item $f(x)=\mfrac{ax^2+x-1}{\ee^x}$;
+            \vspace{2cm}
+            \item $f(x)=(x-1)\ee^x-\mfrac{k}2x^2$;
+            \vspace{2cm}
+            \item $f(x)=x\ee^x+(a-2)\ee^x-x$;
+            \vspace{2cm}
+          \end{enumerate}
+          \begin{answer}
+            \begin{enumerate}[itemindent=1em,listparindent=6em, label=\arabic*)]
+              \item $f'(x)=a\ee^x-\mfrac1x$;
+              \item $f'(x)=(-ax^2-x+2ax+2)\ee^{-x}$;
+              \item $f'(x)=x\ee^x-kx$;
+              \item $f'(x)=(x+a-1)\ee^x-1$;
+            \end{enumerate}
+          \end{answer}
+        \end{multicols}
+  \end{exercise}
+  \vspace{3em}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p3【2018•广州调研】【导数，切线】\\
+      \source{2018文}{广州调研}
+      已知直线$y=kx-2$与曲线$y=x\ln x$相切，则实数$k$的值为\xz
+      \xx{$\ln 2$}{$1$}{$1-\ln2$}{$1+\ln 2$}
+      \begin{answer}
+        D
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p3【2018•太原一模】【导数，切线】\\
+      \source{2018文}{太原一模}
+      曲线$y=\sin x+\ee^x$在点$(0,1)$处的切线方程是\xz
+      \xx{$x-2y+2=0$}{$2x-y+1=0$}{$x+2y-4=0$}{$x-y+1=0$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 A组 P4p13【2018•全国III卷】【导数，切线】\\
+      \source{2018文}{全国III卷}
+      曲线$y=(ax+1)\ee^x$在点$(0,1)$处的切线的斜率为$-2$，则$a=$\tk.
+      \begin{answer}
+        $-3$
+      \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型 4 导数的应用 B组 P4p14【2018•南昌一模】【导数，求导】\\
+      \source{2018文}{南昌一模}
+      设函数$f(x)$在$(0,+\infty)$内可导，其导函数为$f'(x)$，且$f(\ln x)=x+\ln x$，则$f'(1)=$\tk.
+      \begin{answer}
+        $1+\ee$
+      \end{answer}
+  \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

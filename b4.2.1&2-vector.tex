@@ -338,8 +338,7 @@
       \bm{a}=(x,y)
     \end{equation}
     其中$ x $叫做$ \bm{a} $在$x$轴上的坐标，$ y $叫做$ \bm{a} $在$y$轴上的坐标，(\ref{eq:axy})式叫做\textbf{向量的坐标表示}
-    \begin{center}
-    \begin{tikzpicture}[scale=0.7]
+    \begin{center}\begin{tikzpicture}[scale=0.7]
       \draw[->,>=stealth] (-1,0)--(3,0) node[below](x){$x$};
       \draw[->,>=stealth] (0,-1)--(0,3) node[right](y){$y$};
       \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
@@ -349,7 +348,7 @@
       \draw[dashed](A)--++(-1.5,0)node[left](y){$y$};
       \draw[dashed](A)--++(0,-1.5)node[below](x){$x$};
       \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
-    \end{tikzpicture}
+      \end{tikzpicture}
     \end{center}
     \begin{description}
       \item[三点共线的判定] 若$ A,~B,~C $三点共线，有$ \vv{OA}=\lambda \vv{OB}+\mu\vv{OC}~(\lambda+\mu=1) $.或$\vv{AB}=\lambda \vv{AC}$.

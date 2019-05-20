@@ -18,6 +18,8 @@
 \RequirePackage{zhnumber}
 \RequirePackage{gensymb}%为表示角度符号添加
 \RequirePackage{textcomp}
+\RequirePackage{ulem}%强调文本
+  \newcommand{\mysout}[1]{\sout{\text{#1}}}
 % \RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
 \RequirePackage{multicol}%分栏
@@ -25,7 +27,7 @@
   % \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
 % \RequirePackage{siunitx}%国际单位制符号
 %数学符号
-\RequirePackage{amsmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
+\RequirePackage{amsmath,nccmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
 \RequirePackage[g]{esvect}%向量表示包
 \RequirePackage{enumitem}
   \setlist[enumerate]{itemsep=0mm}
@@ -34,6 +36,11 @@
             pgfplots,
             tkz-euclide}
   \usetikzlibrary{calc,math,arrows.meta,shapes,graphs,intersections,angles,quotes}
+  \tikzstyle{startstop} = [rectangle,rounded corners,minimum height=0.7cm,minimum width=1.2cm,text centered, draw=black]
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{process} = [rectangle,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{decision} = [diamond,shape aspect=2.5,minimum height=0.5cm,text centered,draw=black]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
 % \usetikzlibrary{automata,
 %                 positioning}
 \RequirePackage{fontspec,txfonts,setspace}
@@ -176,6 +183,8 @@
 % 分值
 \newcommand{\fz}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
    {$\cdots$}(#1 \text{分})}\\ }
+\newcommand{\fzn}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
+  {$\cdots$}(#1 \text{分})} }
 %z选择题四个选项的样式
 %       当你排版选择题的时候，你只需输入
 %\xx{选项 A 的内容}{选项 B 的内容}{选项 C 的内容}{选项 D 的内容}
@@ -262,8 +271,14 @@
 
 % 段落之间的竖直距离
 %\setlength{\parskip}{3pt plus1pt minus1pt}
-\setlength{\parskip}{2pt plus1pt minus1pt}
-
+\setlength{\parskip}{2pt plus.5pt minus.5pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 单行公式的行距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\setlength\abovedisplayskip{3pt plus1pt minus1pt}
+\setlength\belowdisplayskip{3pt plus1pt minus1pt}
+\setlength{\abovedisplayshortskip}{0pt}
+\setlength{\belowdisplayshortskip}{0pt}
 % 定义行距
 % \renewcommand{\baselinestretch}{1.2}%单倍行距
 % \renewcommand{\baselinestretch}{1.6}%双倍行距
@@ -321,6 +336,7 @@
 %=======================================================================
 %特殊格式
 \newcommand{\source}[2]{[{\kaishu #1 \textbullet #2}]}%注明来源时加中括号
+\newcommand{\eg}[1]{{\kaishu 【{\textbf 例}】：#1}}%举例
 %=======================================================================
 \newcommand{\circled}[1]{\textcircled{\scriptsize #1}}
 \newcommand{\dcircled}[1]{}
@@ -341,6 +357,14 @@
 \def\NN{\mathbb{N}}
 \def\rad{\,\mathrm{rad}}
 \def\deg{\,\mathrm{deg}}
+% \newcommand{\varpareq}{\underset{$=$}{\mbox{\raisebox{0.3em}{$\,\varparallel$}}}}
+% \newcommand{\varpareq}{\ooalign{\varparallel\cr\hidewidth =\hidewidth\cr}}
+\makeatletter
+\newcommand{\varpareq}{\mathbin{\mathpalette\@varpareq\relax}}
+\newcommand{\@varpareq}[2]{\ooalign{%
+  \raisebox{.5\height}{$#1\,\varparallel$}\cr
+  \smash{\raisebox{-.6\height}{$#1=$}}\cr}}
+\makeatother
 \newcommand{\dfracp}[2]{\dfrac{#1\piup}{#2}}
 \newcommand{\Bp}[1]{\Bigl(#1\Bigr)}
 \newcommand{\bbp}[1]{\biggl(#1\biggr)}
