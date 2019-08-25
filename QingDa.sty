@@ -14,12 +14,46 @@
 \RequirePackage{tabularx}
 \RequirePackage{tablists}
 \RequirePackage{titlesec}
+  % \titlecontents{标题层次}[左间距]{整体格式}{标题序号}{标题内容}{指引线和页码}[下间距]
+% 一直乱码……
+%   \titlecontents{part}[20mm] %标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \heiti}
+%     {\contentslabel{3.5em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}
+%   \titlecontents{section}[12mm]%标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \fangsong}
+%     {\vspace{1cm}}                  % above code
+%     {\contentslabel{2.5em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}[6pt]
+%   \titlecontents{subsection}[18mm]%标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \kaishu}
+%     {\contentslabel{3.3em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}[0pt]
+% % 作者：王进之
+% % 链接：https://www.zhihu.com/question/29757796/answer/104247233
+% % 来源：知乎
+% 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
 \RequirePackage[hidelinks]{hyperref}
 \RequirePackage{zhnumber}
 \RequirePackage{gensymb}%为表示角度符号添加
 \RequirePackage{textcomp}
+\newif\ifshow
+\showtrue
+% \showfalse
+\RequirePackage{version}%注释语句，默认隐藏
+  \ifshow \includeversion{analisis}
+    \else \excludeversion{analisis}
+  \fi
+% \usepackage[disable]{todonotes} % notes not showed
+% \usepackage[draft]{todonotes}   % notes showed
+\RequirePackage{framed}%文字加边框
+  \setlength{\OuterFrameSep}{-0.2\baselineskip}%设置框与正文的垂直间距
 \RequirePackage{ulem}%强调文本
   \newcommand{\mysout}[1]{\sout{\text{#1}}}
+  \newcommand{\myuwave}[1]{\uwave{\text{#1}}}
 % \RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
 \RequirePackage{multicol}%分栏
@@ -28,6 +62,20 @@
 % \RequirePackage{siunitx}%国际单位制符号
 %数学符号
 \RequirePackage{amsmath,nccmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
+  %数学公式的间距设置
+  % 作者：liuqiangaliuv
+  % 来源：CSDN
+  % 原文：https://blog.csdn.net/liuqiangaliuv/article/details/80016255
+  % 版权声明：本文为博主原创文章，转载请附上博文链接！
+  % \makeatletter %会导致各种乱码
+  \renewcommand\normalsize{%
+  	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
+    \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
+    \abovedisplayshortskip \z@ \@plus3\p@
+    \belowdisplayshortskip 3\p@ \@plus3\p@ \@minus3\p@
+    \belowdisplayskip \abovedisplayskip
+    \let\@listi\@listI}
+    % \makeatother
 \RequirePackage[g]{esvect}%向量表示包
 \RequirePackage{enumitem}
   \setlist[enumerate]{itemsep=0mm}
@@ -104,11 +152,11 @@
 
 \fancypagestyle{plain}
 {\fancyhf{}
-\renewcommand{\headrulewidth}{1.6pt}
-\fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
-  {\vspace{-6pt}}
-  \hspace{-55pt}\includegraphics[height=2.32cm]{LogoTwo_L.png}
-  \end{tabular}
+  \renewcommand{\headrulewidth}{1.6pt}
+  \fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
+    {\vspace{-6pt}}
+    \hspace{-55pt}\includegraphics[height=2.32cm]{LogoTwo_L.png}
+    \end{tabular}
 }
 \fancyhead[R]{\begin{tabular}[c]{cr@{}c@{}}
   {\vspace{-6pt}}
@@ -125,13 +173,13 @@
 
 \renewcommand{\footrulewidth}{.5pt}
 \fancyfoot[C]{
-\resizebox{!}{1.0\baselineskip}
-{\begin{tabular}[c]{@{} c @{}}
-      \Huge{\vspace{8pt}\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{爱琴海校区：87509388}} \\
-      \LARGE{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
-      \LARGE{第\thepage 页}
-\end{tabular}}
-}
+  \resizebox{!}{1.0\baselineskip}
+  {\begin{tabular}[c]{@{} c @{}}
+        \Huge{\vspace{8pt}\textbf{鼓楼校区：87500166\hspace{2em}}\textbf{台江校区：83310089\hspace{2em}}\textbf{金山校区：87521588\hspace{2em}}\textbf{爱琴海校区：87509388}} \\
+        \LARGE{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
+        \LARGE{第\thepage 页}
+   \end{tabular}}
+  }
 }
 
 \pagestyle{plain}
@@ -151,29 +199,26 @@
 \newcommand{\Teach}[1]{\renewcommand{\QD@Teach}{#1}}
 
 \newcommand{\makefront}{
-%\title{2012年某某中学高三数学测试题}
-%\author{总分:150分and 时间120分钟}
-%\date{命题人: 某某某}
-%\maketitle
-\begin{table}[h]
-\small\vspace{-26pt}
-\arrayrulewidth=1pt
-  \centering
-  \renewcommand{\arraystretch}{1.5}
+  %\title{2012年某某中学高三数学测试题}
+  %\author{总分:150分and 时间120分钟}
+  %\date{命题人: 某某某}
+  %\maketitle
+  \begin{table}[h]
+  \small\vspace{-24pt}
+  \arrayrulewidth=1pt
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \hspace{-2em}
+    \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
+      \hline
+        {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei \wuhao 首课时间}&\QD@FirstTime&{\hei \wuhao 本课时间}  & \QD@CurrentTime  \\ \hline
+       {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
+       {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
+       {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
+    \end{tabular}
   \hspace{-2em}
-  \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|p{1.5cm}<{\centering}|}
-  \hline
-    {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei \wuhao 首课时间}&\QD@FirstTime&{\hei \wuhao 本课时间}  & \QD@CurrentTime  \\ \hline
-   {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
-   {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
-   {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
-\end{tabular}
-\hspace{-2em}
-\end{table}
+  \end{table}
 }
-
-
-
 
 \pagenumbering{arabic} % switch off page numbering
 
@@ -271,18 +316,21 @@
 
 % 段落之间的竖直距离
 %\setlength{\parskip}{3pt plus1pt minus1pt}
-\setlength{\parskip}{2pt plus.5pt minus.5pt}
+\setlength{\parskip}{2pt plus.5pt minus2pt}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 单行公式的行距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\setlength\abovedisplayskip{3pt plus1pt minus1pt}
-\setlength\belowdisplayskip{3pt plus1pt minus1pt}
-\setlength{\abovedisplayshortskip}{0pt}
-\setlength{\belowdisplayshortskip}{0pt}
+% \setlength\abovedisplayskip{2pt plus1pt minus1pt}
+% \setlength\belowdisplayskip{2pt plus1pt minus1pt}
+% \setlength{\abovedisplayshortskip}{0pt}
+% \setlength{\belowdisplayshortskip}{0pt}
 % 定义行距
-% \renewcommand{\baselinestretch}{1.2}%单倍行距
-% \renewcommand{\baselinestretch}{1.6}%双倍行距
-\renewcommand{\baselinestretch}{1.4}%
+% \baselineskip = \f@baselineskip * \baselinestretch,
+ % \f@baselineskip默认为字号的1.2倍
+ % \baselinestretch：article类默认为1；ctexart类默认为1.3
+ % Word 中的“单倍行距”/“双倍行距”等名词，指的是因子的数值为 1 或者 2 的时候的行距；
+ % 相反 setspace 宏包的 “单倍”、“一倍半”、“双倍”则是指行距相对于字号的倍数。
+\renewcommand{\baselinestretch}{1.6}%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -337,6 +385,18 @@
 %特殊格式
 \newcommand{\source}[2]{[{\kaishu #1 \textbullet #2}]}%注明来源时加中括号
 \newcommand{\eg}[1]{{\kaishu 【{\textbf 例}】：#1}}%举例
+% \newcommand{\answers}[2]{\begin{answer} #1 \analisis{#2} \end{answer}}%尚未成功的构想
+%参数控制隐藏或显示段落
+% \newenvironment{hide}[1][0]{\ifnum #1=1 \par \else}{ \fi \par}%默认情况总失败
+% \newenvironment{hide}[1][0]{\newcounter{i}\whiledo{\value{i}<\value{#1}}\bgroup}{\stepcounter{i}\egroup \par}%判断条件无用总失败
+% \newif\ifprint
+% \printfalse
+% \newcommand{\blank}[1][1]{%
+%   \ifnum #1=1
+%   \else
+%     #2%
+%   \fi}
+
 %=======================================================================
 \newcommand{\circled}[1]{\textcircled{\scriptsize #1}}
 \newcommand{\dcircled}[1]{}

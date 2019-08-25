@@ -1,0 +1,61 @@
+            大量经费进认可空间
+          \end{analisis}
+          % \showfalse
+          % \begin{analisis}
+          %   是的史丹佛i少肥肉
+          % \end{analisis}
+          \begin{framed}
+            {\heiti 说明}\\
+            此题求\circled{1}\circled{2}交点时，得到的点$(\mfrac12,-\mfrac12)$，不符合题意.{\kaishu 这种情况很少见，但为求万无一失，还是不能省去代入检验的步骤.}\\ \blank
+            一旦出现这种情况，则目标函数不可能同时存在最大值与最小值.因此此题若要求$z=x-3y$的值域，那么$[-8,-1]$将是错误答案.{\kaishu 这种情况更少见.一般由题目的描述可以直接判断目标函数有最大值还是有最小值}\\
+            此题中，目标函数$z=x-3y$要么只有最大值（这种情况最大值为$-1$，那么值域应为$(-\infty,-1)$），要么只有最小值（这种情况最小值为$-8$，那么值域应为$(-8,+\infty)$）.为判断值域，将不符合约束条件的点$(\mfrac12,-\mfrac12)$带入目标函数得$z=2$，于是$2$不可能在$z$的值域中，所以$z$的值域为$(-\infty,-1)$，$z$只有最大值.\\
+            如果要求$h=x+3y$的值域，那么由\circled{1}，\circled{3}交点$(2,1)$得$h=5$，由\circled{2}，\circled{3}交点$(-4,4)$得$h=8$，于是$h$可能是只有最大值，最大值为$8$，值域$(-\infty,8)$；也可能$h$只有最小值，最小值为$5$，值域$(5,+\infty)$，由不满足约束条件的\circled{1}，\circled{2}交点
+            $(\mfrac12,-\mfrac12)$得$h=-1$，可见$h$不能等于$-1$，因此$h$值域为$(5,+\infty)$，$h$只有最小值.
+          \end{framed}
+      % \end{answer}
+
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p15【2018•湖北八校联考（一）】【线性规划】\\
+      \source{2018文}{湖北八校联考（一）}
+      已知$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-y+4\geqslant0\,,\\
+        &x\leqslant2\,,\\
+        &x+y+k\geqslant0\,.
+      \end{aligned}\right.$且$z=x+3y$的最小值为2，则常数$k=$\tk.
+      % \begin{answer}
+      %   $-2$
+        \\{\heiti 【解析】：}
+          已知$z=x+3y$的最小值为2，即$x+3y\geqslant2$，这是必须满足的已知条件；
+          由$x+y+k\geqslant0$，得到“目标函数”$k\geqslant -(x+y)$，要求的是$-(x+y)$的最小值（在已知条件下）.
+          将三个已知直线方程编号
+          \[\begin{aligned}
+            &x-y+4=0\,,\quad &\circled{1}\\
+            &x-2=0\,,\quad &\circled{2}\\
+            &x+3y-2=0\,.\quad &\circled{3}
+          \end{aligned}\]
+          由\circled{1}，\circled{3}得交点$(-\mfrac52,\mfrac32)$，带入“目标函数”得$k=1$；\\
+          由\circled{2}，\circled{3}得交点$(2,0)$，带入“目标函数”得$k=-2$；\\
+          于是$-(x+y)$最小值为$-2$，答案为$k=-2$.\\
+          {\kaishu \circled{注}：此时不求出\circled{1}，\circled{2}两方程交点，因为\circled{3}式是必须满足的}
+      % \end{answer}
+  \end{exercise}
+\section{等差数列与等比数列}
+\section{框图}
+\section{基本不等式}
+\section{概率与统计}
+
+\section{}
+
+
+% \newpage
+% \section{课后作业}
+%   \begin{exercise}{\heiti 练习}
+%
+%   \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

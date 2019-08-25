@@ -1,0 +1,438 @@
+\Topic{填空题与选择题简单题型小结}
+  \Teach{}
+  \Grade{高三}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
+  % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
+  % \Name{郭文镔}\FirstTime{20181111}\CurrentTime{20181117}
+  % \Name{马灿威}\FirstTime{20181111}\CurrentTime{20181111}
+  % \Name{黄亭燏}\FirstTime{20181231}\CurrentTime{20181231}
+  % \Name{王睿妍}\FirstTime{20190129}\CurrentTime{}
+  \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190514}
+  \newtheorem*{Theorem}{定理}
+  \makefront
+  \setcounter{tocdepth}{2}%只显示两级目录
+  \begin{spacing}{0.8}%%行间距
+    \tableofcontents
+  \end{spacing}
+
+% \vspace{-1.5em}
+\clearpage
+\startexercise
+\section{集合与不等式}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p1【2018•全国I卷】【集合，交集】\\
+      \source{2018文}{全国I卷}
+      已知集合$A=\{0,2\}$，$B=\{-2,-1,0,1,2\}$，则$A\cap B=$\xz
+      \xx{$\{0,2\}$}
+       {$\{1,2\}$}
+       {$\{0\}$}
+       {$\{-1,-2,0,1,2\}$}
+      % \begin{answer}
+        \\{\heiti 【答案】:}
+          A
+        \begin{framed}{\heiti 知识点提示}\\
+          {\fangsong 交集}：既属于集合$A$，又属于$B$的所有元素组成的集合，记为$A\cap B$.
+            \\\eg{
+             $\{1,2,3\}\cap \{2,3,5\}=\{2,3\}$；$[2,+\infty)\cap[-1,3)=[2,3)$.
+             }
+        \end{framed}
+      % \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p4【2018•济南模拟】【集合，并集，二次方程】\\
+      \source{2018文}{济南模拟}
+      已知集合$A=\{x\mid x^2+2x-3=0\}$，$B=\{-1,1\}$则$A\cup B=$\xz
+      \xx{$\{1\}$}
+       {$\{-1,1,3\}$}
+       {$\{-3,-1,1\}$}
+       {$\{-3,-1,1,3\}$}
+      % \begin{answer}
+        \\{\heiti 【答案】:}
+          C
+        \\{\heiti 【解析】：}
+          方程$x^2+2x-3=0$的解为$x=1$或$x=-3$，$\therefore$ 集合$B=\{1,-3\}$，故$A$与$B$的并集$A\cup B=\{-3,-1,1\}$
+        \begin{framed}{\heiti 知识点提示}
+          \begin{itemize}
+            \item {\fangsong 并集}：集合$A$中所有元素与集合$B$中的所有元素共同组成的集合，记为$A\cup B$.
+             \\\eg{
+              $\{1,2,3\}\cup \{2,3,5\}=\{1,2,3,5\}$；$[2,+\infty)\cup[-1,3)=[-1,+\infty)$.
+              }
+            \item 解一元二次方程方法（以方程$2x^2-5x-3=0$为例）：\par
+              \hspace{-2.5em}
+              \begin{minipage}[t]{0.52\linewidth}\vspace{-0.5\baselineskip}
+                  \begin{flushleft}
+                    \hspace{2.5em}配方法：
+                      \[\begin{aligned}
+                        2x^2-5x-3&=0\\
+                        x^2-\mfrac52 x-\mfrac32&=0\\
+                        x^2-2\times\mfrac54x+\bigl(\mfrac54\bigr)^2-\bigl(\mfrac54\bigr)^2-\mfrac32&=0\\
+                        \bigl(x-\mfrac54\bigr)^2 &=\mfrac{25}{16}+\mfrac{3\times8}{2\times8}=\mfrac{49}{16}\\
+                        x-\mfrac54 &=\pm\mfrac74\\
+                        x &=\mfrac54 \pm\mfrac74
+                      \end{aligned}\]
+                    \hspace{2.5em}即$x=3$或$x=-\mfrac12$.
+                  \end{flushleft}
+              \end{minipage}\hspace{2em}
+              \begin{minipage}[t]{0.48\linewidth}\vspace{-0.5\baselineskip}
+                  \begin{flushleft}
+                    十字相乘法：
+                    \[\begin{aligned}
+                        2&x            &\quad           &\,+1           &\longrightarrow &\;2x+1\\
+                        &x             &\quad           &\,-3           &\longrightarrow &\;x-3\\
+                        &\downarrow  &\downarrow\qquad  &\;\downarrow   &\quad           &\quad\downarrow\\
+                        2&x^2        &(-6x+x)           &\,-3           &\longrightarrow &\;2x^2-5x-3=0
+                      \end{aligned}\]
+                    所以方程可化为$(2x+1)(x-3)=0$，\\
+                    $\therefore$ $2x+1=0$ 或$x-3=0$,\\
+                    即$x=3$或$x=-\mfrac12$.
+                  \end{flushleft}
+              \end{minipage}
+          \end{itemize}
+        \end{framed}
+      %   C
+      % \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p5【2018•贵阳期末】【集合，交集，根式定义域】\\
+          \source{2018文}{贵阳期末}
+          设$A=\{x\mid -1<x<2\}$，$B=\{x\mid y=\sqrt{-x+1}\}$，则$A\cap B=$\xz
+          \xx{$(-1,1]$}
+           {$(-5,2)$}
+           {$(-3,2)$}
+           {$(-3,3)$}
+          \begin{answer}
+            A
+          \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p2【2018•天津卷】【集合，补集交集，区间】\\
+      \source{2018文}{天津卷}
+      设全集为$\mathbb{R}$，集合$A=\{x\mid 0<x<2\}$，$B=\{x\mid x\geqslant1\}$，
+      则$A\bigcap\bigl(\complement_{\mathbb R}B\bigr)=$\xz
+      \xx{$\{x\mid 0<x\leqslant1\}$}
+       {$\{x\mid 0<x<1\}$}
+       {$\{x\mid 1\leqslant x<2\}$}
+       {$\{x\mid 0<x<2\}$}
+      \begin{answer}
+        B
+      \end{answer}
+    \item 《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p8【2018•南昌调研】【集合，交集，对数】\\
+      \source{2018文}{南昌调研}
+      设集合$A=\{x\mid -2\leqslant x\leqslant 1\}$，$B=\{x\mid y=\log_2{(x^2-2x-3)}\}$，则$A\cap B=$\xz
+      \xx{$[-2,1)$}
+       {$(-1,1]$}
+       {$[-2,-1)$}
+       {$[-1,1)$}
+      \begin{answer}
+        C
+      \end{answer}
+    \item 《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型1集合的运算P1p3【2018•全国II卷】【集合，元素】\\
+      \source{2018文}{全国II卷}
+      已知集合$A=\{(x,y)\mid x^2+y^2\leqslant3,x\inZ,y\inZ\}$，则$A$中元素的个数为\xz
+      \xx{9}{8}{5}{4}
+      \begin{answer}
+        A
+      \end{answer}
+  \end{exercise}
+\section{复数}
+  \begin{exercise}
+    \item %【2017•新课标全国卷I】【复数计算】\\
+      \source{2017文}{全国I新课标}
+      下列各式的运算结果为纯虚数的是\xz
+      \xx{$\ii(1+\ii)^2$}
+       {$\ii^2(1-\ii)$}
+       {$(1+\ii)^2$}
+       {$\ii(1+\ii)$}
+      % \begin{answer}
+        \\{\heiti 【答案】:}
+          C
+        \\{\heiti 【解析】：}
+          选项A：$\ii(1+\ii)^2=\ii\codt(2\ii)=-2$；选项B：$\ii^2(1-\ii)=-1\codt(1-\ii)=\ii-1$；
+          选项C：$(1+\ii)^2=1+2\ii-1=2\ii$；选项D：$\ii(1+\ii)=\ii-1$.
+        \begin{framed}{\heiti 知识点提示}
+            \[\text{复数}\,a+b\ii(a,b\inR)
+              \left\{\begin{aligned}
+                &\text{实数($b=0$)}\\
+                &\text{虚数($b\neq0$)}\left\{\begin{aligned} &\text{纯虚数}(a=0)\\ &\text{非纯虚数}(a\neq0)\end{aligned}\right.
+              \end{aligned}\right.\]
+              \\\eg{
+                 $3$是实数；$-1+3\ii$与$2\ii$是虚数，并且$2\ii$是纯虚数，$-1+3\ii$是非纯虚数；以上三个数都是复数.}
+        \end{framed}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型16复数、推理与证明P16p1【2018•全国I卷】【复数计算】\\
+      \source{2018文}{全国I卷}
+      设$z=\mfrac{1-\ii}{1+\ii}+2\ii$，则$|z|=$\xz
+      \xx{$0$}
+       {$\mfrac12$}
+       {$1$}
+       {$\sqrt2$}
+     % \begin{answer}
+       \\{\heiti 【答案】:}
+         C
+       \\{\heiti 【解析】：}
+        $z=\mfrac{1-\ii}{1+\ii}+2\ii=\mfrac{(1-\ii)(1-\ii)}{(1+\ii)(1-\ii)}+2\ii
+          =\mfrac{-2\ii}2+2\ii=\ii$，$\therefore$ $|z|=1$
+        \begin{framed}{\heiti 知识点提示}\\
+          \begin{minipage}[t]{0.65\linewidth}\vspace{-0.5\baselineskip}
+            复数$z=a+b\ii(a,b\inR)$对应的向量$\vv{OZ}$的模，也即点$Z(a,b)$与原点$O$的距离叫做复数的模，记为$|z|$.即：
+              \[|z|=|a+b\ii|=\sqrt{a^2+b^2}\]
+              显然，$|z|\geqslant0$.
+              {\kaishu 复数的模是一个不小于0的实数.}
+              \\\eg{$|3-4\ii|=5$；$|2\ii|=2$.}
+          \end{minipage}
+          \begin{minipage}[t]{0.35\linewidth}\vspace{-0.5\baselineskip}
+            \begin{center}\begin{tikzpicture}[scale=1]
+              \tikzmath{
+                \a=2.5;\b=2;
+              }
+              \draw[->,>=stealth] (-1,0)--(3.5,0) node[below](x){$x$};
+              \draw[->,>=stealth] (0,-0.5)--(0,2.5) node[left](y){$y$};
+              % \draw[very thick,->,>=stealth](0,0)--(1,0)node[midway,below](i) {$\bm{i}$};
+              % \draw[very thick,->,>=stealth](0,0)--(0,1)node[midway,left](j) {$\bm{j}$};
+              \coordinate[label=below left:$O$] (O) at (0,0);
+              \coordinate[label=right:$Z\colon a+b\ii$] (Z) at (\a,\b);
+              \draw[->,>=stealth] (O)--(Z);
+              % \node[right](a1)at(1.5,1.5){$A(x,y)$};
+              \draw[dashed](Z)--++(-\a,0)node[left](y){$b$};
+              \draw[dashed](Z)--++(0,-\b)node[below](x){$a$};
+              % \draw[->,>=stealth](0,0)--(A) node[midway,left] (a) {$\bm{a}$};
+              \end{tikzpicture}\vspace{-1.5em}
+            \end{center}
+          \end{minipage}
+        \end{framed}
+     % \end{answer}
+    \item % 《2018天利38套：高考真题单元专题训练(文)ISBN978-7-223-03161-5》专题33算法、复数P117p2【2016•全国新课标】【复数计算】\\
+      \source{2016文}{全国新课标}
+      设$(1+2\ii)(a+\ii)$的实部与虚部相等，其中$a$为实数，则$a=$\xz
+      \xx{$-3$}{$-2$}{$2$}{$3$}
+      % \begin{answer}
+        \\{\heiti 【答案】:}
+            A
+        \\{\heiti 【解析】：}
+         $(1+2\ii)(a+\ii)=a+\ii+2a\ii-2=(a-2)+(2a+1)\ii$；实部为$a-2$，虚部为$2a+1$；
+          故$a-2=2a+1$ $\Rightarrow$ $-2-1=2a-a$，即$a=-3$.
+         \begin{framed}{\heiti 知识点提示}\\
+            复数$z=a+b\ii$($a,b\inR$)对应点为$(a,b)$，共轭复数为$\bar z=a-b\ii$，实部为$a$，虚部为$b$，模为$|z|=\sqrt{a^2+b^2}$.
+         \end{framed}
+      % \end{answer}
+    \item % 2014-2018年四年高考数学(文)真题汇编.pdf 专题23 复数 P726p15【2015•新课标 I，文 3】【复数计算】\\
+       \source{2015文}{全国新课标I-3}
+       已知复数$z$满足$(z-1)\ii=1+\ii$，则$z=$\xz
+       \xx{$-2-\ii$}{$-2+\ii$}{$2-\ii$}{$2+\ii$}
+       % \begin{answer}
+         \\{\heiti 【答案】:}
+             C
+         \\{\heiti 【解析】：}
+           $(z-1)\ii=1+\ii$ $\Rightarrow$ $z-1=\mfrac{1+\ii}{\ii}=1-\ii$，$\therefore$ $z=2-\ii$.\\
+           {\kaishu \circled{注} 这是关于$z$的一元一次方程，与关于$x$的方程$\sqrt2(x-1)=1+\sqrt2$一样的解法即可：\\
+            $(x-1)=\mfrac{1+\sqrt2}{\sqrt2}=\mfrac{\sqrt2+2}2$ $\Rightarrow$ $x=1+\mfrac{\sqrt2+2}2=\mfrac{\sqrt2+4}2$
+            (或写为$2+\mfrac{\sqrt2}2$).这里的$\sqrt2$与$\ii$并无本质区别，都是用一些符号表示一个数.}
+       % \end{answer}
+    \begin{comment}
+      \item % 2014-2018年四年高考数学(文)真题汇编.pdf 专题23 复数 P726p15【2015•新课标 I，文 3】【复数计算】\\
+        \source{2015文}{全国新课标II-2}
+        若$a$为实数，且$\mfrac{2+a\ii}{1+\ii}=3+\ii$，则$a=$\xz
+        \xx{$-4$}{$-3$}{$3$}{$4$}
+        % \begin{answer}
+          \\{\heiti 【答案】:}
+              D
+          \\{\heiti 【解析】：}
+            $\mfrac{2+a\ii}{1+\ii}=3+\ii$ $\Rightarrow$ $2+a\ii=(1+\ii)(3+\ii)=2+4\ii$，$\therefore$ $a=2$.\\
+        % \end{answer}
+    \end{comment}
+  \end{exercise}
+% \section{指数与对数运算}
+\section{函数、方程与不等式}
+\section{指数函数、对数函数、幂函数}
+\section{平面向量}
+\section{三角函数概念、同角关系与恒等变换}
+\section{三角函数的图像和性质}
+\section{直线与圆方程}
+\section{导数}
+\section{线性规划}
+  \begin{exercise}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p4【2018•大连双基测试】【线性规划】\\
+      \source{2018文}{大连双基测试}
+      设实数$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-y+1\geqslant0\,,\\
+        &x+y-1\leqslant0\,,\\
+        &x-2y-1\leqslant0\,.
+      \end{aligned}\right.$
+      则目标函数$z=2x+y$的取值范围为\xz
+      \xx{$[1,+\infty)$}{$[2,+\infty)$}{$[-8,1]$}{$[-8,2]$}
+      % \begin{answer}
+      % \\{\heiti 【答案】:}
+      %   D
+        \\{\heiti 【解析】：}
+          约束条件涉及三条直线，将三个直线方程编号
+          \[\begin{aligned}
+            &x-y+1=0\,,\quad &\circled{1}\\
+            &x+y-1=0\,,\quad &\circled{2}\\
+            &x-2y-1=0\,.\quad &\circled{3}
+          \end{aligned}\]
+          \begin{itemize}
+            \item 由\circled{1}，\circled{2}得交点$(0,1)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点代入方程\circled{1}\circled{2}，
+                  仔细笔算检查，确保没算错：由$0-1+1=0,0+1-1=0$，计算正确；}
+                \item 将交点$(0,1)$代入\circled{3}对应的不等式
+                  $0-2\times1-1=-3\leqslant0$，符合题意.于是将点$(0,1)$代入目标函数，得$z=1$.
+              \end{itemize}
+            \item 由\circled{1}，\circled{3}得交点$(-3,-2)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{3}，
+                  仔细笔算检查，确保没算错：由$-3-(-2)+1=-3+2+1=0,-3-2\times(-2)-1=-3+4-1=0$，计算正确；}
+                \item 将交点$(-3,-2)$代入\circled{2}对应的不等式
+                  $-3+(-2)-1=-6\leqslant0$，满足条件.于是将点$(-3,-2)$代入目标函数得$z=-8$.
+              \end{itemize}
+            \item 由\circled{2}，\circled{3}得交点$(1,0)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{3}，
+                  仔细笔算检查，确保没算错：由$1-0-1=0,1-2\times0-1=1-0-1=0$，计算正确；}
+                \item 将交点$(1,0)$代入\circled{1}对应的不等式
+                  $1-0+1=2\geqslant0$，满足条件.于是将点$(1,0)$代入目标函数得$z=-8$.
+              \end{itemize}
+          \end{itemize}
+          于是$z$最小值为$2$，最大值$-8$，值域$[-8,2]$，选D.\\
+          % 画出满足约束条件的区域.由目标函数$z=2x+y$得$y=-2x+z$，这是斜率为$-2$，截距为$z$的直线.
+        % {\kaishu 已知直线上两点$(x_1,y_1)$，$(x_2,y_2)$，则直线的斜率$k=\mfrac{x_2-x_1}{y_2-y_1}$.
+        % 例如：已知点$A(2,6)$，点$B(4,2)$，则直线$AB$斜率$k=\mfrac{2-6}{4-2}=-2$；直线与$y$轴交点的纵坐标即为直线的截距，
+        % 例如：已知直线$2y+x+3=0$，则令$x=0$可得$y=-\mfrac32$，于是直线截距为$-\mfrac32$，直线过点$(0,-\mfrac32)$.}\\
+        % 要求$z$的取值范围，即求斜率为$-2$，且经过灰色区域的直线截距取值范围，由图可得
+        % \begin{center}
+        %   \begin{tikzpicture}[smooth]
+        %     \draw[name path=F1,domain=-3.2:1] plot (\x,\x+1) node[right]{$x-y+1=0$};
+        %     \draw[name path=F2,domain=-1:2] plot (\x,-\x+1) node[right]{$x+y-1=0$};
+        %     \draw[name path=F3,domain=-3.2:2] plot (\x,\x/2-1/2) node[right]{$x-2y-1=0$};
+        %     \draw[name path=F0,dashed,domain=-3.5:-2.5] plot (\x,-\x*2-8);
+        %     \draw[name path=F02,dashed,domain=-0.5:2] plot (\x,-\x*2+2);
+        %     \path[name intersections={of=F1 and F2,by=F12}];
+        %     \path[name intersections={of=F2 and F3,by=F23}];
+        %     \path[name intersections={of=F3 and F1,by=F31}];
+        %     \filldraw[fill=gray,draw opacity=0.5] (F12)--(F23)--(F31)--cycle;
+        %     \draw[arrows={-Stealth[length=5pt, inset=3.5pt]}] (-3.5,0) -- (2,0)node[below] (xaxis){$x$};
+        %     \draw[arrows={-Stealth[length=5pt, inset=3.5pt]}] (0,-3) -- (0,3)node[left] (yaxis){$y$};
+        %     \draw  (-0.18,-0.18) node {$O$};
+        %   \end{tikzpicture}
+        % \end{center}
+      % \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》名校信息卷（一） P21p14【2018•益阳、湘潭调研】【线性规划】\\
+      \source{2018文}{益阳、湘潭调研}
+      设变量$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-y-1\leqslant0\,,\\
+        &x+y\geqslant0\,,\\
+        &x+2y-4\geqslant0\,.
+      \end{aligned}\right.$则$z=x-3y$的最大值为\tk.
+      % \begin{answer}
+      % \\{\heiti 【答案】:}
+      %   $-1$
+        \\{\heiti 【解析】：}
+          约束条件涉及三条直线，将三个直线方程编号
+          \[\begin{aligned}
+            &x-y-1=0\,,\quad &\circled{1}\\
+            &x+y=0\,,\quad &\circled{2}\\
+            &x+2y-4=0\,.\quad &\circled{3}
+          \end{aligned}\]
+          \begin{itemize}
+            \item 由\circled{1}，\circled{2}得交点$(\mfrac12,-\mfrac12)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点代入方程\circled{1}\circled{2}，
+                  仔细笔算检查，确保没算错：由$\mfrac12-(-\mfrac12)-1=\mfrac12+\mfrac12-1=0,\mfrac12+(-\mfrac12)=0$，计算正确；}
+                \item 将交点$(\mfrac12,-\mfrac12)$代入\circled{3}对应的不等式
+                  $\mfrac12+2\times(-\mfrac12)-4=\mfrac12-1-4<0$，\myuwave{不符合题意}.于是“抛弃”这个点.
+              \end{itemize}
+            \item 由\circled{1}，\circled{3}得交点$(2,1)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{3}，
+                  仔细笔算检查，确保没算错：由$2-1-1=0,2+2\times1-4=2+2-4=0$，计算正确；}
+                \item 将交点$(2,1)$代入\circled{2}对应的不等式
+                  $2+1\geqslant0$，满足条件.于是将点$(2,1)$代入目标函数得$z=-1$.
+              \end{itemize}
+            \item 由\circled{2}，\circled{3}得交点$(-4,4)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{3}，
+                  仔细笔算检查，确保没算错：由$-4+4=0,-4+2\times4-4=-4+8-4=0$，计算正确；}
+                \item 将交点$(-4,4)$代入\circled{1}对应的不等式
+                  $-4-4-1=-9\leqslant0$，满足条件.于是将点$(-4,4)$代入目标函数得$z=-12$.
+              \end{itemize}
+          \end{itemize}
+          于是$z$最大值$-1$.
+          \begin{framed}{\heiti 补充说明}\\
+            此题求\circled{1}\circled{2}交点时，得到的点$(\mfrac12,-\mfrac12)$，不符合题意.{\kaishu 这种情况很少见，但为求万无一失，还是不能省去代入检验的步骤.}\\
+            一旦出现这种情况，则目标函数不可能同时存在最大值与最小值.因此此题若要求$z=x-3y$的值域，那么$[-8,-1]$将是错误答案.{\kaishu 这种情况更少见.一般由题目的描述可以直接判断目标函数有最大值还是有最小值.}\\
+            {\small 此题中，目标函数$z=x-3y$要么只有最大值（这种情况最大值为$-1$，那么值域应为$(-\infty,-1)$），要么只有最小值
+              （这种情况最小值为$-8$，那么值域应为$(-8,+\infty)$）.为判断值域，将不符合约束条件的点$(\mfrac12,-\mfrac12)$带入目标函数得$z=2$，于是$2$不可能在$z$的值域中，所以$z$的值域为$(-\infty,-1)$，$z$只有最大值.\\
+              如果要求$h=x+3y$的值域，那么由\circled{1}，\circled{3}交点$(2,1)$得$h=5$，由\circled{2}，\circled{3}交点$(-4,4)$得$h=8$，于是$h$可能是只有最大值，最大值为$8$，值域$(-\infty,8)$；也可能$h$只有最小值，最小值为$5$，值域$(5,+\infty)$，由不满足约束条件的\circled{1}，\circled{2}交点
+              $(\mfrac12,-\mfrac12)$得$h=-1$，可见$h$不能等于$-1$，因此$h$值域为$(5,+\infty)$，$h$只有最小值.}
+          \end{framed}
+      % \end{answer}
+    \item %《2019金考卷双测20套(文)ISBN978-7-5371-9890-5》题型9不等式P9p15【2018•湖北八校联考（一）】【线性规划】\\
+      \source{2018文}{湖北八校联考（一）}
+      已知$x$，$y$满足约束条件
+      $\left\{\begin{aligned}
+        &x-y+4\geqslant0\,,\\
+        &x\leqslant2\,,\\
+        &x+y+k\geqslant0\,.
+      \end{aligned}\right.$且$z=x+3y$的最小值为2，则常数$k=$\tk.
+      % \begin{answer}
+      %   $-2$
+        \\{\heiti 【解析】：}
+          约束条件涉及三条直线，将三个直线方程编号{\kaishu （含有要求的未知数$k$的式子标记为第\circled{3}式）}
+          \[\begin{aligned}
+            &x-y+4=0\,,\quad &\circled{1}\\
+            &x-2=0\,,\quad &\circled{2}\\
+            &x+y+k=0\,.\quad &\circled{3}
+          \end{aligned}\]
+          由已知$z=x+3y$的最小值为2，即$x+3y\geqslant2$，也即
+            \[x+3y-2\geqslant0\qquad\circled{0}\]
+          \begin{itemize}
+            \item 由\circled{1}，\circled{2}得交点$(2,6)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{2}，
+                  仔细笔算检查，确保没算错：由$2-6+4=0,2-2=0$，计算正确；}
+                \item 将交点$(2,6)$代入\circled{0}得到$2+3\times6-2\neq0$，所以此交点不是最值点.接着往下做.\\
+                {\kaishu \circled{注}如果交点满足\circled{0}式，那么题目所求应为$k$的取值范围（答案将类似于$k>2$，$k<-7$），基本不会这样考.因此某种程度上，这一步骤实际上完全可以省略.}
+              \end{itemize}
+            \item 由\circled{1}，\circled{0}得交点$(-\mfrac52,\mfrac32)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{1}\circled{0}，
+                  仔细笔算检查，确保没算错：由$-\mfrac52-\mfrac32+4=-\mfrac82+4=-4+4=0,-\mfrac52+3\times\mfrac32-2=-\mfrac52+\mfrac92-2=\mfrac42-2=0$，计算正确；}
+                \item 将交点$(-\mfrac52,\mfrac32)$代入\circled{3}式，得
+                  $k=-(x+y)=-(-\mfrac52+\mfrac32)=-(-\mfrac22)=1$；\\
+                  此时约束条件为
+                  $\left\{\begin{aligned}
+                    &x-y+4\geqslant0\,,\\
+                    &x\leqslant2\,,\\
+                    &x+y+1\geqslant0\,.
+                  \end{aligned}\right.$
+                  目标函数$z=x+3y$.利用前两个例题使用的方法求出这种情况下的最小值，如果最小值为$2$，那么题目所求的$k$值就是$1$，否则进行下一步：计算\circled{2}，\circled{0}的交点，将交点代入\circled{3}式，即得到$k$的值.\\
+                  {\kaishu 经计算，此时三个交点分别为$(2,6)$、$(-\mfrac52,\mfrac32)$、$(2,-3)$，\circled{2}\circled{3}两式交点$(2,-3)$取得最小值$z_{\min}=x+3y=2+3\times(-3)=-7\neq2$，所以$k$的值不为$1$}
+              \end{itemize}
+            \item 由\circled{2}，\circled{0}得交点$(2,0)$，
+              \begin{itemize}
+                \item 检查.{\kaishu 将求得的交点分别代入方程\circled{2}\circled{0}，
+                  仔细笔算检查，确保没算错：由$2-2=0,2+3\times0-2=0$，计算正确；}
+                \item 将交点$(2,0)$代入\circled{3}式，得
+                  $k=-(x+y)=-(2+0)=-2$；此即为所求.
+              \end{itemize}
+            答案：常数$k=-2$.
+          \end{itemize}
+      % \end{answer}
+  \end{exercise}
+\section{等差数列与等比数列}
+\section{框图}
+\section{基本不等式}
+\section{概率与统计}
+
+\section{}
+
+
+% \newpage
+% \section{课后作业}
+%   \begin{exercise}{\heiti 练习}
+%
+%   \end{exercise}
+\stopexercise
+
+\newpage
+\section{参考答案}
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

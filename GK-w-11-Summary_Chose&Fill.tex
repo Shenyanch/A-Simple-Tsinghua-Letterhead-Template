@@ -12,6 +12,7 @@
   \Name{郑旭晶}\FirstTime{20190423}\CurrentTime{20190514}
   \newtheorem*{Theorem}{定理}
   \makefront
+  \setcounter{tocdepth}{2}%只显示两级目录
   \tableofcontents
 % \vspace{-1.5em}
 \clearpage
@@ -22,11 +23,11 @@
       \item 几个特殊的集合：
         \begin{itemize}
           \item 全体{\fangsong 自然数}$0,1,2,3,\ldots ,$组成的集合，记作$\mathbb{N}$(natural)；
-          \item 全体正自然数组成的集合，记作$\mathbb{N}_+$或$\mathbb{N}^*$
-          \item 全体{\fangsong 整数}$0,\pm1,\pm2,\pm3,\ldots ,$组成的集合，记作$\mathbb{Z}$；(Zheng shu)
+          \item 全体正自然数$1,2,3,\ldots ,$组成的集合，记作$\mathbb{N}_+$或$\mathbb{N}^*$；
+          \item 全体{\fangsong 整数}$0,\pm1,\pm2,\pm3,\ldots ,$组成的集合，记作$\mathbb{Z}$(Zheng shu)；
           \item 全体{\fangsong 有理数}组成的集合，记作$\mathbb{Q}$(quotient)；
-          \item 全体{\fangsong 实数}组成的集合，记作$\mathbb{R}$(real)
-          \item \mysout{全体{\fangsong 复数}组成的集合，记作$\mathbb{C}$(complex)}
+          \item 全体{\fangsong 实数}组成的集合，记作$\mathbb{R}$(real)；
+          \item \mysout{全体{\fangsong 复数}组成的集合，记作$\mathbb{C}$(complex)}.
         \end{itemize}
       \item 元素$a${\fangsong 属于}(belong to)集合$A$，记为$a\in A$；
         反之，若元素$a${\fangsong 不属于}集合$A$，记作$a\notin A$；
@@ -34,7 +35,7 @@
       \item 两个集合具有完全一样的元素，则称两集合{\fangsong 相等}，记作$A=B$；
         \\\eg{$\NN^*=\NN_+$.}
       \item 不包含任何元素的集合称为{\fangsong 空集}，记为$\varnothing$；
-        \\\eg{$\{\}=\varnothing$；$a<b$时，$\{x\mid b<x<a\}=\varnothing$.}
+        \\\eg{$\{\}=\varnothing$；$a<b$时，$\{x\mid b<x<a\}=\varnothing$(如$\{x\mid 5<x<3\}=\varnothing$).}
       \item 如果集合$A$中的元素都属于集合$B$，那么称
         \begin{itemize}
           \item 集合$A${\fangsong 包含于}(contained)集合$B$，记作$A\subseteq B$，并称集合$A$是集合$B$的{\fangsong 子集}(subset)；
@@ -48,30 +49,30 @@
         {\kaishu
           规定空集 $\varnothing$是任何集合的子集.
           }
-        \\\eg{$\varnothing\subsetneqq \{1,2\}$，$\NN \subseteq \ZZ$}
+        \\\eg{$\varnothing\subsetneqq \{1,2\}$，$\NN \subseteq \ZZ$.}
       \item 集合的表示方法$\{x\in A\mid p(x)\}$.其中：
         \begin{itemize}
-          \item $x\inA$指明集合元素用$x$表示，且元素$x$的取值范围是$A$;
-          \item $\mid$为分隔符号(有时用$\colon$表示)；
-          \item $p(x)$指明集合中的元素所具有的特征
+          \item $x\inA$指明集合元素用字母$x$表示，且元素$x$的取值范围是$A$;
+          \item $\mid$为分隔符号\mysout{(有时用$\colon$表示)}；
+          \item $p(x)$指明集合中的元素所具有的特征.
         \end{itemize}
         \eg{
           \begin{itemize}
-            \item 所有偶数组成的集合：$\{x\mid x=2n,\,n\inZ \}$
-            \item 所有直线$y=x$上的点组成的集合：$\{(x,y)\mid y=2x\}$
-            \item {\fangsong 区间}$[a,b)$：$\{x\mid a\leqslant x<b,\,a<b\}$
-            \item {\fangsong 区间}$[a,+\infty)$：$\{x\mid x\geqslant a\}$
+            \item 所有偶数组成的集合：$\{x\mid x=2n,\,n\inZ \}$；
+            \item 所有直线$y=x$上的点组成的集合：$\{(x,y)\mid y=2x\}$；
+            \item {\fangsong 区间}$[a,b)$：$\{x\mid a\leqslant x<b\}$($a<b$)；
+            \item {\fangsong 区间}$[a,+\infty)$：$\{x\mid x\geqslant a\}$.
           \end{itemize}}
     \end{itemize}
   \subsection{集合的运算}
     \begin{itemize}
       \item {\fangsong 交集}：既属于集合$A$，又属于$B$的所有元素组成的集合，记为$A\cap B$；
         \\\eg{
-         $\{1,2,3\}\cap \{2,3,5\}=\{2,3\}$，$[2,+\infty)\cap[-1,3)=[2,3)$.
+         $\{1,2,3\}\cap \{2,3,5\}=\{2,3\}$；$[2,+\infty)\cap[-1,3)=[2,3)$.
          }
       \item {\fangsong 并集}：集合$A$中所有元素与集合$B$中的所有元素共同组成的集合，记为$A\cup B$；
         \\\eg{
-         $\{1,2,3\}\cup \{2,3,5\}=\{1,2,3,5\}$，$[2,+\infty)\cup[-1,3)=[-1,+\infty)$.
+         $\{1,2,3\}\cup \{2,3,5\}=\{1,2,3,5\}$；$[2,+\infty)\cup[-1,3)=[-1,+\infty)$.
          }
       \item {\fangsong 全集}：包含所研究问题中涉及的所有元素的集合；
       \item {\fangsong 补集}：对于全集$U$的一个子集$A$(即$A\subseteq U$)，全集$U$中所有不属于集合$A$的元素组成的集合
@@ -107,14 +108,13 @@
     \begin{itemize}
       \item 形如$a+b\ii(a,b\inR)$的数叫做{\fangsong 复数}，通常用字母$z$来表示，即
             \[z=a+b\ii(a,b\inR).\]
-            其中$a$叫做复数$z$的{\fangsong 实部}，$b$叫做复数$z$的{\fangsong 虚部}.\\
-            {\kaishu 一个复数的实部或虚部一定是实数.}
+            其中$a$叫做复数$z$的{\fangsong 实部}，$b$叫做复数$z$的{\fangsong 虚部}.{\kaishu 一个复数的实部或虚部一定是实数.}
             \\\eg{
                $3-2\ii$的实部是$3$，虚部是$-2$；$2\ii$的实部是$0$，虚部是$2$；$3$的实部是$3$，虚部是$0$.}
       \item 当且仅当两个复数的实部和虚部分别相等时，两个复数{\fangsong 相等}.即：如果$a,b,c,d\inR$，那么
             \[a+b\ii=c+d\ii \Leftrightarrow a=c\text{且}b=d\]
-            \eg{
-               若$3-2\ii=3+b\ii$，则$b=-2$；\circled{注} 结论“若$x+y\ii=a+b\ii$，那么$a=c\text{且}b=d$”是错误的，因为$x$，$y$，$a$，$b$可能不是实数.}
+            {\kaishu \circled{注} 结论“若$x+y\ii=a+b\ii$，那么$a=c\text{且}b=d$”是错误的，因为$x$，$y$，$a$，$b$可能不是实数.}
+            \eg{若$3-2\ii=3+b\ii$，则$b=-2$.}
       \item %分类
         \[\text{复数}\,a+b\ii(a,b\inR)
           \left\{\begin{aligned}
@@ -133,7 +133,7 @@
         任何一个复数$z=a+b\ii(a,b\inR)$都可以由平面上坐标为$(a,b)$的点来表示.即：{\kaishu 复数与平面上的点是一一对应的}.\\
         此时，这个建立了直角坐标系来表示复数的平面就被称作{\fsong 复平面},相应的，$x$轴被称作{\fsong 实轴}，$y$轴被称作{\fsong 虚轴}.
         显然，{\kaishu 实轴上的点都表示实数；虚轴上的点除原点外都表示纯虚数}.\\
-        {\kaishu 乔丹扣篮时跳得很高好像在飞，所以被称作“飞人乔丹”；“复平面”与此类似：平面上的点可以用来表示复数，所以这个平面被称作复平面；
+        {\kaishu \hspace{2em}乔丹扣篮时跳得很高好像在飞，所以被称作“飞人乔丹”；“复平面”与此类似：平面上的点可以用来表示复数，所以这个平面被称作复平面；
          类似的还有“坐标平面”：在平面上建立坐标系，平面上的点可以用坐标表示，故称为坐标平面；
          “实轴”与“虚轴”也是一样的道理：横坐标表示复数的实部，纵坐标表示复数的虚部.}\\
         由于平面直角坐标系下，平面上的点与平面向量一一对应，故复数与平面向量也是一一对应的.\\
@@ -161,7 +161,7 @@
         \[|z|=|a+b\ii|=\sqrt{a^2+b^2}\]
         显然，$|z|\geqslant0$.
         {\kaishu 复数的模是一个不小于0的实数.}
-        \\\eg{$|3-4\ii|=5$；$|2\ii|=2$；}
+        \\\eg{$|3-4\ii|=5$；$|2\ii|=2$.}
     \end{itemize}
   \subsection{复数的运算}
     设$a,b,c,d\inR$，那么，
@@ -474,7 +474,7 @@
           其中$ \theta $为$ \bm{a} $与$ \bm{b} $的夹角.\\
           $\abs{\bm{a}}\cos\theta$($\abs{\bm{b}}\cos\theta$)叫做向量$\bm a$在$\bm b$方向上($\bm b$在$\bm a$方向上)的\textbf{投影}，%记作$\mathrm{Prj}_{\bm b}{\bm a}$(或$\mathrm{Prj}_{\bm b}{\bm a}$)
         \item[几何意义] 两个向量的数量积等于其中一个向量的模长与另一个向量在此向量方向上的投影的乘积\\%$ \bm{a}\bm{\cdot}\bm{b} $等于$\bm{a} $的模长$ \abs{\bm{a}} $与$ \bm{b} $在$ \bm{a} $的方向上的\textbf{投影}$ \abs{\bm{b}}\cos \theta $的乘积.\par
-        {\kaishu \textbf{注:}当$ \theta=0 $时，$ \cos\theta=1 $，所以有$ \bm{a\cdot b}=\bm{\abs{a}\abs{b}} $；\\\phantom{注:\ }当$ \theta=90^{\circ} $时，有$ \cos\theta =0$，所以有$ \bm{a\cdot b}=0 $ \\\phantom{注:\ }当$ \theta=180^{\circ} $时，有$ \cos\theta =-1$，所以有$ \bm{a\cdot b}=-\abs{\bm{a}}\abs{\bm{b}} $   }
+        {\kaishu \textbf{注:}当$ \theta=0 $时，$ \cos\theta=1 $，所以有$ \bm{a\cdot b}=\bm{\abs{a}\abs{b}} $；\\\phantom{注:\ }当$ \theta=90\degree $时，有$ \cos\theta =0$，所以有$ \bm{a\cdot b}=0 $ \\\phantom{注:\ }当$ \theta=180\degree $时，有$ \cos\theta =-1$，所以有$ \bm{a\cdot b}=-\abs{\bm{a}}\abs{\bm{b}} $   }
         \item[数量积坐标计算]$\bm{a}\bm{\cdot}\bm{b}=x_1x_2+y_1y_2$.
         \item[夹角公式] \[ \cos\theta=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\theta\in\left[0,\pi\right],~\theta\text{也写作}\left<\bm{a},\bm{b}\right>\right).\]
       \end{description}
@@ -580,48 +580,118 @@
         $\cos\vangle{\bm a}{\bm b}=\dfrac{\bm{a}\bm{\cdot}\bm{b}}{\abs{\bm{a}}\abs{\bm{b}}}=\dfrac{x_1x_2+y_1y_2}{\sqrt{x_1^2+y_1^2}\sqrt{x_2^2+y_2^2}} \quad \left(\vangle{\bm a}{\bm b}\in\left[0,\piup\right]\right)$
     \end{enumerate}
 \section{三角函数概念、同角关系与恒等变换}
-  \begin{description}[leftmargin=0pt,labelsep=0pt]
-    \item%[两角的和与差]
-      \begin{itemizeMy}[两角的和与差\hspace{2em}]
-        \item $\mathrm{C}_{\alpha\pm\beta}$：
-        $\cos(\alpha\pm\beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$
-        \item $\mathrm{S}_{\alpha\pm\beta}$：
-        $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$
-        \item $\mathrm{T}_{\alpha\pm\beta}$：
-        $\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm \tan\beta}{1\mp\tan\alpha\tan\beta}$
-      \end{itemizeMy}
-    \item%[二倍角公式]
-      \begin{itemizeMy}[二倍角公式\hspace{3em}]
-        \item $\mathrm{S}_{2\alpha}$：
-        $\sin{2\alpha}=2\sin\alpha\cos\alpha$
-        \item $\mathrm{C}_{2\alpha}$：
-        $\cos{2\alpha}=\cos^2{\alpha}-\sin^2{\alpha}=2\cos^2\alpha-1=1-2\sin^2\alpha$
-        \item $\mathrm{T}_{2\alpha}$：
-        $\tan{2\alpha}=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
-      \end{itemizeMy}
-      \item%[半角公式]
-        \begin{itemizeMy}[半角公式\hspace{4em}]
-          \item
-          $\sin{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1-\cos\alpha}2}$
-          \item $\cos{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1+\cos\alpha}2}$
-          \item $\tan{\dfrac{\alpha}2}=\dfrac{\sin\alpha}{1+\cos\alpha}=\dfrac{1-\cos\alpha}{\sin\alpha}$
+  \subsection{基础知识}
+    \subsection{}
+  \subsection{进阶知识}
+  \subsection{补充说明}
+  \subsection{任意角的概念}
+    \begin{enumerate}[1)]
+      \item {\fangsong 角}可以看成平面内一条射线绕着端点从一个位置旋转到另一个位置所形成的图形.
+        规定按逆时针方向旋转形成的角叫做{\fangsong 正角}，按顺时针方向旋转形成的角叫做{\fangsong 负角}.
+        如果一条射线没有作任何旋转，则称其为{\fangsong 零角}.\\
+        \eg{\begin{minipage}[t]{0.65\linewidth}\vspace{-0.5\baselineskip}
+            如图，一条射线的端点是$O$，若从起始位置$OA$（{\fangsong 始边}）按逆时针方向旋转到终止位置$OB$（{\fangsong 终边}），形成$120\degree$的角；若从始边$OA$按顺时针方向旋转到终边$OB$，则形成$-240\degree$的角；若从始边$OA$按逆时针方向旋转一圈后继续旋转到终边$OB$，则形成$480\degree$的角；
+          \end{minipage}
+          \begin{minipage}[t]{0.35\linewidth}\vspace{-0.5\baselineskip}
+            \begin{center}\begin{tikzpicture}[scale=0.8,transform shape]
+              \tikzmath{
+                \r=2.5;
+              }
+              \coordinate[label=below:\footnotesize $O$](O) at(0,0);
+              \draw (O)--(\r,0)node[right](A){$A$};
+              \draw (O)--(120:\r)node[left](B){$B$};
+              \draw [->,>=latex](0.7,0) arc(0:120:0.7) node[right=9pt](a){\footnotesize$120\degree$};
+              \draw [->,>=latex](0.5,0) arc(0:-240:0.5) node[pos=0.75](b){\footnotesize$-240\degree$};
+              \draw [->,>=latex](1.1,0) arc(0:180:1.1) arc(180:360:1.3) arc(360:480:1.5) node[right,pos=0.8](c){\footnotesize$480\degree$};
+              % \node[left](b) at (-120:0.2) {\footnotesize$ -120\degree$};
+              % \draw[rotate=30] (0,0) rectangle +(0.2,0.2);
+              \end{tikzpicture}
+            \end{center}
+          \end{minipage}
+        }
+      \item 在直角坐标系内讨论角时，令角的顶点与原点重合，角的始边与$x$轴的非负半轴重合{\kaishu （始边是射线，应包括端点即原点，故不能说成正半轴）}.那么，角的终边在第几象限，就说这个角是第几{\fangsong 象限角}.
+      \\\eg{$30\degree$角是第一象限角；$-200\degree$角是第二象限角；$200\degree$是第三象限角；$350\degree$角是第四象限角；$90\degree$角不属于任何一个象限.}
+      \item 终边相同的角：所有与$ \alpha $终边相同的角（始边均为$x$轴非负半轴）连同$ \alpha $在内可以构建一个集合$ S=\{\beta \mid\beta =\alpha+k\bm{\cdot}360\degree,\,k\inZ\} $.
+    \end{enumerate}
+  \subsection{弧度制}
+    把长度等于半径长的弧所对的圆心角叫做$ 1 $弧度的角，用符号$ \rad $表示，读作弧度.\par
+    一般的，正角的弧度是正数，负角的弧度是负数，零角的弧度是$ 0. $如果半径为$ r $的圆的圆心角$ \alpha $所对的弧的长为$ l $，那么角$ \alpha $的弧度数的绝对值是:\[\abs{\alpha}=\dfrac{l}{r}.\]
+    角度与弧度对应关系：$360\degree=2\pi\rad$；\\
+    若一个叫角的度数为$n$，弧度数为$\alpha$，则$n$与$\alpha$之间的关系为：$\dfrac{n}{360}=\dfrac{\alpha}{2\piup}$；
+    \\\eg{$\mfrac{90}{360}=\mfrac{\piup/2}{2\piup}$ $\Longrightarrow$ $90\degree=\mfrac{\piup}2\rad$
+        $\mfrac{45}{360}=\mfrac{\piup/4}{2\piup}$ $\Longrightarrow$ $45\degree=\mfrac{\piup}4\rad$.}
+    常见角度与弧度的换算：
+    \[\begin{array}{|c*{11}{|c}|}
+      \hline
+      \text{度}&0\degree& 30\degree& 45\degree& 60\degree& 90\degree& 120\degree& 135\degree&150\degree&180\degree&270\degree&360\degree\\\hline
+      \text{弧度}&0&\Gape[6pt]{\dfrac{\pi}{6}}&\dfrac{\pi}{4}&\dfrac{\pi}{3}&\dfrac{\pi}{2}&\dfrac{2\pi}{3}&\dfrac{3\pi}{2}&\dfrac{5\pi}{6}&\pi&\dfrac{3\pi}{2}&2\pi\\\hline
+      \end{array}\]
+  \subsection{任意角的三角函数}
+    $ P(x,y) $是角$ \alpha $终边上异于原点的一点，$ \abs{OP} =r=\sqrt{x^2+y^2}$，则\[\sin\alpha=\dfrac{y}{r},\cos\alpha=\dfrac{x}{r},\tan\alpha=\dfrac{y}{x}.\]
+    \begin{center}\begin{tikzpicture}[scale=0.8,transform shape]
+      \tikzmath{
+        \r=1;
+        \lx=1.8*\r;\ly=1.4*\r;%
+        \arca=60;
+        \px=\r*cos(\arca);\py=\r*sin(\arca);
+      }
+      \coordinate[label=below left:\footnotesize $O$](O) at(0,0);
+      % \coordinate[label=above right:\footnotesize $P$](P) at(\px,\py);
+      \draw (0,0) circle (\r);
+      % \coordinate[label=right:\footnotesize $A(1,0)$](A) at(0,0);
+      % \coordinate[label=above right:\footnotesize $P(x,y)$](P) at(1,1);
+      \draw[->,>=latex] (-0.9*\lx,0)--(\lx,0)node[below](x){$x$};
+      \draw[->,>=latex] (0,-0.9*\ly)--(0,\ly)node[left](y){$y$};
+      \draw (O)--(\arca:\r)node[right](P){$P(x,y)$};
+      \draw [->,>=latex](9pt,0) arc(0:\arca:9pt) node[right=5pt](a){\footnotesize$\alpha$};
+      \draw (P)-- ++(0,-\py)node[below](M){$M$};
+      % \node[left](b) at (-120:0.2) {\footnotesize$ -120\degree$};
+      % \draw[rotate=30] (0,0) rectangle +(0.2,0.2);
+      \end{tikzpicture}
+    \end{center}
+  \subsection{三角恒等式}
+    \begin{description}[leftmargin=0pt,labelsep=0pt]
+      \item%[两角的和与差]
+        \begin{itemizeMy}[两角的和与差\hspace{2em}]
+          \item $\mathrm{C}_{\alpha\pm\beta}$：
+          $\cos(\alpha\pm\beta)=\cos\alpha\cos\beta \mp \sin\alpha\sin\beta$
+          \item $\mathrm{S}_{\alpha\pm\beta}$：
+          $\sin(\alpha\pm\beta)=\sin\alpha\cos\beta \pm \cos\alpha\sin\beta$
+          \item $\mathrm{T}_{\alpha\pm\beta}$：
+          $\tan(\alpha\pm\beta)=\dfrac{\tan\alpha\pm \tan\beta}{1\mp\tan\alpha\tan\beta}$
         \end{itemizeMy}
-      % \item%[万能公式]
-      %   \begin{itemizeMy}[万能公式\hspace{4em}]
-      %     \item $\sin{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
-      %     \item $\cos{\alpha}=\dfrac{1-\tan^2{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
-      %     \item $\tan{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1-\tan^2{\dfrac{\alpha}2}}}$
-      %   \end{itemizeMy}
-      \item%[辅助角公式]
-        \begin{itemizeMy}[辅助角公式\hspace{3em}]
-          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
-          其中$\sin\varphi=\dfrac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi=\dfrac{a}{\sqrt{a^2+b^2}}$\\
-          $a>0$时，
-          \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
-          其中$\tan\varphi=\dfrac{b}a$，$
-          \varphi\in\Bigl(-\dfrac{\piup}2,\dfrac{\piup}2\Bigr)$
+      \item%[二倍角公式]
+        \begin{itemizeMy}[二倍角公式\hspace{3em}]
+          \item $\mathrm{S}_{2\alpha}$：
+          $\sin{2\alpha}=2\sin\alpha\cos\alpha$
+          \item $\mathrm{C}_{2\alpha}$：
+          $\cos{2\alpha}=\cos^2{\alpha}-\sin^2{\alpha}=2\cos^2\alpha-1=1-2\sin^2\alpha$
+          \item $\mathrm{T}_{2\alpha}$：
+          $\tan{2\alpha}=\dfrac{2\tan\alpha}{1-\tan^2\alpha}$
         \end{itemizeMy}
-  \end{description}
+        \item%[半角公式]
+          \begin{itemizeMy}[半角公式\hspace{4em}]
+            \item
+            $\sin{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1-\cos\alpha}2}$
+            \item $\cos{\dfrac{\alpha}2}=\pm\sqrt{\dfrac{1+\cos\alpha}2}$
+            \item $\tan{\dfrac{\alpha}2}=\dfrac{\sin\alpha}{1+\cos\alpha}=\dfrac{1-\cos\alpha}{\sin\alpha}$
+          \end{itemizeMy}
+        % \item%[万能公式]
+        %   \begin{itemizeMy}[万能公式\hspace{4em}]
+        %     \item $\sin{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+        %     \item $\cos{\alpha}=\dfrac{1-\tan^2{\dfrac{\alpha}2}}{1+\tan^2{\dfrac{\alpha}2}}}$
+        %     \item $\tan{\alpha}=\dfrac{2\tan{\dfrac{\alpha}2}}{1-\tan^2{\dfrac{\alpha}2}}}$
+        %   \end{itemizeMy}
+        \item%[辅助角公式]
+          \begin{itemizeMy}[辅助角公式\hspace{3em}]
+            \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+            其中$\sin\varphi=\dfrac{b}{\sqrt{a^2+b^2}}$，$\cos\varphi=\dfrac{a}{\sqrt{a^2+b^2}}$\\
+            $a>0$时，
+            \item $a\sin x+b\cos x=\sqrt{a^2+b^2}\sin(x+\varphi)$\\
+            其中$\tan\varphi=\dfrac{b}a$，$
+            \varphi\in\Bigl(-\dfrac{\piup}2,\dfrac{\piup}2\Bigr)$
+          \end{itemizeMy}
+    \end{description}
   \begin{exercise}
     \item%福建师大附中2015-2016学年高一数学第二学期期末检测.doc-2【象限角】
       (2016 \textbullet {\kaishu 师大附中} 2)
@@ -666,7 +736,6 @@
         \begin{answer}
           A
         \end{answer}
-
   \end{exercise}
 \section{三角函数的图像和性质}
   \subsection{三角函数的图像和性质}
