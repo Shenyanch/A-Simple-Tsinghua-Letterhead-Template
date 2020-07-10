@@ -1,14 +1,51 @@
 \begin {answerlist}
-\item [1.3]
-            A
-          
-\item [1.4]
-        B
-      
-\item [1.5]
+\item [2.1]
         C
       
-\item [1.6]
-        A
+\item [2.2]
+        C
+      
+\item [2.3]
+        C
+      
+\item [2.4]
+        D
+      
+\item [2.5]
+        \cos{2x}
+      
+\item [2.6]
+        $-\dfrac{2\sqrt{5}}5$
+      
+\item [2.7]
+        $\dfrac{2+\sqrt{3}}4$
+      
+\item [2.8]
+        $-\dfrac{7}9$
+      
+\item [2.9]
+        $\dfrac{7}5$
+      
+\item [2.10]
+        $1$或$\dfrac{8}5$
+      
+\item [2.11]
+        $\dfrac{\piup}6$，$\dfrac{5\piup}6$
+      
+\item [2.12]
+        (I)$A=\sqrt{3}$；
+        (II)$f\Bigl(\dfrac{3\piup}4-\theta\Bigr)=\dfrac{\sqrt{30}}4$
+      
+\item [2.13]
+        0
+      
+\item [2.14]
+        (I)$f(x)=2\sin{\Bigl(2x-\dfrac{\piup}3\Bigr)}$，定义域：$\Bigl\{x\Bigm|x\neq \dfrac{\piup}2+k\piup,k\in\mathbb{Z}\Bigr\}$；
+        最小正周期：$T=\piup$.
+        (II)$f(x)$在区间$\Bigl[-\dfrac{\piup}{12},\dfrac{\piup}4\Bigr]$上单调递增，在区间$\Bigl[-\dfrac{\piup}4,-\dfrac{\piup}{12}\Bigr]$上单调递减.
+      
+\item [2.15]
+        (I)$\omega=\dfrac{1}5$.
+        (II)$\sin\alpha=\dfrac{3}5$，$\cos\beta=\dfrac{8}{17}$，$\cos\alpha=\dfrac{4}5$，$\sin\beta=\dfrac{15}{17}$，$\cos{(\alpha+\beta)}=-\dfrac{13}{85}$.
       
 \end {answerlist}
