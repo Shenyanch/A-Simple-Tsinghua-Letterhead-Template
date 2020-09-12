@@ -1,41 +1,37 @@
-\documentclass{article}
-\usepackage{tikz}
-\usepackage{etoolbox}
-\usepackage{enumitem}
-\newcommand*{\circled}[1]{\lower.7ex\hbox{\tikz\draw (0pt, 0pt)%
-    circle (.5em) node {\makebox[1em][c]{\small #1}};}}
-\robustify{\circled}
+\documentclass[10pt]{article}
+\usepackage{pgf,tikz,pgfplots}
+\pgfplotsset{compat=1.15}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\pagestyle{empty}
 \begin{document}
-\mbox{}\rlap{\rule{.7\linewidth}{.4pt}}%
-This is the circled number \circled{20}.
-
-\begin{enumerate}[label=\circled{\arabic*}]
-\item I
-\item am
-\item happy
-\item to
-\item join
-\item with
-\item you
-\item today
-\item in
-\item what
-\item will
-\item go
-\item down
-\item in
-\item history
-\item as
-\item the
-\item greatest
-\item demonstration
-\item for
-\item freedom
-\item in
-\item the
-\item history
-\item of
-\item our
-\item nation.
-\end{enumerate}
+\definecolor{qqwuqq}{rgb}{0,0.39215686274509803,0}
+\definecolor{qqzzcc}{rgb}{0,0.6,0.8}
+\definecolor{wrwrwr}{rgb}{0.3803921568627451,0.3803921568627451,0.3803921568627451}
+\definecolor{rvwvcq}{rgb}{0.08235294117647059,0.396078431372549,0.7529411764705882}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1cm,y=1cm]
+\clip(-4.2321232873468855,-0.9887021889186253) rectangle (5.983923062742394,5.951818058698226);
+\draw [rotate around={2.174744114610052:(-1.21,0.92)},line width=2pt] (-1.21,0.92) ellipse (2.359033618165131cm and 1.7507254529575067cm);
+\draw [line width=2pt,color=wrwrwr,domain=-4.2321232873468855:5.983923062742394] plot(\x,{(--3.4480314005830888--0.7106293814148047*\x)/2.7264767660003746});
+\draw [line width=2pt,color=wrwrwr,domain=-4.2321232873468855:5.983923062742394] plot(\x,{(-16.60515245152884-4.317738122926034*\x)/-4.572188411960842});
+\draw [line width=2pt,color=wrwrwr,domain=-4.2321232873468855:5.983923062742394] plot(\x,{(--3.069653940153476-3.1498019500246683*\x)/-0.09115944965254408});
+\draw [line width=2pt,color=qqzzcc,domain=-4.2321232873468855:5.983923062742394] plot(\x,{(--2.945975296864179-2.3542573069461943*\x)/2.003355437191254});
+\draw [line width=2pt,domain=-4.2321232873468855:5.983923062742394] plot(\x,{(-4.63403980001752-3.6071087415112295*\x)/-1.8457116459604672});
+\begin{scriptsize}
+\draw [fill=black] (-0.7357116459604671,1.0728912584887702) circle (2.5pt);
+\draw[color=black] (-0.6619995628533203,1.2682151865654157) node {$Q$};
+\draw [fill=rvwvcq] (-3.4621884119608417,0.3622618770739655) circle (2.5pt);
+\draw[color=rvwvcq] (-3.3882758615574975,0.5591836217009603) node {$A$};
+\draw [fill=black] (1.11,4.68) circle (2.5pt);
+\draw[color=black] (1.1854770498216713,4.883277531367287) node {$P$};
+\draw [fill=wrwrwr] (1.018840550347456,1.5301980499753314) circle (2pt);
+\draw[color=wrwrwr] (1.0955998092050503,1.7076150295800077) node {$B$};
+\draw [fill=wrwrwr] (-1.0196968575153098,2.668824500776417) circle (2pt);
+\draw[color=wrwrwr] (-0.9416176447716974,2.8460600773905416) node {$E$};
+\draw [fill=wrwrwr] (0.9836585796759442,0.31456719383022275) circle (2pt);
+\draw[color=wrwrwr] (1.0556543689309963,0.4992654612898796) node {$F$};
+\draw [fill=qqwuqq] (-0.33238338432803866,1.861123213039715) circle (2pt);
+\draw[color=qqwuqq] (-0.25255880004426806,2.037164911840952) node {$M$};
+\end{scriptsize}
+\end{tikzpicture}
 \end{document}
