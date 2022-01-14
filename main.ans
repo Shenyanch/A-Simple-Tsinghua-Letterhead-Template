@@ -1,122 +1,105 @@
 \begin {answerlist}
 \item [1.1]
-        (2)(5)正确
-      
+          D
+        
+\item [1.2]
+          B
+        
+\item [1.3]
+          B
+        
+\item [1.4]
+          D
+        
+\item [1.5]
+          D
+        
+\item [1.6]
+          $-\dfrac43$
+        
+\item [1.7]
+          (I)$\sqrt5-1$
+          (II)原式$=\dfrac{-\sin\alpha-2\cos\alpha}{-\cos\alpha+1}=\dfrac{\sqrt5}5+1$
+        
+\item [1.8]
+          A
+        
+\item [1.9]
+            D
+          
+\item [1.10]
+          $\Bigl\{x\Bigm | -\dfrac{\piup}3+2k\piup\leqslant x\leqslant \dfrac{\piup}3+2k\piup,k\inZ \Bigr\}$
+        
+\item [1.11]
+          B
+        
+\item [1.12]
+          \circled{2}\circled{3}\circled{4}
+        
+\item [1.13]
+          B
+        
+\item [1.14]
+          (I)$\Bigl[-\dfrac{4\piup}3+4k\piup,\dfrac{2\piup}3+4k\piup\Bigr]$，$k\inZ$；
+          (II)当$x=\dfrac{4\piup}3$时，取最小值$f(x)_{\min}=\dfrac92$；当$x=\dfrac{2\piup}3$时，取最大值$f(x)_{\max}=6$.
+        
+\item [1.15]
+          $y_{\min}=\begin{cases}
+            2a+3,\quad a\leqslant-1,\\
+            a^2+2,\quad -1<a<1,\\
+            -2a+3,\quad a\geqslant+3.
+          \end{cases}$
+        
+\item [1.16]
+          D
+        
+\item [1.17]
+          C
+        
+\item [1.18]
+          C
+        
+\item [1.19]
+           A
+         
+\item [1.20]
+              A
+            
+\item [1.21]
+              (I)$f(x)=\sqrt3\sin\Bp{\omega x-\dfrac{\piup}3}$，$\omega=2$.
+              (II)$g(x)=\sqrt3\sin\Bp{x-\dfrac{\piup}{12}}$，当$x=-\dfrac{\piup}4$时,$g(x)$取得最小值$-\dfrac32$
+            
 \item [2.1]
         B
       
+\item [2.2]
+        C
+      
 \item [2.3]
-        $\vv{BD}=-\bm a+\bm c+\bm b$；$\vv{BC}=\bm b-\bm a$；$\vv{BE}=\bm a-\bm a$；$\vv{CD}=\bm c$；$\vv{CE}=\bm c-\bm b$.
+        D
       
 \item [2.4]
-        (1)$9\bm a$；(2)$\dfrac4{21}\bm a-\dfrac17\bm b+\dfrac17\bm c$；$-\bm a$.
+        D
       
 \item [2.5]
-        $x=\dfrac12$；$y=-\dfrac16$
+        B
       
 \item [2.6]
-        A
+        $-\dfrac13$
       
 \item [2.7]
-        A
+        $\Bigl[k\piup+\dfrac{5\piup}{12},k\piup+\dfrac{11\piup}{12} \Bigr],k\in\mathbb{Z}$
       
 \item [2.8]
-        C
+        (1)$-\dfrac56$；
+        (2)$\dfrac45$.
       
 \item [2.9]
-        $\dfrac12$
+        (I)$A=\sqrt{3}$；
+        (II)$f\Bigl(\dfrac{3\piup}4-\theta\Bigr)=\dfrac{\sqrt{30}}4$
       
 \item [2.10]
-        (1)$\because \vv{AB}=\bm a+2\bm b$，$\vv{CB}=2\bm a+4\bm b$；$\therefore \vv{CB}=2\vv{AB}$；
-        (2)$k=2\sqrt2$；
-      
-\item [3.1]
-        $2\bm a-\bm b$
-      
-\item [3.2]
-        A
-      
-\item [3.3]
-        D
-      
-\item [3.4]
-        $\bigg(1,-\mfrac{11}2\biggr)$
-      
-\item [3.5]
-        B
-      
-\item [3.6]
-        B
-      
-\item [3.7]
-        $\dfrac{17}6$
-      
-\item [4.1]
-        B
-      
-\item [4.2]
-        B
-      
-\item [4.3]
-        A
-      
-\item [4.4]
-        C
-      
-\item [4.5]
-        D
-      
-\item [4.6]
-        $3\sqrt{5}$
-      
-\item [4.7]
-        $\sqrt{3}$
-      
-\item [4.8]
-        6
-      
-\item [5.1]
-        (5)(8)正确，其余皆误.
-      
-\item [5.2]
-        D
-      
-\item [5.3]
-        C
-      
-\item [5.4]
-        D
-      
-\item [5.5]
-        $\vv{AB}=\dfrac{2}3(2\bm d-\bm c)$，$\vv{AD}=\dfrac{2}3(2\bm c-\bm d)$
-      
-\item [5.6]
-        (1)$k=-\mfrac{16}{13}$；(2)$\bm d=\Bigl(\mfrac{20+\sqrt{5}}5,\mfrac{5+2\sqrt{5}}5\Bigr)$或$\Bigl(\mfrac{20-\sqrt{5}}5,\mfrac{5-2\sqrt{5}}5\Bigr)$
-  
-\item [5.7]
-        $\Bigl(\mfrac{5-\sqrt{21}}2,1\Bigr) \bigcup \Bigl(1,\mfrac{5-\sqrt{21}}2 \Bigr)$
-      
-\item [5.8]
-        $3\sqrt{2}$
-      
-\item [5.9]
-        $\sqrt{2}$
-      
-\item [5.10]
-        1；1
-      
-\item [5.11]
-        \circled{1}$\vv{AC}$；\circled{2}$\bm 0$；\circled{3}$\bm 0$；\circled{4}$\bm 0$
-      
-\item [5.12]
-        (1)$f(k)=\mfrac{k^2+1}{4k} (k>0)$；
-        (2)$\bm a$与$\bm b$不可能垂直；当$k=2\pm\sqrt{3}$时，$\bm a\varparallel \bm b$；
-        (3)60\degree
-      
-\item [5.14]
-        (1)略；(2)$k=\pm1$
-      
-\item [5.17]
-        $\theta=0$时，$\vv{BP}\cdot\vv{CQ}$取最大值0.
+        (I)$f(x)=\sqrt2\sin\Bp{2x+\dfrac{\piup}3}$，单调递增区间为$\Bigl[-\dfrac{5\piup}{12}+k\piup,\dfrac{\piup}{12}+k\piup\Bigr]$,$k\inZ$.
+        \\(II)$g(x)=\sqrt2\sin\Bp{4x-\dfrac{\piup}3}$，值域：$\Bigl[-\dfrac{\sqrt6}2,\sqrt2\Bigr]$
       
 \end {answerlist}

@@ -1,116 +1,52 @@
-\section{必修一知识点回顾【注意应用的数学思想：分类讨论、数形结合、变量替换】}
-\startexercise
-\section{例子}
-\begin{exercise}
-\item (17-18福州八中高一期中4)函数$f(x)=a^{-x^2+3x+2}(0<a<1)$的单调递增区间是\xz
-        \xx{$(-\infty,\frac32)$}
-        {$(\frac32,+\infty)$}
-        {$(-\infty,-\frac32)$}
-        {$(\frac32,+\infty)$}
-\begin{answer}
-不行吗。
-\end{answer}
-\item  (17-18福州八中高一期中5) 下列四组函数中，表示同一函数的是\xz
-        \xx{$f(x)=\lg{x^4},g(x)=4\lg x$}
-        {$f(x)=\sqrt{x+1}\cdot\sqrt{x-1},g(x)=\sqrt{x^2-1}$}
-        {$f(x)=\frac{x^2-1}{x-1},g(x)=x+1$}
-        {$f(x)=\begin{cases}x,x\geq0\\-x,x<0\end{cases},g(x)=\sqrt{x^2}$}
-\begin{answer}
-D
-\end{answer}
-\end{exercise}
-
-
-\begin{enumerate} 
-        \item[一、] 选择题请把......
-        \item (17-18福州八中高一期中4)函数$f(x)=a^{-x^2+3x+2}(0<a<1)$的单调递增区间是\xz
-        \xx{$(-\infty,\frac32)$}
-        {$(\frac32,+\infty)$}
-        {$(-\infty,-\frac32)$}
-        {$(\frac32,+\infty)$}
-        \begin{answer}
-            D
-        \end{answer}
-
-    \input{resources/Exercises}    
-        \item 等下写选择题小题内容 
-        \item 等下写选择题小题内容 
-        \item 等下写选择题小题内容 
-        \item 等下写选择题小题内容 
-        \item 等下写选择题小题内容 
-        \item 等下写选择题小题内容 
-
-        \item[二、] 填空题  ......
-        \item （17-18八中高一期中11）若幂函数$f(x)$的图象过点$(2,\frac{\sqrt2}2)$ ，则$f(\frac14 )= $ \tk.
-        \item 等下写填空题小题内容 
-        \item 等下写填空题小题内容 
-        \item 等下写填空题小题内容 
-        \item 等下写填空题小题内容 
-
-        \item[三、] 解答题  ......
-        \item (福建省师大附中 2015-2016 高一上学期期中考试22)已知函数$f(x)=-1+\log_a{x+2}$($a>0$,且 $a \neq1$)，$g(x)=(\frac12)^{x-1}$.\\
-（1）函数$ y= f (x )$ 的图象恒过定点 $A$，求 $A$ 点坐标；\\
-（2）若函数 $F ( x )= f ( x )- g ( x )$ 的图像过点$(2,\frac12)$, 证明：方程 $F ( x )= 0$ 在 $x\in(1，2)$上有唯一解. 
-
-
-        \item 等下写解答题小题内容 
-        \item 等下写解答题小题内容 
-        \item 等下写解答题小题内容 
-        \item 等下写解答题小题内容 
-        \item 等下写解答题小题内容 
-\end{enumerate} 
-
-\input{resources/Exercises}
-\subsection{集合是什么？怎么表示？有什么性质？记住一些特殊的集合及其表示方法、性质。}
-    \begin{tikzpicture}[domain=0:4]
-  \draw[very thin,color=gray] (-0.1,-1.1) grid (3.9,3.9);
-  \draw[->] (-0.2,0) -- (4.2,0) node[right] {$x$};
-  \draw[->] (0,-1.2) -- (0,4.2) node[above] {$f(x)$};
-  \draw[color=red]    plot (\x,\x)             node[right] {$f(x) =x$};
-  % \x r 表示弧度
-  \draw[color=blue]   plot (\x,{sin(\x r)})    node[right] {$f(x) = \sin x$};
-  \draw[color=orange] plot (\x,{0.05*exp(\x)}) node[right] {$f(x) = \frac{1}{20} \mathrm e^x$};
-\end{tikzpicture}
-\subsection{集合间有什么关系？注意与一些特殊集合间的关系。}
-
-\begin{enumerate}
-\item 集合间的运算: 交集、并集、补集的含义与表示。运算结果有何特殊性质？ 
-\end{enumerate}
-
-\begin{enumerate}
-\item  计算二重积分~$\ds{\iint\limits_{D}\me^{x^2+y^2}\dif \sigma}$, 其中~$D=\{(x,y)\Big| x^2+ y^2 \leqslant 25\}$.\\
-\begin{tikzpicture}[domain=0:4]
-\tkzInit[xmax=4.2,ymax=3.2,xmin=-1.2,ymin=-1.2,xstep=1]
-%\tkzGrid
-\tkzAxeXY
-\draw[color=red] plot (\x,\x) node[right] {$f(x)=x$};
-\draw[color=orange,domain=-0.5:4] plot (\x,{0.05*exp(\x)}) node[right] {$f(x)=\frac{1}{20}\mathrm e^x$};
-\draw[color=blue,domain=0:4] plot (\x,{sin(\x r)}) node[right] {$f(x)=\sin x$};
-\draw[color=blue!50,x=1cm,y=0.5cm,domain=-0.5:2.4] plot (\x, {(\x)^3-4*(\x)+2}) node[right] {$f(x)=x^3-4x+2$};
-\end{tikzpicture}
-\end{enumerate}
-
-
-集合的应用。集合与其他数学概念的联系。
-
-函数是什么？怎么表示？有什么性质？记住一些特殊的函数及其表示方法、性质。\\
-指数幂如何表示与计算？运算规则如何？与已学过运算间的联系？\\
-对数如何表示与计算？运算规则如何？与已学过运算间的联系？
-
-函数间有什么关系？
-
-函数间的运算：加减乘除、复合的含义与表示。运算结果有何特殊性质?
-
-函数的应用。函数与其他数学概念的联系。
-
-二、运算与技巧
-几种常用的表达式化简与处理办法\\
-函数是什么？怎么表示？有什么性质？记住一些特殊的函数及其表示方法、性质。\\
-指数幂如何表示与计算？运算规则如何？与已学过运算间的联系？\\
-对数如何表示与计算？运算规则如何？与已学过运算间的联系？
-几种方程与不等式的求解办法
-
-几种常见问题
+首先，$y=\sin\Bigl(\dfrac x2-\dfrac{\piup}2\Bigr)$ 要证明的结论是$\mathbb{R}\mathbbm{R}$：\par
+任取$\varepsilon>0$，存在$\delta>0$，使得当$0<|x-x_0|<\delta$时，有
+    \begin{equation}
+        \left|\frac{1}{g(x)}-\frac{1}{B}\right|\biggAbs{\frac{1}{g(x)}-\frac{1}{B}}<\varepsilon\label{eq:conclusion}
+    \end{equation}
+    \begin{equation}
+        \abs{\frac{1}{g(x)}-\frac{1}{B}} \abs{\frac{1}{2}} \abs{\mfrac{1}{2}}
+    \end{equation}
+    \begin{equation}
+        \bigAbs{\frac{1}{g(x)}-\frac{1}{B}} \bigAbs{\frac{1}{2}} \bigAbs{\mfrac{1}{2}}
+    \end{equation}
+    \begin{equation}
+        \BigAbs{\frac{1}{g(x)}-\frac{1}{B}} \BigAbs{\frac{1}{2}} \BigAbs{\mfrac{1}{2}}
+    \end{equation}
+    \begin{equation}
+        \biggAbs{\frac{1}{g(x)}-\frac{1}{B}} \biggAbs{\frac{1}{2}} \biggAbs{\mfrac{1}{2}}
+    \end{equation}
+式\eqref{eq:conclusion}可化为：
+\begin{equation}
+    \frac{|g(x)-B|}{|B|\,|g(x)|}
+\end{equation}}
+绝对值符号$\abs{\bm{a}}=\sqrt{x_1^2+y_1^2}$\qquad
+$\abs{\vv{AB}}=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2}$\\
+$\left| \vv{AB} \right|$
+$\abs{\vv{AB}} \abs{\bm{a}}$
+$\Abs{\vv{AB}} \Abs{\bm{a}}$
+$\bigAbs{\vv{AB}}$
+$\BigAbs{\vv{AB}}$
+$\biggAbs{\vv{AB}}$\\
+$\abs{\frac{1}{2}} \abs{\mfrac{1}{2}} \abs{\dfrac{1}{2}}$
+$\bigAbs{\frac{1}{2}} \bigAbs{\mfrac{1}{2}} \bigAbs{\dfrac{1}{2}}$
+$\BigAbs{\frac{1}{2}} \BigAbs{\mfrac{1}{2}} \BigAbs{\dfrac{1}{2}}$
+$\biggAbs{\frac{1}{2}} \biggAbs{\mfrac{1}{2}} \biggAbs{\dfrac{1}{2}}$\\
+最佳方案：$\bigAbs{\frac{1}{2}} \BigAbs{\mfrac{1}{2}} \biggAbs{\dfrac{1}{2}}$\\
+更多验证：$\bigAbs{\frac{1}{f(x)}} \BigAbs{\mfrac{1}{f(x)}} \biggAbs{\dfrac{1}{f(x)}}$\\
+继续验证：$\bigAbs{\frac{g(x)}{f(x)}} \BigAbs{\mfrac{g(x)}{f(x)}} \biggAbs{\dfrac{g(x)}{f(x)}}$\\
+更多验证：$\BigAbs{\frac{1}{f(x)}}  \left| \frac{1}{f(x)} \right| $
+        $\biggAbs{\mfrac{1}{f(x)}} \left| \mfrac{1}{f(x)} \right| $
+        $\biggAbs{\dfrac{1}{f(x)}} \left| \dfrac{1}{f(x)} \right|$\\
+继续验证：$\BigAbs{\frac{g(x)}{f(x)}}  \left| \frac{g(x)}{f(x)} \right| $
+        $\biggAbs{\mfrac{g(x)}{f(x)}} \left| \mfrac{g(x)}{f(x)} \right| $
+        $\biggAbs{\dfrac{g(x)}{f(x)}} \left| \dfrac{g(x)}{f(x)} \right|$\\
+再次验证：$\bigAbs{\frac{x^2}{\sin(\frac{\pi}2)}}  \left| \frac{x^2}{\sin(\frac{\pi}2)} \right| $
+        $\BigAbs{\mfrac{x^2}{\sin(\mfrac{\pi}2)}} \left| \mfrac{x^2}{\sin(\mfrac{\pi}2)} \right| $
+        $\biggAbs{\dfrac{x^2}{\sin(\dfrac{\pi}2)}} \left| \dfrac{x^2}{\sin(\dfrac{\pi}2)} \right|$\\
+再次验证：$\BigAbs{\frac{x^2}{\sin(\frac{\pi}2)}}  \left| \frac{x^2}{\sin(\frac{\pi}2)} \right| $
+        $\biggAbs{\mfrac{x^2}{\sin(\mfrac{\pi}2)}} \left| \mfrac{x^2}{\sin(\mfrac{\pi}2)} \right| $
+        $\BiggAbs{\dfrac{x^2}{\sin(\dfrac{\pi}2)}} \left| \dfrac{x^2}{\sin(\dfrac{\pi}2)} \right|$\\
+$\Sin{\dfrac{1}{\pi}}$
 
 
 

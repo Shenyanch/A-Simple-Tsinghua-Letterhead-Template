@@ -1,0 +1,110 @@
+\section{复合函数的极限}
+首先，回顾一下极限的定义（关于定义域的一些细节就省略不写了）:
+\begin{framed}
+    设$A$为给定常数，如果对任给的$\varepsilon>0$,存在正数$\delta$，使得当$0<|x-x_0|<\delta$时，有$|f(x)-A|<\varepsilon$，
+    则称{\fangsong 函数$f$当$x$趋于$x_0$时以$A$为极限}．记为：
+    \[
+        \lim_{x \to x_0} f(x)=A.
+    \]
+\end{framed}
+
+$\varepsilon$这东西就相当于给定一个误差范围一样，无论把这个误差范围限制得多么小，都可以找到在$x_0$附近的$x$值，
+使得在这范围内的$f(x)$与$A$之间的误差总是在$\varepsilon$之内.
+简单来说，极限的核心要点就是:~$f(x)$与$A$可以\CJKunderdot{要多接近有多接近}.
+
+注意到所谓“$x_0$附近的$x$值”$0<|x-x_0|<\delta$可以用邻域符号表示为$x\in\mathring{U}(x_0;\delta)$，
+不等式$|f(x)-A|<\varepsilon$也能用邻域符号表示为$f(x)\in{U}(A;\varepsilon)$，于是“函数$f$当$x$趋于$x_0$时以$A$为极限”表明：
+\begin{framed}
+    任给$\varepsilon>0$,存在$\delta>0$，使得对一切$x\in\mathring{U}(x_0;\delta)$，
+    有$f(x)\in{U}(A;\varepsilon)$. 
+\end{framed}
+
+也就是说，如果当$x$趋于$x_0$时，函数$f$以$A$为极限，那么：以$A$为中心，无论设定多么“小”的一个邻域${U}(A;\varepsilon)$，
+都能找出一个$x_0$的$\delta$空心邻域$\mathring{U}(x_0;\delta)$，使得在此范围内的$f(x)$，都属于邻域${U}(A;\varepsilon)$.
+例如：\\
+要使$f(x)$在邻域${U}(A;1)$内，可找出一个$\delta_1$，这时只需$x\in\mathring{U}(x_0;\delta_1)$即可；\\
+要使$f(x)$在邻域${U}(A;0.1)$内，可找出一个$\delta_2$，这时只需$x\in\mathring{U}(x_0;\delta_2)$即可；\\
+要使$f(x)$在邻域${U}(A;0.01)$内，可找出一个$\delta_3$，这时只需$x\in\mathring{U}(x_0;\delta_3)$即可.
+
+另外，还需要特别注意的一点是：$f(x_0)$无论是否存在，取值多少，都和极限$\lim\limits_{x \to x_0} f(x)$没有任何关系；
+并且函数$f$在$x$趋于$x_0$时极限为$A$，并不能说明$f(x_0)$在邻域${U}(A;\varepsilon)$内.\\
+
+\newpage
+现在，简单说明下要判断的问题：\par
+\begin{framed}
+    设函数$y=f\bigl(\varphi(x)\bigr)$由$u=\varphi(x)$与$y=f(u)$复合而成，
+    若$\lim\limits_{x \to x_0}\varphi(x)=a$，且$\lim\limits_{u \to a}f(u)=A$，那么是否有下式成立？
+    \begin{equation}
+        \lim_{x \to x_0} f(\varphi(x))=\lim_{u \to a} f(u)=A\label{eq:conclusion}
+    \end{equation}
+\end{framed}
+\begin{framed}
+    \eqref{eq:conclusion}式~$\iff$~任给$\varepsilon>0$,存在$\delta>0$，
+    使得对一切$x\in\mathring{U}(x_0;\delta)$，有$f\bigl(\varphi(x)\bigr)=f(u)\in{U}(A;\varepsilon)$.
+\end{framed}
+而由$\lim\limits_{u \to a}f(u)=A$知:
+\begin{framed}
+    要使$f(u)$在邻域${U}(A;\varepsilon)$内，可以找出一个$h>0$，只需$u\in\mathring{U}(a;h)$即可.
+\end{framed}
+那么，何时$u=\varphi(x)\in\mathring{U}(a;h)$~？由$\lim\limits_{x \to x_0}\varphi(x)=a$知:
+\begin{framed}
+    要使$\varphi(x)$在邻域${U}(a;h)$内，可以找出一个$\delta_1>0$，只需$x\in\mathring{U}(x_0;\delta_1)$即可.
+\end{framed}
+
+可以注意到，${U}(a;h)$与$\mathring{U}(a;h)$只差了一点.可以分以下三种情况讨论：\par
+\circled{1}~如果$x\in\mathring{U}(x_0;\delta_1)$时，恰好$u=\varphi(x)\neq a$.
+            那么这时$u=\varphi(x)$就在空心邻域$\mathring{U}(a;h)$内，
+            于是$f(u)=f\bigl(\varphi(x)\bigr)$在邻域${U}(A;\varepsilon)$内.
+            从而\eqref{eq:conclusion}式成立.\par
+\circled{2}~如果$x\in\mathring{U}(x_0;\delta_1)$时，存在某个$u=\varphi(x)= a$.
+            这时可以试着将$\delta_1$再取小一些，例如取成$\delta$，且当$x\in\mathring{U}(x_0;\delta)$时，
+            不存在$u=\varphi(x)= a$，即可化为\circled{1}中的情况.于是\eqref{eq:conclusion}式仍成立.
+            \\【这时，由于$x\in\mathring{U}(x_0;\delta)\subseteq \mathring{U}(x_0;\delta_1)$，因此$\varphi(x)\in{U}(a;h)$；
+            又因为$u=\varphi(x)\neq a$，从而$\varphi(x)\in\mathring{U}(a;h)$.】\par
+            那么，能不能做到这点呢？可以先考虑一下反面情形，如果取不到上述的$\delta$，也就是说：对于任意的$\delta>0$，
+            只要$x\in\mathring{U}(x_0;\delta)$，就一定存在某个$u=\varphi(x)= a$.
+            这种情况在下面的\circled{3}中讨论.由这反面情形，可以取到上述的$\delta$，就一定表明：存在某个$\delta_2>0$，
+            使得$x\in\mathring{U}(x_0;\delta_2)$时，$u=\varphi(x)\neq a$.这时，我们取$\delta=\min\{\delta_1,\delta_2\}$即可.\par
+\circled{3}~对于任意的$\delta_0>0$，只要$x\in\mathring{U}(x_0;\delta_0)$，就一定存在某个$u=\varphi(x)= a$.
+            这时，对于前述的$\delta_1$，假设$u^*=\varphi(x^*)=a$，其中$x^*\in\mathring{U}(x_0;\delta_1)$，
+            这时$f(u^*)\bigl(=f(a)\bigr)$是否在邻域${U}(A;\varepsilon)$内？\par
+            如果不在，那么就无法从$x\in\mathring{U}(x_0;\delta_1)$顺推到$f(u)\in{U}(A;\varepsilon)$【有$f\bigl(\varphi(x^*)\bigr)\notin{U}(A;\varepsilon)$这个反例】.\par
+            如果在，也就是说，$f(a)\in{U}(A;\varepsilon)$，那么这时，对于$x\in\mathring{U}(x_0;\delta_1)$，
+            $f\bigl(\varphi(x^*)\bigr)\in{U}(A;\varepsilon)$就一定都能够成立.于是\eqref{eq:conclusion}式得以成立.\par
+            注意到上述讨论中，$\varepsilon$是任取的，也就是说，\eqref{eq:conclusion}式要在当前情况\circled{3}下成立，
+            就要求对任意$\varepsilon>0$，都必须有$f(a)\in{U}(A;\varepsilon)$，而$A$与$f(a)$都是定值，这就表明：$f(a)=A$.
+            也就是说：函数$f$在点$a$处连续.【后面学到函数的连续性之时，会再讲这种情况.】
+
+\newpage
+最后总结归纳一下复合函数求极限的情形，
+前面的\circled{1}、\circled{2}两种情形其实都可以归结为一种情形，也就是：
+\begin{framed}
+    设函数$y=f\bigl(\varphi(x)\bigr)$由$u=\varphi(x)$与$y=f(u)$复合而成，
+    若$\lim\limits_{x \to x_0}\varphi(x)=a$，$\lim\limits_{u \to a}f(u)=A$，
+    并且存在某个$\delta_2>0$，使得$x\in\mathring{U}(x_0;\delta_2)$时，$\varphi(x)\neq a$.那么：
+    \begin{equation*}
+        \lim_{x \to x_0} f(\varphi(x))=\lim_{u \to a} f(u)=A
+    \end{equation*}
+\end{framed}
+这就是你当前学习的复合函数极限运算法则.其中的一种特殊情形就是：
+\begin{framed}
+    设函数$y=f\bigl(\varphi(x)\bigr)$由$u=\varphi(x)$与$y=f(u)$复合而成，
+    若$\lim\limits_{x \to x_0}\varphi(x)=\infty$，$\lim\limits_{u \to a}f(u)=A$，
+    则有：
+    \begin{equation*}
+        \lim_{x \to x_0} f(\varphi(x))=\lim_{u \to \infty} f(u)=A
+    \end{equation*}
+\end{framed}
+
+而前面讨论的情形\circled{3}将在后续学习函数的连续性之时，再次讲到：
+\begin{framed}
+    设函数$y=f\bigl(\varphi(x)\bigr)$由$u=\varphi(x)$与$y=f(u)$复合而成，
+    若$\lim\limits_{x \to x_0}\varphi(x)=a$，$\lim\limits_{u \to a}f(u)=A$，
+    并且函数$y=f(u)$在$u=a$处连续，则：
+    \begin{equation*}
+        \lim_{x \to x_0} f(\varphi(x))=\lim_{u \to a} f(u)=A
+    \end{equation*}
+\end{framed}
+
+
+

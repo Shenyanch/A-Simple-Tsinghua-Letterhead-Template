@@ -1,0 +1,477 @@
+ \ProvidesPackage{QingDa}
+\RequirePackage[BoldFont,SlantFont]{xeCJK}
+% \RequirePackag{fontspec} 
+%\RequirePackage[utf8x]{inputenc}
+\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.2cm,footskip=1.2cm,headheight=2.5cm,headsep=0.1cm]{geometry}
+%与可打印区域(total body)边距(margins)： 靠近装订侧边距(inner)left、靠近翻页侧边距(outer)right、底部bottom、顶部top
+%可打印区域(total body)：文字区(body)、页眉(header)、页脚(footer)、边注区(\marginpar为边注命令)
+%边注区(marginal note)与邻区间距marginparsep、边注区(marginal note)宽度marginparwidth
+%文字区(body)：宽度textwidth即为默认width值、高度textheight即为默认height值、默认includemp参数true于是marginparsep和 marginparsep将包含到 width 中(即边注区在body内)
+%页眉(header):与body紧连；页眉区域高度headheight、页眉区域与下边区域间距headsep； 设置includehead参数时headheight 和 headsep 包含到 height 中
+%页脚(foot):与body紧连；页脚区域高度footskip；设置includefoot参数时将会使 footskip 包含到 height 中
+\RequirePackage{graphicx}
+\RequirePackage{fancyhdr}
+\RequirePackage[export]{adjustbox}
+\RequirePackage{tabularx}
+\RequirePackage{tablists}
+\RequirePackage{titlesec}
+  % \titlecontents{标题层次}[左间距]{整体格式}{标题序号}{标题内容}{指引线和页码}[下间距]
+% 一直乱码……
+%   \titlecontents{part}[20mm] %标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \heiti}
+%     {\contentslabel{3.5em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}
+%   \titlecontents{section}[12mm]%标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \fangsong}
+%     {\vspace{1cm}}                  % above code
+%     {\contentslabel{2.5em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}[6pt]
+%   \titlecontents{subsection}[18mm]%标签距离页面左边距
+%     {\fontsize{12pt}{20pt}\selectfont \kaishu}
+%     {\contentslabel{3.3em}} %标签距离目录内容距离
+%     {}
+%     {\titlerule*{.}\contentspage}[0pt]
+% % 作者：王进之
+% % 链接：https://www.zhihu.com/question/29757796/answer/104247233
+% % 来源：知乎
+% 著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+\RequirePackage[hidelinks]{hyperref}
+\RequirePackage{zhnumber}
+\RequirePackage{gensymb}%为表示角度符号添加
+\RequirePackage{textcomp}
+\newif\ifshow
+\showtrue
+% \showfalse
+\RequirePackage{version}%注释语句，默认隐藏
+  \ifshow \includeversion{analisis}
+    \else \excludeversion{analisis}
+  \fi
+% \usepackage[disable]{todonotes} % notes not showed
+% \usepackage[draft]{todonotes}   % notes showed
+\RequirePackage{framed}%文字加边框
+  \setlength{\OuterFrameSep}{-0.2\baselineskip}%设置框与正文的垂直间距
+\RequirePackage{ulem}%强调文本
+  \newcommand{\mysout}[1]{\sout{\text{#1}}}%横线删除
+  \newcommand{\myuwave}[1]{\uwave{\text{#1}}}%波浪线
+\newcommand{\FDef}{\fangsong}      % FontDefinition，概念的定义采用字体仿宋
+\newcommand{\FCom}{\kaishu}      % FontCommentary，解释衍伸采用字体楷书
+\RequirePackage{multicol}%分栏
+% \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
+  % \RequirePackage{latexexercise}
+%\RequirePackage{latexexercise0}
+% \RequirePackage{siunitx}%国际单位制符号
+%数学符号
+\RequirePackage{amsmath,nccmath,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
+\RequirePackage[g]{esvect}%向量表示包
+\RequirePackage{upgreek}}%希腊字母直立
+\def\piup{\uppi}%不用txfonts包，重新定义txfonts包中的直立pi
+\RequirePackage{enumitem}
+  \setlist[enumerate]{itemsep=0mm}
+%绘图
+\RequirePackage{tikz,
+            pgfplots,
+            tkz-euclide}
+  \usetikzlibrary{calc,math,arrows.meta,shapes,graphs,intersections,angles,quotes}
+  \tikzstyle{startstop} = [rectangle,rounded corners,minimum height=0.7cm,minimum width=1.2cm,text centered, draw=black]
+  \tikzstyle{io} = [trapezium, trapezium left angle = 70,trapezium right angle=110,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{process} = [rectangle,minimum height=0.7cm,minimum width=1.8cm,text centered,draw=black]
+  \tikzstyle{decision} = [diamond,shape aspect=2.5,minimum height=0.5cm,text centered,draw=black]
+  \tikzstyle{arrow} = [thick,->,>=stealth]
+% \usetikzlibrary{automata,
+%                 positioning}
+%-----------------------------------------------------------------------
+%以下设置中，txfonts 将使得全文为 times new roman 字体
+% \RequirePackage{fontspec,txfonts,setspace}
+% \setmainfont{Times New Roman}
+%-----------------------------------------------------------------------
+% 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
+% 用法：\rmnum{数字}，\Rmnum{数字}
+%\makeatletter
+\newcommand{\rmnum}[1]{\romannumeral #1}
+\newcommand{\Rmnum}[1]{\expandafter\@slowromancap\romannumeral #1@}
+%\makeatother
+% 在正文中使用命令\rmnum{数字},Rmnum{数字}来分别显示大小写罗马数字.
+% LaTeX的命令和TeX的命令一样，只允许普通字符（26个字母的大小写形式）作为命令的名称，
+% 不允许出现数字、特殊字符等。当然，这不是一个不可逾越的鸿沟。
+% 本质上来说，只要catcode=11的字符都可以作为命令的名称，因此只要修改字符的catcode为11，
+% 这个字符就可以出现在命令的名称中。LaTeX的内部命令中，
+% \makeatletter命令的实质就是修改字符@的catcode为11，这样@就可以出现在命令名称中了。
+% \makeatother重新修改@的catcode为12，不允许@出现在命令的名字中。
+
+
+
+% Font Setting:
+%-----------------------------------------------------------------------
+% 1. Families Definations
+%
+%    Only 3 families are introduced here, for the normal font, caption
+% font, and title font.
+%-----------------------------------------------------------------------
+\newcommand{\song}{\songti}    % 宋体
+\newcommand{\kai}{\kaishu}      % 楷体
+\newcommand{\hei}{\heiti}      % 黑体
+\newcommand{\fsong}{\fangsong}      % 仿宋
+%-----------------------------------------------------------------------
+% 2. Font size definition
+%
+%    Copy From THU Template by Wang Lei with modifying by Wang Xu.
+%-----------------------------------------------------------------------
+\newcommand{\yihao}{\fontsize{26pt}{36pt}\selectfont}  	  % 一号
+\newcommand{\erhao}{\fontsize{22pt}{28pt}\selectfont}  	  % 二号
+\newcommand{\xiaoer}{\fontsize{18pt}{18pt}\selectfont} 	  % 小二
+\newcommand{\sanhao}{\fontsize{16pt}{16pt}\selectfont} 	  % 三号
+\newcommand{\xiaosan}{\fontsize{15pt}{15pt}\selectfont}	  % 小三
+\newcommand{\sihao}{\fontsize{14pt}{14pt}\selectfont}  	  % 四号
+\newcommand{\xiaosi}{\fontsize{12pt}{20pt}\selectfont} 	  % 小四
+\newcommand{\wuhao}{\fontsize{10.5pt}{10.5pt}\selectfont} % 五号
+\newcommand{\xiaowu}{\fontsize{9pt}{9pt}\selectfont} % 小五
+\newcommand{\liuhao}{\fontsize{8pt}{8pt}\selectfont} % 六号
+\newcommand{\defaultfont}{\renewcommand{\baselinestretch}{1.56}%
+	\fontsize{10.5pt}{11pt}\selectfont}
+%
+% End of Font Setting
+%\CTEXsetup[name={第,节},number={\chinese{section}}]{section}
+\titleformat{\section}[block]{\bfseries}{\chinese{section} 、}{0.25em}{}
+\titlespacing{\section}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
+\titleformat{\subsection}[block]{\bfseries}{\S\arabic{subsection}.}{0.25em}{}
+\titlespacing{\subsection}{0pt}{0.4ex plus 0.1ex minus .1ex}{0.3ex plus .1ex minus .1ex}
+\titleformat{\subsubsection}[block]{\bfseries}{\arabic{subsection}.\arabic{subsubsection}}{0.25em}{}
+\titlespacing{\subsubsection}{4pt}{0.3ex plus 0.1ex minus .1ex}{0.2ex plus .1ex minus .1ex}
+\titleformat{\part}{\centering\bfseries}{}{0.1em}{}
+\titleformat{\paragraph}[hang]{\bfseries}{\relax}{}{\hspace*{15pt}$\bullet$\hspace{1em}}[\relax]
+
+
+\fancypagestyle{plain}
+{\fancyhf{}
+  \renewcommand{\headrulewidth}{1.6pt}
+  \fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
+    {\vspace{-5pt}}
+    \hspace{-40pt}\includegraphics[height=2.29cm]{Logo2020_L.pdf}
+    \end{tabular}
+}
+\fancyhead[R]{\begin{tabular}[c]{cr@{}c@{}}
+  {\vspace{-50pt}}
+   {\xiaosi 来锐思\; 学习好！}\hspace{-10pt}
+  \end{tabular}
+  }
+% \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
+% \fancyhead[R]{\begin{tabular}[t]{@{} c @{}}
+%       {\vspace{0.3em}}
+%       \small{福州清大教育\hspace{6em}} \\
+%       \small{FuZhou Qingda Education\hspace{6em}} \\
+% \end{tabular}
+% }
+
+\renewcommand{\footrulewidth}{.5pt}
+\fancyfoot[C]{
+  \resizebox{!}{1.0\baselineskip}
+  {\begin{tabular}[c]{@{} c @{}}
+        \Huge{\vspace{8pt}\textbf{(鼓楼)87500166\hspace{3em}}\textbf{(金山)87521588\hspace{3em}}\textbf{(台江)83310089\hspace{3em}}\textbf{(爱琴海)87509388\hspace{3em}}\textbf{(红海园)83208050\hspace{3em}}\textbf{(鳌峰)86219555}} \\
+        \huge{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
+        \huge{第\thepage 页}
+   \end{tabular}}
+  }
+}
+
+\pagestyle{plain}
+
+\newcommand{\QD@StuName}{}
+\newcommand{\QD@FirstTime}{}
+\newcommand{\QD@CurrentTime}{}
+\newcommand{\QD@Grade}{}
+\newcommand{\QD@Topic}{}
+\newcommand{\QD@Teach}{}
+
+\newcommand{\Name}[1]{\renewcommand{\QD@StuName}{#1}}
+\newcommand{\FirstTime}[1]{\renewcommand{\QD@FirstTime}{#1}}
+\newcommand{\CurrentTime}[1]{\renewcommand{\QD@CurrentTime}{#1}}
+\newcommand{\Grade}[1]{\renewcommand{\QD@Grade}{#1}}
+\newcommand{\Topic}[1]{\renewcommand{\QD@Topic}{#1}}
+\newcommand{\Teach}[1]{\renewcommand{\QD@Teach}{#1}}
+
+\newcommand{\makefront}{
+  %\title{2012年某某中学高三数学测试题}
+  %\author{总分:150分and 时间120分钟}
+  %\date{命题人: 某某某}
+  %\maketitle
+  \begin{table}[h]
+  \small\vspace{-21pt}
+  \arrayrulewidth=1pt
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \hspace{-12em}
+    \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|}
+      \hline
+        {\hei 教师姓名}  & 沈炜炜&{\hei \bf 学生姓名}&\QD@StuName  & {\hei 首课时间}&\QD@FirstTime&{\hei 本课时间}  & \QD@CurrentTime  \\ \hline
+       {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
+       {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
+       {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
+    \end{tabular}
+  \hspace{-12em}
+  \end{table}
+}
+
+\pagenumbering{arabic} % switch off page numbering
+
+%选择题括号的配置
+\newcommand{\xz}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
+   {$\cdots$}(\hspace{#1 cm})}\\ }
+% 分值
+\newcommand{\fz}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
+   {$\cdots$}(#1 \text{分})}\\ }
+\newcommand{\fzn}[1][1]{\nolinebreak{\dotfill}\mbox{\raisebox{-0.2em}
+  {$\cdots$}(#1 \text{分})} }
+%z选择题四个选项的样式
+%       当你排版选择题的时候，你只需输入
+%\xx{选项 A 的内容}{选项 B 的内容}{选项 C 的内容}{选项 D 的内容}
+%       上面代码的意思是取四个选项的最长宽度，加上 “A.” %以及左右留空，作为选项的最长宽度。将
+%它和行宽的 1/2 以及 1/4 作比较， 来决定把 4 个选项排成一行、两行或者四行及以上。
+\RequirePackage{ifthen}
+\newlength{\la}
+\newlength{\lb}
+\newlength{\lc}
+\newlength{\ld}
+\newlength{\lhalf}
+\newlength{\lquarter}
+\newlength{\lmax}
+\newcommand{\xx}[4]{%\ \\[.5pt]%
+  \settowidth{\la}{A.~#1~~~}
+  \settowidth{\lb}{B.~#2~~~}
+  \settowidth{\lc}{C.~#3~~~}
+  \settowidth{\ld}{D.~#4~~~}
+  \ifthenelse{\lengthtest{\la > \lb}}
+    {\setlength{\lmax}{\la}}
+    {\setlength{\lmax}{\lb}}
+  \ifthenelse{\lengthtest{\lmax < \lc}}
+    {\setlength{\lmax}{\lc}}  {}
+  \ifthenelse{\lengthtest{\lmax < \ld}}
+    {\setlength{\lmax}{\ld}}  {}
+  \setlength{\lhalf}{0.5\linewidth}
+  \setlength{\lquarter}{0.25\linewidth}
+  \ifthenelse{\lengthtest{\lmax < \lquarter}}
+    {\noindent\makebox[\lquarter][l]{A.~#1~~~}%
+     \makebox[\lquarter][l]{B.~#2~~~}%
+     \makebox[\lquarter][l]{C.~#3~~~}%
+     \makebox[\lquarter][l]{D.~#4~~~}}%
+    {\ifthenelse{\lengthtest{\lmax < \lhalf}}
+       {\noindent\makebox[\lhalf][l]{A.~#1~~~}%
+        \makebox[\lhalf][l]{B.~#2~~~}\\%
+        \makebox[\lhalf][l]{C.~#3~~~}%
+        \makebox[\lhalf][l]{D.~#4~~~}}
+       {\noindent A.~#1  \\ B.~#2 \\ C.~#3 \\ D.~#4 }
+    }
+}
+%(6) 填空题横线的排版
+%       当编写到填空题的时候，加上 \tk 即可，可以加在一句话中间，也可以加到一句话末尾，当在
+%末尾的时候，可以在后面加上句号。
+%       横线的默认长度是 2.5cm， 可以使用\tk[3]将横线改为 3cm。
+\newcommand{\tk}[1][2.5]{\,\underline{\mbox{\hspace{#1 cm}}}\,}
+\newcommand{\tkline}[1]{\rule[-3pt]{#1cm}{0.4pt}}
+% \newcommand{\tk}[1][2.5]{
+% \setlength{\lengthtemp}{1cm}%
+% \whiledo{\lengthtest{\lengthtemp<\tklength}}{
+% ifthenelse{\equal{#1}{m}}{}{\linebreak[3]}
+% rulew
+% }
+% \,\underline{\mbox{\hspace{#1 cm}}}\,}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 公式的精调
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \eqnarray如果很长，影响分栏、换行和分页（整块挪动，造成页面空白），
+% 可以设置成为自动调整模式
+\allowdisplaybreaks[4]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%下面这组命令使浮动对象的缺省值稍微宽松一点，从而防止幅度
+%对象占据过多的文本页面，也可以防止在很大空白的浮动页上放置
+%很小的图形。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\textfraction}{0.15}
+\renewcommand{\topfraction}{0.85}
+\renewcommand{\bottomfraction}{0.65}
+\renewcommand{\floatpagefraction}{0.60}
+
+\newlength\CJKtwospaces
+\def\CJKindent{
+    \settowidth\CJKtwospaces{\CJKchar{"0A1}{"0A1}\CJKchar{"0A1}{"0A1}}%
+    \parindent\CJKtwospaces
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 设置行距和段落间垂直距离
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 段落之间的竖直距离
+%\setlength{\parskip}{3pt plus1pt minus1pt}
+\setlength{\parskip}{2pt plus.5pt minus2pt}
+ %数学公式的间距设置
+  % 作者：liuqiangaliuv
+  % 来源：CSDN
+  % 原文：https://blog.csdn.net/liuqiangaliuv/article/details/80016255
+  % 版权声明：本文为博主原创文章，转载请附上博文链接！
+  % \makeatletter %会导致各种乱码
+  % \renewcommand\normalsize{%
+  % 	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
+  %   \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
+  %   \abovedisplayshortskip \z@ \@plus3\p@
+  %   \belowdisplayshortskip 3\p@ \@plus3\p@ \@minus3\p@
+  %   \belowdisplayskip \abovedisplayskip
+  %   \let\@listi\@listI}
+  \renewcommand\normalsize{%
+  	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
+    \abovedisplayskip 1\p@ \@plus2\p@ \@minus5\p@
+    \abovedisplayshortskip \z@ \@plus3\p@
+    \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+    \belowdisplayskip \abovedisplayskip
+    \let\@listi\@listI}
+    % \makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 单行公式的行距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \setlength\abovedisplayskip{2pt plus1pt minus1pt}
+% \setlength\belowdisplayskip{2pt plus1pt minus1pt}
+% \setlength{\abovedisplayshortskip}{0pt}
+% \setlength{\belowdisplayshortskip}{0pt}
+% 定义行距
+%\baselineskip = \f@baselineskip * \baselinestretch,
+ %\f@baselineskip默认为字号的1.2倍
+ %\baselinestretch：article类默认为1；ctexart类默认为1.3
+ %Word 中的“单倍行距”/“双倍行距”等名词，指的是因子的数值为 1 或者 2 的时候的行距；
+ %相反 setspace 宏包的 “单倍”、“一倍半”、“双倍”则是指行距相对于字号的倍数。
+% \renewcommand{\baselinestretch}{1.6}%
+%以下当相邻行的纵向间距小于 \lineskiplimit 时，额外插入高度为 \lineskip 的间距
+% \setlength{\lineskip}{5pt}
+% \setlength{\lineskiplimit}{3pt}
+\setlength{\lineskip}{0.2\baselineskip}
+\setlength{\lineskiplimit}{0.15\baselineskip}%以五号字10.5pt为试验，间距小于0.45倍，基本都能小于0.35倍，小于0.2倍也挺常见，含分式时，小于0.08很常见，估计0.25倍应较为合适间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 调整列表环境的垂直间距
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \let\orig@Itemize =\itemize
+% \let\orig@Enumerate =\enumerate
+% \let\orig@Description =\description
+%
+% \def\Myspacing{\itemsep=1.5ex \topsep=-0.5ex \partopsep=0pt \parskip=0pt \parsep=0.5ex}
+% \def\newitemsep{
+% \renewenvironment{itemize}{\orig@Itemize\Myspacing}{\endlist}
+% \renewenvironment{enumerate}{\orig@Enumerate\Myspacing}{\endlist}
+% \renewenvironment{description}{\orig@Description\Myspacing}{\endlist}
+% }
+%
+% \def\olditemsep{
+% \renewenvironment{itemize}{\orig@Itemize}{\endlist}
+% \renewenvironment{enumerate}{\orig@Enumerate}{\endlist}
+% \renewenvironment{description}{\orig@Description}{\endlist}
+% }
+%
+% \newitemsep
+
+\newlength{\jeroenlen}
+\newenvironment{itemizeMy}[1][\hspace{0em}]
+ {\settowidth{\jeroenlen}{#1}%
+  \begin{description}[leftmargin=\jeroenlen,labelwidth=0pt,labelsep=0pt]
+  \item[\textbf{#1}]%
+  \begin{itemize}[leftmargin=1.5em,labelsep=.5em]}
+ {\end{itemize}\end{description}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 修改引用的格式，
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% 增加 \ucite 命令使显示的引用为上标形式
+\newcommand{\ucite}[1]{$^{\mbox{\scriptsize \cite{#1}}}$}
+\newcommand{\BIBand}{and}
+%\bibpunct{[}{]}{,}{s}{}{\textsuperscript{,}}
+%\renewcommand\NAT@open{\textsuperscript{[}}
+%\renewcommand\NAT@close{\textsuperscript{]}}
+
+%=======================================================================
+% The captions
+\newcommand{\captionfont}{\wuhao\kai\rmfamily}
+\newcommand{\captionlabelfont}{\wuhao\kai\rmfamily}
+%\renewcommand{\captionlabeldelim}{\hspace{1em}}
+%=======================================================================
+% \renewcommand{\thefigure}{\thechapter--\@arabic\c@figure}
+% \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
+% \renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
+% 以上设置的是公式引用时括号里编号的格式，但尚需修改，否则公式总出现(-1)这种形式
+%=======================================================================
+%特殊格式
+\newcommand{\source}[2]{[{\kaishu #1 \textbullet #2}]}%注明来源时加中括号
+\newcommand{\eg}[1]{{\kaishu 【{\textbf 例}】：#1}}%举例
+% \newcommand{\answers}[2]{\begin{answer} #1 \analisis{#2} \end{answer}}%尚未成功的构想
+%参数控制隐藏或显示段落
+% \newenvironment{hide}[1][0]{\ifnum #1=1 \par \else}{ \fi \par}%默认情况总失败
+% \newenvironment{hide}[1][0]{\newcounter{i}\whiledo{\value{i}<\value{#1}}\bgroup}{\stepcounter{i}\egroup \par}%判断条件无用总失败
+% \newif\ifprint
+% \printfalse
+% \newcommand{\blank}[1][1]{%
+%   \ifnum #1=1
+%   \else
+%     #2%
+%   \fi}
+
+%=======================================================================
+\newcommand{\circled}[1]{\textcircled{\scriptsize #1}}
+\newcommand{\dcircled}[1]{}
+\newcommand{\ee}{{\mathrm e}}
+\newcommand{\ii}{{\mathrm i}}
+\newcommand{\dd}{{\mathrm d}}
+\newcommand{\ppi}{{\piup}}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
+\newcommand{\ket}[1]{\ensuremath{|#1\rangle}}
+\newcommand{\vangle}[2]{\ensuremath{\langle #1,#2 \rangle}}
+%\[ \Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr) \]
+\newcommand{\bigAbs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\BigAbs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggAbs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\BiggAbs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+\newcommand{\Abs}[1]{\bigl\lvert #1 \bigr\rvert}%行内数字\frac最佳方案
+\newcommand{\mAbs}[1]{\Bigl\lvert #1 \Bigr\rvert}%数字\mfrac最佳方案
+\newcommand{\dAbs}[1]{\biggl\lvert #1 \biggr\rvert}%\dfrac最佳方案
+\renewcommand{\tfrac}{\mfrac}%将行内公式\tfrac重定义为大小更合适的\mfrac
+%right-angle-mark；tikz作垂足；#2#1->#2#3为逆时针方向
+\newcommand{\rAm}[3]{($(#2)!6pt!(#1)$)--($(#2)!6pt!(#1)!6pt!90:(#1)$)--($(#2)!6pt!(#3)$)}
+\def\inZ{\in\mathbb{Z}}
+\def\inR{\in\mathbb{R}}
+\def\inN{\in\mathbb{N}}
+\def\ZZ{\mathbb{Z}}
+\def\RR{\mathbb{R}}
+\def\NN{\mathbb{N}}
+\def\rad{\,\mathrm{rad}}
+\def\deg{\,\mathrm{deg}}
+% \newcommand{\varpareq}{\underset{$=$}{\mbox{\raisebox{0.3em}{$\,\varparallel$}}}}
+% \newcommand{\varpareq}{\ooalign{\varparallel\cr\hidewidth =\hidewidth\cr}}
+\makeatletter
+\newcommand{\varpareq}{\mathbin{\mathpalette\@varpareq\relax}}
+\newcommand{\@varpareq}[2]{\ooalign{%
+  \raisebox{.5\height}{$#1\,\varparallel$}\cr
+  \smash{\raisebox{-.6\height}{$#1=$}}\cr}}
+\makeatother
+\newcommand{\dfracp}[2]{\dfrac{#1\piup}{#2}}
+\newcommand{\Bp}[1]{\Bigl(#1\Bigr)}
+\newcommand{\bbp}[1]{\biggl(#1\biggr)}
+%====================================================================
+%弧AB的符号
+\makeatletter
+\DeclareFontFamily{U}{tipa}{}
+\DeclareFontShape{U}{tipa}{m}{n}{<->tipa10}{}
+\newcommand{\arc@char}{{\usefont{U}{tipa}{m}{n}\symbol{62}}}%
+\newcommand{\arc}[1]{\mathpalette\arc@arc{#1}}
+\newcommand{\arc@arc}[2]{%
+  \sbox0{$\m@th#1#2$}%
+  \vbox{
+    \hbox{\resizebox{\wd0}{\height}{\arc@char}}
+    \nointerlineskip
+    \box0
+  }%
+}
+\makeatother
+%====================================================================

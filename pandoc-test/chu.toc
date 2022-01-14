@@ -1,0 +1,95 @@
+\contentsline {section}{\numberline {1} 代数学}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1} 有理实数}{2}{subsection.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.1}\includegraphics [width=1.76389in,height=0.29167in]{media/image5.png}}{2}{subsubsection.1.1.1}%
+\contentsline {subsubsection}{\numberline {1.1.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{2}{subsubsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.2} 无理实数}{3}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3} 整式与分式}{4}{subsection.1.3}%
+\contentsline {subsubsection}{\numberline {1.3.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{4}{subsubsection.1.3.1}%
+\contentsline {subsubsection}{\numberline {1.3.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{5}{subsubsection.1.3.2}%
+\contentsline {subsubsection}{\numberline {1.3.3}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{6}{subsubsection.1.3.3}%
+\contentsline {section}{\numberline {2} 几何学}{6}{section.2}%
+\contentsline {subsection}{\numberline {2.1} 相交线与平行线}{6}{subsection.2.1}%
+\contentsline {subsubsection}{\numberline {2.1.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{6}{subsubsection.2.1.1}%
+\contentsline {subsubsection}{\numberline {2.1.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{7}{subsubsection.2.1.2}%
+\contentsline {subsubsection}{\numberline {2.1.3}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{7}{subsubsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.2} 三角形}{7}{subsection.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{7}{subsubsection.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{8}{subsubsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.3}}{10}{subsubsection.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.4}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{10}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.5}在与中 ∵ ∴≌}{10}{subsubsection.2.2.5}%
+\contentsline {subsubsection}{\numberline {2.2.6}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{10}{subsubsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.3} 四边形}{10}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{10}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}\textbf {2、思路总结}}{12}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}}{12}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}}{12}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}}{12}{subsubsection.2.3.5}%
+\contentsline {subsubsection}{\numberline {2.3.6}}{12}{subsubsection.2.3.6}%
+\contentsline {subsubsection}{\numberline {2.3.7}}{12}{subsubsection.2.3.7}%
+\contentsline {subsubsection}{\numberline {2.3.8}}{12}{subsubsection.2.3.8}%
+\contentsline {subsubsection}{\numberline {2.3.9}平行四边形边上一点与两对边形成的两个三角形面积和等于平行四边形面积一半。}{12}{subsubsection.2.3.9}%
+\contentsline {subsubsection}{\numberline {2.3.10}\textbf {①}}{12}{subsubsection.2.3.10}%
+\contentsline {subsubsection}{\numberline {2.3.11}\textbf {②}}{12}{subsubsection.2.3.11}%
+\contentsline {subsubsection}{\numberline {2.3.12}\includegraphics [width=1.69444in,height=0.77778in]{media/image48.png}}{12}{subsubsection.2.3.12}%
+\contentsline {subsubsection}{\numberline {2.3.13}}{12}{subsubsection.2.3.13}%
+\contentsline {subsubsection}{\numberline {2.3.14}}{12}{subsubsection.2.3.14}%
+\contentsline {subsubsection}{\numberline {2.3.15}平行四边形内一点与两对边形成的两个三角形面积和等于平行四边形面积一半。}{12}{subsubsection.2.3.15}%
+\contentsline {subsubsection}{\numberline {2.3.16}\textbf {①}}{12}{subsubsection.2.3.16}%
+\contentsline {subsubsection}{\numberline {2.3.17}\textbf {②}}{12}{subsubsection.2.3.17}%
+\contentsline {subsubsection}{\numberline {2.3.18}\includegraphics [width=1.625in,height=0.68056in]{media/image49.png}}{12}{subsubsection.2.3.18}%
+\contentsline {subsubsection}{\numberline {2.3.19}}{12}{subsubsection.2.3.19}%
+\contentsline {subsubsection}{\numberline {2.3.20}}{12}{subsubsection.2.3.20}%
+\contentsline {subsubsection}{\numberline {2.3.21}平行四边形外一点与两对边形成的两个三角形面积和（差）为平行四边形面积一半。}{12}{subsubsection.2.3.21}%
+\contentsline {subsubsection}{\numberline {2.3.22}\textbf {①}}{12}{subsubsection.2.3.22}%
+\contentsline {subsubsection}{\numberline {2.3.23}\textbf {②}}{12}{subsubsection.2.3.23}%
+\contentsline {subsubsection}{\numberline {2.3.24}\includegraphics [width=1.54167in,height=0.95833in]{media/image50.png}}{12}{subsubsection.2.3.24}%
+\contentsline {subsubsection}{\numberline {2.3.25}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{12}{subsubsection.2.3.25}%
+\contentsline {subsection}{\numberline {2.4} 圆}{13}{subsection.2.4}%
+\contentsline {subsubsection}{\numberline {2.4.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{13}{subsubsection.2.4.1}%
+\contentsline {subsubsection}{\numberline {2.4.2}}{13}{subsubsection.2.4.2}%
+\contentsline {subsubsection}{\numberline {2.4.3}\includegraphics [width=1.88889in,height=0.34722in]{media/image5.png}}{13}{subsubsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.4}}{14}{subsubsection.2.4.4}%
+\contentsline {subsubsection}{\numberline {2.4.5}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{14}{subsubsection.2.4.5}%
+\contentsline {subsubsection}{\numberline {2.4.6}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{14}{subsubsection.2.4.6}%
+\contentsline {subsubsection}{\numberline {2.4.7}}{15}{subsubsection.2.4.7}%
+\contentsline {subsubsection}{\numberline {2.4.8}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{15}{subsubsection.2.4.8}%
+\contentsline {subsection}{\numberline {2.5} 旋转与视图}{15}{subsection.2.5}%
+\contentsline {subsubsection}{\numberline {2.5.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{15}{subsubsection.2.5.1}%
+\contentsline {subsubsection}{\numberline {2.5.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{16}{subsubsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.6} 几何解题方法与思路}{16}{subsection.2.6}%
+\contentsline {subsubsection}{\numberline {2.6.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{16}{subsubsection.2.6.1}%
+\contentsline {subsubsection}{\numberline {2.6.2}}{16}{subsubsection.2.6.2}%
+\contentsline {subsubsection}{\numberline {2.6.3}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{16}{subsubsection.2.6.3}%
+\contentsline {subsubsection}{\numberline {2.6.4}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{17}{subsubsection.2.6.4}%
+\contentsline {subsubsection}{\numberline {2.6.5}}{17}{subsubsection.2.6.5}%
+\contentsline {subsubsection}{\numberline {2.6.6}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{17}{subsubsection.2.6.6}%
+\contentsline {subsubsection}{\numberline {2.6.7}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{18}{subsubsection.2.6.7}%
+\contentsline {subsubsection}{\numberline {2.6.8}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{18}{subsubsection.2.6.8}%
+\contentsline {section}{\numberline {3} 方程、函数、不等式}{19}{section.3}%
+\contentsline {subsection}{\numberline {3.1} 坐标系}{19}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{19}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2} 一次方程、函数与不等式}{19}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{19}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{20}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{21}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}}{23}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{23}{subsubsection.3.2.5}%
+\contentsline {subsubsection}{\numberline {3.2.6}\includegraphics [width=2.23611in,height=0.34722in]{media/image5.png}}{23}{subsubsection.3.2.6}%
+\contentsline {subsection}{\numberline {3.3} 分式方程与反比例函数}{23}{subsection.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{23}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}\textbf {5、分式方程考点总结}}{24}{subsubsection.3.3.2}%
+\contentsline {subsubsection}{\numberline {3.3.3}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{24}{subsubsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.4} 二次方程、函数与不等式}{25}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{25}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{25}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}\includegraphics [width=2.29167in,height=0.34722in]{media/image5.png}}{25}{subsubsection.3.4.3}%
+\contentsline {subsubsection}{\numberline {3.4.4}\textbf {4、坐标系中面积问题}}{26}{subsubsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.5} 锐角三角函数}{26}{subsection.3.5}%
+\contentsline {subsubsection}{\numberline {3.5.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{26}{subsubsection.3.5.1}%
+\contentsline {section}{\numberline {4} 统计概率}{27}{section.4}%
+\contentsline {subsection}{\numberline {4.1} 统计}{27}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{27}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{28}{subsubsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.2} 概 率}{29}{subsection.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}\includegraphics [width=1.75in,height=0.34722in]{media/image5.png}}{29}{subsubsection.4.2.1}%

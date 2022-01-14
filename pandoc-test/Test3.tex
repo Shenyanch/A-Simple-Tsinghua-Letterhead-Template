@@ -1,0 +1,60 @@
+% 首先，我们回顾一下极限的定义：\par
+% 设$A$为给定常数，如果对任给的$\varepsilon>0$,存在正数$\delta$，使得当$0<|x-x_0|<\delta$时，有$|f(x)-A|<\varepsilon$，
+% 则称{\fangsong 函数$f$当$x$趋于$x_0$时以$A$为极限}．\par
+这是Test3内容，与Test2没区别：\par
+任取$\varepsilon>0$，存在$\delta>0$，使得当$0<|x-x_0|<\delta$时，有
+    \begin{equation}
+        \left|\frac{1}{g(x)}-\frac{1}{B}\right|<\varepsilon
+    \end{equation}
+式\eqref{eq:conclusion}可化为：
+\begin{equation}
+    \frac{|g(x)-B|}{|B|\,|g(x)|}<\varepsilon
+\end{equation}
+注意到上式左侧由以下三项组成：$\frac1{|B|}$、$|g(x)-B|$与$\frac1{|g(x)|}$．
+现在要做的，就是在已经给定的正数$\varepsilon$下，找到合适的$\delta$，然后分别判断这三项的取值范围，最后论证这三项在给定的$\delta$下乘积能够小于$\varepsilon$.\par
+第一项$\frac1{|B|}$是常数；\par
+对第二项$|g(x)-B|$，与第三项$\frac1{|g(x)|}$，由
+\begin{equation}
+    \lim_{x \to x_0} g(x)=B
+\end{equation}
+可得：对于任意$\varepsilon_0>0$,能够找到$\delta_0$，使得当$0<|x-x_0|<\delta_0$时，有$|g(x)-B|<\varepsilon_0$.\\
+于是：
+\begin{enumerate}[label=\circled{\arabic*}]
+    \item 取$\varepsilon_0=\varepsilon$，则必定存在正数$\delta_{10}$，使得当$0<|x-x_0|<\delta_{10}$时，有
+        \begin{equation}
+            |g(x)-B|<\varepsilon
+        \end{equation}
+    \item 取$\varepsilon_0=\frac{|B|}{2}$，则必定存在正数$\delta_2$，使得当$0<|x-x_0|<\delta_2$时，就有
+        \begin{equation}
+            |g(x)-B|<\frac{|B|}{2}
+        \end{equation}
+\end{enumerate}
+由\circled{2}，可由绝对值不等式得到
+    \begin{equation}
+        \frac1{|g(x)|}<\frac{2}{|B|}
+    \end{equation}
+取$\delta=\min\{\delta_{10},\delta_2\}$，那么，当$0<|x-x_0|<\delta$时，就同时有$0<|x-x_0|<\delta_{10}$与$0<|x-x_0|<\delta_2$成立．\\
+当$0<|x-x_0|<\delta_{10}$成立时，式\eqref{eq:lim1}成立，\\
+当$0<|x-x_0|<\delta_2$成立时，式\eqref{eq:lim2}成立，那么式\eqref{eq:lim2-1}也就能够成立．\\
+于是，当$0<|x-x_0|<\delta$时，\eqref{eq:lim1}、\eqref{eq:lim2-1}两式就能同时成立．
+这时，就有:
+        \begin{equation}
+            \left|\frac{1}{g(x)}-\frac{1}{B}\right|=\frac{1}{|B|}\times|g(x)-B|\times\frac{1}{|g(x)|}
+            <\frac{1}{|B|}\times \varepsilon \times \frac{2}{|B|}=\frac{2\varepsilon}{|B|^2}
+        \end{equation}
+这与我们最终想要证明的式\eqref{eq:conclusion}还差了那么一点，所以需要稍作调整．\\
+\circled{1}中，改取$\varepsilon_0=\frac{|B|^2}{2}\varepsilon$，那么，则必定存在正数$\delta_1$，使得当$0<|x-x_0|<\delta_1$时，有
+\begin{equation}
+    |g(x)-B|<\frac{|B|^2}{2}\varepsilon.
+\end{equation}
+这时，改取$\delta=\min\{\delta_{1},\delta_2\}$，那么当$0<|x-x_0|<\delta$时，可知\eqref{eq:lim1-1}、\eqref{eq:lim2-1}两式同时成立.
+于是
+\begin{equation}
+    \left|\frac{1}{g(x)}-\frac{1}{B}\right|=\frac{1}{|B|}\times|g(x)-B|\times\frac{1}{|g(x)|}
+    <\frac{1}{|B|}\times \frac{|B|^2}{2}\varepsilon \times \frac{2}{|B|}=\varepsilon
+\end{equation}
+这就是我们要证明的式\eqref{eq:conclusion}.
+Test3内容结束
+
+
+

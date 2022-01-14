@@ -1,0 +1,108 @@
+\Topic{数学拓展数论专题 - 莫比乌斯函数}
+  \Teach{}
+  \Grade{高二}
+  \Name{张一男}
+
+  \newtheorem*{Theorem}{定理}
+  \makefront
+\vspace{-1.5em}
+
+\subsection{乘性函数}
+    算术函数：定义在所有正整数上的函数.\\
+    算术函数$f$如果满足对任意两个互素的正整数$n$ 和$m$，均有$f(mn)=f(m)f(n)$，称为乘性函数（或积性函数）．
+    如果对任意两个正整数$n$和$m$，均有$f(mn)=f(m)f(n)$，就称为完全乘性（或完全积性）函数.
+
+    【性质1】如果$f$是一个乘性函数，对任意正整数$n$有素数幂分解$n=p_1^{\alpha_1}p_2^{\alpha_2}\ldots p_s^{\alpha_s}$,
+    那么\[f(n)=f(p_1^{\alpha_1})f(p_2^{\alpha_2})\ldots f(p_s^{\alpha_s})\].
+\subsection{和函数}
+    设$f$是一个算术函数，那么
+    \[F(n) = \sum_{d\mid n}f(d)\]
+    代表$f$在$n$中所有正因子处的值之和．函数$F$称为$f$的和函数.
+
+    如果$f$是乘性函数，那么$f$的和函数，即$F(n) = \sum \limits_{d\mid n} f(d)$也是乘性函数.
+
+    为了证明$F$是一个乘性函数，我们必须证明：如果$m$和$n$是互素的正整数，那么$F(mn)=F(m)F(n)$．
+    所以首先假设$(m,n)=1$.
+    有\[F(mn) = \sum_{d\mid mn}f(d).\]
+        因为$(m,n)=1$，每个$mn$的因子可以唯一地写成$m$的因子$d_1$和$n$的因子$d_2$之
+        积，并且这两个因子互素．即$d=d_1d_2$，所以有
+        \[F(mn) = \sum_{\substack{d_1\mid m \\d_2\mid n}}f(d_1d_2)\]
+        因为$f$是乘性的，且$(d_1,d_2)=1$,则
+        \[
+            \begin{aligned} 
+                F(mn) &= \sum_{\substack{d_1\mid m \\d_2\mid n}}f(d_1)f(d_2)\\
+                &=\sum_{d_1\mid m }f(d_1)\sum_{d_2\mid n }f(d_2)\\
+                &=F(m)F(n)
+            \end{aligned}
+        \]
+
+        【推论】因子和函数$\sigma$与因子个数函数$\tau$是乘性函数.\\
+        设$f(n)=n$和$g(n)=1$，则$f$和$g$均是乘性的.
+        于是$\sigma(n)=\sum \limits_{d\mid n} f(d)$和$\tau(n)=\sum \limits_{d\mid n} g(d)$是乘性的.
+  
+\clearpage
+    【欧拉函数的和函数】设$n$为一个正整数，那么\[F(n) = \sum_{d\mid n}\phi(d)=n\]
+
+    我们将从1到$n$的整数构成的集合分类．整数$m$如果与$n$的最大公因子为$d$，则$m$
+    属于$C_d$类． 就是说，如果$m$属于$C_d$，那么$(m,n)=d$，当且仅当$(m/d，n/d)=1$.
+    所以，$C_d$类中所含整数的个数是所有不超过$n/d$且和$n/d$互素的正整数的个数． 从上面的分析，我们可
+    以看到$C_d$类中存在中$(n/d)$个整数．因为我们将1到$n$的所有整数分成互不相交的类，且每个
+    整数只厲于其中一个类． 那么这些不同的类所含的所有整数的个数之和就是$n$，所以
+    \[n = \sum_{d\mid n}\phi(n/d)\].
+    因为$d$取遍所有整除$n$的正整数，$n/d$也取遍它的所有因子，从而
+    \[n = \sum_{d\mid n}\phi(n/d)= \sum_{d\mid n}\phi(d)\].
+
+    \subsection{莫比乌斯反演}
+        莫比乌斯函数$\mu(n)$定义为
+        \[\mu(n)=
+        \left\{\begin{aligned}
+            &1,&& n=1; \\
+            &(-1)^s, &&n=p_1p_2\ldots p_s,\text{素数 }p_1<p_2<\ldots <p_s;\\
+            &0, && \text{others}.
+        \end{aligned}\right.
+        \]\\
+\vspace{2em}
+        【性质1】莫比乌斯函数$\mu(n)$是乘性函数.\\
+\vspace{2em}
+        【性质2】莫比乌斯函数的和函数在$n$处的值$F(n)=\sum \limits_{d\mid n} \mu(d)$满足
+        \[
+            \sum \limits_{d\mid n} \mu(d)=
+            \left\{\begin{aligned}
+                &1,&& \text{if}\quad n=1; \\
+                &0, && \text{if}\quad n>1.
+            \end{aligned}\right.
+        \]\\
+        \vspace{3em}
+
+        【莫比乌斯反演公式】若$f$是算术函数，$F$为$f$的和函数，满足
+        \[F(n) = \sum_{d\mid n}f(d).\]
+        则对任意正整数$n$，
+        \[f(n) = \sum_{d\mid n}\mu(d)F(n/d).\]
+        证明如下：
+        \[
+            \begin{aligned} 
+                \sum_{d\mid n}\mu(d)F(n/d)&=\sum_{d\mid n}\biggl(\mu(d)\sum_{e\mid (n/d)}f(e)\biggr)\\
+                                          &=\sum_{d\mid n}\biggl(\sum_{e\mid (n/d)}\mu(d)f(e)\biggr)\\
+            \end{aligned}            
+        \]
+
+        注意到整数对$(d,e)$满足$d\mid n$和$e\mid (n/d)$时，同样必有$e\mid n$和$d\mid (n/e)$．于是
+        \[
+            \begin{aligned} 
+                \sum_{d\mid n}\biggl(\sum_{e\mid (n/d)}\mu(d)f(e)\biggr)&=\sum_{e\mid n}\biggl(\sum_{d\mid (n/e)}\mu(d)f(e)\biggr)\\
+                                          &=\sum_{e\mid n}\biggl(f(e)\sum_{d\mid (n/e)}\mu(d)\biggr)\\
+            \end{aligned}            
+        \]
+        
+        又和式$\sum \limits_{d\mid (n/e)} \mu(d)=1$仅在$n/e=1$是成立，其他情况下该和式都等于0.因此有：
+        \[\sum_{e\mid n}\biggl(f(e)\sum_{d\mid (n/e)}\mu(d)\biggr)=f(n)\cdot1=f(n).\]\\
+        \vspace{5em}
+
+        【定理】设$f$为算术函数，它的和函数为$F(n) = \sum \limits_{d\mid n}f(d)$，那么如果$F$是乘性函数，则$f$也是乘性函数.
+
+
+
+
+
+
+

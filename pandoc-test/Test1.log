@@ -1,0 +1,1109 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  4 NOV 2020 16:47
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1
+(/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:4: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 首
+     先，要证明的结论是：\par
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 首 in font nullfont!
+Missing character: There is no 先 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 证 in font nullfont!
+Missing character: There is no 明 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 4--4
+[] 
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:5: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 任
+     取$\varepsilon>0$，存在$\delta>0$，使得当$0<|x-x_0|<\delta$时，有
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 任 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 存 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 使 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 有 in font nullfont!
+
+Overfull \hbox (35.21869pt too wide) in paragraph at lines 5--6
+[]$\OML/cmm/m/it/10 " >
+ []
+
+
+Overfull \hbox (20.37843pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10 0$$\OML/cmm/m/it/10 ^^N >
+ []
+
+
+Overfull \hbox (20.55554pt too wide) in paragraph at lines 5--6
+\OT1/cmr/m/n/10 0$$0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 5--6
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 5--6
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 5--6
+\OML/cmm/m/it/10 ^^N$ 
+ []
+
+
+Overfull \hbox (68.39352pt too wide) detected at line 8
+[] \OML/cmm/m/it/10 < "[]
+ []
+
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:9: Undefined control sequence.
+l.9 式\eqref
+           {eq:conclusion}可化为：
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 化 in font nullfont!
+Missing character: There is no 为 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (64.88245pt too wide) detected at line 12
+[] \OML/cmm/m/it/10 < "[]
+ []
+
+Missing character: There is no 注 in font nullfont!
+Missing character: There is no 意 in font nullfont!
+Missing character: There is no 到 in font nullfont!
+Missing character: There is no 上 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 左 in font nullfont!
+Missing character: There is no 侧 in font nullfont!
+Missing character: There is no 由 in font nullfont!
+Missing character: There is no 以 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no 三 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 组 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no ： in font nullfont!
+Missing character: There is no 、 in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no ． in font nullfont!
+Missing character: There is no 现 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 做 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 已 in font nullfont!
+Missing character: There is no 经 in font nullfont!
+Missing character: There is no 给 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 正 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 找 in font nullfont!
+Missing character: There is no 到 in font nullfont!
+Missing character: There is no 合 in font nullfont!
+Missing character: There is no 适 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 然 in font nullfont!
+Missing character: There is no 后 in font nullfont!
+Missing character: There is no 分 in font nullfont!
+Missing character: There is no 别 in font nullfont!
+Missing character: There is no 判 in font nullfont!
+Missing character: There is no 断 in font nullfont!
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 三 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no 值 in font nullfont!
+Missing character: There is no 范 in font nullfont!
+Missing character: There is no 围 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 最 in font nullfont!
+Missing character: There is no 后 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 证 in font nullfont!
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 三 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 给 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 下 in font nullfont!
+Missing character: There is no 乘 in font nullfont!
+Missing character: There is no 积 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 够 in font nullfont!
+Missing character: There is no 小 in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no . in font nullfont!
+
+Overfull \hbox (42.71011pt too wide) in paragraph at lines 12--14
+$[]$$\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (32.9518pt too wide) in paragraph at lines 12--14
+\OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j$$[]$
+ []
+
+
+Overfull \hbox (18.97217pt too wide) in paragraph at lines 12--14
+\OML/cmm/m/it/10 "$$^^N$$^^N$$"$ 
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:15: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 第
+      一项$\frac1{|B|}$是常数；\par
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 第 in font nullfont!
+Missing character: There is no 一 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no 常 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no ； in font nullfont!
+
+Overfull \hbox (33.53299pt too wide) in paragraph at lines 15--15
+[]$[]$ 
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:16: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.16 对
+      第二项$|g(x)-B|$，与第三项$\frac1{|g(x)|}$，由
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 对 in font nullfont!
+Missing character: There is no 第 in font nullfont!
+Missing character: There is no 二 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no 第 in font nullfont!
+Missing character: There is no 三 in font nullfont!
+Missing character: There is no 项 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 由 in font nullfont!
+
+Overfull \hbox (49.17712pt too wide) in paragraph at lines 16--17
+[]$\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (32.9518pt too wide) in paragraph at lines 16--17
+\OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j$$[]$ 
+ []
+
+
+Overfull \hbox (62.65273pt too wide) detected at line 19
+[] \OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) = \OML/cmm/m/it/10 B[]
+ []
+
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no ： in font nullfont!
+Missing character: There is no 对 in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 任 in font nullfont!
+Missing character: There is no 意 in font nullfont!
+Missing character: There is no , in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 够 in font nullfont!
+Missing character: There is no 找 in font nullfont!
+Missing character: There is no 到 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 使 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 有 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (19.70482pt too wide) in paragraph at lines 19--22
+$\OML/cmm/m/it/10 "[] >
+ []
+
+
+Overfull \hbox (29.48611pt too wide) in paragraph at lines 19--22
+\OT1/cmr/m/n/10 0$$\OML/cmm/m/it/10 ^^N[]$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 19--22
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (38.1077pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 ^^N[]$$\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (21.4201pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (9.1493pt too wide) in paragraph at lines 19--22
+\OML/cmm/m/it/10 "[]$ 
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:22: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.22 \begin{enumerate}[
+                       label=\circled{\arabic*}]
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no [ in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no b in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no = in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:22: Undefined control sequence.
+l.22 \begin{enumerate}[label=\circled
+                                     {\arabic*}]
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:22: Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.22 \begin{enumerate}[label=\circled{\arabic*
+                                              }]
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23     \item 取
+                $\varepsilon_0=\varepsilon$，则必定存在正数$\delta_{10}$，使得当$0<|x-x_...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23     \item 取
+                $\varepsilon_0=\varepsilon$，则必定存在正数$\delta_{10}$，使得当$0<|x-x_...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:23: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23     \item 取
+                $\varepsilon_0=\varepsilon$，则必定存在正数$\delta_{10}$，使得当$0<|x-x_...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 则 in font nullfont!
+Missing character: There is no 必 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 存 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 正 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 使 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 有 in font nullfont!
+
+Overfull \hbox (19.70482pt too wide) in paragraph at lines 22--24
+[]$\OML/cmm/m/it/10 "[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (33.1354pt too wide) in paragraph at lines 22--24
+\OML/cmm/m/it/10 "$$^^N[]$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 22--24
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 22--24
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (12.9167pt too wide) in paragraph at lines 22--24
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (58.03812pt too wide) detected at line 26
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < "[]
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:27: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27     \item 取
+                $\varepsilon_0=\frac{|B|}{2}$，则必定存在正数$\delta_2$，使得当$0<|x-x_0...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:27: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27     \item 取
+                $\varepsilon_0=\frac{|B|}{2}$，则必定存在正数$\delta_2$，使得当$0<|x-x_0...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:27: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27     \item 取
+                $\varepsilon_0=\frac{|B|}{2}$，则必定存在正数$\delta_2$，使得当$0<|x-x_0...
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 则 in font nullfont!
+Missing character: There is no 必 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 存 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 正 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 使 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 有 in font nullfont!
+
+Overfull \hbox (19.70482pt too wide) in paragraph at lines 26--28
+[]$\OML/cmm/m/it/10 "[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (38.01909pt too wide) in paragraph at lines 26--28
+[]$$\OML/cmm/m/it/10 ^^N[]$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 26--28
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 26--28
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (8.93057pt too wide) in paragraph at lines 26--28
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (69.41731pt too wide) detected at line 30
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < [][]
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:31: LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.31 \end{enumerate}
+                    
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 由 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:32: Undefined control sequence.
+l.32 由\circled
+              {2}，可由绝对值不等式得到
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 由 in font nullfont!
+Missing character: There is no 绝 in font nullfont!
+Missing character: There is no 对 in font nullfont!
+Missing character: There is no 值 in font nullfont!
+Missing character: There is no 不 in font nullfont!
+Missing character: There is no 等 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 到 in font nullfont!
+
+Overfull \hbox (55.9527pt too wide) detected at line 35
+[] \OML/cmm/m/it/10 < [][]
+ []
+
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 那 in font nullfont!
+Missing character: There is no 么 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 同 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no 有 in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no ． in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:37: Undefined control sequence.
+l.37 当$0<|x-x_0|<\delta_{10}$成立时，式\eqref
+                                        {eq:lim1}成立，\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:38: Undefined control sequence.
+l.38 当$0<|x-x_0|<\delta_2$成立时，式\eqref
+                                     {eq:lim2}成立，那么式\eqref{eq:lim2-1}也就能够成立．\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 那 in font nullfont!
+Missing character: There is no 么 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:38: Undefined control sequence.
+l.38 ...<\delta_2$成立时，式\eqref{eq:lim2}成立，那么式\eqref
+                                                  {eq:lim2-1}也就能够成立．\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 也 in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 够 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no ． in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:39: Undefined control sequence.
+l.39 于是，当$0<|x-x_0|<\delta$时，\eqref
+                                   {eq:lim1}、\eqref{eq:lim2-1}两式就能同时成立．
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 、 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:39: Undefined control sequence.
+l.39 ...$0<|x-x_0|<\delta$时，\eqref{eq:lim1}、\eqref
+                                                  {eq:lim2-1}两式就能同时成立．
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 两 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 能 in font nullfont!
+Missing character: There is no 同 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no ． in font nullfont!
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 有 in font nullfont!
+Missing character: There is no : in font nullfont!
+
+Overfull \hbox (15.37842pt too wide) in paragraph at lines 35--41
+$\OML/cmm/m/it/10 ^^N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (68.51396pt too wide) in paragraph at lines 35--41
+[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^N[]; ^^N[]\OMS/cmsy/m/n/10 g$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (20.37843pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (28.47223pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N[]$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (8.93057pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (15.55553pt too wide) in paragraph at lines 35--41
+\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (12.9167pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (15.55553pt too wide) in paragraph at lines 35--41
+\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (8.93057pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (15.55553pt too wide) in paragraph at lines 35--41
+\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 35--41
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 35--41
+\OML/cmm/m/it/10 ^^N$
+ []
+
+
+Overfull \hbox (261.44562pt too wide) detected at line 44
+[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^B j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j ^^B [] \OML/cmm/m/it/10 < [] \OMS/cmsy/m/n/10 ^^B \OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ^^B [] \OT1/cmr/m/n/10 = []
+ []
+
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no 我 in font nullfont!
+Missing character: There is no 们 in font nullfont!
+Missing character: There is no 最 in font nullfont!
+Missing character: There is no 终 in font nullfont!
+Missing character: There is no 想 in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 证 in font nullfont!
+Missing character: There is no 明 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:45: Undefined control sequence.
+l.45 这与我们最终想要证明的式\eqref
+                       {eq:conclusion}还差了那么一点，所以需要稍作调整．\\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no 还 in font nullfont!
+Missing character: There is no 差 in font nullfont!
+Missing character: There is no 了 in font nullfont!
+Missing character: There is no 那 in font nullfont!
+Missing character: There is no 么 in font nullfont!
+Missing character: There is no 一 in font nullfont!
+Missing character: There is no 点 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 所 in font nullfont!
+Missing character: There is no 以 in font nullfont!
+Missing character: There is no 需 in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 稍 in font nullfont!
+Missing character: There is no 作 in font nullfont!
+Missing character: There is no 调 in font nullfont!
+Missing character: There is no 整 in font nullfont!
+Missing character: There is no ． in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:46: Undefined control sequence.
+<recently read> \circled 
+                         
+l.46 \circled
+             {1}中，改取$\varepsilon_0=\frac{|B|^2}{2}\varepsilon$，那么，则必定存在正数$\d...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 中 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 改 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 那 in font nullfont!
+Missing character: There is no 么 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 则 in font nullfont!
+Missing character: There is no 必 in font nullfont!
+Missing character: There is no 定 in font nullfont!
+Missing character: There is no 存 in font nullfont!
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 正 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 使 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 有 in font nullfont!
+
+Overfull \hbox (19.70482pt too wide) in paragraph at lines 44--47
+\OML/cmm/m/it/10 "[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (46.5851pt too wide) in paragraph at lines 44--47
+[]\OML/cmm/m/it/10 "$$^^N[]$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 44--47
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 44--47
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (8.93057pt too wide) in paragraph at lines 44--47
+\OML/cmm/m/it/10 ^^N[]$ 
+ []
+
+
+Overfull \hbox (81.3444pt too wide) detected at line 49
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 < []":[]
+ []
+
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 改 in font nullfont!
+Missing character: There is no 取 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 那 in font nullfont!
+Missing character: There is no 么 in font nullfont!
+Missing character: There is no 当 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 知 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:50: Undefined control sequence.
+l.50 ...delta_2\}$，那么当$0<|x-x_0|<\delta$时，可知\eqref
+                                                  {eq:lim1-1}、\eqref{eq:lim2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 、 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:50: Undefined control sequence.
+l.50 ...x-x_0|<\delta$时，可知\eqref{eq:lim1-1}、\eqref
+                                                  {eq:lim2-1}两式同时成立.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no 2 in font nullfont!
+Missing character: There is no - in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no 两 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no 同 in font nullfont!
+Missing character: There is no 时 in font nullfont!
+Missing character: There is no 成 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+
+Overfull \hbox (15.37842pt too wide) in paragraph at lines 49--52
+$\OML/cmm/m/it/10 ^^N \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (64.52783pt too wide) in paragraph at lines 49--52
+[]\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 ^^N[]; ^^N[]\OMS/cmsy/m/n/10 g$$\OT1/cmr/m/n/10 0 \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (16.27086pt too wide) in paragraph at lines 49--52
+\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 ^^@
+ []
+
+
+Overfull \hbox (23.5347pt too wide) in paragraph at lines 49--52
+\OML/cmm/m/it/10 x[]\OMS/cmsy/m/n/10 j \OML/cmm/m/it/10 <
+ []
+
+
+Overfull \hbox (4.8229pt too wide) in paragraph at lines 49--52
+\OML/cmm/m/it/10 ^^N$
+ []
+
+
+Overfull \hbox (266.1088pt too wide) detected at line 55
+[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^B j\OML/cmm/m/it/10 g\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 x\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B\OMS/cmsy/m/n/10 j ^^B [] \OML/cmm/m/it/10 < [] \OMS/cmsy/m/n/10 ^^B []\OML/cmm/m/it/10 " \OMS/cmsy/m/n/10 ^^B [] \OT1/cmr/m/n/10 = \OML/cmm/m/it/10 "
+ []
+
+Missing character: There is no 这 in font nullfont!
+Missing character: There is no 就 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no 我 in font nullfont!
+Missing character: There is no 们 in font nullfont!
+Missing character: There is no 要 in font nullfont!
+Missing character: There is no 证 in font nullfont!
+Missing character: There is no 明 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/Test1.tex:56: Undefined control sequence.
+l.56 这就是我们要证明的式\eqref
+                     {eq:conclusion}.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no e in font nullfont!
+Missing character: There is no q in font nullfont!
+Missing character: There is no : in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no u in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no . in font nullfont!
+)
+! Emergency stop.
+<*> .../WORK/Git/Qingda-Template/pandoc-test/Test1
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 26 strings out of 479418
+ 594 string characters out of 5884585
+ 251340 words of memory out of 5000000
+ 17643 multiletter control sequences out of 15000+600000
+ 532346 words of font info for 25 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 18i,3n,15p,178b,120s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

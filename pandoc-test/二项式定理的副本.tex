@@ -1,0 +1,1459 @@
+﻿
+\section{题型分类练习-二项式定理、计数原理、古典概型}
+
+\noindent 1．$-40$
+
+\noindent 【分析】
+
+\noindent 先求出二项展开式的通项$T_{r+1} =\left(-1\right)^{r} 2^{5-r} \cdot \mathrm C_{5}^{r} x^{\frac{5r-5}{2} } $，再令$\frac{5r-5}{2} =5$，得到含$x^{5} $的项，进而求出$x^{5} $的系数．
+
+\noindent 【详解】
+
+\noindent 因为$\left(\frac{2}{\sqrt{x} } -x^{2} \right)^{5} $的展开式的通项公式为$T_{r+1} =\left(-1\right)^{r} 2^{5-r} \cdot \mathrm C_{5}^{r} x^{\frac{5r-5}{2} } $，
+
+\noindent 令$\frac{5r-5}{2} =5$，则$r=3$，
+
+\noindent 所以展开式中含$x^{5} $的项为$T_{3+1} =\left(-1\right)^{3} 2^{5-3} \cdot \mathrm C_{5}^{3} x^{5} =-40x^{5} $，
+
+\noindent 故$x^{5} $的系数是$-40$．
+
+\noindent 故答案为：-40
+
+\noindent 2．40
+
+\noindent 【分析】
+
+\noindent 由二项式定理及展开式通项公式可得：$\left(2x-\frac{1}{x} \right)^{5} $展开式的通项公式为$T_{r+1} =$$\mathrm C_{5}^{{\rm r}} $$2^{5-r} $$(-1)^{r} $$x^{5-2r} $,再利用乘法的分配律运算即可得解.
+
+\noindent 【详解】
+
+\noindent 解：由$\left(2x-\frac{1}{x} \right)^{5} $展开式的通项公式为$T_{r+1} =$$\mathrm C_{5}^{{\rm r}} $$2^{5-r} $$(-1)^{r} $$x^{5-2r} $,
+
+\noindent 则 $\left(x+\frac{1}{x} \right)\left(2x-\frac{1}{x} \right)^{5} $的展开式中常数项为$\mathrm C_{5}^{2} $$2^{3} $-$\mathrm C_{5}^{3} $$2^{2} $=40,
+
+\noindent 故答案为40.
+
+\noindent 【点睛】
+
+\noindent 本题考查了二项式定理及展开式通项公式，属中档题.
+
+\noindent 3．$\pm \sqrt{2} $
+
+\noindent 【分析】
+
+\noindent 先得到$\left(\frac{x}{2} +\frac{a}{\sqrt{x} } \right)^{6} $的通项公式为
+
+\noindent $T_{r+1} =$$\mathrm C_{6}^{r} \times 2^{-6+r} \times a^{r} \times x^{6-\frac{3}{2} r} $，若得到常数项，
+
+\noindent 当$(x-1)$取$-1$时，令$6-\frac{3}{2} r=0$，当$(x-1)$取\textit{x}时，令$6-\frac{3}{2} r=-1$，解得$r$，再根据常数项为15求解.
+
+\noindent 【详解】
+
+\noindent 因为$\left(\frac{x}{2} +\frac{a}{\sqrt{x} } \right)^{6} $的通项公式为$T_{r+1} =\mathrm C_{6}^{r} \times $$\left(\frac{x}{2} \right)^{6-r} \times \left(\frac{a}{\sqrt{x} } \right)^{r} =\mathrm C_{6}^{r} \times 2^{-6+r} \times a^{r} \times x^{6-\frac{3}{2} r} $，
+
+\noindent 若得到常数项，当$(x-1)$取$-1$时，令$6-\frac{3}{2} r=0$，当$(x-1)$取$x$时，令$6-\frac{3}{2} r=-1$，
+
+\noindent 解得$r=4$或$r=\frac{14}{3} $（舍），
+
+\noindent 所以$r=4$，
+
+\noindent 因为$(x-1)\cdot \left(\frac{x}{2} +\frac{a}{\sqrt{x} } \right)^{6} $展开式的常数项为$15$，
+
+\noindent 所以$\mathrm C_{6}^{4} \times 2^{-6+4} \times a^{4} =15$，
+
+\noindent 解得$a=\pm \sqrt{2} $．
+
+\noindent 故答案为：$\pm \sqrt{2} $
+
+\noindent 【点睛】
+
+\noindent 本题主要考查二项式展开式的通项公式以及常数项的应用，还考查了运算求解的能力，属于中档题．
+
+\noindent 4．70
+
+\noindent 【分析】
+
+\noindent 先求出二项式展开式的通项公式，再令$x$的系数等于$0$，求得$r$的值，即可求得展开式中的常数项的值．
+
+\noindent 【详解】
+
+\noindent $\left(x+\frac{1}{x} +2\right)^{4} =\frac{\left(x+1\right)^{8} }{x^{4} } $ 的展开式的通项公式为$T_{r+1} =\mathrm C_{8}^{r} \cdot \frac{x^{8-r} }{x^{4} } ={\rm \; }\mathrm C_{8}^{r} \cdot x^{4-r} $， 令$4-r=0$，求得$r=4$，可得展开式中的常数项是$\mathrm C_{8}^{4} =70$，故答案为：70．
+
+\noindent 【点睛】
+
+\noindent 本题主要考查二项式定理的应用，二项式展开式的通项公式，求展开式中某项的系数，配方是关键，属于基础题．
+
+\noindent 5．1560
+
+\noindent 【分析】
+
+\noindent 把$(x^{2} +3x+2)^{5} $转化为$\left(1+x\right)^{5} \left(2+x\right)^{5} $，再利用二项式的展开式的通项公式，可求出答案.
+
+\noindent 【详解】
+
+\noindent 由题意，$(x^{2} +3x+2)^{5} =\left(1+x\right)^{5} \left(2+x\right)^{5} $，
+
+\noindent 因为$\left(1+x\right)^{5} $的展开式的通项公式为$T_{r+1} =\mathrm C_{5}^{r} x^{r} $，$\left(2+x\right)^{5} $的展开式的通项公式为$T_{k+1} =\mathrm C_{5}^{k} 2^{5-k} x^{k} $，
+
+\noindent 所以$(x^{2} +3x+2)^{5} $的展开式中$x^{3} $的项的系数是$\mathrm C_{5}^{3} \mathrm C_{5}^{0} 2^{5} +\mathrm C_{5}^{2} \mathrm C_{5}^{1} 2^{4} +\mathrm C_{5}^{1} \mathrm C_{5}^{2} 2^{3} +\mathrm C_{5}^{0} \mathrm C_{5}^{3} 2^{2} $$=320+800+400+40=1560$.
+
+\noindent 故答案为：1560.
+
+\noindent 【点睛】
+
+\noindent 关键点点睛：本题考查二项式定理的应用，考查三项展开式的系数问题.解决本题的关键是把$(x^{2} +3x+2)^{5} $转化为$\left(1+x\right)^{5} \left(2+x\right)^{5} $，进而分别求出$\left(1+x\right)^{5} $、$\left(2+x\right)^{5} $的展开式的通项公式，令$r+k=3$，可求出$(x^{2} +3x+2)^{5} $的展开式中$x^{3} $的项的系数.考查学生的逻辑推理能力，计算求解能力，属于中档题.
+
+\noindent 6．3    3    
+
+\noindent 【分析】
+
+\noindent 利用二项式定理列出多项式$\left(x^{2} +\frac{1}{x} \right)^{n} \left(n\in N^{*} \right)$的二项展开式的通项，根据已知条件，令$x$的指数为$0$得到关于$n,r$的方程，求得$n$的最小值，再求得常数项即可.
+
+\noindent 【详解】
+
+\noindent 由题意知，多项式$\left(x^{2} +\frac{1}{x} \right)^{n} \left(n\in N^{*} \right)$的二项展开式的通项为$T_{r+1} =\mathrm C_{n}^{r} x^{2(n-r)} \cdot x^{-r} =\mathrm C_{n}^{r} x^{2n-3r} $，令$2n-3r=0$，则$n=\frac{3}{2} r,\because n\in N^{*} $，
+
+\noindent $\therefore $当$r=2$时，$n$取得最小值3，则$\left(x^{2} +\frac{1}{x} \right)^{n} =\left(x^{2} +\frac{1}{x} \right)^{3} ,T_{r+1} =\mathrm C_{3}^{r} x^{6-3r} $，
+
+\noindent 令$6-3r=0$，得$r=2$，所以展开式中的常数项为$\mathrm C_{3}^{2} =3$.
+
+\noindent 故答案分别为：$3$；$3$
+
+\noindent 【点睛】
+
+\noindent 本题考查利用二项式定理求二项展开式的通项公式和常数项；考查运算求解能力；熟练掌握二项展开式的通项公式是求解本题的关键；属于中档题.
+
+\noindent 7．60
+
+\noindent 【解析】
+
+\noindent 因为展开式二项式系数和为64，所以$2^{n} =64$，$n=6$，展开式的通项为$T_{r{\rm +}1} {\rm =(}-1)^{r} {\rm 2}^{6-r} \mathrm C_{6}^{r} x^{6-r} x^{-\frac{r}{2} } ={\rm (}-1)^{r} {\rm 2}^{6-r} \mathrm C_{6}^{r} x^{6-\frac{3}{2} r} $ ，
+
+\noindent 令$6-\frac{3}{2} r{\rm =}0$，得$r=4$，所以常数项为第5项，$T_{5} =4\times 15=60$，故填$60$.   $ $ 
+
+\noindent 点睛：涉及二项式展开式的特定项，一般要先写出二项式的展开式的通项公式，根据特定项的特点确定r,从而求出特定项或与题目有关的问题，一般会求常数项.
+
+\noindent 8．$-1$
+
+\noindent 【分析】
+
+\noindent 由二项式系数之和为64，得$n=6$，再根据展开式中的常数项为20列方程求解即可.
+
+\noindent 【详解】
+
+\noindent 因为二项式系数之和为64，
+
+\noindent 所以$2^{n} =64$，得$n=6$，
+
+\noindent 又常数项为$T_{4} =\mathrm C_{6}^{3} x^{3} \left(-\frac{a}{x} \right)^{3} $，
+
+\noindent 故$-\mathrm C_{6}^{3} a^{3} =20$，解得$a=-1$，
+
+\noindent 故答案为：$-1$
+
+\noindent 【点睛】
+
+\noindent 本题主要考查二项展开式定理的通项与系数，属于简单题. 二项展开式定理的问题也是高考命题热点之一，关于二项式定理的命题方向比较明确，主要从以下几个方面命题：（1）考查二项展开式的通项公式$T_{r+1} ={\rm C}_{n}^{r} a^{n-r} b^{r} $；（可以考查某一项，也可考查某一项的系数）（2）考查各项系数和和各项的二项式系数和；（3）二项展开式定理的应用.
+
+\noindent 9．$-90$
+
+\noindent 【分析】
+
+\noindent 根据$\left(3\sqrt{x} -\frac{1}{x} \right)^{n} $的展开式中各项系数之和为$32$，令$x=1$解得$n$，得到其通项公式，再令\textit{x}的指数为-2求解即可.
+
+\noindent 【详解】
+
+\noindent 令$x=1$，得展开式中各项系数之和为$2^{n} $.
+
+\noindent 由$2^{n} =32$，得$n=5$，
+
+\noindent 通项公式为$T_{r+1} =\mathrm C_{5}^{r} \left(3\sqrt{x} \right)^{5-r} \left(-\frac{1}{x} \right)^{r} =\mathrm C_{5}^{r} \left(3\right)^{5-r} \left(-\right)^{r} x^{\frac{5-3r}{2} } $
+
+\noindent 令$\frac{5-3r}{2} =-2$，得$r=3$
+
+\noindent 所以$\frac{1}{x^{2} } $的系数是$\left(-1\right)^{3} \times 3^{2} \times \mathrm C_{5}^{3} =-90$.
+
+\noindent 故答案为：$-90$
+
+\noindent 【点睛】
+
+\noindent 本题主要考查二项展开式的系数以及通项公式的应用，还考查了运算求解的能力，属于基础题.
+
+\noindent 10．3
+
+\noindent 【分析】
+
+\noindent 给二项式中的$x$赋值1求出展开式的各项系数的和$A$；利用二项式系数和公式求出$B$，代入已知的等式，解方程求出$n$的值．
+
+\noindent 【详解】
+
+\noindent 解：令二项式中的$x$为1得到各项系数之和$A=4^{n} $
+
+\noindent 又各项二项式系数之和$B=2^{n} $
+\[\because A+B=72\] 
+\[\therefore 4^{n} +2^{n} =72\] 
+解得$n=3$
+
+\noindent 故答案为：3
+
+\noindent 【点睛】
+
+\noindent 本题考查解决展开式的各项系数和问题常用的方法是赋值法、考查二项式系数的性质：二项式系数和为$2^{n} $，属于基础题．
+
+\noindent 11．C
+
+\noindent 【分析】
+
+\noindent 根据二项式性质得偶数项的二项式系数之和为$2^{n-1} $，进而解出$n$，根据二形式展开式的通项公式写出中间项的系数.
+
+\noindent 【详解】
+
+\noindent 因为偶数项的二项式系数之和为$2^{n-1} =128$，
+
+\noindent 所以$n-1=7$，$n=8$，
+
+\noindent 则展开式共有9项，中间项为第5项，
+
+\noindent 因为$(1-2x)^{8} $的展开式的通项$T_{r+1} =\mathrm C_{8}^{r} (-2x)^{r} =\mathrm C_{8}^{r} (-2)^{r} \cdot x^{r} $，
+
+\noindent 所以$T_{5} =\mathrm C_{8}^{4} (-2x)^{4} =\mathrm C_{8}^{4} (-2)^{4} \cdot x^{4} $，
+
+\noindent 其系数为$\mathrm C_{8}^{4} (-2)^{4} =1120$.
+
+\noindent 故选：C.
+
+\noindent 【点睛】
+
+\noindent 求二项展开式问题解决方法：
+
+\noindent （1）求二项展开式中的特定项，一般是化简通项公式后，令字母的指数符合要求(求常数项时，指数为零；求有理项时，指数为整数等)，解出项数k＋1，代回通项公式即可；
+
+\noindent （2）对于几个多项式积的展开式中的特定项问题，一般都可以根据因式连乘的规律，结合组合思想求解，但要注意适当地运用分类方法，以免重复或遗漏；
+
+\noindent （3）对于三项式问题一般先变形化为二项式再解决.
+
+\noindent 12．B
+
+\noindent 【分析】
+
+\noindent 首先求二项展开式，再求奇次项系数的和.
+
+\noindent 【详解】
+
+\noindent $\left(1-x\right)^{6} =1-\mathrm C_{6}^{1} x+\mathrm C_{6}^{2} x^{2} -\mathrm C_{6}^{3} x^{3} +\mathrm C_{6}^{4} x^{4} -\mathrm C_{6}^{5} x^{5} +\mathrm C_{6}^{6} x^{6} $，
+
+\noindent 所以\textit{x}的奇次项系数和为$-\mathrm C_{6}^{1} -\mathrm C_{6}^{3} -\mathrm C_{6}^{5} =-32$，
+
+\noindent 故选：B.
+
+\noindent 13．A
+
+\noindent 【分析】
+
+\noindent 先将$\left(x+2\right)\left(1-2x\right)^{5} $展开，再利用赋值法求出奇次幂项的系数之和.
+
+\noindent 【详解】
+
+\noindent 设$\left(x+2\right)\left(1-2x\right)^{5} =a_{0} +a_{1} x+a_{2} x^{2} +\cdot \cdot \cdot +a_{6} x^{6} $，
+
+\noindent 令$x=1$，则$-3=a_{0} +a_{1} +a_{2} +\cdot \cdot \cdot +a_{6} $，
+
+\noindent 令$x=-1$，则$3^{5} =a_{0} -a_{1} +a_{2} -\cdot \cdot \cdot +a_{6} $，
+
+\noindent 两式相减，整理得$a_{1} +a_{3} +a_{5} =-123$.
+
+\noindent 故选：A
+
+\noindent 14．B
+
+\noindent 【分析】
+
+\noindent 令$x=1$可得：$a_{0} +a_{1} +a_{2} +\cdot \cdot \cdot +a_{7} {\rm =}(1+1)^{3} (1-2)^{4} =8$，
+
+\noindent 令$x=-1$可得：$a_{0} -a_{1} +a_{2} +\cdot \cdot \cdot -a_{7} {\rm =}(1-1)^{3} (1+2)^{4} =0$，相加即可得解.
+
+\noindent 【详解】
+
+\noindent 令$x=1$可得：$a_{0} +a_{1} +a_{2} +\cdot \cdot \cdot +a_{7} {\rm =}(1+1)^{3} (1-2)^{4} =8$，
+
+\noindent 令$x=-1$可得：$a_{0} -a_{1} +a_{2} +\cdot \cdot \cdot -a_{7} {\rm =}(1-1)^{3} (1+2)^{4} =0$，
+
+\noindent 两式相加可得：$2(a_{0} +a_{2} +a_{4} +a_{6} )=8$，
+
+\noindent 所以$a_{0} +a_{2} +a_{4} +a_{6} =4$，
+
+\noindent 故选：B
+
+\noindent 15．A
+
+\noindent 【分析】
+
+\noindent 先令$x=1$求得$a_{0} +a_{1} +\cdots +a_{10} $的值，令$x=-1$求得$a_{0} -a_{1} +a_{2} -a_{3} +\cdots +a_{10} $的值，利用平方差公式化简所求的表达式，由此求得它的值.
+
+\noindent 【详解】
+
+\noindent 令$x=1$，得$a_{0} +a_{1} +\cdots +a_{10} =\left(\sqrt{2} -1\right)^{10} $，
+
+\noindent 令$x=-1$，得$a_{0} -a_{1} +a_{2} -a_{3} +\cdots +a_{10} =\left(\sqrt{2} +1\right)^{10} $，
+
+\noindent 故$\left(a_{0} +a_{2} +\cdots +a_{10} \right)^{2} -\left(a_{1} +a_{3} +\cdots +a_{9} \right)^{2} $
+\[=\left(a_{0} +a_{1} +\cdots +a_{10} \right)\left(a_{0} -a_{1} +a_{2} -a_{3} +\cdots +a_{10} \right)\] 
+\[=\left(\sqrt{2} +1\right)^{10} \left(\sqrt{2} -1\right)^{10} =1.\] 
+故选：A.
+
+\noindent 【点睛】
+
+\noindent 方法点睛：该题考查的是有关利用赋值法求二项展开式的系数和的问题，解题方法如下：
+
+\noindent （1）令$x=1$，求得$a_{0} +a_{1} +\cdots +a_{10} $的值；
+
+\noindent （2）令$x=-1$，求得$a_{0} -a_{1} +a_{2} -a_{3} +\cdots +a_{10} $；
+
+\noindent （3）利用平方差公式化简$\left(a_{0} +a_{2} +\cdots +a_{10} \right)^{2} -\left(a_{1} +a_{3} +\cdots +a_{9} \right)^{2} $，
+
+\noindent 代入求得结果.
+
+\noindent 16．B
+
+\noindent 【分析】
+
+\noindent 令$x=-1$求得$a_{0} -a_{1} +a_{2} -\ldots +a_{6} $，再由$|a_{0} |+|a_{1} |+|a_{2} |+\ldots \ldots +|a_{6} |=a_{0} -a_{1} +a_{2} -\ldots +a_{6} $求得结果．
+
+\noindent 【详解】
+
+\noindent 令$x=-1$有$a_{0} -a_{1} +a_{2} -\ldots +a_{6} =2^{6} =64$，
+
+\noindent 又由题意可得$|a_{0} |+|a_{1} |+|a_{2} |+\ldots \ldots +|a_{6} |=a_{0} -a_{1} +a_{2} -\ldots +a_{6} =64$，
+
+\noindent 故选：$B$．
+
+\noindent 【点睛】
+
+\noindent 本题主要考查二项式定理中的赋值法求系数和，属于基础题．
+
+\noindent 17．D
+
+\noindent 【分析】
+
+\noindent 由51＝52﹣1，然后将51${}^{2020}$展开，求其余数，然后令余数与\textit{a}的和能被13整除即可.
+
+\noindent 【详解】
+
+\noindent 解：51${}^{2020}$＝（52﹣1）${}^{2020}$＝（1﹣52）${}^{2020}$
+\[=\mathrm C_{2020}^{0} -\mathrm C_{2020}^{1} 52+\mathrm C_{2020}^{2} 52^{2} -\cdots \cdots +\mathrm C_{2020}^{2020} 52^{2020} .\] 
+因为52能被13整除，所以上式从第二项起，每一项都可以被13整除，
+
+\noindent 所以上式被13除，余数为$\mathrm C_{2020}^{0} =1$，
+
+\noindent 所以要使51${}^{2020}$+\textit{a}能被13整除，因为\textit{a}$\mathrm{\in}$\textit{Z}，且0$\mathrm{\le}$\textit{a}＜13，只需\textit{a}+1＝13即可，
+
+\noindent 故\textit{a}＝12.
+
+\noindent 故选：\textit{D.}
+
+\noindent 【点睛】
+
+\noindent 本题考查二项式定理的应用，用二项式定理解决整除问题，掌握二项展开式通项公式是解题关键．
+
+\noindent 18．D
+
+\noindent 【分析】
+
+\noindent 化简可得$15^{2020} =\left(14+1\right)^{2020} $，再根据二项式定理的展开式，可知$\mathrm C_{2020}^{0} 14^{2020} +\mathrm C_{2020}^{1} 14^{2019} +...+\mathrm C_{2020}^{2019} 14^{1} $能被14整除，由此即可求结果.
+
+\noindent 【详解】
+
+\noindent 因为$15^{2020} =\left(14+1\right)^{2020} =\mathrm C_{2020}^{0} 14^{2020} +\mathrm C_{2020}^{1} 14^{2019} +...+\mathrm C_{2020}^{2019} 14^{1} +1$ 
+
+\noindent 其中$\mathrm C_{2020}^{0} 14^{2020} +\mathrm C_{2020}^{1} 14^{2019} +...+\mathrm C_{2020}^{2019} 14^{1} $能被14整除，
+
+\noindent 所以要使$m>0$，且$15^{2020} +m$恰能被14整除，
+
+\noindent 所以$m$的取值可以是$13$.
+
+\noindent 故选：D.
+
+\noindent 【点睛】
+
+\noindent 本题主要考查了二项式定理的应用，属于基础题.
+
+\noindent 19．C
+
+\noindent 【分析】
+
+\noindent 将$80^{11} $转化为$\left(81-1\right)^{11} $，利用二项式定理，即可得解.
+
+\noindent 【详解】
+\[80^{11} =\left(81-1\right)^{11} \] 
+\[=\mathop{C}\nolimits_{11}^{0} \cdot 81^{11} +\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} \cdot \left(-1\right)+\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} \cdot \left(-1\right)^{2} +\cdots +\mathop{C}\nolimits_{11}^{10} \cdot 81^{1} \cdot \left(-1\right)^{10} +\mathop{C}\nolimits_{11}^{11} \cdot \left(-1\right)^{11} \] 
+\[=81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +\mathop{C}\nolimits_{11}^{10} \cdot 81^{1} -\mathop{C}\nolimits_{11}^{11} \] 
+\[=81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +11\times 81-1\] 
+\[=81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +10\times 81+81-1\] 
+\[=81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +10\times 81+80\] 
+\[=81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +10\times 81+72+8\] 
+$81^{11} -\mathop{C}\nolimits_{11}^{1} \cdot 81^{10} +\mathop{C}\nolimits_{11}^{2} \cdot 81^{9} +\cdots +10\times 81+72$可以被9整除，
+
+\noindent 所以$80^{11} $被9除的余数为8.
+
+\noindent 故选：C.
+
+\noindent 【点睛】
+
+\noindent 本题考查利用二项式定理解决余数问题，将原式变形为$\left(81-1\right)^{11} $是本题的解题关键，属于中档题.
+
+\noindent 20．B
+
+\noindent 【分析】
+
+\noindent 利用捆绑法列出式子即可求出.
+
+\noindent 【详解】
+
+\noindent $\because $甲、乙两位同学要相邻，$\therefore $一共为$\mathrm A_{2}^{2} {\it \; }\cdot \mathrm A_{5}^{5} =240$种.
+
+\noindent 故选：B．
+
+\noindent 21．C
+
+\noindent 【分析】
+
+\noindent 先排甲，再将丙、丁捆绑在一起当一个元素排，再排乙、戊.
+
+\noindent 【详解】
+
+\noindent 当甲排在第一位时，共有$\mathrm A_{3}^{3} \mathrm A_{2}^{2} =12$种发言顺序，
+
+\noindent 当甲排在第二位时，共有$\mathrm C_{2}^{1} \mathrm A_{2}^{2} \mathrm A_{2}^{2} =8$种发言顺序，
+
+\noindent 所以一共有$12+8=20$种不同的发言顺序.
+
+\noindent 故选：C.
+
+\noindent 【点睛】
+
+\noindent 方法点睛：本题主要考查排列的应用，属于中档题.常见排列数的求法为：
+
+\noindent （1）相邻问题采取``捆绑法''；
+
+\noindent （2）不相邻问题采取``插空法''；
+
+\noindent （3）有限制元素采取``优先法''；
+
+\noindent （4）特殊元素顺序确定问题，先让所有元素全排列，然后除以有限制元素的全排列数.
+
+\noindent 22．24
+
+\noindent 【分析】
+
+\noindent 先安排$A$有$\mathrm C_{2}^{1} $种，再安排$B$和$C$有$\mathrm C_{3}^{1} \mathrm A_{2}^{2} $种，最后其余2为同学有$\mathrm A_{2}^{2} $种，由分步计数原理可得答案.
+
+\noindent 【详解】
+
+\noindent 由$A$同学只能在第一或最后一个答题，则$A$同学的答题位次有$\mathrm C_{2}^{1} $种
+
+\noindent $B$和$C$同学则必须相邻顺序答题，则$B$和$C$相邻的选法有$\mathrm C_{3}^{1} \mathrm A_{2}^{2} $种
+
+\noindent 其余2位同学有$\mathrm A_{2}^{2} $种
+
+\noindent 则不同的答题顺序编排方法的种数为$\mathrm C_{2}^{1} $$\mathrm C_{3}^{1} \mathrm A_{2}^{2} $$\mathrm A_{2}^{2} =24$种.
+
+\noindent 故答案为：24
+
+\noindent 23．D
+
+\noindent 【分析】
+
+\noindent 将连中的三枪看作一枪与另一枪一起可表达为``射6枪其中有2枪命中且不连中''的可能情况种数，即在未中的4枪中插空即可求种数.
+
+\noindent 【详解】
+
+\noindent 1、连中的三枪看作一枪与另一命中的枪作排列：$\mathrm A_{2}^{2} $种，
+
+\noindent 2、将未中的四枪形成的5个间隔任取2个作为上述两枪的位置：$\mathrm C_{5}^{2} $种，
+
+\noindent $\mathrm{\therefore}$总共有$\mathrm A_{2}^{2} \mathrm C_{5}^{2} =20$种.
+
+\noindent 故选：D
+
+\noindent 24．B
+
+\noindent 【分析】
+
+\noindent 利用插空法可求不同的安排方式的总数.
+
+\noindent 【详解】
+
+\noindent 6间空教室，有3个空教室不使用，故可把作为检查项目的教室插入3个不使用的教室之间，故所有不同的安排方式的总数为$\mathrm A_{4}^{3} =24$.
+
+\noindent 故选：B.
+
+\noindent 25．1440
+
+\noindent 【分析】
+
+\noindent 先将5名大人全排列，将两个小孩再依条件插空，不插两边，可得答案.
+
+\noindent 【详解】
+
+\noindent 先让5名大人全排列，有$\mathrm A_{5}^{5} $种排法，两个小孩再依条件插空，有$\mathrm A_{4}^{2} $种方法，
+
+\noindent 故共有$\mathrm A_{5}^{5} \mathrm A_{4}^{2} $=1440种排法．故答案为：1440
+
+\noindent 26．$12$
+
+\noindent 【分析】
+
+\noindent 先排符号``＋''``－''，有$\mathrm A_{2}^{2} $种再将数字$1$，$2$，$3$ ``插空''，即可求解.
+
+\noindent 【详解】
+
+\noindent 先排符号``＋''``－''，有$\mathrm A_{2}^{2} $种排列方法，
+
+\noindent 此时两个符号中间与两端共有$3$个空位，把数字$1$，$2$，$3$ ``插空''，有$\mathrm A_{3}^{3} $种排列方法，
+
+\noindent 因此满足题目要求的排列方法共有$\mathrm A_{3}^{3} \mathrm A_{2}^{2} =12$.
+
+\noindent 故答案为：$12$
+
+\noindent 【点睛】
+
+\noindent 方法点睛：常见排列数的求法为：
+
+\noindent （1）相邻问题采取``捆绑法''；
+
+\noindent （2）不相邻问题采取``插空法''；
+
+\noindent （3）有限制元素采取``优先法''；
+
+\noindent （4）特殊元素顺序确定问题，先让所有元素全排列，然后除以有限制元素的全排列数.
+
+\noindent 27．$14400$
+
+\noindent 【分析】
+
+\noindent 不管怎么排都能满足白颜色汽车至少2辆停在一起，所以只需考虑红颜色的汽车互不相邻即可.
+
+\noindent 【详解】
+
+\noindent 不管怎么排都能满足白颜色汽车至少2辆停在一起，所以分两步：
+
+\noindent 第一步，将5辆白色汽车全排列，有$\mathrm A_{5}^{5} =120$种；
+
+\noindent 第二步，3辆红色汽车插孔，有$\mathrm A_{6}^{3} =120$种；
+
+\noindent 由分步计数原理得共有$120\times 120=14400$种，
+
+\noindent 故答案为：$14400$
+
+\noindent 【点睛】
+
+\noindent 方法点睛：排列中的相邻问题常用捆绑法，不相邻问题常用插空法.
+
+\noindent 28．（1）4320；（2）14400；（3）20160；（4）30960.
+
+\noindent 【分析】
+
+\noindent （1）相邻问题用捆绑法法求解；
+
+\noindent （2）不相邻问题用插空法求解；
+
+\noindent （3）由于甲在乙左边与乙在甲左边的各占$\frac{1}{2} $，所以全排列再求解；
+
+\noindent （4）特殊位置优先排列，分情况讨论即可,也可以用间接法求解，或者特殊元素法.
+
+\noindent 【详解】
+
+\noindent （1）（捆绑法）由于女生排在一起，可把她们看成一个整体，
+
+\noindent 这样同5名男生合在一起有6个元素，排成一排有${\rm A}_{6}^{6} $种排法，
+
+\noindent 而其中每一种排法中，3名女生之间又有${\rm A}_{3}^{3} $种排法，
+
+\noindent 因此，共有${\rm A}_{6}^{6} \cdot {\rm A}_{3}^{3} =4320$种不同排法；
+
+\noindent （2）（插空法）先排5名男生，有${\rm A}_{5}^{5} $种排法，
+
+\noindent 这5名男生之间和两端有6个位置，从中选取3个位置排女生，有${\rm A}_{6}^{3} $种排法，
+
+\noindent 因此共有${\rm A}_{5}^{5} \cdot {\rm A}_{6}^{3} =14400$种不同排法；
+
+\noindent （3）8名学生的所有排列共${\rm A}_{8}^{8} $种，其中甲在乙左边与乙在甲左边的各占$\frac{1}{2} $，
+
+\noindent 因此符合要求的排法种数为$\frac{1}{2} {\rm A}_{8}^{8} =20160$；
+
+\noindent （4）甲、乙为特殊元素，左、右两边为特殊位置，
+
+\noindent 法一（特殊元素法）：甲在最右边时，其他的可全排，有${\rm A}_{7}^{7} $种不同排法，
+
+\noindent 甲不在最右边时，可从余下6个位置中任选一个，有${\rm A}_{6}^{1} $种，
+
+\noindent 而乙可排在除去最右边位置后剩余的6个中的任一个上，有${\rm A}_{6}^{1} $种，
+
+\noindent 其余人全排列，共有${\rm A}_{6}^{1} \cdot {\rm A}_{6}^{1} \cdot {\rm A}_{6}^{6} $种不同排法，
+
+\noindent 由分类加法计数原理知，共有${\rm A}_{7}^{7} +{\rm A}_{6}^{1} \cdot {\rm A}_{6}^{1} \cdot {\rm A}_{6}^{6} =30960$种不同排法；
+
+\noindent 法二（特殊位置法）：先排最左边，除去甲外，有${\rm A}_{7}^{1} $种排法，
+
+\noindent 余下7个位置全排，有${\rm A}_{7}^{7} $种排法，
+
+\noindent 但应剔除乙在最右边时的排法${\rm A}_{6}^{1} \cdot {\rm A}_{6}^{6} $种，
+
+\noindent 因此共有${\rm A}_{7}^{1} \cdot {\rm A}_{7}^{7} -{\rm A}_{6}^{1} \cdot {\rm A}_{6}^{6} =30960$种排法；
+
+\noindent 法三（间接法）：8名学生全排列，共${\rm A}_{8}^{8} $种，
+
+\noindent 其中，不符合条件的有甲在最左边时，有${\rm A}_{7}^{7} $种排法，
+
+\noindent 乙在最右边时，有${\rm A}_{7}^{7} $种排法，
+
+\noindent 其中都包含了甲在最左边，同时乙在最右边的情形，有${\rm A}_{6}^{6} $种排法，
+
+\noindent 因此共有${\rm A}_{8}^{8} -2{\rm A}_{7}^{7} +{\rm A}_{6}^{6} =30960$种排法．
+
+\noindent 【点睛】
+
+\noindent \eqref{GrindEQ__1_}解排列组合问题要遵循两个原则：一是按元素(或位置)的性质进行分类；二是按事情发生的过程进行分步．具体地说，解排列组合问题常以元素(或位置)为主体，即先满足特殊元素(或位置)，再考虑其他元素(或位置)；
+
+\noindent \eqref{GrindEQ__2_}不同元素的分配问题，往往是先分组再分配．在分组时，通常有三种类型：①不均匀分组；②均匀分组；③部分均匀分组，注意各种分组类型中，不同分组方法的求法．
+
+\noindent 29．B
+
+\noindent 【分析】
+
+\noindent 根据题意，利用隔板法，先将座号$1$、$2$、$3$、$4$、$5$、$6$分成四份，然后再分给甲、乙、丙、丁四个人即可.
+
+\noindent 【详解】
+
+\noindent 因为每人至少一张，且分给同一人的多张票必须连号，
+
+\noindent 又分给甲、乙、丙、丁四个人，
+
+\noindent 则在座位号$1$、$2$、$3$、$4$、$5$、$6$的五个空位插3个板子，有$\mathop{C}\nolimits_{5}^{3} =10$种，
+
+\noindent 然后再分给甲、乙、丙、丁四个人，有$\mathop{A}\nolimits_{4}^{4} =24$种，
+
+\noindent 所以不同的分法种数为$10\times 24=240$,
+
+\noindent 故选：B
+
+\noindent 30．$21$
+
+\noindent 【解析】
+
+\noindent 试题分析：将$8$个球排成一排，形成$7$个空隙，在$7$个空隙中任取两个插入两块隔板，共有$\mathrm C_{7}^{2} =\frac{7\times 6}{2} =21$种放法．
+
+\noindent 考点：排列组合的应用．
+
+\noindent 【方法点晴】本题主要考查了排列、组合的应用、解答此类问题要正确理解题意，恰当地选择解题的方法是解答的关键，本题的解答中，将$8$个球排成一排，形成$7$个空隙，在$7$个空隙中任取两个插入两块隔板，即可完成求解，采用了插空法，着重考查了学生分析问题和解答问题的能力，属于中档试题．
+
+\noindent 31．36
+
+\noindent 【分析】
+
+\noindent 首先将小球分组，接着放入盒子中，根据分步乘法计数原理可得结果.
+
+\noindent 【详解】
+
+\noindent 每盒至少$1$个球，则分组必为：$1,1,2$，共有：$\frac{\mathrm C_{4}^{1} \mathrm C_{3}^{1} }{\mathrm A_{2}^{2} } =6$种分法
+
+\noindent 放入$3$个盒子中，则有$6\mathrm A_{3}^{3} =36$种放法
+
+\noindent 故答案为$36$
+
+\noindent 【点睛】
+
+\noindent 本题考查排列组合中的分组分配问题，易错点是在分组过程中忽略了存在平均分组的情况，造成重复.
+
+\noindent 32．222
+
+\noindent 【分析】
+
+\noindent 设分配给3个学校的名额数分别为\textit{x}${}_{1}$，\textit{x}${}_{2}$，\textit{x}${}_{3}$，则每校至少有一个名额的分法数为不定方程\textit{x}${}_{1}$＋\textit{x}${}_{2}$＋\textit{x}${}_{3}$＝24的正整数解的组数，用隔板原理知有$\mathrm C_{24-1}^{3{\rm -}1} {\rm =}\mathrm C_{23}^{2} $种方法，排除掉两校人数相同和三校人数都相同的情况即可得出结果.
+
+\noindent 【详解】
+
+\noindent 设分配给3个学校的名额数分别为\textit{x}${}_{1}$，\textit{x}${}_{2}$，\textit{x}${}_{3}$，
+
+\noindent 则每校至少有一个名额的分法数为不定方程
+
+\noindent \textit{x}${}_{1}$＋\textit{x}${}_{2}$＋\textit{x}${}_{3}$＝24的正整数解的组数，
+
+\noindent 用隔板原理知有$\mathrm C_{24-1}^{3{\rm -}1} {\rm =}\mathrm C_{23}^{2} $＝253种．
+
+\noindent 又在``每校至少有一个名额的分法''中要排除``至少有两个学校的名额数相同''的分配方法：
+
+\noindent 只有两校人数相同，设为(\textit{i}，\textit{i}，24－2\textit{i})，
+
+\noindent 由题意有\textit{i}＝1，2，3，4，5，6，7，9，10，11共3$\mathrm{\times}$10种情况；
+
+\noindent 三校人数都相同的只有(8，8，8)这1种．
+
+\noindent 综上可知，满足条件的分配方法共有253－31＝222种．
+
+\noindent 故答案为：222
+
+\noindent 33．120
+
+\noindent 【分析】
+
+\noindent 先在编号为2，3的盒内分别放入1个，2个球，然后再将剩17个小球，利用隔板法分为三堆放入即可.
+
+\noindent 【详解】
+
+\noindent 先在编号为2，3的盒内分别放入1个，2个球，还剩17个小球，
+
+\noindent 三个盒内每个至少再放入1个，将17个球排成一排，
+
+\noindent 有16个空隙，插入2块挡板分为三堆放入三个盒中，
+
+\noindent 共有$\mathop{C}\nolimits_{16}^{2} =120$种方法．
+
+\noindent 故答案为：120
+
+\noindent 34．C
+
+\noindent 【分析】
+
+\noindent 6名学生分配到两所敬老院，每所敬老院至少2人，则对6名学生进行分组分配即可
+
+\noindent 【详解】
+
+\noindent 解：6名学生分成两组，每组不少于两人的分组，一组2人另一组4人，或每组3人，
+
+\noindent 所以不同的分配方案为$\mathrm C_{6}^{2} \mathrm A_{2}^{2} +\mathrm C_{6}^{3} =50$,
+
+\noindent 故选：C
+
+\noindent 35．A
+
+\noindent 【分析】
+
+\noindent 利用分步乘法计数原理先分组再分配即可求解.
+
+\noindent 【详解】
+
+\noindent 根据题意，分2步进行：
+
+\noindent ①将6个医疗小组平均分成3组，每组2支医疗队，有$\frac{\mathrm C_{6}^{2} \mathrm C_{4}^{2} \mathrm C_{2}^{2} }{\mathrm A_{3}^{3} } {\rm =}15$种分组方法；
+
+\noindent ②将甲所在的小组安排到甲地，其他两个小组安排到乙、丙两地，有$\mathrm A_{2}^{2} =2$种情况，
+
+\noindent 则有$15\times 2=30$种不同的安排方法.
+
+\noindent 故选：A.
+
+\noindent 【点睛】
+
+\noindent 本题主要考查了分布乘法计数原理，涉及平均分组和分配问题，属于中档题.
+
+\noindent 36．B
+
+\noindent 【分析】
+
+\noindent 分别算出左边密码锁和右边密码锁的设置方式，再相乘即可得到.
+
+\noindent 【详解】
+
+\noindent 左边密码锁的四个数字共有$\frac{{\rm C}_{4}^{2} {\rm A}_{4}^{2} }{{\rm A}_{2}^{2} } =36$种设法，右边密码锁的四个数字共有${\rm A}_{4}^{4} =24$种设法，故密码设置的方法有$36\times 24=864$种.
+
+\noindent 故选：B.
+
+\noindent 【点睛】
+
+\noindent 方法点睛：本题考查排列组合，解排列、组合问题的基本原则：特殊优先，先分组再分解，先取后排；较复杂问题可采用间接法，转化为求它的对立事件，解题时要细心、周全，做到不重不漏，考查学生的计算，属于基础题.
+
+\noindent 37．C
+
+\noindent 【分析】
+
+\noindent 先将5名学生分成两组，再分配即可求解.
+
+\noindent 【详解】
+
+\noindent 将5名学生分成两组可以有两类，
+
+\noindent 一组$4$人，一组$1$人，则有$\mathrm C_{5}^{4} \mathrm A_{2}^{2} =10$，
+
+\noindent 一组$3$人，一组$2$人，则有$\mathrm C_{5}^{3} \mathrm A_{2}^{2} =20$，
+
+\noindent 所以不同的安排方法为$10+20=30$种，
+
+\noindent 故选：C
+
+\noindent 【点睛】
+
+\noindent 关键点点睛：本题的关键点是先分组后分配，5名学生分成两组，即一组$4$人，一组$1$人和一组$3$人，一组$2$人，再分配即可.
+
+\noindent 38．B
+
+\noindent 【分析】
+
+\noindent 分去4个人或5个人两种情况进行讨论.
+
+\noindent 【详解】
+
+\noindent 当去4个人时，则安排方法有$\mathrm C_{5}^{4} \mathrm C_{4}^{2} =30$种，
+
+\noindent 当去5个人时，则安排方法有$\mathrm C_{5}^{3} \mathrm C_{2}^{1} =20$种，
+
+\noindent 综上，不同的安排方法共有50种.
+
+\noindent 故选：B.
+
+\noindent 39．180
+
+\noindent 【分析】
+
+\noindent 分为两类：第一类是一组3人，另一组5人，第二类是两组均为4人，然后根据人数分组，再进行排列即可.
+
+\noindent 【详解】
+
+\noindent 分配的方案有两类，
+
+\noindent 第一类：一组3人，另一组5人，有$\left({\rm C}_{8}^{3} -1\right)\cdot {\rm A}_{2}^{2} =110$种；
+
+\noindent 第二类：两组均为4人，有$\frac{{\rm C}_{8}^{4} {\rm C}_{4}^{4} }{{\rm A}_{2}^{5} } \cdot {\rm A}_{2}^{2} =70$种，
+
+\noindent 所以共有$N=110+70=180$种不同的分配方案．
+
+\noindent 故填：180
+
+\noindent 【点睛】
+
+\noindent 本题考查了分类计数原理和分步计数原理以及排列组合数的计算，属于中档题目，解题中需要注意分组的条件要充分考虑到，防止重复和遗漏.
+
+\noindent 40．（1）$6$种；（2）$243$种；（3）150种.
+
+\noindent 【分析】
+
+\noindent （1）用挡板法求解；
+
+\noindent （2）每本书都有三种分配方法，求幂便可得到答案；
+
+\noindent （3）用分组分配问题的求解方法求解，①将$5$本书分成$3$组，②将分好的三组全排列，对应3名学生，由分步计数原理计算可得答案.
+
+\noindent 【详解】
+
+\noindent 解：（1）根据题意，若$5$本书完全相同，将$5$本书排成一排，中间有$4$个空位可用，
+
+\noindent 在$4$个空位中任选$2$个，插入挡板，有$\mathrm C_{4}^{2} =6$种情况，
+
+\noindent 即有$6$种不同的分法；
+
+\noindent （2）根据题意，若$5$本书都不相同，每本书可以分给$3$人中任意1人，都有3种分法，
+
+\noindent 则5本不同的书有$3\times 3\times 3\times 3\times 3=3^{5} =243$种；
+
+\noindent （3）根据题意，分2步进行分析：
+
+\noindent ①将$5$本书分成$3$组，
+
+\noindent 若分成1、1、3的三组，有$\frac{\mathrm C_{5}^{3} \mathrm C_{2}^{1} }{\mathrm A_{2}^{2} } =10$种分组方法，
+
+\noindent 若分成1、2、2的三组，有$\frac{\mathrm C_{5}^{1} \mathrm C_{4}^{2} \mathrm C_{2}^{2} }{\mathrm A_{2}^{2} } =15$种分组方法，
+
+\noindent 则有$10+15=25$种分组方法；
+
+\noindent ②将分好的三组全排列，对应$3$名学生，有$\mathrm A_{3}^{3} =6$种情况，
+
+\noindent 则有$25\times 6=150$种分法.
+
+\noindent 【点睛】
+
+\noindent 本题考查排列、组合的应用，涉及分步计数原理的应用，难度一般. 解答时注意挡板法、分组分配问题等的应用，注意分类讨论思想的运用.
+
+\noindent 41．72
+
+\noindent 【分析】
+
+\noindent 先求出总数，再找到其对立面的个数；做差即可得出结论．
+
+\noindent 【详解】
+
+\noindent 解：用1，2，3，4，5组成一个没有重复数字的五位数，共有$\mathrm A_{5}^{5} =120$个；
+
+\noindent 三个奇数中仅有两个相邻；
+
+\noindent 其对立面是三个奇数都相邻或者都不相邻；
+
+\noindent 当三个奇数都相邻时，把这三个奇数看成一个整体与2和4全排列共有$\mathrm A_{3}^{3} \times \mathrm A_{3}^{3} =36$个；
+
+\noindent 三个奇数都不相邻时，把这三个奇数分别插入2和4形成的三个空内共有$\mathrm A_{2}^{2} \times \mathrm A_{3}^{3} =12$个；
+
+\noindent 故符合条件的有$120-12-36=72$；
+
+\noindent 故答案为：$72$．
+
+\noindent 【点睛】
+
+\noindent 本题考查分类计数原理，考查排列、组合知识，考查学生的计算能力，属于中档题．
+
+\noindent 42．$72$
+
+\noindent 【分析】
+
+\noindent 用$1,2,3,4,5$组成无重复数字的五位奇数，可以看作是$5$个空,要求个位是奇数,其它位置无条件限制,因此先从$3$个奇数中任选$1$个填入个位,其它$4$个数在$4$个位置上全排列即可.
+
+\noindent 【详解】
+
+\noindent 要组成无重复数字的五位奇数，则个位只能排$1,3,5$中的一个数，共有3种排法，然后还剩$4$个数，剩余的$4$个数可以在十位到万位$4$个位置上全排列，共有$\mathrm A_{4}^{4} =24$种排法，
+
+\noindent 由分步乘法计数原理得，由$1,2,3,4,5$组成的无重复数字的五位数中奇数有$3\times 24=72$个.故答案为：$72$.
+
+\noindent 【点睛】
+
+\noindent 本题主要考查分步计数原理及位置有限制的排列问题，属于中档题.元素位置有限制的排列问题有两种方法：（1）先让特殊元素排在没限制的位置；（2）先把没限制的元素排在有限制的位置.
+
+\noindent 43．18；
+
+\noindent 【分析】
+
+\noindent 先排第一个数字，再把剩下的三个数字排列即可.
+
+\noindent 【详解】
+
+\noindent 因为第一个数字不能为0，所以先排第一个数字，再把剩下的三个数字排列，则一共有$\mathrm A_{3}^{1} \mathrm A_{3}^{3} =3\times 6=18$种排法.
+
+\noindent 故答案为：18.
+
+\noindent 【点睛】
+
+\noindent 本题考查排数问题，属于基础题.
+
+\noindent 44．$276$
+
+\noindent 【分析】
+
+\noindent 计算出1，2，3，4，5，0组成数字不重复的六位数的个数、1，2相邻的六位数的个数、5，0相邻的六位数的个数、1和2相邻且5和0相邻的六位数的个数，利用间接法求解即可.
+
+\noindent 【详解】
+
+\noindent 1，2，3，4，5，0组成数字不重复的六位数的个数共有$\mathrm A_{6}^{6} -\mathrm A_{5}^{5} =600$个
+
+\noindent 其中1，2相邻的六位数的个数共有$\mathrm A_{5}^{5} \mathrm A_{2}^{2} -\mathrm A_{4}^{4} \mathrm A_{2}^{2} =192$个
+
+\noindent 5，0相邻的六位数的个数共有$\mathrm A_{5}^{5} \mathrm A_{2}^{2} -\mathrm A_{4}^{4} =216$个
+
+\noindent 1和2相邻且5和0相邻的六位数的个数共有$\mathrm A_{4}^{4} \mathrm A_{2}^{2} \mathrm A_{2}^{2} -\mathrm A_{3}^{3} \mathrm A_{2}^{2} =84$个
+
+\noindent 即满足1和2不相邻，5和0不相邻，则这样的六位数的个数为$600-192-216+84=276$
+
+\noindent 故答案为：$276$
+
+\noindent 【点睛】
+
+\noindent 本题主要考查了利用间接法求不相邻的数字排数问题，属于中档题.
+
+\noindent 45．D
+
+\noindent 【分析】
+
+\noindent 分两种情况讨论，选择$2$种颜色和$3$种颜色涂色，然后分别求出涂色方法种数，相加即可.
+
+\noindent 【详解】
+
+\noindent 分以下两种情况讨论：
+
+\noindent ①选择$2$种颜色涂色，则第一个和第三个格子的颜色相同，第二个和第四个格子的颜色相同，此时，不同的涂色方法种数为$\mathrm C_{5}^{2} \mathrm C_{2}^{1} =20$；
+
+\noindent ②选择$3$种颜色涂色，则第一个格子有$\mathrm C_{3}^{1} $种选择，第二个格子有$\mathrm C_{2}^{1} $种选择.
+
+\noindent （i）若第三个格子与第一个格子颜色相同，则第四个格子只有$1$种选择；
+
+\noindent （ii）若第三个格子与第一个格子颜色不相同，第三个格子只有$1$种选择，第四个格子有$\mathrm C_{2}^{1} $种选择.
+
+\noindent 综上所述，不同的涂色方法种数为$20+\mathrm C_{5}^{3} \cdot \mathrm C_{3}^{1} \cdot \mathrm C_{2}^{1} \cdot \left(1+\mathrm C_{2}^{1} \right)=200$种.
+
+\noindent 故选：D.
+
+\noindent 【点睛】
+
+\noindent 本题考查涂色问题，考查分类计数原理的应用，考查分类讨论思想的应用，属于中等题.
+
+\noindent 46．D
+
+\noindent 【分析】
+
+\noindent 第一步完成3号区域有6种不同方法，第二步完成1号区域有5种不同方法，第三步完成4号区域有4种不同方法，第四步完成2号区域有3种不同方法，第五步完成5号区域有4种不同方法，第六步完成6号区域有3种不同方法，最后求出不同的涂色方法即可
+
+\noindent 【详解】
+
+\noindent 解：根据题意分步完成任务：
+
+\noindent 第一步：完成3号区域：从6种颜色中选1种涂色，有6种不同方法；
+
+\noindent 第二步：完成1号区域：从除去3号区域的1种颜色后剩下的5种颜色中选1种涂色，有5种不同方法；
+
+\noindent 第三步：完成4号区域：从除去3、1号区域的2种颜色后剩下的4种颜色中选1种涂色，有4种不同方法；
+
+\noindent 第四步：完成2号区域：从除去3、1、4号区域的3种颜色后剩下的3种颜色中选1种涂色，有3种不同方法；
+
+\noindent 第五步：完成5号区域：从除去1、2号区域的2种颜色后剩下的4种颜色中选1种涂色，有4种不同方法；
+
+\noindent 第六步：完成6号区域：从除去1、2、5号区域的3种颜色后剩下的3种颜色中选1种涂色，有3种不同方法；
+
+\noindent 所以不同的涂色方法：$6\times 5\times 4\times 3\times 4\times 3=4320$种.
+
+\noindent 故选：D.
+
+\noindent 【点睛】
+
+\noindent 本题考查分步乘法计数原理解决涂色问题，是基础题.
+
+\noindent 47．C
+
+\noindent 【分析】
+
+\noindent 对面$SAB$与面$SDC$同色和不同色进行分类，结合分步乘法计算原理，即可得出答案.
+
+\noindent 【详解】
+
+\noindent 当面$SAB$与面$SDC$同色时，面$ABCD$有4种方法，面$SDC$有3种方法，面$SAD$有2种方法，面$SAB$有1种方法，面$SBC$有2种方法，即$4\times 3\times 2\times 1\times 2=48$种
+
+\noindent 当面$SAB$与面$SDC$不同色时，面$ABCD$有4种方法，面$SDC$有3种方法，面$SAD$有2种方法，面$SAB$有1种方法，面$SBC$有1种方法，即$4\times 3\times 2\times 1\times 1=24$种
+
+\noindent 即不同的染色方法总数为$48+24=72$种
+
+\noindent 故选：C
+
+\noindent 【点睛】
+
+\noindent 本题主要考查了计数原理的应用，属于中档题.
+
+\noindent 48．72
+
+\noindent 【分析】
+
+\noindent 根据相邻的矩形涂色不同，一共有4种颜色，先涂\textit{A}有$\mathrm C_{4}^{1} $种，再涂\textit{B}有$\mathrm C_{3}^{1} $种，\textit{C}与\textit{A}，\textit{B}相邻，则\textit{C}从剩下的2种颜色中选，\textit{ D}只与\textit{C}相邻，可选剩下的1种和\textit{A}，\textit{B}用的颜色，最后利用分步计数原理求解.
+
+\noindent 【详解】
+
+\noindent 根据题意，先涂\textit{A}有${\rm C}_{4}^{1} =4$种，
+
+\noindent 再涂\textit{B}有$\mathrm C_{3}^{1} =3$种，
+
+\noindent \textit{C}与\textit{A}，\textit{B}相邻，则\textit{C}有$\mathrm C_{2}^{1} =2$种，
+
+\noindent \textit{D}只与\textit{C}相邻，则\textit{D}有$\mathrm C_{3}^{1} =3$种，
+
+\noindent 所以不同的涂法有$4\times 3\times 2\times 3=72$种，
+
+\noindent 故答案为：72
+
+\noindent 【点睛】
+
+\noindent 本题主要考查计数原理中的涂色问题，还考查了分析求解问题的能力，属于基础题.
+
+\noindent 49．480
+
+\noindent 【分析】
+
+\noindent 按照分步计数原理，首先染A区域，再染B区域，C区域，最后染D区域，计算可得；
+
+\noindent 【详解】
+
+\noindent 解：依题意，首先染A区域有$6$种选择，再染B区域有5种选择，第三步染C区域有4种选择，第四步染D区域也有4种选择，根据分步乘法计数原理可知一共有$6\times 5\times 4\times 4=480$种方法
+
+\noindent 故答案为：$480$
+
+\noindent 【点睛】
+
+\noindent 本题考查染色问题，分步乘法计数原理的应用，属于基础题.
+
+\noindent 50．C
+
+\noindent 【分析】
+
+\noindent 根据题意，分4步依次分析区域\textit{A、B、C、D、E}的涂色方法数目，由分步计数原理计算答案.
+
+\noindent 【详解】
+
+\noindent 根据题意，5个区域依次为\textit{A、B、C、D、E}, 如图，
+
+\noindent \includegraphics*[width=1.67in, height=1.30in, keepaspectratio=false]{image288}
+
+\noindent 分4步进行分析：
+
+\noindent ①对于区域A，有5种颜色可选，
+
+\noindent ②对于区域B，与A区域相邻，有4种颜色可选;③对于区域C，与A、B区域相邻,有3种颜色可选;
+
+\noindent ④,对于区域D、E,若D与B颜色相同，E区域有3种颜色可选，若D与B颜色不相同，D区域有2种颜色可选，E区域有2种颜色可选，则区域D、E有$3+2\times 2=7$种选择,
+
+\noindent 则不同的涂色方案有$5\times 4\times 3\times 7=420$种;
+
+\noindent 故选：C
+
+\noindent 【点睛】
+
+\noindent 本题主要考查排列、组合的应用，涉及分步、分类计数原理的应用，属于中档题，
+
+\noindent 51．72
+
+\noindent 【分析】
+
+\noindent 先对$E$部分种植，再对$A$部分种植，对$C$部分种植进行分类：$\mathrm{\textrm{①}}$若与$A$相同，$\mathrm{\textrm{②}}$若与$A$不同进行讨论即可
+
+\noindent 【详解】
+
+\noindent 先对$E$部分种植，有4种不同的种植方法；
+
+\noindent 再对$A$部分种植，又3种不同的种植方法；
+
+\noindent 对$C$部分种植进行分类：
+
+\noindent $\mathrm{\textrm{①}}$若与$A$相同，$D$有2种不同的种植方法，$B$有2种不同的种植方法，共有$4\times 3\times 2\times 2=48$（种），
+
+\noindent $\mathrm{\textrm{②}}$若与$A$不同，$C$有2种不同的种植方法，$D$有1种不同的种植方法，$B$有1种不同的种植方法，
+
+\noindent 共有$4\times 3\times 2\times 1\times 1=24$（种），
+
+\noindent 综上所述，共有72种种植方法．
+
+\noindent 故答案为：72.
+
+\noindent 【点睛】
+
+\noindent 本题考查排列与组合的应用，属于涂色类的问题，考查学生逻辑推理能力，是一道容易题
+
+\noindent 52．20
+
+\noindent 【分析】
+
+\noindent 根据题意，分情况讨论，求出每种情况对应的染色方法种数，即可得出结果．
+
+\noindent 【详解】
+
+\noindent 从左往右数，不管数到哪个格子，总有黑色格子不少于白色格子包含的情况有：
+
+\noindent 全染黑色，有1种方法；
+
+\noindent 第一个格子染黑色，另外5个格子中有1个格子染白色，剩余的都染黑色，有5种方法；第一个格子染黑色，另外5个格子中有2个格子染白色，剩余的都染黑色，有9种方法；第一个格子染黑色，另外5个格黑子中有3个格子染白色，剩余的都染黑色，有5种方法．
+
+\noindent 所以从左往右数，不管数到哪个格子，总有黑色格子不少于白色格子的染色方法数为$1+5+9+5=20$．
+
+\noindent 故答案为：$20$．
+
+\noindent 【点睛】
+
+\noindent 本题主要考查排列组合，意在考查考生的化归与转化能力、运算求解能力、逻辑推理能力，考查的核心素养是数学运算、逻辑推理．
+
+\noindent 53．252    1040    
+
+\noindent 【分析】
+
+\noindent 利用分步计数原理先从上方的小方格$A$、$B$开始染色，再从下方$C$开始利用分类计数原理染色，直至对小方格$E$染色完毕，就可求出结果.
+
+\noindent 【详解】
+
+\noindent 解：（1）根据题意，若用4种颜色染色时，先对$A$、$B$区域染色有$\mathrm C_{4}^{1} \mathrm C_{3}^{1} $种，再对$C$染色：
+
+\noindent ①当$C$同$B$时，有$\mathrm C_{2}^{1} \bullet \mathrm C_{2}^{1} $种；
+
+\noindent ②当$C$同$A$时，有$\mathrm C_{3}^{1} +\mathrm C_{2}^{1} \bullet \mathrm C_{2}^{1} $种；
+
+\noindent ③当$C$不同$A$、$B$时，有$\mathrm C_{2}^{1} (\mathrm C_{3}^{1} +\mathrm C_{2}^{1} )$种；
+
+\noindent 综合①②③共有$\mathrm C_{4}^{1} \mathrm C_{3}^{1} \bullet [\mathrm C_{2}^{1} \bullet \mathrm C_{2}^{1} +\mathrm C_{3}^{1} +\mathrm C_{2}^{1} \bullet \mathrm C_{2}^{1} +\mathrm C_{2}^{1} (\mathrm C_{3}^{1} +\mathrm C_{2}^{1} )]=252$种；
+
+\noindent （2）根据题意，若用5种颜色染色时，先对$A$、$B$区域染色有$\mathrm C_{5}^{1} \bullet \mathrm C_{4}^{1} $种，再对$C$染色：
+
+\noindent \includegraphics*[width=1.52in, height=0.83in, keepaspectratio=false, trim=0.00in 0.09in 0.00in 0.07in]{image289}①当$C$同$B$时，有$\mathrm C_{3}^{1} \bullet \mathrm C_{3}^{1} $种；
+
+\noindent ②当$C$同$A$时，有$\mathrm C_{4}^{1} +\mathrm C_{3}^{1} \bullet \mathrm C_{3}^{1} $种；
+
+\noindent ③当$C$不同$A$、$B$时，有$\mathrm C_{3}^{1} (\mathrm C_{4}^{1} +\mathrm C_{2}^{1} \mathrm C_{3}^{1} )$种；
+
+\noindent 综合①②③，共有$\mathrm C_{5}^{1} \bullet \mathrm C_{4}^{1} [\mathrm C_{3}^{1} \bullet \mathrm C_{3}^{1} +\mathrm C_{4}^{1} +\mathrm C_{3}^{1} \bullet \mathrm C_{3}^{1} +\mathrm C_{3}^{1} (\mathrm C_{4}^{1} +\mathrm C_{2}^{1} \mathrm C_{3}^{1} )]=1040$种.
+
+\noindent 故答案为：252；1040.
+
+\noindent 【点睛】
+
+\noindent 本题考查排列组合的应用，涉及分步计数原理与分类计数原理的应用，属于中档题.
+
+\noindent 54．C
+
+\noindent 【分析】
+
+\noindent 记``该中学学生喜欢足球''为事件$A$，``该中学学生喜欢游泳''为事件$B$，则``该中学学生喜欢足球或游泳''为事件$A+B$，``该中学学生既喜欢足球又喜欢游泳''为事件$A\cdot B$，然后根据积事件的概率公式$P(A\cdot B)=$$P(A)+P(B)-P(A+B)$可得结果.
+
+\noindent 【详解】
+
+\noindent 记``该中学学生喜欢足球''为事件$A$，``该中学学生喜欢游泳''为事件$B$，则``该中学学生喜欢足球或游泳''为事件$A+B$，``该中学学生既喜欢足球又喜欢游泳''为事件$A\cdot B$，
+
+\noindent 则$P(A)=0.6$，$P(B)=0.82$，$P\left(A+B\right)=0.96$，
+
+\noindent 所以$P(A\cdot B)=$$P(A)+P(B)-P(A+B)$$=0.6+0.82-0.96=0.46$
+
+\noindent 所以该中学既喜欢足球又喜欢游泳的学生数占该校学生总数的比例为$46\% $.
+
+\noindent 故选：C.
+
+\noindent 【点睛】
+
+\noindent 本题考查了积事件的概率公式，属于基础题.
+
+\noindent 55．B
+
+\noindent 【详解】
+
+\noindent 分析：由公式${\rm P}\left({\rm A}\cup {\rm B}\right)={\rm P}\left({\rm A}\right)+{\rm P}\left({\rm B}\right)+{\rm P}\left({\rm AB}\right)$计算可得
+
+\noindent 详解：设事件A为只用现金支付，事件B为只用非现金支付，
+
+\noindent 则${\rm P}\left({\rm A}\cup {\rm B}\right)={\rm P}\left({\rm A}\right)+{\rm P}\left({\rm B}\right)+{\rm P}\left({\rm AB}\right)=1$
+
+\noindent 因为${\rm P}\left({\rm A}\right)=0.45,{\rm P}\left({\rm AB}\right)=0.15$
+
+\noindent 所以${\rm P}\left({\rm B}\right)=0.4$，
+
+\noindent 故选B.
+
+\noindent 点睛：本题主要考查事件的基本关系和概率的计算，属于基础题．
+
+\noindent 56．B
+
+\noindent 【解析】
+
+\noindent 试题分析：若乙盒中放入的是红球，则须保证抽到的两个均是红球；若乙盒中放入的是黑球，则须保证抽到的两个球是一红一黑，且红球放入甲盒；若丙盒中放入的是红球，则须保证抽到的两个球是一红一黑：且黑球放入甲盒；若丙盒中放入的是黑球，则须保证抽到的两个球都是黑球.由于抽到两个红球的次数与抽到两个黑球的次数应是相等的，故乙盒中红球与丙盒中黑球一样多，选B.
+
+\noindent 【考点】概率统计分析
+
+\noindent 【名师点睛】本题创新味十足，是能力立意的好题.如果所求事件对应的基本事件有多种可能，那么一般我们通过逐一列举计数，再求概率，此题即是如此.列举的关键是要有序(有规律)，从而确保不重不漏.另外注意对立事件概率公式的应用.
+
+\noindent 
+
+\noindent 57．A
+
+\noindent 【解析】
+
+\noindent 试题分析：甲不输概率为$\frac{1}{2}+\frac{1}{3}=\frac{5}{6}.$选A.
+
+\noindent 【考点】概率
+
+\noindent 【名师点睛】概率问题的考查，侧重于对古典概型和对立事件的概率考查，属于简单题.运用概率加法的前提是事件互斥，不输包含赢与和，两种互斥，可用概率加法公式.对古典概型概率的考查，注重事件本身的理解，淡化计数方法.因此先明确所求事件本身的含义，然后利用枚举法、树形图解决计数问题，而当正面问题比较复杂时，往往采取计数其对立事件.
+
+\noindent 58．$\frac{1}{6} $    $\frac{2}{3} $    
+
+\noindent 【分析】
+
+\noindent 根据相互独立事件同时发生的概率关系，即可求出两球都落入盒子的概率；同理可求两球都不落入盒子的概率，进而求出至少一球落入盒子的概率.
+
+\noindent 【详解】
+
+\noindent 甲、乙两球落入盒子的概率分别为$\frac{1}{2} ,\frac{1}{3} $，
+
+\noindent 且两球是否落入盒子互不影响，
+
+\noindent 所以甲、乙都落入盒子的概率为$\frac{1}{2} \times \frac{1}{3} =\frac{1}{6} $，
+
+\noindent 甲、乙两球都不落入盒子的概率为$(1-\frac{1}{2} )\times (1-\frac{1}{3} )=\frac{1}{3} $，
+
+\noindent 所以甲、乙两球至少有一个落入盒子的概率为$\frac{2}{3} $.
+
+\noindent 故答案为：$\frac{1}{6} $；$\frac{2}{3} $.
+
+\noindent 【点睛】
+
+\noindent 本题主要考查独立事件同时发生的概率，以及利用对立事件求概率，属于基础题.
+
+\noindent 59．D
+
+\noindent 【分析】
+
+\noindent 男女生人数相同可利用整体发分析出两位女生相邻的概率，进而得解.
+
+\noindent 【详解】
+
+\noindent 两位男同学和两位女同学排成一列，因为男生和女生人数相等，两位女生相邻与不相邻的排法种数相同，所以两位女生相邻与不相邻的概率均是$\frac{1}{2} $．故选D．
+
+\noindent 【点睛】
+
+\noindent 本题考查常见背景中的古典概型，渗透了数学建模和数学运算素养．采取等同法，利用等价转化的思想解题．
+
+\noindent 60．D
+
+\noindent 【解析】
+
+\noindent 分析：分别求出事件``2名男同学和3名女同学中任选2人参加社区服务''的总可能及事件``选中的2人都是女同学''的总可能，代入概率公式可求得概率.
+
+\noindent 详解：设2名男同学为$\mathrm A_{1} ,\mathrm A_{2} $，3名女同学为$B_{1} ,B_{2} ,B_{3} $，从以上5名同学中任选2人总共有$\mathrm A_{1} \mathrm A_{2} ,\mathrm A_{1} B_{1} ,\mathrm A_{1} B_{2} ,\mathrm A_{1} B_{3} ,\mathrm A_{2} B_{1} ,\mathrm A_{2} B_{2} ,\mathrm A_{2} B_{3} ,B_{1} B_{2} ,B_{1} B_{3} ,B_{2} B_{3} $共10种可能，
+
+\noindent 选中的2人都是女同学的情况共有$B_{1} B_{2} ,B_{1} B_{3} ,B_{2} B_{3} $共三种可能
+
+则选中的2人都是女同学的概率为$P=\frac{3}{10} =0.3$，
+
+故选D.
+
+\noindent 点睛：应用古典概型求某事件的步骤：第一步，判断本试验的结果是否为等可能事件，设出事件$A$；第二步，分别求出基本事件的总数$n$与所求事件$A$中所包含的基本事件个数$m$；第三步，利用公式$P(A)=\frac{m}{n} $求出事件$A$的概率.
+
+\noindent 61．B
+
+\noindent 【分析】
+
+\noindent 本题首先用列举法写出所有基本事件，从中确定符合条件的基本事件数，应用古典概率的计算公式求解．
+
+\noindent 【详解】
+
+\noindent 设其中做过测试的3只兔子为$a,b,c$，剩余的2只为$A,B$，则从这5只中任取3只的所有取法有$\{ a,b,c\} ,\{ a,b,A\} ,\{ a,b,B\} ,\{ a,c,A\} ,\{ a,c,B\} ,\{ a,A,B\} $，$\{ b,c,A\} ,\{ b,c,B\} ,\{ b,A,B\} ,\{ c,A,B\} $共10种．其中恰有2只做过测试的取法有$\{ a,b,A\} ,\{ a,b,B\} ,\{ a,c,A\} ,\{ a,c,B\} ,$$\{ b,c,A\} ,\{ b,c,B\} $共6种，
+
+\noindent 所以恰有2只做过测试的概率为$\frac{6}{10} =\frac{3}{5} $，选B．
+
+\noindent 【点睛】
+
+\noindent 本题主要考查古典概率的求解，题目较易，注重了基础知识、基本计算能力的考查．应用列举法写出所有基本事件过程中易于出现遗漏或重复，将兔子标注字母，利用``树图法''，可最大限度的避免出错．
+
+\noindent 62．C
+
+\noindent 【解析】
+
+\noindent 选取两支彩笔的方法有$\mathrm C_{5}^{2} $种，含有红色彩笔的选法为$\mathrm C_{4}^{1} $种，
+
+\noindent 由古典概型公式，满足题意的概率值为$p=\frac{\mathrm C_{4}^{1} }{\mathrm C_{5}^{2} } =\frac{4}{10} =\frac{2}{5} $.
+
+\noindent 本题选择C选项.
+
+\noindent 考点：古典概型
+
+\noindent 名师点睛：对于古典概型问题主要把握基本事件的种数和符合要求的事件种数，基本事件的种数要注意区别是排列问题还是组合问题，看抽取时是有、无顺序，本题从这5支彩笔中任取2支不同颜色的彩笔，是组合问题，当然简单问题建议采取列举法更直观一些.
+
+\noindent 63．C
+
+\noindent 【解析】
+
+\noindent 分析：先确定不超过30的素数，再确定两个不同的数的和等于30的取法，最后根据古典概型概率公式求概率.
+
+\noindent 详解：不超过30的素数有2，3，5，7，11，13，17，19，23，29，共10个，随机选取两个不同的数，共有$\mathrm C_{10}^{2} =45$种方法，因为$7{\rm +}23{\rm =}11{\rm +}19{\rm =}13{\rm +}17{\rm =}30$，所以随机选取两个不同的数，其和等于30的有3种方法，故概率为$\frac{3}{45} {\rm =}\frac{1}{15} $，选C.
+
+\noindent 点睛：古典概型中基本事件数的探求方法： \eqref{GrindEQ__1_}列举法. \eqref{GrindEQ__2_}树状图法：适合于较为复杂的问题中的基本事件的探求.对于基本事件有``有序''与``无序''区别的题目，常采用树状图法. \eqref{GrindEQ__3_}列表法：适用于多元素基本事件的求解问题，通过列表把复杂的题目简单化、抽象的题目具体化. \eqref{GrindEQ__4_}排列组合法：适用于限制条件较多且元素数目较多的题目.
+
+\noindent 64．C
+
+\noindent 【解析】
+
+\noindent 标有$1$，$2$，$\cdot \cdot \cdot $，$9$的$9$张卡片中，标奇数的有$5$张，标偶数的有$4$张，所以抽到的2张卡片上的数奇偶性不同的概率是$\frac{2\mathrm C_{5}^{1} \mathrm C_{4}^{1} }{9\times 8} =\frac{5}{9} $ ,选C.
+
+\noindent 【名师点睛】概率问题的考查，侧重于对古典概型和对立事件的概率考查，属于简单题.江苏对古典概型概率考查，注重事件本身的理解，淡化计数方法.因此先明确所求事件本身的含义，然后一般利用枚举法、树形图解决计数问题，而当正面问题比较复杂时，往往采取计数其对立事件.
+
+\noindent 65．D
+
+\noindent 【解析】
+
+\noindent 考点：古典概型及其概率计算公式．
+
+\noindent 分析：从正六边形的6个顶点中随机选择4个顶点，选择方法有C${}_{6}$${}^{4}$=15种，且每种情况出现的可能性相同，故为古典概型，由列举法计算出它们作为顶点的四边形是矩形的方法种数，求比值即可．
+
+\noindent 解：从正六边形的6个顶点中随机选择4个顶点，选择方法有C${}_{6}$${}^{4}$=15种，
+
+\noindent 它们作为顶点的四边形是矩形的方法种数为3，由古典概型可知
+
+\noindent 它们作为顶点的四边形是矩形的概率等于$\frac{3}{15} $=$\frac{1}{5} $
+
+\noindent 故选D．
+
+\noindent 
+
+\noindent 66．$\frac{7}{10} $.
+
+\noindent 【分析】
+
+\noindent 先求事件的总数，再求选出的2名同学中至少有1名女同学的事件数，最后根据古典概型的概率计算公式得出答案.
+
+\noindent 【详解】
+
+\noindent 从3名男同学和2名女同学中任选2名同学参加志愿服务，共有$\mathrm C_{5}^{2} =10$种情况.
+
+\noindent 若选出的2名学生恰有1名女生，有$\mathrm C_{3}^{1} \mathrm C_{2}^{1} =6$种情况，
+
+\noindent 若选出的2名学生都是女生，有$\mathrm C_{2}^{2} =1$种情况，
+
+\noindent 所以所求的概率为$\frac{6+1}{10} =\frac{7}{10} $.
+
+\noindent 【点睛】
+
+\noindent 计数原理是高考考查的重点内容，考查的形式有两种，一是独立考查，二是与古典概型结合考查，由于古典概型概率的计算比较明确，所以，计算正确基本事件总数是解题的重要一环.在处理问题的过程中，应注意审清题意，明确``分类''``分步''，根据顺序有无，明确``排列''``组合''.
+
+\noindent 67．$\frac{1}{9} $
+
+\noindent 【分析】
+
+\noindent 分别求出基本事件总数，点数和为5的种数，再根据概率公式解答即可．
+
+\noindent 【详解】
+
+\noindent 根据题意可得基本事件数总为$6\times 6=36$个.
+
+\noindent 点数和为5的基本事件有$\left(1,4\right)$，$\left(4,1\right)$，$\left(2,3\right)$，$\left(3,2\right)$共4个.
+
+\noindent $\mathrm{\therefore}$出现向上的点数和为5的概率为$P=\frac{4}{36} =\frac{1}{9} $.
+
+\noindent 故答案为：$\frac{1}{9} $.
+
+\noindent 【点睛】
+
+\noindent 本题考查概率的求法，考查古典概型、列举法等基础知识，考查运算求解能力，是基础题．
+
+\noindent 68．$\frac{2}{5} $
+
+\noindent 【解析】
+
+\noindent 从这5个点中任取2个点共有10种取法；而该两点间的距离为\includegraphics*[width=0.29in, height=0.47in, keepaspectratio=false]{image290}的点只有四个顶点分别和中心的距离符合条件，即事件A有4种，于是两点间的距离为\includegraphics*[width=0.29in, height=0.47in, keepaspectratio=false]{image291}的概率为$P=\frac{4}{10} {\rm =}\frac{2}{5} .$
+
+\noindent 【考点定位】本题主要考察随机事件的概率，分两步做即可
+
+\noindent 69．$\frac{1}{5} $
+
+\noindent 【分析】
+
+\noindent 求出所有事件的总数，求出三个砝码的总质量为9克的事件总数，然后求解概率即可．
+
+\noindent 【详解】
+
+\noindent 编号互不相同的五个砝码，其中5克、3克、1克砝码各一个，2克砝码两个，
+
+\noindent 从中随机选取三个，3个数中含有1个2；2个2，没有2，3种情况，
+
+\noindent 所有的事件总数为：$\mathrm C_{5}^{3} $=10，
+
+\noindent 这三个砝码的总质量为9克的事件只有：5，3，1或5，2，2两个，
+
+\noindent 所以：这三个砝码的总质量为9克的概率是：
+
+\noindent $\frac{2}{10} $=$\frac{1}{5} $，
+
+\noindent 故答案为$\frac{1}{5} $．
+
+\noindent 【点睛】
+
+\noindent 有关古典概型的概率问题，关键是正确求出基本事件总数和所求事件包含的基本事件数：1．基本事件总数较少时，用列举法把所有基本事件一一列出时，要做到不重复、不遗漏，可借助``树状图''列举；2．注意区分排列与组合，以及计数原理的正确使用．
+
+\noindent 70．A
+
+\noindent 【分析】
+
+\noindent 列出从5个点选3个点的所有情况，再列出3点共线的情况，用古典概型的概率计算公式运算即可.
+
+\noindent 【详解】
+
+\noindent 如图，从$O,A,B,C,D$5个点中任取3个有
+\[\{ O,A,B\} ,\{ O,A,C\} ,\{ O,A,D\} ,\{ O,B,C\} \] 
+\[\{ O,B,D\} ,\{ O,C,D\} ,\{ A,B,C\} ,\{ A,B,D\} \] 
+$\{ A,C,D\} ,\{ B,C,D\} $共$10$种不同取法，
+
+\noindent 3点共线只有$\{ A,O,C\} $与$\{ B,O,D\} $共2种情况，
+
+\noindent 由古典概型的概率计算公式知，
+
+\noindent 取到3点共线的概率为$\frac{2}{10} =\frac{1}{5} $.
+
+\noindent 故选：A
+
+\noindent \includegraphics*[width=1.96in, height=1.62in, keepaspectratio=false, trim=0.00in 0.09in 0.00in 0.11in]{image292}
+
+\noindent 【点晴】
+
+\noindent 本题主要考查古典概型的概率计算问题，采用列举法，考查学生数学运算能力，是一道容易题.
+
+

@@ -1,0 +1,279 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  30 NOV 2020 15:24
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest
+(/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:1: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1     \item    已
+                  知集合$A=\{x\in\mathbb{N}|x>1\}$，则\xz
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 已 in font nullfont!
+Missing character: There is no 知 in font nullfont!
+Missing character: There is no 集 in font nullfont!
+Missing character: There is no 合 in font nullfont!
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 1.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 1.
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:1: Undefined control sequence.
+l.1     \item    已知集合$A=\{x\in\mathbb
+                                     {N}|x>1\}$，则\xz
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 则 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:1: Undefined control sequence.
+l.1 ...item    已知集合$A=\{x\in\mathbb{N}|x>1\}$，则\xz
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:2: Undefined control sequence.
+l.2     \xx
+           {$\varnothing\in A$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:2: Undefined control sequence.
+<recently read> \varnothing 
+                            
+l.2     \xx{$\varnothing
+                        \in A$}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:6: LaTeX Error: Environment answer undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6     \begin{answer}
+                      
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+Missing character: There is no B in font nullfont!
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:8: LaTeX Error: \begin{document} ended by \end{answer}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.8     \end{answer}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (18.05553pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 A \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (20.15968pt too wide) in paragraph at lines 1--10
+\OMS/cmsy/m/n/10 f\OML/cmm/m/it/10 x \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (28.17354pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 N\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 x >
+ []
+
+
+Overfull \hbox (16.66672pt too wide) in paragraph at lines 1--10
+\OT1/cmr/m/n/10 1\OMS/cmsy/m/n/10 g$$2
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 A$
+ []
+
+
+Overfull \hbox (22.77777pt too wide) in paragraph at lines 1--10
+[] []
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 A$
+ []
+
+
+Overfull \hbox (22.77777pt too wide) in paragraph at lines 1--10
+[] \OMS/cmsy/m/n/10 2
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 A$
+ []
+
+
+Overfull \hbox (33.88892pt too wide) in paragraph at lines 1--10
+\OMS/cmsy/m/n/10 f[]g ^^R
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 1--10
+\OML/cmm/m/it/10 A$
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:10: LaTeX Error: Lonely \item--perhaps a missing list environment.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.10     在
+          平行四边形$ABCD$中，若$\vv{AB}=(2,4)$，$\vv{AD}=(-1,-1)$，则$\vv{BD}=$\tk
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 在 in font nullfont!
+Missing character: There is no 平 in font nullfont!
+Missing character: There is no 行 in font nullfont!
+Missing character: There is no 四 in font nullfont!
+Missing character: There is no 边 in font nullfont!
+Missing character: There is no 形 in font nullfont!
+Missing character: There is no 中 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 若 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:10: Undefined control sequence.
+<recently read> \vv 
+                    
+l.10     在平行四边形$ABCD$中，若$\vv
+                            {AB}=(2,4)$，$\vv{AD}=(-1,-1)$，则$\vv{BD}=$\tk
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ， in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:10: Undefined control sequence.
+<recently read> \vv 
+                    
+l.10     在平行四边形$ABCD$中，若$\vv{AB}=(2,4)$，$\vv
+                                            {AD}=(-1,-1)$，则$\vv{BD}=$\tk
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 则 in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:10: Undefined control sequence.
+<recently read> \vv 
+                    
+l.10 ...中，若$\vv{AB}=(2,4)$，$\vv{AD}=(-1,-1)$，则$\vv
+                                                  {BD}=$\tk
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:10: Undefined control sequence.
+l.10 ...B}=(2,4)$，$\vv{AD}=(-1,-1)$，则$\vv{BD}=$\tk
+                                                  
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:11: LaTeX Error: Environment answer undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.11     \begin{answer}
+                       
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/ExplainTest.tex:13: LaTeX Error: \begin{document} ended by \end{answer}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.13     \end{answer}
+                     
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (58.14859pt too wide) in paragraph at lines 10--14
+\OML/cmm/m/it/10 ABCD$$[] \OT1/cmr/m/n/10 =
+ []
+
+
+Overfull \hbox (48.83472pt too wide) in paragraph at lines 10--14
+\OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ; \OT1/cmr/m/n/10 4)$$[] =
+ []
+
+
+Overfull \hbox (64.97711pt too wide) in paragraph at lines 10--14
+\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 1)$$[] =$
+ []
+
+
+Overfull \hbox (37.77785pt too wide) in paragraph at lines 10--14
+\OT1/cmr/m/n/10 (\OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 3\OML/cmm/m/it/10 ; \OMS/cmsy/m/n/10 ^^@\OT1/cmr/m/n/10 5)$
+ []
+
+)
+! Emergency stop.
+<*> ...Git/Qingda-Template/pandoc-test/ExplainTest
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 21 strings out of 479418
+ 522 string characters out of 5884585
+ 246340 words of memory out of 5000000
+ 17640 multiletter control sequences out of 15000+600000
+ 532338 words of font info for 24 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 18i,8n,15p,145b,54s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.

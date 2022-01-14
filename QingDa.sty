@@ -1,7 +1,8 @@
  \ProvidesPackage{QingDa}
-%\RequirePackage[BoldFont,SlantFont]{xeCJK}
+\RequirePackage[BoldFont,SlantFont]{xeCJK}
+% \RequirePackag{fontspec} 
 %\RequirePackage[utf8x]{inputenc}
-\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=2.2cm,footskip=1.2cm,headheight=2.5cm,headsep=0.1cm]{geometry}
+\RequirePackage[left=1.5cm,right=1.5cm,top=2.5cm,bottom=1.8cm,footskip=1.2cm,headheight=2.5cm,headsep=0.1cm]{geometry}
 %与可打印区域(total body)边距(margins)： 靠近装订侧边距(inner)left、靠近翻页侧边距(outer)right、底部bottom、顶部top
 %可打印区域(total body)：文字区(body)、页眉(header)、页脚(footer)、边注区(\marginpar为边注命令)
 %边注区(marginal note)与邻区间距marginparsep、边注区(marginal note)宽度marginparwidth
@@ -52,30 +53,21 @@
 \RequirePackage{framed}%文字加边框
   \setlength{\OuterFrameSep}{-0.2\baselineskip}%设置框与正文的垂直间距
 \RequirePackage{ulem}%强调文本
-  \newcommand{\mysout}[1]{\sout{\text{#1}}}
-  \newcommand{\myuwave}[1]{\uwave{\text{#1}}}
+  \newcommand{\mysout}[1]{\sout{\text{#1}}}%横线删除
+  \newcommand{\myuwave}[1]{\uwave{\text{#1}}}%波浪线
+\newcommand{\FDef}{\fangsong}      % FontDefinition，概念的定义采用字体仿宋
+\newcommand{\FCom}{\kaishu}      % FontCommentary，解释衍伸采用字体楷书
 \RequirePackage{multicol}%分栏
 % \setlength{\columnseprule}{1pt}%将栏位之间的分割线宽度设为1pt(缺省是0pt，也就是不显示)
   % \RequirePackage{latexexercise}
 %\RequirePackage{latexexercise0}
 % \RequirePackage{siunitx}%国际单位制符号
 %数学符号
-\RequirePackage{amsmath,nccmath,amsfonts,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
-  %数学公式的间距设置
-  % 作者：liuqiangaliuv
-  % 来源：CSDN
-  % 原文：https://blog.csdn.net/liuqiangaliuv/article/details/80016255
-  % 版权声明：本文为博主原创文章，转载请附上博文链接！
-  % \makeatletter %会导致各种乱码
-  \renewcommand\normalsize{%
-  	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
-    \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
-    \abovedisplayshortskip \z@ \@plus3\p@
-    \belowdisplayshortskip 3\p@ \@plus3\p@ \@minus3\p@
-    \belowdisplayskip \abovedisplayskip
-    \let\@listi\@listI}
-    % \makeatother
+\RequirePackage{amsmath,nccmath,amssymb,amsthm,times,bm,bbding,pifont,dsfont }%AMS宏包
+\RequirePackage{mathtools}%提供命令如\mathclap（数学模式下的\clap）
 \RequirePackage[g]{esvect}%向量表示包
+\RequirePackage{upgreek}}%希腊字母直立
+\def\piup{\uppi}%不用txfonts包，重新定义txfonts包中的直立pi
 \RequirePackage{enumitem}
   \setlist[enumerate]{itemsep=0mm}
 %绘图
@@ -90,8 +82,11 @@
   \tikzstyle{arrow} = [thick,->,>=stealth]
 % \usetikzlibrary{automata,
 %                 positioning}
-\RequirePackage{fontspec,txfonts,setspace}
-\setmainfont{Times New Roman}
+%-----------------------------------------------------------------------
+%以下设置中，txfonts 将使得全文为 times new roman 字体
+% \RequirePackage{fontspec,txfonts,setspace}
+% \setmainfont{Times New Roman}
+%-----------------------------------------------------------------------
 % 定义新的命令\rmnum，\Rmnum，用来显示大小写罗马数字
 % 用法：\rmnum{数字}，\Rmnum{数字}
 %\makeatletter
@@ -153,13 +148,14 @@
 {\fancyhf{}
   \renewcommand{\headrulewidth}{1.6pt}
   \fancyhead[L]{\begin{tabular}[c]{c@{}c @{}}
-    {\vspace{8pt}}
-    \hspace{-40pt}\includegraphics[height=1.65cm]{Logo2020_L.png}
+    % {\vspace{-5pt}}
+    % % \hspace{-40pt}\includegraphics[height=2.29cm]{Logo2020_L.pdf}%模版图片大小
+    % \hspace{-30pt}\includegraphics[height=2cm]{Logo2021_L.pdf}%合适图片大小
     \end{tabular}
 }
 \fancyhead[R]{\begin{tabular}[c]{cr@{}c@{}}
-  {\vspace{8pt}}
-   \includegraphics[height=1.65cm]{Logo2020_R.png}\hspace{-40pt}
+  {\vspace{-40pt}}
+  %  {\xiaosi 来锐思\; 学习好！}\hspace{-10pt}
   \end{tabular}
   }
 % \fancyhead[R]{\Large 清华大学\phantom{a} \\ 数学科学系}
@@ -174,9 +170,11 @@
 \fancyfoot[C]{
   \resizebox{!}{1.0\baselineskip}
   {\begin{tabular}[c]{@{} c @{}}
-        \Huge{\vspace{8pt}\textbf{(鼓楼)87500166\hspace{2.5em}}\textbf{(金山)87521588\hspace{2.5em}}\textbf{(台江)83310089\hspace{2.5em}}\textbf{(爱琴海)87509388\hspace{2.5em}}\textbf{(红海园)83208050\hspace{2.5em}}\textbf{(鳌峰)86219555}} \\
-        \LARGE{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
-        \LARGE{第\thepage 页}
+        % \Huge{\vspace{8pt}\textbf{(鼓楼)87500166\hspace{3em}}\textbf{(金山)87521588\hspace{3em}}\textbf{(台江)83310089\hspace{3em}}\textbf{(爱琴海)87509388\hspace{3em}}\textbf{(红海园)83208050\hspace{3em}}\textbf{(鳌峰)86219555}} \\
+        % \huge{\vspace{8pt}锐思教学部内部版权所有\hspace{1.5em}未经允许\hspace{1em}严禁复制} \\
+        % \huge{第\thepage 页}
+        \tiny{\hspace{1.5em} \hspace{1em} } \\
+        \vspace{1em}{第\thepage 页}
    \end{tabular}}
   }
 }
@@ -203,17 +201,23 @@
   %\date{命题人: 某某某}
   %\maketitle
   \begin{table}[h]
-  \small\vspace{-24pt}
+  \small\vspace{-21pt}
   \arrayrulewidth=1pt
     \centering
     \renewcommand{\arraystretch}{1.5}
     \hspace{-12em}
-    \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|}
+    % \begin{tabular}{|m{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{2.25cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|p{1.8cm}<{\centering}|p{1.5cm}<{\centering}|}
+    %   \hline
+    %     {\hei 教师姓名}  & 沈炜炜&{\hei \bf 学生姓名}&\QD@StuName  & {\hei 首课时间}&\QD@FirstTime&{\hei 本课时间}  & \QD@CurrentTime  \\ \hline
+    %    {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
+    %    {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
+    %    {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
+    % \end{tabular}
+    \begin{tabular}{|m{2.2cm}<{\centering}|p{2.2cm}<{\centering}|p{2.2cm}<{\centering}|p{3.3cm}<{\centering}|p{2.2cm}<{\centering}|p{3.3cm}<{\centering}|}
       \hline
-        {\hei 教师姓名}  & 沈炜炜&{\hei 学生姓名}&\QD@StuName  & {\hei 首课时间}&\QD@FirstTime&{\hei 本课时间}  & \QD@CurrentTime  \\ \hline
-       {\hei 学习科目}  & 数学&{\hei 上课年级}&\QD@Grade & \multicolumn{2}{c|}{\hei 教材版本}&\multicolumn{2}{c|}{人教A版}  \\ \hline
-       {\hei 课题名称} & \multicolumn{7}{l|}{\QD@Topic}\\\hline
-       {\hei 重点难点}&\multicolumn{7}{l|}{\QD@Teach}\\\hline
+        {\hei 教师姓名}  & 沈炜炜&{\hei \bf 学生姓名}&\QD@StuName  & {\hei \bf 科\quad 目}  & 数\enspace 学  \\ \hline
+        {\hei 课题名称} & \multicolumn{5}{l|}{\QD@Topic}\\\hline
+        {\hei 重点难点}&\multicolumn{5}{l|}{\QD@Teach}\\\hline
     \end{tabular}
   \hspace{-12em}
   \end{table}
@@ -316,6 +320,27 @@
 % 段落之间的竖直距离
 %\setlength{\parskip}{3pt plus1pt minus1pt}
 \setlength{\parskip}{2pt plus.5pt minus2pt}
+ %数学公式的间距设置
+  % 作者：liuqiangaliuv
+  % 来源：CSDN
+  % 原文：https://blog.csdn.net/liuqiangaliuv/article/details/80016255
+  % 版权声明：本文为博主原创文章，转载请附上博文链接！
+  % \makeatletter %会导致各种乱码
+  % \renewcommand\normalsize{%
+  % 	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
+  %   \abovedisplayskip 1\p@ \@plus1\p@ \@minus6\p@
+  %   \abovedisplayshortskip \z@ \@plus3\p@
+  %   \belowdisplayshortskip 3\p@ \@plus3\p@ \@minus3\p@
+  %   \belowdisplayskip \abovedisplayskip
+  %   \let\@listi\@listI}
+  \renewcommand\normalsize{%
+  	% \@setfontsize\normalsize\@xpt\@xiipt %这行会改变全文的字体大小与间距
+    \abovedisplayskip 1\p@ \@plus2\p@ \@minus5\p@
+    \abovedisplayshortskip \z@ \@plus3\p@
+    \belowdisplayshortskip 6\p@ \@plus3\p@ \@minus3\p@
+    \belowdisplayskip \abovedisplayskip
+    \let\@listi\@listI}
+    % \makeatother
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 单行公式的行距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -324,12 +349,17 @@
 % \setlength{\abovedisplayshortskip}{0pt}
 % \setlength{\belowdisplayshortskip}{0pt}
 % 定义行距
-% \baselineskip = \f@baselineskip * \baselinestretch,
- % \f@baselineskip默认为字号的1.2倍
- % \baselinestretch：article类默认为1；ctexart类默认为1.3
- % Word 中的“单倍行距”/“双倍行距”等名词，指的是因子的数值为 1 或者 2 的时候的行距；
- % 相反 setspace 宏包的 “单倍”、“一倍半”、“双倍”则是指行距相对于字号的倍数。
+%\baselineskip = \f@baselineskip * \baselinestretch,
+ %\f@baselineskip默认为字号的1.2倍
+ %\baselinestretch：article类默认为1；ctexart类默认为1.3
+ %Word 中的“单倍行距”/“双倍行距”等名词，指的是因子的数值为 1 或者 2 的时候的行距；
+ %相反 setspace 宏包的 “单倍”、“一倍半”、“双倍”则是指行距相对于字号的倍数。
 % \renewcommand{\baselinestretch}{1.6}%
+%以下当相邻行的纵向间距小于 \lineskiplimit 时，额外插入高度为 \lineskip 的间距
+% \setlength{\lineskip}{5pt}
+% \setlength{\lineskiplimit}{3pt}
+\setlength{\lineskip}{0.2\baselineskip}
+\setlength{\lineskiplimit}{0.15\baselineskip}%以五号字10.5pt为试验，间距小于0.45倍，基本都能小于0.35倍，小于0.2倍也挺常见，含分式时，小于0.08很常见，估计0.25倍应较为合适间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % 调整列表环境的垂直间距
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -377,9 +407,11 @@
 \newcommand{\captionfont}{\wuhao\kai\rmfamily}
 \newcommand{\captionlabelfont}{\wuhao\kai\rmfamily}
 %\renewcommand{\captionlabeldelim}{\hspace{1em}}
-\renewcommand{\thefigure}{\thechapter--\@arabic\c@figure}
-\renewcommand{\thetable}{\thechapter--\@arabic\c@table}
-\renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
+%=======================================================================
+% \renewcommand{\thefigure}{\thechapter--\@arabic\c@figure}
+% \renewcommand{\thetable}{\thechapter--\@arabic\c@table}
+% \renewcommand{\theequation}{\thechapter--\@arabic\c@equation}
+% 以上设置的是公式引用时括号里编号的格式，但尚需修改，否则公式总出现(-1)这种形式
 %=======================================================================
 %特殊格式
 \newcommand{\source}[2]{[{\kaishu #1 \textbullet #2}]}%注明来源时加中括号
@@ -403,9 +435,18 @@
 \newcommand{\ii}{{\mathrm i}}
 \newcommand{\dd}{{\mathrm d}}
 \newcommand{\ppi}{{\piup}}
-\newcommand{\abs}[1]{\left| #1 \right|}
+\newcommand{\abs}[1]{\lvert #1 \rvert}
 \newcommand{\ket}[1]{\ensuremath{|#1\rangle}}
 \newcommand{\vangle}[2]{\ensuremath{\langle #1,#2 \rangle}}
+%\[ \Biggl(\biggl(\Bigl(\bigl((x)\bigr)\Bigr)\biggr)\Biggr) \]
+\newcommand{\bigAbs}[1]{\bigl\lvert #1 \bigr\rvert}
+\newcommand{\BigAbs}[1]{\Bigl\lvert #1 \Bigr\rvert}
+\newcommand{\biggAbs}[1]{\biggl\lvert #1 \biggr\rvert}
+\newcommand{\BiggAbs}[1]{\Biggl\lvert #1 \Biggr\rvert}
+\newcommand{\Abs}[1]{\bigl\lvert #1 \bigr\rvert}%行内数字\frac最佳方案
+\newcommand{\mAbs}[1]{\Bigl\lvert #1 \Bigr\rvert}%数字\mfrac最佳方案
+\newcommand{\dAbs}[1]{\biggl\lvert #1 \biggr\rvert}%\dfrac最佳方案
+\renewcommand{\tfrac}{\mfrac}%将行内公式\tfrac重定义为大小更合适的\mfrac
 %right-angle-mark；tikz作垂足；#2#1->#2#3为逆时针方向
 \newcommand{\rAm}[3]{($(#2)!6pt!(#1)$)--($(#2)!6pt!(#1)!6pt!90:(#1)$)--($(#2)!6pt!(#3)$)}
 \def\inZ{\in\mathbb{Z}}

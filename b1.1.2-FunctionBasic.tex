@@ -1,7 +1,7 @@
 \Topic{函数及其性质}
   \Teach{函数的单调性}
   \Grade{高一}
-  \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
+  % \Name{郑皓天}\FirstTime{20181207}\CurrentTime{20181207}
   % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
   %\Name{1v2}\FirstTime{20181028}\CurrentTime{20181117}
   % \Name{林叶}\FirstTime{20180908}\CurrentTime{20181125}
@@ -27,7 +27,7 @@
       \hline
       $3^x$&&&&\\
       \hline
-      $\dfrac{1}{x}$&&&&\\
+      $\tfrac{1}{x}$&&&&\\
       \hline
       $\sqrt{x}$&&&&\\
       \hline
@@ -54,9 +54,10 @@
           \item 指数、对数函数的底数大于0且不等于1；
           \item 实际问题对自变量的限制.
         \end{enumerate}
-        \item 若函数$f(x)$定义域为$D$，且$f(A)$存在，则$$a\in D.$$
+        \item 若函数$f(x)$定义域为$D$，且$f(A)$存在，则$A\in D.$
       \end{itemize}
   \end{description}
+  \clearpage
   \begin{exercise}
     \item
       函数$f(x)=\sqrt{2^x-1}$的定义域是\xz
@@ -89,13 +90,14 @@
         D
       \end{answer}
   \end{exercise}
+\vspace{5em}
 \section{函数的奇偶性}
   \begin{description}
     \item[几何定义] 一般地，图像关于$y$轴对称的函数称为偶函数，图像关于原点对称的函数称为奇函数.
     \item[代数定义]
     \begin{enumerate}[label=\arabic*)]
       \item[] \hspace{-2em}若对于函数$f(x)$定义域内任意一个$x$，都有$f(-x)=f(x)$，则函数$f(x)$称为偶函数；
-      \item[] 若对于函数$f(x)$定义域内任意一个$x$，都有$f(-x)=-f(x)$，那么函数$f(x)$称为奇函数；
+      \item[] 若对于函数$f(x)$定义域内任意一个$x$，都有$f(-x)=-f(x)$，则函数$f(x)$称为奇函数；
     \end{enumerate}
     {\kaishu
       奇函数与偶函数的定义域关于原点对称
@@ -116,6 +118,7 @@
         \item 若奇函数$f(x)$在原点有定义，则$f(x)=0$.
       \end{itemize}
   \end{description}
+  \clearpage
   \begin{exercise}
     \item
       设奇函数$f(x)$在$ \left(0,+\infty\right) $上增函数且$ f(1)=0 $，则不等式$ \dfrac{f(x)-f(-x)}{x}<0 $的解集为\xz
@@ -202,6 +205,7 @@
         \end{enumerate}
     \end{itemize}
   \end{description}
+  \vspace{5em}
   \begin{exercise}
     \item
       设$f(x),\ g(x)$都是单调函数，有如下四个命题：\\
@@ -247,10 +251,11 @@
       (\Rmnum{1})求函数$f(x)$在$(0,+\infty)$上的解析式；
       (\Rmnum{2})求函数$f(x)$在$[0,+\infty)$上的最小值.
       \begin{answer}
-        (I)$x\in(0,+\infty)$时，$f(x)=f(-x)=4^x-a\cdot 2^x$；\hspace{2em}
-        (II)$a\geq2$时，$f(x)_{\min}=f(\dfrac{a}2)=-\dfrac{a^2}4$；$0<a<2$时，$f(x)_{\min}=f(0)=1-a$
+        (I)$x\in(0,+\infty)$时，$f(x)=f(-x)=4^x-a\cdot 2^x$；\\
+        (II)$a\geq2$时，$f(x)_{\min}=f(\dfrac{a}2)=-\dfrac{a^2}4$；\\
+            $0<a<2$时，$f(x)_{\min}=f(0)=1-a$.
       \end{answer}
-    \vspace{12em}
+    \vspace{18em}
     \item
       %福州重点中学期中考真题分类汇编 2函数的相关性质.pdf P21
       (福州市格致中学 2016-2017 高一上期中考试数学学科试卷22)已知二次函数 $f ( x )= ax^2+ bx+3$ 是偶函数，且 过点$(-1,4)$，$ g ( x )= x + 4$ .\\
@@ -258,7 +263,7 @@
       （\Rmnum{2} ）求函数 $F ( x )= f (2^x )+ g (2^{x+1} )$ 的值域； \\
       （\Rmnum{3} ）若 $f ( x ) \geq g ( mx +m )$ 对 $x\in [2, 6] $恒成立，求实数 $m$ 的取值范围.\\
       \begin{answer}
-      (I) $f(x)=ax^2+3$; (II) $(7,+\infty)$; (III) $m\leq1$
+      (I) $f(x)=ax^2+3$; (II) $(7,+\infty)$; (III) $m\leq1$.
       \end{answer}
       \vspace{13em}
     \vspace{12em}
@@ -293,14 +298,14 @@
         D
       \end{answer}
     \item
-      设函数$f(x)=\lg \dfrac{2+x}{2-x}$，则$ f\left(\dfrac{x}{2}\right)+f\left(\dfrac{2}{x}\right) $的定义域为\xz
+      设函数$f(x)=\lg \tfrac{2+x}{2-x}$，则$ f\!\left(\tfrac{x}{2}\right)+f\!\Bigl(\tfrac{2}{x}\Bigr) $的定义域为\xz
       \xx{$\left(-4,0\right)\bigcup \left(0,4\right) $}{$\left(-4,-1\right)\bigcup \left(1,4\right) $}{$ \left(-2,-1\right)\bigcup \left(1,2\right)$}{$ \left(-4,-2\right)\bigcup \left(2,4\right)$}
       \begin{answer}
         B
       \end{answer}
     \item
       %30次课学完高中数学P3.7例6(4)
-      (2009四川卷文理12) 已知函数$f(x)$是定义在实数集$\mathbb{R}$上的不恒为零的偶函数，且对任意实数$x$都有$xf(x+1)=(1+x)f(x) $，则$f(\frac{5}{2}) $的值是\xz
+      (2009四川卷文理12) 已知函数$f(x)$是定义在实数集$\mathbb{R}$上的不恒为零的偶函数，且对任意实数$x$都有$xf(x+1)=(1+x)f(x) $，则$f\!\Bigl(\tfrac{5}{2}\Bigr) $的值是\xz
       \xx{0}
       {$\frac12$}
       {1}
@@ -309,7 +314,7 @@
       A
       \end{answer}
     \item
-      若函数$f(x)=\ln (e^{3x}+1)+ax$为偶函数，则$ a= $\tk.
+      若函数$f(x)=\ln (\rm e^{3x}+1)+ax$为偶函数，则$ a= $\tk.
       \begin{answer}
         $-\dfrac{3}2$
       \end{answer}
@@ -320,7 +325,7 @@
       \end{answer}
     \item
       设函数$f(x)$在$ \left(-\infty,+\infty\right) $内有定义，下列函数：\\
-      \ding{192} $ y=-\left|f(x)\right| $\qquad\ding{193} $ y=xf(x^2) $;\\
+      \ding{192} $ y=-\left|f(x)\right| $\qquad\ding{193} $ y=xf\bigl(x^2\bigr) $;\\
       \ding{194} $ y=-f(-x) $\qquad \ding{195} $ y=f(x)-f(-x) $.\\
       中必为奇函数的有\tk.(要求填写正确答案的序号)
       \begin{answer}
@@ -332,9 +337,9 @@
       (1) 求$f(x)$最小值和最大值；\\
       (2) 若不等式$f(x)-2m+1>0 $恒成立，求实数$m$ 的取值范围.
       \begin{answer}
-        (1) $f_{\min}(x)=f(\frac13)=1$
-              $f_{\max}(x)=f(3)=5$
-        (2) $m\in(-\infty,1)$
+        (1) $f_{\min}(x)=f(\frac13)=1$，
+              $f_{\max}(x)=f(3)=5$\\
+        (2) $m\in(-\infty,1)$.
       \end{answer}
     \vspace{22em}
     \item
@@ -352,13 +357,17 @@
       (福州市屏东中学 2016-2017 高一上期中22)已知函数$f(x)=2^x-2^{-2} $，定义域为$\mathbb{R} $；函数 $g(x)=2^{x+1}-2^{2x} $，定义域为$[-1,1] $.\\
       （1）判断函数$f(x) $的奇偶性，不用证明；\\
       （2）求函数$g(x) $ 的最值；\\
-       (3) 若不等式$f(g(x))\leq f(-3am+m^2+1) $对$x\in[-1,1] $,$a\in[-2,2] $ 上恒成立，求 $m$ 的取值范围.
+       (3) 若不等式$f\bigl(g(x)\bigr)\leq f(-3am+m^2+1) $对$x\in[-1,1] $,$a\in[-2,2] $ 上恒成立，求 $m$ 的取值范围.
        \begin{answer}
-       (1) 增函数; (2) $g_{\max}(t)=g(1)=1 $; $g_{\min}(t)=g(2)=0 $; (3) $m\in (-\infty,-6)\cup[6,+\infty)\cup\{0\} $
+       (1) 增函数; \\
+       (2) $g(t)_{\max}=g(1)=1 $; $g(t)_{\min}=g(2)=0 $; \\
+       (3) $m\in (-\infty,-6)\cup[6,+\infty)\cup\{0\} $.
       \end{answer}
       \vspace{20em}
   \end{exercise}
 \stopexercise
 \newpage
 \section{参考答案}
-\printanswer
+\begin{multicols}{2}
+  \printanswer
+\end{multicols}

@@ -1,0 +1,298 @@
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  4 MAR 2021 21:16
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input
+(/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06>
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:1: Undefined control sequence.
+l.1 \section
+            {圆锥曲线结论}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:1: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 \section{圆
+              锥曲线结论}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 圆 in font nullfont!
+Missing character: There is no 锥 in font nullfont!
+Missing character: There is no 曲 in font nullfont!
+Missing character: There is no 线 in font nullfont!
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 1--2
+[] 
+ []
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:3: Undefined control sequence.
+l.3 \subsection
+               {直线与圆锥曲线联立}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:3: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3 \subsection{直
+                 线与圆锥曲线联立}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 直 in font nullfont!
+Missing character: There is no 线 in font nullfont!
+Missing character: There is no 与 in font nullfont!
+Missing character: There is no 圆 in font nullfont!
+Missing character: There is no 锥 in font nullfont!
+Missing character: There is no 曲 in font nullfont!
+Missing character: There is no 线 in font nullfont!
+Missing character: There is no 联 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no 联 in font nullfont!
+Missing character: There is no 立 in font nullfont!
+Missing character: There is no 方 in font nullfont!
+Missing character: There is no 程 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 3--5
+[]
+ []
+
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 5.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 5.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:6: LaTeX Error: Environment aligned undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6         \left\{\begin{aligned}
+                                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:8: Undefined control sequence.
+<recently read> \dfrac 
+                       
+l.8             \dfrac
+                      {x^2}{m}+\dfrac{y^2}{n}=1.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:8: Undefined control sequence.
+l.8             \dfrac{x^2}{m}+\dfrac
+                                     {y^2}{n}=1.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:9: LaTeX Error: \begin{equation} on input line 5 ended by \end{aligned}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.9         \end{aligned}
+                         \right.
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (156.74623pt too wide) detected at line 10
+[]
+ []
+
+Missing character: There is no 整 in font nullfont!
+Missing character: There is no 理 in font nullfont!
+Missing character: There is no 并 in font nullfont!
+Missing character: There is no 化 in font nullfont!
+Missing character: There is no 简 in font nullfont!
+Missing character: There is no 为 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 二 in font nullfont!
+Missing character: There is no 次 in font nullfont!
+Missing character: There is no 方 in font nullfont!
+Missing character: There is no 程 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (5.71527pt too wide) in paragraph at lines 10--12
+\OML/cmm/m/it/10 x$ 
+ []
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:13: Undefined control sequence.
+l.13         \Bigl(\mfrac
+                         {B^2}{m}+\mfrac{A^2}{n}\Bigr)x^2+\mfrac{2AC}{n}x+\B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:13: Undefined control sequence.
+l.13         \Bigl(\mfrac{B^2}{m}+\mfrac
+                                        {A^2}{n}\Bigr)x^2+\mfrac{2AC}{n}x+\B...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:13: Undefined control sequence.
+l.13 ...rac{B^2}{m}+\mfrac{A^2}{n}\Bigr)x^2+\mfrac
+                                                  {2AC}{n}x+\Bigl(\mfrac{C^2...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:13: Undefined control sequence.
+l.13 ...}{n}\Bigr)x^2+\mfrac{2AC}{n}x+\Bigl(\mfrac
+                                                  {C^2}{n}-B^2\Bigr)=0
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (185.88037pt too wide) detected at line 14
+[][]\OML/cmm/m/it/10 m \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 n[]x[] \OT1/cmr/m/n/10 + []\OML/cmm/m/it/10 nx \OT1/cmr/m/n/10 + [][]\OML/cmm/m/it/10 n \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 B[][] \OT1/cmr/m/n/10 = 0
+ []
+
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no 判 in font nullfont!
+Missing character: There is no 别 in font nullfont!
+Missing character: There is no 式 in font nullfont!
+Missing character: There is no ： in font nullfont!
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:17: Undefined control sequence.
+l.17         \Delta=\Bigl(\mfrac
+                                {2B}{mn}\Bigr)^2\cdot mn\bigl(A^2m+B^2n-C^2\...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Overfull \hbox (159.93925pt too wide) detected at line 18
+\OT1/cmr/m/n/10 ^^A = [][][][][] \OMS/cmsy/m/n/10 ^^A \OML/cmm/m/it/10 mn[]A[]m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]n \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 C[][]
+ []
+
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 是 in font nullfont!
+Missing character: There is no 得 in font nullfont!
+Missing character: There is no 到 in font nullfont!
+Missing character: There is no ： in font nullfont!
+
+Overfull \hbox (160.08365pt too wide) detected at line 22
+\OT1/cmr/m/n/10 ^^A \OML/cmm/m/it/10 > \OT1/cmr/m/n/10 0 \OMS/cmsy/m/n/10 ([]) \OML/cmm/m/it/10 mn[]A[]m \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 B[]n \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 C[][] > \OT1/cmr/m/n/10 0
+ []
+
+
+/Users/shenyanch/WORK/Git/Qingda-Template/pandoc-test/input.tex:25: LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25     进
+          行参数代换$A\leftrightarrow B$、$m\leftrightarrow n$，以上一系列结论即可转为关于$y$的二次...
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no 进 in font nullfont!
+Missing character: There is no 行 in font nullfont!
+Missing character: There is no 参 in font nullfont!
+Missing character: There is no 数 in font nullfont!
+Missing character: There is no 代 in font nullfont!
+Missing character: There is no 换 in font nullfont!
+Missing character: There is no 、 in font nullfont!
+Missing character: There is no ， in font nullfont!
+Missing character: There is no 以 in font nullfont!
+Missing character: There is no 上 in font nullfont!
+Missing character: There is no 一 in font nullfont!
+Missing character: There is no 系 in font nullfont!
+Missing character: There is no 列 in font nullfont!
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no 即 in font nullfont!
+Missing character: There is no 可 in font nullfont!
+Missing character: There is no 转 in font nullfont!
+Missing character: There is no 为 in font nullfont!
+Missing character: There is no 关 in font nullfont!
+Missing character: There is no 于 in font nullfont!
+Missing character: There is no 的 in font nullfont!
+Missing character: There is no 二 in font nullfont!
+Missing character: There is no 次 in font nullfont!
+Missing character: There is no 方 in font nullfont!
+Missing character: There is no 程 in font nullfont!
+Missing character: There is no 结 in font nullfont!
+Missing character: There is no 论 in font nullfont!
+Missing character: There is no ； in font nullfont!
+
+Overfull \hbox (40.27774pt too wide) in paragraph at lines 25--26
+[]$\OML/cmm/m/it/10 A \OMS/cmsy/m/n/10 $
+ []
+
+
+Overfull \hbox (29.64467pt too wide) in paragraph at lines 25--26
+\OML/cmm/m/it/10 B$$m \OMS/cmsy/m/n/10 $
+ []
+
+
+Overfull \hbox (11.26395pt too wide) in paragraph at lines 25--26
+\OML/cmm/m/it/10 n$$y$ 
+ []
+
+)
+! Emergency stop.
+<*> .../WORK/Git/Qingda-Template/pandoc-test/input
+                                                  
+*** (job aborted, no legal \end found)
+
+ 
+Here is how much of TeX's memory you used:
+ 23 strings out of 479418
+ 578 string characters out of 5884585
+ 246340 words of memory out of 5000000
+ 17641 multiletter control sequences out of 15000+600000
+ 532346 words of font info for 25 fonts, out of 8000000 for 9000
+ 1348 hyphenation exceptions out of 8191
+ 18i,5n,15p,163b,85s stack positions out of 5000i,500n,10000p,200000b,80000s
+No pages of output.
