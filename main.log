@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  18 DEC 2021 13:54
+This is XeTeX, Version 3.14159265-2.6-0.999992 (TeX Live 2020) (preloaded format=xelatex 2020.5.21)  14 JAN 2022 22:15
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1418,7 +1418,7 @@ Package pgfplots notification 'compat/show suggested version=true': you might be
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: End \AtBeginDocument code.
-(./Number Theory - Congruence.tex
+(./Number Theory - QuadraticResidue.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 7.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
@@ -1458,33 +1458,29 @@ Package fontspec Info: Font family 'FandolHei-Regular(0)' created for font
 LaTeX Font Warning: Font shape `TU/ptm/b/n' undefined
 (Font)              using `TU/ptm/m/n' instead on input line 7.
 
-[1
+) [1
 
 ]
-Missing character: There is no ， in font [lmroman10-regular]:mapping=tex-text;!
- [2
-
-]) [3]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 78.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 78.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 80.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 80.
  (./main.aux)
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 78.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 78.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 80.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 80.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 93AA475095FBA2D900F5D81B6C4E8B98;248.
+(rerunfilecheck)             Checksum: F033B1E40B8734B8AB3F517F85422C37;40.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 78.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 80.
  ) 
 Here is how much of TeX's memory you used:
- 48869 strings out of 479418
- 1173458 string characters out of 5884585
- 1614220 words of memory out of 5000000
- 65349 multiletter control sequences out of 15000+600000
- 549647 words of font info for 114 fonts, out of 8000000 for 9000
+ 48774 strings out of 479418
+ 1166634 string characters out of 5884585
+ 1607220 words of memory out of 5000000
+ 65257 multiletter control sequences out of 15000+600000
+ 549623 words of font info for 111 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 71i,19n,119p,885b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 71i,18n,119p,885b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on main.pdf (3 pages).
+Output written on main.pdf (1 page).
